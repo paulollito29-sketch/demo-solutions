@@ -89,7 +89,7 @@ export const PROSPECTS: Prospect[] = [
     "baDesc": "Desliza para ver la transformación de brillo y volumen con nuestra línea Chocó Glam.",
     "baBefore": "https://images.unsplash.com/photo-1519699047748-de8e457a634e?auto=format&fit=crop&w=1000&q=85",
     "baAfter": "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=1000&q=85",
-    "logoUrl": "/logos/p002-paolas.svg"
+    "logoUrl": "/logos/p002-brand.jpg"
   },
   {
     "id": "P003",
@@ -163,7 +163,7 @@ export const PROSPECTS: Prospect[] = [
     "baDesc": "Baños relajantes, corte de raza higiénico y control médico en un ambiente seguro.",
     "baBefore": "https://images.unsplash.com/photo-1548767797-d8c844163c4c?auto=format&fit=crop&w=1000&q=85",
     "baAfter": "https://images.unsplash.com/photo-1583337130417-3346a1be7dee?auto=format&fit=crop&w=1000&q=85",
-    "logoUrl": "/logos/p003-mikelas.svg"
+    "logoUrl": "/logos/p003-brand.jpg"
   },
   {
     "id": "P004",
@@ -282,7 +282,7 @@ export const PROSPECTS: Prospect[] = [
     "baDesc": "Sabor contundente con pesca fresca, sarandaja y ají mochero aromático.",
     "baBefore": "https://images.unsplash.com/photo-1535399831218-d5bd36d1a6b3?auto=format&fit=crop&w=1000&q=85",
     "baAfter": "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=1000&q=85",
-    "logoUrl": "/logos/p007-el-cevichito.svg"
+    "logoUrl": "/logos/p007-brand.jpg"
   },
   {
     "id": "P008",
@@ -356,7 +356,7 @@ export const PROSPECTS: Prospect[] = [
     "baDesc": "Ceviche fresco con cubos de palta seleccionada y leche de tigre cremosa.",
     "baBefore": "https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?auto=format&fit=crop&w=1000&q=85",
     "baAfter": "https://images.unsplash.com/photo-1535399831218-d5bd36d1a6b3?auto=format&fit=crop&w=1000&q=85",
-    "logoUrl": "/logos/p008-ramiro.svg"
+    "logoUrl": "/logos/p008-brand.jpg"
   },
   {
     "id": "P009",
@@ -624,7 +624,7 @@ export const PROSPECTS: Prospect[] = [
     "baDesc": "Platos contundentes para disfrutar en familia con sazón norteña y criolla.",
     "baBefore": "https://images.unsplash.com/photo-1535399831218-d5bd36d1a6b3?auto=format&fit=crop&w=1000&q=85",
     "baAfter": "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=1000&q=85",
-    "logoUrl": "/logos/p018-la-maquinita.svg"
+    "logoUrl": "/logos/p018-brand.jpg"
   },
   {
     "id": "P019",
@@ -818,7 +818,7 @@ export const PROSPECTS: Prospect[] = [
     "baDesc": "Manicura rusa, balayage y faciales con profesionales de primera.",
     "baBefore": "https://images.unsplash.com/photo-1519699047748-de8e457a634e?auto=format&fit=crop&w=1000&q=85",
     "baAfter": "https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=1000&q=85",
-    "logoUrl": "/logos/p027-kawai.svg"
+    "logoUrl": "/logos/p027-brand.jpg"
   },
   {
     "id": "P028",
@@ -892,7 +892,7 @@ export const PROSPECTS: Prospect[] = [
     "baDesc": "Clientas felices en nuestras manos con productos de gama internacional.",
     "baBefore": "https://images.unsplash.com/photo-1519699047748-de8e457a634e?auto=format&fit=crop&w=1000&q=85",
     "baAfter": "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=1000&q=85",
-    "logoUrl": "/logos/p028-krasoty.svg"
+    "logoUrl": "/logos/p028-brand.jpg"
   },
   {
     "id": "P029",
@@ -1026,7 +1026,7 @@ export const PROSPECTS: Prospect[] = [
     "baDesc": "Jaleas crocantes, arroces bien servidos y ceviches preparados con el limón exacto.",
     "baBefore": "https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?auto=format&fit=crop&w=1000&q=85",
     "baAfter": "https://images.unsplash.com/photo-1535399831218-d5bd36d1a6b3?auto=format&fit=crop&w=1000&q=85",
-    "logoUrl": "/logos/p033-pez-azul.svg"
+    "logoUrl": "/logos/p033-brand.jpg"
   },
   {
     "id": "P034",
@@ -1219,7 +1219,7 @@ export const PROSPECTS: Prospect[] = [
     "baDesc": "Pescado del día con leche de tigre aromática, choclo tierno y camote glaseado.",
     "baBefore": "https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?auto=format&fit=crop&w=1000&q=85",
     "baAfter": "https://images.unsplash.com/photo-1535399831218-d5bd36d1a6b3?auto=format&fit=crop&w=1000&q=85",
-    "logoUrl": "/logos/p038-tentaciones.svg"
+    "logoUrl": "/logos/p038-brand.jpg"
   },
   {
     "id": "P039",
@@ -1293,7 +1293,7 @@ export const PROSPECTS: Prospect[] = [
     "baDesc": "Especialistas en laceados y uñas acrílicas con promociones todo el año.",
     "baBefore": "https://images.unsplash.com/photo-1519699047748-de8e457a634e?auto=format&fit=crop&w=1000&q=85",
     "baAfter": "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=1000&q=85",
-    "logoUrl": "/logos/p039-bea-salon.svg"
+    "logoUrl": "/logos/p039-brand.jpg"
   },
   {
     "id": "P040",
@@ -1367,7 +1367,7 @@ export const PROSPECTS: Prospect[] = [
     "baDesc": "Resinas 3M y blanqueamiento LED en un ambiente relajado y profesional.",
     "baBefore": "https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=1000&q=85",
     "baAfter": "https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&w=1000&q=85",
-    "logoUrl": "/logos/p040-dental-barranco.svg"
+    "logoUrl": "/logos/p040-brand.jpg"
   },
   {
     "id": "P041",
@@ -1546,7 +1546,7 @@ export const PROSPECTS: Prospect[] = [
     "baDesc": "Tratamientos capilares con Alfaparf Milano y mechas de alto contraste.",
     "baBefore": "https://images.unsplash.com/photo-1527799820374-dcf8d9d4a388?auto=format&fit=crop&w=1000&q=85",
     "baAfter": "https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?auto=format&fit=crop&w=1000&q=85",
-    "logoUrl": "/logos/p048-emys.svg"
+    "logoUrl": "/logos/p048-brand.jpg"
   },
   {
     "id": "P049",
@@ -1980,7 +1980,7 @@ export const PROSPECTS: Prospect[] = [
     "baDesc": "Precisión diagnóstica y calidez en el entorno médico de San Felipe.",
     "baBefore": "https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=1000&q=85",
     "baAfter": "https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1000&q=85",
-    "logoUrl": "/logos/p073-yamazato.svg"
+    "logoUrl": "/logos/p073-brand.jpg"
   },
   {
     "id": "P074",
@@ -2999,7 +2999,7 @@ export const PROSPECTS: Prospect[] = [
     "baDesc": "Odontología integral sin dolor con resinas de alta estética y ortodoncia.",
     "baBefore": "https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=1000&q=85",
     "baAfter": "https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&w=1000&q=85",
-    "logoUrl": "/logos/p137-mundo-odontic.svg"
+    "logoUrl": "/logos/p137-brand.jpg"
   },
   {
     "id": "P138",
@@ -3463,7 +3463,7 @@ export const PROSPECTS: Prospect[] = [
     "baDesc": "Tratamiento de uñeros, hongos y atención especializada para pie diabético.",
     "baBefore": "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=1000&q=85",
     "baAfter": "https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=1000&q=85",
-    "logoUrl": "/logos/p164-dolarte.svg"
+    "logoUrl": "/logos/p164-brand.jpg"
   },
   {
     "id": "P165",
@@ -3537,7 +3537,7 @@ export const PROSPECTS: Prospect[] = [
     "baDesc": "Tratamientos estéticos faciales y alisados anti-frizz duraderos.",
     "baBefore": "https://images.unsplash.com/photo-1519699047748-de8e457a634e?auto=format&fit=crop&w=1000&q=85",
     "baAfter": "https://images.unsplash.com/photo-1562322140-8baeececf3df?auto=format&fit=crop&w=1000&q=85",
-    "logoUrl": "/logos/p165-jadifi.svg"
+    "logoUrl": "/logos/p165-brand.jpg"
   },
   {
     "id": "P166",
@@ -3611,7 +3611,7 @@ export const PROSPECTS: Prospect[] = [
     "baDesc": "Devuélvele la salud a tu cabello con terapias capilares reconstructoras.",
     "baBefore": "https://images.unsplash.com/photo-1527799820374-dcf8d9d4a388?auto=format&fit=crop&w=1000&q=85",
     "baAfter": "https://images.unsplash.com/photo-1607779097040-26e80aa78e66?auto=format&fit=crop&w=1000&q=85",
-    "logoUrl": "/logos/p166-parwa.svg"
+    "logoUrl": "/logos/p166-brand.jpg"
   },
   {
     "id": "P167",
@@ -3685,7 +3685,7 @@ export const PROSPECTS: Prospect[] = [
     "baDesc": "Resultados permanentes con brillo espejo y suavidad incomparable para adultas y niñas.",
     "baBefore": "https://images.unsplash.com/photo-1527799820374-dcf8d9d4a388?auto=format&fit=crop&w=1000&q=85",
     "baAfter": "https://images.unsplash.com/photo-1607779097040-26e80aa78e66?auto=format&fit=crop&w=1000&q=85",
-    "logoUrl": "/logos/p167-veroka.svg"
+    "logoUrl": "/logos/p167-brand.jpg"
   },
   {
     "id": "P168",

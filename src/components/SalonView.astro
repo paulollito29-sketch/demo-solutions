@@ -1,0 +1,479 @@
+---
+// SalonView.astro — Vista de salón de belleza de alta gama inspirada en Montalvo Salón & Spa y Fortu Beauty
+---
+
+<div id="salon-prototype-view" class="prototype-view" style="display: none;">
+  <!-- Barra Superior Haute Coiffure (Estilo Montalvo) -->
+  <aside aria-label="Aviso promocional" class="bg-[#0b0a0d] border-b border-[#2a2438] text-[#e6cfb3] text-xs font-mono py-2 px-4 shadow-sm sticky top-0 z-50">
+    <div class="max-w-6xl mx-auto flex flex-wrap items-center justify-between gap-2">
+      <div class="flex items-center gap-2">
+        <span class="text-amber-400">✨</span>
+        <span class="font-bold tracking-widest uppercase text-[11px] text-amber-200">EXPERIENCIA VIP SALÓN:</span>
+        <span class="hidden sm:inline text-stone-300">Agenda tu cita online y obtén 15% OFF en tu primera visita + Diagnóstico capilar gratuito.</span>
+      </div>
+      <a href="#salon-tarifario" class="border border-[#c5a880]/50 hover:border-[#c5a880] text-[#c5a880] hover:text-white px-3 py-0.5 rounded-full text-[10px] uppercase font-bold tracking-widest transition">
+        RESERVAR TURNO VIP →
+      </a>
+    </div>
+  </aside>
+
+  <!-- Cabecera Editorial Noir & Gold -->
+  <header class="border-b border-[#24202b] bg-[#100e14]/95 backdrop-blur-md text-stone-200 sticky top-8 z-40">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between gap-4">
+      <div class="flex items-center gap-3">
+        <div class="p-1 rounded bg-[#181620] border border-[#322c3e] flex items-center">
+          <img id="salon-nav-logo" src="/logos/p002-paolas.svg" alt="Logotipo Oficial" class="h-10 sm:h-12 w-auto max-w-[200px] object-contain" />
+        </div>
+        <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[10px] font-mono bg-amber-950/60 text-amber-300 font-semibold border border-amber-800/60 hidden sm:inline-flex">
+          ✨ Citas Disponibles Hoy
+        </span>
+      </div>
+
+      <nav class="hidden md:flex items-center gap-6 text-xs uppercase tracking-[0.16em] font-medium text-stone-400">
+        <a href="#salon-lookbook" class="hover:text-[#c5a880] transition-colors">Lookbook 2026</a>
+        <a href="#salon-comparador" class="hover:text-[#c5a880] transition-colors">Antes &amp; Después</a>
+        <a href="#salon-tarifario" class="hover:text-[#c5a880] transition-colors">Servicios &amp; Precios</a>
+        <a href="#salon-ubicacion" class="hover:text-[#c5a880] transition-colors">Salón &amp; Sede</a>
+        <a id="salon-social-pill" href="#" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-mono border border-stone-800 bg-[#16141c] text-stone-300 hover:border-[#c5a880] transition">
+          <span class="w-1.5 h-1.5 rounded-full bg-[#c5a880]"></span>
+          <span id="salon-social-text">@instagram</span>
+        </a>
+      </nav>
+
+      <a href="#salon-tarifario" class="bg-gradient-to-r from-[#c5a880] via-[#dfcaaa] to-[#c5a880] hover:brightness-110 text-stone-950 font-bold px-5 py-2.5 rounded text-xs uppercase tracking-[0.14em] shadow-lg shadow-amber-950/30 transition">
+        <span>Agendar Turno</span>
+      </a>
+    </div>
+  </header>
+
+  <!-- Hero Editorial de Moda y Belleza (Estilo Montalvo Salón & Spa) -->
+  <section class="relative overflow-hidden bg-[#121017] text-white border-b border-[#24202b]">
+    <!-- Glow sutil champán -->
+    <div class="absolute -top-32 right-1/4 w-[500px] h-[500px] rounded-full opacity-15 pointer-events-none blur-3xl bg-[#c5a880]"></div>
+
+    <div class="max-w-6xl mx-auto px-4 py-16 sm:py-24 relative z-10">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+        <!-- Columna Izquierda: Copy Editorial & Slogan -->
+        <div class="lg:col-span-7 space-y-6">
+          <div class="flex flex-wrap items-center gap-2.5">
+            <span class="inline-flex items-center gap-2 border border-[#c5a880]/40 px-3 py-1 bg-[#1a1722] rounded-full font-mono text-[11px] uppercase tracking-wider text-[#dfcaaa]">
+              <span class="w-2 h-2 rounded-full bg-[#c5a880] animate-pulse"></span>
+              <span id="salon-hero-kicker">HAUTE COIFFURE · COLOR SPECIALISTS · URBAN SPA</span>
+            </span>
+            <span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-[11px] font-mono bg-rose-950/70 text-rose-300 border border-rose-800/50 font-semibold">
+              ✦ Diagnóstico Capilar Gratuito
+            </span>
+          </div>
+
+          <h1 class="font-serif text-4xl sm:text-6xl lg:text-[60px] font-normal leading-[1.06] tracking-tight text-white">
+            <span id="salon-hero-title">El arte del estilismo en</span>
+            <em id="salon-hero-sub" class="font-normal italic block mt-1 text-transparent bg-clip-text bg-gradient-to-r from-[#dfcaaa] via-[#f7ecd9] to-[#c5a880]">Paola's Salón &amp; Urban Spa.</em>
+          </h1>
+
+          <!-- Lema Oficial -->
+          <blockquote class="border-l-3 border-[#c5a880] pl-4 py-1.5 italic font-serif text-lg sm:text-xl text-[#dfcaaa] bg-[#181520]/80 rounded-r-md">
+            <span id="salon-hero-lema">«No solo cambiamos tu cabello, transformamos tu actitud. El look de tus sueños está a solo una cita de distancia.»</span>
+          </blockquote>
+
+          <p id="salon-hero-lead" class="text-stone-300 text-base sm:text-lg leading-relaxed max-w-xl font-normal">
+            Tratamientos capilares de alta gama sin formol, balayage y colorimetría avanzada, alisados permanentes de brillo espejo y manicura spa con atención personalizada en Magdalena del Mar.
+          </p>
+
+          <!-- CTAs -->
+          <div class="pt-4 flex flex-wrap items-center gap-4">
+            <a href="#salon-tarifario" class="bg-gradient-to-r from-[#c5a880] via-[#dfcaaa] to-[#c5a880] hover:brightness-110 text-stone-950 font-bold px-8 py-4 rounded text-xs sm:text-sm uppercase tracking-[0.16em] shadow-xl inline-flex items-center gap-3 transition transform hover:scale-[1.02]">
+              <span>Ver Tarifario &amp; Agendar</span>
+              <span>↓</span>
+            </a>
+            <a href="#salon-comparador" class="px-7 py-4 border border-[#3b3447] hover:border-[#c5a880] text-xs sm:text-sm uppercase tracking-[0.12em] font-medium transition bg-[#181520] text-stone-200 rounded">
+              Ver Resultados Antes/Después
+            </a>
+          </div>
+
+          <!-- Métricas Salón -->
+          <div class="grid grid-cols-3 gap-4 pt-6 border-t border-[#24202b] font-mono">
+            <div>
+              <span class="block text-[10px] uppercase tracking-wider text-stone-400">CALIFICACIÓN</span>
+              <span class="text-lg sm:text-xl font-bold text-[#dfcaaa]"><span id="salon-stat-rating">4.8</span> / 5.0 ★</span>
+            </div>
+            <div class="border-l border-[#24202b] pl-4">
+              <span class="block text-[10px] uppercase tracking-wider text-stone-400">RESEÑAS</span>
+              <span class="text-lg sm:text-xl font-bold text-stone-100" id="salon-stat-reviews">+100 clientas</span>
+            </div>
+            <div class="border-l border-[#24202b] pl-4">
+              <span class="block text-[10px] uppercase tracking-wider text-stone-400">DISTRITO</span>
+              <span class="text-lg sm:text-xl font-bold text-stone-100" id="salon-stat-zone">Magdalena</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Columna Derecha: Tarjeta Fotográfica de Tendencia -->
+        <div class="lg:col-span-5 relative">
+          <div class="relative rounded-2xl overflow-hidden border border-[#362e42] shadow-2xl shadow-black/80 group">
+            <img id="salon-hero-photo" src="https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=1200&q=85" alt="Look de Salón" class="w-full aspect-[4/4.8] object-cover group-hover:scale-105 transition-transform duration-700" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black via-black/30 to-transparent pointer-events-none"></div>
+
+            <div class="absolute top-4 left-4 bg-black/70 backdrop-blur-md text-[#dfcaaa] border border-[#c5a880]/40 text-[10px] font-mono font-bold uppercase tracking-wider px-3 py-1 rounded-full">
+              ✨ SERVICIO DESTACADO
+            </div>
+
+            <div class="absolute bottom-4 left-4 right-4 bg-[#14121a]/90 backdrop-blur-md p-5 border border-[#3b334a] rounded-xl shadow-2xl text-stone-100">
+              <div class="flex items-center justify-between">
+                <span class="font-mono text-[10px] uppercase tracking-widest text-[#dfcaaa] font-bold" id="salon-featured-label">EXPERIENCIA EXCLUSIVA</span>
+                <span class="font-mono text-base font-extrabold text-[#dfcaaa]" id="salon-featured-price">S/ 160</span>
+              </div>
+              <h2 class="font-serif text-xl font-bold mt-1 text-white" id="salon-featured-title">Experiencia Chocó Glam &amp; Nutrición</h2>
+              <p class="text-xs text-stone-300 mt-1 line-clamp-2" id="salon-featured-sub">Coloración chocolate rica en reflejos cálidos y nutrición profunda a base de cacao.</p>
+              <div class="mt-3 pt-3 border-t border-[#24202b] flex items-center justify-between text-[11px] font-mono text-stone-400">
+                <span id="salon-address-caption">Magdalena del Mar</span>
+                <span class="text-[#dfcaaa]">Cita previa</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cinta Ticker Belleza -->
+  <div class="border-b border-[#24202b] py-3 overflow-hidden bg-black text-[#dfcaaa] text-[11px] font-mono uppercase tracking-[0.25em]">
+    <div class="marquee-track" id="salon-marquee-content">
+      <span class="mx-6 font-semibold">✦ ATENCIÓN PERSONALIZADA CON CITA PREVIA</span>
+      <span class="mx-6 font-semibold text-white">✦ PRODUCTOS PROFESIONALES SIN FORMOL</span>
+      <span class="mx-6 font-semibold text-[#c5a880]">✦ BALAYAGE, MECHAS &amp; NAIL ART DE TENDENCIA</span>
+      <span class="mx-6 font-semibold text-white">✦ RESERVAS DIRECTAS SIN COMISIONES POR WHATSAPP</span>
+      <span class="mx-6 font-semibold">✦ ASESORÍA Y DIAGNÓSTICO CAPILAR SIN COSTO</span>
+      <span class="mx-6 font-semibold text-white">✦ PRODUCTOS PROFESIONALES SIN FORMOL</span>
+    </div>
+  </div>
+
+  <!-- SECCIÓN 1: LOOKBOOK MONTALVO (4 Grandes Categorías Visuales) -->
+  <section id="salon-lookbook" class="py-16 sm:py-24 px-4 bg-[#14121a] text-stone-100 border-b border-[#24202b]">
+    <div class="max-w-6xl mx-auto space-y-12">
+      <div class="text-center max-w-2xl mx-auto space-y-2">
+        <span class="font-mono text-xs uppercase tracking-[0.22em] text-[#dfcaaa] font-bold">LOOKBOOK &amp; ESPECIALIDADES</span>
+        <h2 class="font-serif text-3xl sm:text-5xl font-normal text-white">Colecciones &amp; Tendencias 2026</h2>
+        <p class="text-stone-400 text-sm leading-relaxed">
+          Inspiradas en las pasarelas internacionales. Técnicas de autor ejecutadas por profesionales apasionados.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- Colección 1 -->
+        <div class="group relative rounded-2xl overflow-hidden border border-[#2d2739] hover:border-[#c5a880] transition-all duration-500 bg-[#191622] flex flex-col justify-between">
+          <div class="relative aspect-[3/4] overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=700&q=85" alt="Colorimetría y Balayage" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent"></div>
+            <div class="absolute top-3 left-3 bg-black/70 backdrop-blur-md px-2.5 py-1 rounded text-[10px] font-mono text-[#dfcaaa] border border-[#c5a880]/30 font-bold uppercase">
+              01 · COLOR
+            </div>
+            <div class="absolute bottom-4 left-4 right-4">
+              <h3 class="font-serif text-xl font-bold text-white">Colorimetría &amp; Balayage</h3>
+              <p class="text-xs text-stone-300 mt-1">Rubios miel, Morena iluminada y Babylights con protección capilar.</p>
+            </div>
+          </div>
+          <div class="p-4 border-t border-[#292333] flex items-center justify-between text-xs font-mono">
+            <span class="text-[#dfcaaa]">Desde S/ 180</span>
+            <a href="#salon-tarifario" class="text-white hover:text-[#dfcaaa] underline uppercase text-[11px]">Ver Servicios →</a>
+          </div>
+        </div>
+
+        <!-- Colección 2 -->
+        <div class="group relative rounded-2xl overflow-hidden border border-[#2d2739] hover:border-[#c5a880] transition-all duration-500 bg-[#191622] flex flex-col justify-between">
+          <div class="relative aspect-[3/4] overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1607779097040-26e80aa78e66?auto=format&fit=crop&w=700&q=85" alt="Alisados y Tratamientos" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent"></div>
+            <div class="absolute top-3 left-3 bg-black/70 backdrop-blur-md px-2.5 py-1 rounded text-[10px] font-mono text-[#dfcaaa] border border-[#c5a880]/30 font-bold uppercase">
+              02 · TERAPIA
+            </div>
+            <div class="absolute bottom-4 left-4 right-4">
+              <h3 class="font-serif text-xl font-bold text-white">Alisados &amp; Botox Capilar</h3>
+              <p class="text-xs text-stone-300 mt-1">Liso espejo termoactivo, nutrición con cacao y cero formol.</p>
+            </div>
+          </div>
+          <div class="p-4 border-t border-[#292333] flex items-center justify-between text-xs font-mono">
+            <span class="text-[#dfcaaa]">Desde S/ 110</span>
+            <a href="#salon-tarifario" class="text-white hover:text-[#dfcaaa] underline uppercase text-[11px]">Ver Servicios →</a>
+          </div>
+        </div>
+
+        <!-- Colección 3 -->
+        <div class="group relative rounded-2xl overflow-hidden border border-[#2d2739] hover:border-[#c5a880] transition-all duration-500 bg-[#191622] flex flex-col justify-between">
+          <div class="relative aspect-[3/4] overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1632345031435-8727f6897d53?auto=format&fit=crop&w=700&q=85" alt="Nails & Spa" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent"></div>
+            <div class="absolute top-3 left-3 bg-black/70 backdrop-blur-md px-2.5 py-1 rounded text-[10px] font-mono text-[#dfcaaa] border border-[#c5a880]/30 font-bold uppercase">
+              03 · NAILS
+            </div>
+            <div class="absolute bottom-4 left-4 right-4">
+              <h3 class="font-serif text-xl font-bold text-white">Nails Studio &amp; Pedicura Spa</h3>
+              <p class="text-xs text-stone-300 mt-1">Uñas en polygel, esmaltado semipermanente y spa de pies con sales.</p>
+            </div>
+          </div>
+          <div class="p-4 border-t border-[#292333] flex items-center justify-between text-xs font-mono">
+            <span class="text-[#dfcaaa]">Desde S/ 45</span>
+            <a href="#salon-tarifario" class="text-white hover:text-[#dfcaaa] underline uppercase text-[11px]">Ver Servicios →</a>
+          </div>
+        </div>
+
+        <!-- Colección 4 -->
+        <div class="group relative rounded-2xl overflow-hidden border border-[#2d2739] hover:border-[#c5a880] transition-all duration-500 bg-[#191622] flex flex-col justify-between">
+          <div class="relative aspect-[3/4] overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=700&q=85" alt="Maquillaje y Novias" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent"></div>
+            <div class="absolute top-3 left-3 bg-black/70 backdrop-blur-md px-2.5 py-1 rounded text-[10px] font-mono text-[#dfcaaa] border border-[#c5a880]/30 font-bold uppercase">
+              04 · MAKEUP
+            </div>
+            <div class="absolute bottom-4 left-4 right-4">
+              <h3 class="font-serif text-xl font-bold text-white">Styling &amp; MakeUp HD</h3>
+              <p class="text-xs text-stone-300 mt-1">Peinados de pasarela, maquillaje blindado para eventos y novias.</p>
+            </div>
+          </div>
+          <div class="p-4 border-t border-[#292333] flex items-center justify-between text-xs font-mono">
+            <span class="text-[#dfcaaa]">Desde S/ 120</span>
+            <a href="#salon-tarifario" class="text-white hover:text-[#dfcaaa] underline uppercase text-[11px]">Ver Servicios →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECCIÓN 2: COMPARADOR ANTES / DESPUÉS (Montalvo VIP Showcase) -->
+  <section id="salon-comparador" class="py-16 sm:py-24 px-4 bg-[#0f0d14] border-b border-[#24202b] text-white">
+    <div class="max-w-4xl mx-auto space-y-8 text-center">
+      <div>
+        <span class="font-mono text-xs uppercase tracking-[0.25em] text-[#dfcaaa] font-bold">TRANSFORMACIÓN REAL EN CABINA</span>
+        <h2 class="font-serif text-3xl sm:text-5xl font-normal mt-1">El Poder del Cuidado Profesional</h2>
+        <p class="text-stone-400 text-sm mt-2 max-w-xl mx-auto">
+          Desliza el control interactivo para comparar el cabello opaco o con daño previo frente al brillo sedoso y color vibrante logrado en nuestro salón.
+        </p>
+      </div>
+
+      <div class="relative rounded-2xl overflow-hidden border-2 border-[#3b334a] shadow-2xl bg-black aspect-[16/10] max-h-[500px]">
+        <!-- Imagen Después (Fondo) -->
+        <img id="salon-ba-after" src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=1200&q=85" alt="Resultado Después" class="w-full h-full object-cover" />
+        <span class="absolute top-4 right-4 bg-black/80 backdrop-blur-md text-[#dfcaaa] text-[10px] font-mono uppercase tracking-widest px-3 py-1 rounded border border-[#c5a880]/40 font-bold z-10">
+          DESPUÉS · BRILLO GLOW
+        </span>
+
+        <!-- Imagen Antes (Cortada) -->
+        <div id="salon-ba-clip" class="absolute inset-0 overflow-hidden" style="width: 50%;">
+          <img id="salon-ba-before" src="https://images.unsplash.com/photo-1519699047748-de8e457a634e?auto=format&fit=crop&w=1200&q=85" alt="Antes del tratamiento" class="absolute inset-0 w-full h-full object-cover max-w-none" />
+          <span class="absolute top-4 left-4 bg-black/80 backdrop-blur-md text-stone-300 text-[10px] font-mono uppercase tracking-widest px-3 py-1 rounded border border-white/20 font-bold z-10">
+            ANTES · OPACO
+          </span>
+        </div>
+
+        <!-- Slider Range Transparente -->
+        <input id="salon-ba-slider" type="range" min="0" max="100" value="50" class="absolute inset-0 w-full h-full opacity-0 cursor-ew-resize z-20" aria-label="Comparar antes y después" />
+
+        <!-- Línea Divisoria Decorativa con Asa Dorada -->
+        <div id="salon-ba-handle" class="absolute top-0 bottom-0 pointer-events-none z-10 w-0.5 bg-[#dfcaaa]" style="left: 50%;">
+          <div class="absolute top-1/2 -translate-y-1/2 -translate-x-1/2 w-8 h-8 rounded-full bg-[#dfcaaa] text-stone-950 flex items-center justify-center font-bold text-xs shadow-xl border-2 border-stone-950">
+            ↔
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECCIÓN 3: CONCIERGE WIZARD EN 3 PASOS (Estilo Fortu Beauty) -->
+  <section id="salon-tarifario" class="py-16 sm:py-24 px-4 bg-[#14121a] text-stone-100 border-b border-[#24202b]">
+    <div class="max-w-6xl mx-auto">
+      <div class="flex flex-col md:flex-row md:items-end justify-between pb-8 border-b border-[#24202b] gap-4">
+        <div>
+          <span class="font-mono text-xs uppercase tracking-[0.2em] text-[#dfcaaa] font-bold">RESERVA CONCIERGE EN 3 PASOS</span>
+          <h2 class="font-serif text-3xl sm:text-5xl font-normal text-white mt-1">Servicios VIP &amp; Tarifario</h2>
+        </div>
+        <div id="salon-category-tabs" class="flex flex-wrap gap-2">
+          <!-- Pestañas de categorías inyectadas por JS -->
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 pt-10 items-start">
+        <!-- Lista de Servicios del Salón -->
+        <div class="lg:col-span-7">
+          <div id="salon-services-list" class="divide-y divide-[#24202b] border-t border-[#24202b]">
+            <!-- Inyectado por JS -->
+          </div>
+          <p class="text-xs text-stone-500 mt-6 font-mono">
+            * Precios expresados en Soles (S/). Incluyen lavado con shampoo tratante y cepillado final.
+          </p>
+        </div>
+
+        <!-- WIZARD CONCIERGE FORTU BEAUTY -->
+        <div class="lg:col-span-5 lg:sticky lg:top-24 bg-[#181522] border-2 border-[#c5a880]/40 p-6 sm:p-8 rounded-2xl shadow-2xl text-stone-200">
+          <div class="border-b border-[#292336] pb-4">
+            <span class="font-mono text-[10px] uppercase tracking-[0.2em] text-[#dfcaaa] font-bold">CONCIERGE DE BELLEZA</span>
+            <h3 class="font-serif text-2xl font-bold text-white mt-1">Reserva tu Horario VIP</h3>
+          </div>
+
+          <!-- Pasos Visuales -->
+          <div class="grid grid-cols-3 gap-2 mt-4 text-center font-mono text-[10px] text-stone-400">
+            <div class="p-1.5 rounded bg-[#241f30] text-[#dfcaaa] font-bold border border-[#c5a880]/30">1. Servicios</div>
+            <div class="p-1.5 rounded bg-[#1e1a29]">2. Diagnóstico</div>
+            <div class="p-1.5 rounded bg-[#1e1a29]">3. Horario</div>
+          </div>
+
+          <!-- Servicios Seleccionados -->
+          <div class="mt-4">
+            <div class="flex items-center justify-between text-xs font-mono text-stone-400 pb-2">
+              <span>SERVICIOS ELEGIDOS:</span>
+              <span id="salon-cart-count-badge" class="px-2 py-0.5 bg-[#252033] text-[#dfcaaa] font-bold rounded">0 items</span>
+            </div>
+            <div id="salon-cart-items" class="py-3 space-y-2 min-h-[80px] max-h-48 overflow-y-auto border-y border-[#292336] text-xs">
+              <p class="text-stone-500 italic py-4 text-center font-serif">Selecciona servicios para armar tu paquete de belleza.</p>
+            </div>
+          </div>
+
+          <!-- Total Estimado -->
+          <div class="py-4 border-b border-[#292336] flex items-baseline justify-between">
+            <span class="font-mono text-xs uppercase tracking-wider text-stone-400">Inversión Estimada:</span>
+            <span id="salon-cart-total" class="font-mono text-2xl font-extrabold text-[#dfcaaa]">S/ 0.00</span>
+          </div>
+
+          <!-- Formulario Concierge -->
+          <div class="space-y-3 pt-4 text-xs font-mono">
+            <div>
+              <label for="salon-client-name" class="block text-[10px] uppercase tracking-wider text-stone-400 mb-1">TU NOMBRE COMPLETO</label>
+              <input id="salon-client-name" type="text" placeholder="Ej. Paola Valdivia" class="w-full bg-[#110f17] border border-[#352d42] px-3 py-2.5 text-white rounded focus:outline-none focus:border-[#c5a880]" />
+            </div>
+
+            <!-- Diagnóstico de Hebra Capilar (Fortu Beauty) -->
+            <div>
+              <label for="salon-hair-type" class="block text-[10px] uppercase tracking-wider text-stone-400 mb-1">TIPO DE CABELLO / DIAGNÓSTICO</label>
+              <select id="salon-hair-type" class="w-full bg-[#110f17] border border-[#352d42] px-2.5 py-2.5 text-white rounded focus:outline-none">
+                <option value="Cabello Natural / Sin Decoloración">Cabello Natural / Virgen</option>
+                <option value="Con Balayage o Mechas Previas">Con Balayage o Mechas</option>
+                <option value="Cabello Seco o Quebradizo">Seco / Requiere Nutrición</option>
+                <option value="Con Frizz / Requiere Alisado">Con Frizz / Requiere Liso</option>
+              </select>
+            </div>
+
+            <div class="grid grid-cols-2 gap-3">
+              <div>
+                <label for="salon-client-day" class="block text-[10px] uppercase tracking-wider text-stone-400 mb-1">DÍA PREFERIDO</label>
+                <select id="salon-client-day" class="w-full bg-[#110f17] border border-[#352d42] px-2.5 py-2.5 text-white rounded focus:outline-none">
+                  <option value="Hoy mismo (Cita prioritaria)">Hoy mismo</option>
+                  <option value="Mañana">Mañana</option>
+                  <option value="Este fin de semana">Fin de semana</option>
+                  <option value="Coordinar por WhatsApp">Coordinar horario</option>
+                </select>
+              </div>
+              <div>
+                <label for="salon-client-time" class="block text-[10px] uppercase tracking-wider text-stone-400 mb-1">TURNO</label>
+                <select id="salon-client-time" class="w-full bg-[#110f17] border border-[#352d42] px-2.5 py-2.5 text-white rounded focus:outline-none">
+                  <option value="Mañana (10:00 AM - 1:00 PM)">Mañana (10am-1pm)</option>
+                  <option value="Tarde (2:00 PM - 5:00 PM)">Tarde (2pm-5pm)</option>
+                  <option value="Noche (5:00 PM - 8:00 PM)">Noche (5pm-8pm)</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <!-- Botón de Envío Concierge -->
+          <button id="btn-salon-send-whatsapp" type="button" class="mt-6 w-full py-4 bg-gradient-to-r from-[#c5a880] via-[#dfcaaa] to-[#c5a880] hover:brightness-110 text-stone-950 font-bold font-mono text-xs uppercase tracking-[0.16em] rounded-lg shadow-xl shadow-amber-950/40 flex items-center justify-center gap-2 cursor-pointer transition transform hover:scale-[1.01]">
+            <span>Confirmar Cita VIP por WhatsApp</span>
+            <span>→</span>
+          </button>
+
+          <div class="flex items-center justify-center gap-2 text-[10px] text-stone-400 font-mono mt-4 pt-3 border-t border-[#292336]">
+            <span>✓ Reserva directa</span>
+            <span>•</span>
+            <span>✓ Diagnóstico sin costo</span>
+            <span>•</span>
+            <span>✓ Atención exclusiva</span>
+          </div>
+
+          <div class="mt-3 flex items-center justify-between text-[11px] text-stone-500 font-mono">
+            <span id="salon-ticket-name">Salón &amp; Spa</span>
+            <span id="salon-ticket-phone" class="text-[#dfcaaa]">Teléfono</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECCIÓN 4: SALÓN, MAPA & OPINIONES VIP -->
+  <section id="salon-ubicacion" class="py-16 sm:py-24 px-4 bg-[#0f0d14] text-white border-b border-[#24202b]">
+    <div class="max-w-6xl mx-auto space-y-12">
+      <div class="grid grid-cols-1 lg:grid-cols-12 border border-[#2d2739] rounded-2xl overflow-hidden bg-[#16131d]">
+        <div class="lg:col-span-5 p-6 sm:p-10 flex flex-col justify-between space-y-6 border-b lg:border-b-0 lg:border-r border-[#2d2739]">
+          <div class="space-y-4">
+            <span class="font-mono text-xs uppercase tracking-[0.2em] text-[#dfcaaa] font-bold">VISITA NUESTRO ESTUDIO</span>
+            <h3 id="salon-loc-name" class="font-serif text-3xl sm:text-4xl font-normal text-white">Salón &amp; Urban Spa</h3>
+
+            <div class="space-y-3 pt-2 text-sm">
+              <div>
+                <span class="font-mono text-[10px] uppercase tracking-wider text-stone-400 block">DIRECCIÓN REGISTRADA</span>
+                <span id="salon-loc-address" class="text-stone-200 font-medium">Calle Grau 295, Magdalena del Mar</span>
+              </div>
+              <div>
+                <span class="font-mono text-[10px] uppercase tracking-wider text-stone-400 block">TELÉFONO DE CITAS</span>
+                <span id="salon-loc-phone" class="font-mono text-[#dfcaaa] font-bold text-base">Teléfono</span>
+              </div>
+              <div>
+                <span class="font-mono text-[10px] uppercase tracking-wider text-stone-400 block">HORARIO VIP</span>
+                <span class="text-stone-300 text-xs block font-medium">Lunes a Sábado: 9:30 a. m. – 8:00 p. m. (Domingos previa cita)</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-4 border-t border-[#292336] font-mono">
+            <a id="salon-maps-link" href="#" target="_blank" rel="noopener noreferrer" class="bg-[#dfcaaa] hover:bg-[#c5a880] text-stone-950 font-bold py-3 px-4 text-center text-xs uppercase tracking-wider rounded transition">
+              Google Maps ↗
+            </a>
+            <a id="salon-call-link" href="#" class="py-3 px-4 border border-[#3b3447] hover:border-[#c5a880] text-center text-xs uppercase tracking-wider text-stone-300 hover:text-white transition rounded bg-[#110f17]">
+              Llamar al salón
+            </a>
+          </div>
+        </div>
+
+        <div class="lg:col-span-7 min-h-[360px] bg-stone-950">
+          <iframe id="salon-gmap-iframe" class="w-full h-full min-h-[360px]" style="border:0;" loading="lazy" allowfullscreen src="about:blank"></iframe>
+        </div>
+      </div>
+
+      <!-- Reseñas VIP -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 font-sans">
+        <div class="bg-[#171420] border border-[#2b2537] p-6 rounded-xl space-y-3">
+          <div class="font-mono text-xs text-[#dfcaaa] flex items-center justify-between">
+            <span>★★★★★ · BALAYAGE</span>
+            <span class="text-rose-400 font-semibold text-[10px] bg-rose-950/60 px-2 py-0.5 rounded">CLIENTA VIP</span>
+          </div>
+          <p class="font-serif text-lg italic text-stone-200">"El cambio de look superó mis expectativas. Mi cabello quedó súper suave y con un brillo chocolate hermoso. ¡La mejor atención!"</p>
+          <p class="font-mono text-[11px] text-stone-500 uppercase">— Reseña verificada en Google Maps</p>
+        </div>
+
+        <div class="bg-[#171420] border border-[#2b2537] p-6 rounded-xl space-y-3">
+          <div class="font-mono text-xs text-[#dfcaaa] flex items-center justify-between">
+            <span>★★★★★ · ATENCIÓN &amp; PUNTUALIDAD</span>
+            <span class="text-rose-400 font-semibold text-[10px] bg-rose-950/60 px-2 py-0.5 rounded">CLIENTA VIP</span>
+          </div>
+          <p class="font-serif text-lg italic text-stone-200">"Agendé por WhatsApp y cuando llegué me atendieron de inmediato sin esperas. El botox capilar dejó mi cabello sin frizz."</p>
+          <p class="font-mono text-[11px] text-stone-500 uppercase">— Ficha pública Google</p>
+        </div>
+
+        <div class="bg-[#171420] border border-[#2b2537] p-6 rounded-xl space-y-3">
+          <div class="font-mono text-xs text-[#dfcaaa] flex items-center justify-between">
+            <span>★ <span id="salon-rev-rating">4.8</span> PROMEDIO</span>
+            <span class="text-rose-400 font-semibold text-[10px] bg-rose-950/60 px-2 py-0.5 rounded">CLIENTA VIP</span>
+          </div>
+          <p class="font-serif text-lg italic text-stone-200">"Ambiente moderno, música relajante y productos de primera línea. Sales sintiéndote renovada por completo."</p>
+          <p class="font-mono text-[11px] text-stone-500 uppercase">— Opinión destacada</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer Salón Editorial -->
+  <footer class="border-t border-[#24202b] py-8 px-4 text-xs text-stone-400 font-mono bg-black">
+    <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div class="flex items-center gap-3">
+        <img id="salon-footer-logo" src="/logos/p002-paolas.svg" alt="Logo de pie" class="h-8 w-auto object-contain opacity-90" />
+        <p>© 2026 <span id="salon-footer-name" class="text-white font-semibold">Salón &amp; Spa</span>. Todos los derechos reservados.</p>
+      </div>
+      <p class="text-[#dfcaaa]">Haute Coiffure &amp; Citas Concierge por WhatsApp</p>
+    </div>
+  </footer>
+</div>

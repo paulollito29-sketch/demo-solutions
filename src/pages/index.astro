@@ -3,6 +3,10 @@ import Layout from '../layouts/Layout.astro';
 import AgencyBar from '../components/AgencyBar.astro';
 import PitchModal from '../components/PitchModal.astro';
 import BennyCustomView from '../components/BennyCustomView.astro';
+import RestaurantView from '../components/RestaurantView.astro';
+import VeterinaryView from '../components/VeterinaryView.astro';
+import SalonView from '../components/SalonView.astro';
+import ClinicView from '../components/ClinicView.astro';
 
 // Componentes originales para el resto de prospectos
 import TopBar from '../components/TopBar.astro';
@@ -26,6 +30,18 @@ import Footer from '../components/Footer.astro';
   <div id="benny-prototype-view">
     <BennyCustomView />
   </div>
+
+  <!-- Vista temática gastronómica: Restaurantes y Cevicherías (Las Rejas & Mis Costillitas) -->
+  <RestaurantView />
+
+  <!-- Vista temática veterinaria y pet shops (Aristocat & Veterinaria Flores) -->
+  <VeterinaryView />
+
+  <!-- Vista temática alta peluquería y urban spa (Montalvo & Fortu Beauty) -->
+  <SalonView />
+
+  <!-- Vista temática clínica dental y estética médica (Mundo Odontic & Yamazato) -->
+  <ClinicView />
 
   <!-- Vista estándar original para todos los demás prospectos del sistema -->
   <div id="general-prototype-view" style="display: none;">

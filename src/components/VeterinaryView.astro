@@ -1,0 +1,465 @@
+---
+// VeterinaryView.astro — Vista veterinaria inspirada en Aristocat y Veterinaria Flores
+---
+
+<div id="veterinary-prototype-view" class="prototype-view" style="display: none;">
+  <!-- Barra de Urgencias Médicas 24 Horas (Estilo Aristocat & Flores) -->
+  <aside aria-label="Aviso de urgencias" class="bg-red-700 text-white text-xs font-mono py-2 px-4 shadow-md sticky top-0 z-50">
+    <div class="max-w-6xl mx-auto flex flex-wrap items-center justify-between gap-2">
+      <div class="flex items-center gap-2">
+        <span class="inline-block w-2.5 h-2.5 rounded-full bg-white animate-ping"></span>
+        <span class="font-bold tracking-wider">🚨 URGENCIAS VETERINARIAS 24 HORAS:</span>
+        <span class="hidden sm:inline text-red-100">Guardia médica activa en clínica. Si tu mascota tiene una emergencia, llámanos de inmediato.</span>
+      </div>
+      <a id="vet-top-call" href="#" class="bg-white text-red-700 hover:bg-red-50 px-3 py-0.5 rounded-full text-[11px] font-bold tracking-wider transition">
+        LLAMAR DE URGENCIA →
+      </a>
+    </div>
+  </aside>
+
+  <!-- Cabecera Médica Púrpura & Mint -->
+  <header class="border-b border-purple-900/40 bg-[#3b1259]/95 backdrop-blur-md text-white sticky top-8 z-40">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between gap-4">
+      <div class="flex items-center gap-3">
+        <div class="p-1.5 rounded-xl bg-white border border-purple-200 shadow-md flex items-center">
+          <img id="vet-nav-logo" src="/logos/p003-mikelas.svg" alt="Logotipo Oficial" class="h-10 sm:h-12 w-auto max-w-[200px] object-contain" />
+        </div>
+        <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[10px] font-mono bg-teal-950 text-teal-300 font-semibold border border-teal-700 hidden sm:inline-flex">
+          <span class="w-2 h-2 rounded-full bg-teal-400 animate-pulse"></span> Consultorio &amp; Tópico Abierto
+        </span>
+      </div>
+
+      <nav class="hidden md:flex items-center gap-6 text-xs uppercase tracking-[0.14em] font-medium text-purple-200">
+        <a href="#vet-servicios" class="hover:text-teal-300 transition-colors">Especialidades</a>
+        <a href="#vet-triaje" class="hover:text-teal-300 transition-colors">Ficha Médica Express</a>
+        <a href="#vet-tarifario" class="hover:text-teal-300 transition-colors">Tarifario de Salud</a>
+        <a href="#vet-ubicacion" class="hover:text-teal-300 transition-colors">Clínica &amp; Sede</a>
+        <a id="vet-social-pill" href="#" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-mono border border-purple-800 bg-[#4c1973] text-purple-200 hover:border-teal-400 transition">
+          <span class="w-1.5 h-1.5 rounded-full bg-teal-400"></span>
+          <span id="vet-social-text">@veterinaria</span>
+        </a>
+      </nav>
+
+      <a href="#vet-triaje" class="bg-gradient-to-r from-teal-400 to-emerald-500 hover:from-teal-500 hover:to-emerald-600 text-stone-950 font-bold px-5 py-2.5 rounded-full text-xs uppercase tracking-[0.14em] shadow-lg shadow-teal-950/40 transition">
+        <span>Agendar Cita</span>
+      </a>
+    </div>
+  </header>
+
+  <!-- Hero Veterinario Afectuoso & Profesional (Estilo Aristocat & Flores) -->
+  <section class="relative overflow-hidden bg-gradient-to-b from-[#2e0e47] via-[#3a1257] to-[#250b38] text-white border-b border-purple-900/40">
+    <div class="absolute -top-32 right-1/4 w-[500px] h-[500px] rounded-full opacity-20 pointer-events-none blur-3xl bg-teal-500"></div>
+
+    <div class="max-w-6xl mx-auto px-4 py-16 sm:py-24 relative z-10">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+        <!-- Columna Izquierda: Copy de Cuidado y Confianza UNMSM -->
+        <div class="lg:col-span-7 space-y-6">
+          <div class="flex flex-wrap items-center gap-2.5">
+            <span class="inline-flex items-center gap-2 border border-teal-400/40 px-3.5 py-1 bg-teal-950/60 rounded-full font-mono text-[11px] uppercase tracking-wider text-teal-300">
+              <span class="w-2 h-2 rounded-full bg-teal-400 animate-pulse"></span>
+              <span id="vet-hero-kicker">MÉDICOS VETERINARIOS TITULADOS UNMSM · CMVP</span>
+            </span>
+            <span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-[11px] font-mono bg-purple-900/80 text-purple-200 border border-purple-700 font-semibold">
+              🐾 Cuidado con Amor Real
+            </span>
+          </div>
+
+          <h1 class="font-serif text-4xl sm:text-6xl lg:text-[58px] font-extrabold leading-[1.06] tracking-tight text-white">
+            <span id="vet-hero-title">El bienestar de tu engreído en</span>
+            <em id="vet-hero-sub" class="font-normal italic block mt-1 text-transparent bg-clip-text bg-gradient-to-r from-teal-300 via-emerald-200 to-teal-400">Veterinaria Mikelas.</em>
+          </h1>
+
+          <!-- Lema Oficial -->
+          <blockquote class="border-l-4 border-teal-400 pl-4 py-1.5 italic font-serif text-lg sm:text-xl text-purple-100 bg-purple-950/50 rounded-r-md">
+            <span id="vet-hero-lema">«Médicos Veterinarios egresados de la UNMSM, comprometidos en velar por el bienestar de tu engreído con mucho amor en Pueblo Libre.»</span>
+          </blockquote>
+
+          <p id="vet-hero-lead" class="text-purple-200 text-base sm:text-lg leading-relaxed max-w-xl font-normal">
+            Atención clínica preventiva, vacunación séxtuple y triple felina, desparasitación completa, cirugías con anestesia inhalatoria y baños medicados en un ambiente seguro, higiénico y libre de estrés.
+          </p>
+
+          <!-- CTAs -->
+          <div class="pt-4 flex flex-wrap items-center gap-4">
+            <a href="#vet-triaje" class="bg-gradient-to-r from-teal-400 to-emerald-400 hover:from-teal-500 hover:to-emerald-500 text-stone-950 font-bold px-8 py-4 rounded-full text-xs sm:text-sm uppercase tracking-[0.15em] shadow-xl inline-flex items-center gap-3 transition transform hover:scale-[1.02]">
+              <span>Llenar Ficha Médica Express</span>
+              <span>↓</span>
+            </a>
+            <a href="#vet-tarifario" class="px-7 py-4 border border-purple-700 hover:border-teal-400 text-xs sm:text-sm uppercase tracking-[0.12em] font-medium transition bg-purple-900/60 text-purple-100 rounded-full">
+              Ver Tarifario de Salud
+            </a>
+          </div>
+
+          <!-- Métricas de Confianza Médica -->
+          <div class="grid grid-cols-3 gap-4 pt-6 border-t border-purple-900/60 font-mono">
+            <div>
+              <span class="block text-[10px] uppercase tracking-wider text-purple-300">CALIFICACIÓN</span>
+              <span class="text-lg sm:text-xl font-bold text-teal-300"><span id="vet-stat-rating">4.8</span> / 5.0 ★</span>
+            </div>
+            <div class="border-l border-purple-900/60 pl-4">
+              <span class="block text-[10px] uppercase tracking-wider text-purple-300">PACIENTES FELICES</span>
+              <span class="text-lg sm:text-xl font-bold text-white" id="vet-stat-reviews">+1,300 familias</span>
+            </div>
+            <div class="border-l border-purple-900/60 pl-4">
+              <span class="block text-[10px] uppercase tracking-wider text-purple-300">DISTRITO</span>
+              <span class="text-lg sm:text-xl font-bold text-white" id="vet-stat-zone">Pueblo Libre</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Columna Derecha: Paciente en Consulta -->
+        <div class="lg:col-span-5 relative">
+          <div class="relative rounded-3xl overflow-hidden border-2 border-purple-700/60 shadow-2xl shadow-purple-950/80 group">
+            <img id="vet-hero-photo" src="https://images.unsplash.com/photo-1583337130417-3346a1be7dee?auto=format&fit=crop&w=1200&q=85" alt="Paciente en consulta" class="w-full aspect-[4/4.8] object-cover group-hover:scale-105 transition-transform duration-700" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black via-black/30 to-transparent pointer-events-none"></div>
+
+            <div class="absolute top-4 left-4 bg-teal-600 text-stone-950 font-mono text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-full shadow-md">
+              🩺 ATENCIÓN PROFESIONAL UNMSM
+            </div>
+
+            <div class="absolute bottom-4 left-4 right-4 bg-[#2f1047]/90 backdrop-blur-md p-5 border border-purple-600/50 rounded-2xl shadow-2xl text-purple-100">
+              <div class="flex items-center justify-between">
+                <span class="font-mono text-[10px] uppercase tracking-widest text-teal-300 font-bold" id="vet-featured-label">CONSULTA COMPLETA</span>
+                <span class="font-mono text-base font-extrabold text-teal-300" id="vet-featured-price">S/ 40</span>
+              </div>
+              <h2 class="font-serif text-xl font-bold mt-1 text-white" id="vet-featured-title">Chequeo Clínico Integral</h2>
+              <p class="text-xs text-purple-200 mt-1 line-clamp-2" id="vet-featured-sub">Examen físico de cabeza a cola, signos vitales, control de peso, oídos y dentadura.</p>
+              <div class="mt-3 pt-3 border-t border-purple-800 flex items-center justify-between text-[11px] font-mono text-purple-300">
+                <span id="vet-address-caption">Pueblo Libre</span>
+                <span class="text-teal-300">Sin estrés</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cinta Ticker Veterinaria -->
+  <div class="border-b border-purple-900/40 py-3 overflow-hidden bg-[#1f0730] text-teal-300 text-[11px] font-mono uppercase tracking-[0.22em]">
+    <div class="marquee-track" id="vet-marquee-content">
+      <span class="mx-6 font-semibold">✦ MÉDICOS VETERINARIOS TITULADOS UNMSM</span>
+      <span class="mx-6 font-semibold text-white">✦ BAÑOS RELAJANTES &amp; GROOMING SIN SEDANTES</span>
+      <span class="mx-6 font-semibold text-teal-200">✦ VACUNAS &amp; DESPARASITACIÓN CON REGISTRO OFICIAL</span>
+      <span class="mx-6 font-semibold text-white">✦ CONSULTAS RÁPIDAS POR WHATSAPP</span>
+      <span class="mx-6 font-semibold">✦ FARMACIA Y PET SHOP ESPECIALIZADO</span>
+      <span class="mx-6 font-semibold text-white">✦ QUIRÓFANO Y HOSPITALIZACIÓN EQUIPADA</span>
+    </div>
+  </div>
+
+  <!-- SECCIÓN 1: WIDGET INTERACTIVO DE TRIAJE MÉDICO EXPRESS (El Corazón de Aristocat & Flores) -->
+  <section id="vet-triaje" class="py-16 sm:py-24 px-4 bg-[#f8f5fb] text-stone-900 border-b border-purple-100">
+    <div class="max-w-5xl mx-auto">
+      <div class="text-center max-w-2xl mx-auto space-y-2 mb-12">
+        <span class="font-mono text-xs uppercase tracking-[0.25em] text-[#581c87] font-bold">FICHA MÉDICA EXPRESS</span>
+        <h2 class="font-serif text-3xl sm:text-5xl font-extrabold text-stone-900">Agenda la Cita de tu Engreído</h2>
+        <p class="text-stone-600 text-sm leading-relaxed">
+          Cuéntanos sobre tu mascota para que el médico veterinario tenga su ficha lista antes de tu llegada.
+        </p>
+      </div>
+
+      <div class="bg-white border-2 border-purple-200 rounded-3xl p-6 sm:p-12 shadow-xl space-y-8">
+        <!-- Paso 1: Tipo de Mascota -->
+        <div>
+          <span class="block font-mono text-xs uppercase tracking-wider text-purple-900 font-bold mb-3">
+            PASO 1: ¿QUIÉN ES TU ENGREÍDO?
+          </span>
+          <div class="grid grid-cols-3 gap-3 font-mono text-sm">
+            <button id="vet-pet-dog" type="button" class="vet-pet-btn py-4 px-3 rounded-2xl border-2 border-purple-600 bg-purple-50 text-purple-950 font-bold flex flex-col items-center justify-center gap-2 hover:bg-purple-100 transition">
+              <span class="text-3xl">🐶</span>
+              <span>Perrito</span>
+            </button>
+            <button id="vet-pet-cat" type="button" class="vet-pet-btn py-4 px-3 rounded-2xl border-2 border-stone-200 bg-stone-50 text-stone-700 font-bold flex flex-col items-center justify-center gap-2 hover:bg-purple-50 hover:border-purple-300 transition">
+              <span class="text-3xl">🐱</span>
+              <span>Gatito</span>
+            </button>
+            <button id="vet-pet-other" type="button" class="vet-pet-btn py-4 px-3 rounded-2xl border-2 border-stone-200 bg-stone-50 text-stone-700 font-bold flex flex-col items-center justify-center gap-2 hover:bg-purple-50 hover:border-purple-300 transition">
+              <span class="text-3xl">🐰</span>
+              <span>Exótico / Otro</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Paso 2: Datos del Paciente -->
+        <div>
+          <span class="block font-mono text-xs uppercase tracking-wider text-purple-900 font-bold mb-3">
+            PASO 2: DATOS DEL PACIENTE
+          </span>
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 font-mono text-xs">
+            <div>
+              <label for="vet-patient-name" class="block text-stone-500 uppercase tracking-wider mb-1">Nombre de la Mascota</label>
+              <input id="vet-patient-name" type="text" placeholder="Ej. Toby / Luna" class="w-full bg-stone-50 border border-stone-300 rounded-xl px-4 py-3 text-stone-900 focus:outline-none focus:border-purple-600 font-sans text-sm" />
+            </div>
+            <div>
+              <label for="vet-patient-age" class="block text-stone-500 uppercase tracking-wider mb-1">Edad Aproximada</label>
+              <input id="vet-patient-age" type="text" placeholder="Ej. 2 años / 6 meses" class="w-full bg-stone-50 border border-stone-300 rounded-xl px-4 py-3 text-stone-900 focus:outline-none focus:border-purple-600 font-sans text-sm" />
+            </div>
+            <div>
+              <label for="vet-tutor-name" class="block text-stone-500 uppercase tracking-wider mb-1">Nombre del Tutor / Dueño</label>
+              <input id="vet-tutor-name" type="text" placeholder="Tu nombre" class="w-full bg-stone-50 border border-stone-300 rounded-xl px-4 py-3 text-stone-900 focus:outline-none focus:border-purple-600 font-sans text-sm" />
+            </div>
+          </div>
+        </div>
+
+        <!-- Paso 3: Motivo de la Consulta -->
+        <div>
+          <span class="block font-mono text-xs uppercase tracking-wider text-purple-900 font-bold mb-3">
+            PASO 3: MOTIVO DE ATENCIÓN
+          </span>
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 text-xs font-mono">
+            <label class="flex items-center gap-3 p-3.5 rounded-xl border border-stone-200 bg-stone-50 hover:bg-purple-50 cursor-pointer transition">
+              <input type="radio" name="vet-reason" value="Consulta Médica General" checked class="w-4 h-4 text-purple-600" />
+              <div>
+                <span class="font-bold text-stone-900 block">🩺 Consulta Médica General</span>
+                <span class="text-stone-500 text-[11px] font-sans">Chequeo, inapetencia, malestar</span>
+              </div>
+            </label>
+
+            <label class="flex items-center gap-3 p-3.5 rounded-xl border border-stone-200 bg-stone-50 hover:bg-purple-50 cursor-pointer transition">
+              <input type="radio" name="vet-reason" value="Vacunas y Desparasitación" class="w-4 h-4 text-purple-600" />
+              <div>
+                <span class="font-bold text-stone-900 block">💉 Vacunación &amp; Parásitos</span>
+                <span class="text-stone-500 text-[11px] font-sans">Triple, Séxtuple, Antirrábica</span>
+              </div>
+            </label>
+
+            <label class="flex items-center gap-3 p-3.5 rounded-xl border border-stone-200 bg-stone-50 hover:bg-purple-50 cursor-pointer transition">
+              <input type="radio" name="vet-reason" value="Baño Medicado y Grooming" class="w-4 h-4 text-purple-600" />
+              <div>
+                <span class="font-bold text-stone-900 block">🛁 Baño Medicado &amp; Spa</span>
+                <span class="text-stone-500 text-[11px] font-sans">Dermatológico, corte higiénico</span>
+              </div>
+            </label>
+
+            <label class="flex items-center gap-3 p-3.5 rounded-xl border border-stone-200 bg-stone-50 hover:bg-purple-50 cursor-pointer transition">
+              <input type="radio" name="vet-reason" value="Profilaxis Dental" class="w-4 h-4 text-purple-600" />
+              <div>
+                <span class="font-bold text-stone-900 block">🦷 Profilaxis Dental</span>
+                <span class="text-stone-500 text-[11px] font-sans">Limpieza de sarro por ultrasonido</span>
+              </div>
+            </label>
+
+            <label class="flex items-center gap-3 p-3.5 rounded-xl border border-stone-200 bg-stone-50 hover:bg-purple-50 cursor-pointer transition">
+              <input type="radio" name="vet-reason" value="Cirugía o Esterilización" class="w-4 h-4 text-purple-600" />
+              <div>
+                <span class="font-bold text-stone-900 block">🏥 Cirugía / Esterilización</span>
+                <span class="text-stone-500 text-[11px] font-sans">Con anestesia inhalatoria segura</span>
+              </div>
+            </label>
+
+            <label class="flex items-center gap-3 p-3.5 rounded-xl border border-red-300 bg-red-50 hover:bg-red-100 cursor-pointer transition">
+              <input type="radio" name="vet-reason" value="Urgencia Médica Inmediata" class="w-4 h-4 text-red-600" />
+              <div>
+                <span class="font-bold text-red-900 block">🚨 Urgencia Inmediata</span>
+                <span class="text-red-700 text-[11px] font-sans">Atención prioritaria inmediata</span>
+              </div>
+            </label>
+          </div>
+        </div>
+
+        <!-- Paso 4: Botón WhatsApp -->
+        <div class="pt-4 border-t border-purple-100 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <div class="text-xs text-stone-500 font-mono">
+            <span>✓ Ficha enviada directamente al médico de turno</span>
+            <span class="block text-purple-900 font-bold mt-0.5">Sin tiempos de espera innecesarios en sala</span>
+          </div>
+
+          <button id="btn-vet-send-whatsapp" type="button" class="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-[#581c87] to-[#7e22ce] hover:from-[#4c1973] hover:to-[#6b21a8] text-white font-bold font-mono text-xs uppercase tracking-[0.16em] rounded-full shadow-lg shadow-purple-900/30 flex items-center justify-center gap-3 cursor-pointer transition transform hover:scale-[1.02]">
+            <span>🐾 Enviar Ficha a WhatsApp</span>
+            <span>→</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECCIÓN 2: PILARES CLÍNICOS & ESPECIALIDADES (Estilo Aristocat) -->
+  <section id="vet-servicios" class="py-16 sm:py-24 px-4 bg-white text-stone-900 border-b border-purple-100">
+    <div class="max-w-6xl mx-auto space-y-12">
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
+        <div>
+          <span class="font-mono text-xs uppercase tracking-[0.25em] text-teal-600 font-bold">HOSPITAL &amp; CONSULTORIOS</span>
+          <h2 class="font-serif text-3xl sm:text-5xl font-extrabold text-stone-900 mt-1">Especialidades Médicas</h2>
+        </div>
+        <p class="text-stone-600 text-sm max-w-md">
+          Infraestructura médica completa diseñada para diagnósticos certeros y tratamientos compasivos.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+        <!-- Pilar 1 -->
+        <div class="p-6 rounded-2xl border-2 border-stone-100 hover:border-purple-300 bg-purple-50/40 transition space-y-4">
+          <div class="w-12 h-12 rounded-xl bg-purple-600 text-white flex items-center justify-center text-2xl shadow-md">
+            🩺
+          </div>
+          <h3 class="font-serif text-xl font-bold text-stone-900">Medicina General &amp; Vacunatorio</h3>
+          <p class="text-xs text-stone-600 leading-relaxed">
+            Esquemas completos de vacunación con carnet oficial, desparasitación interna/externa y descarte de enfermedades virales.
+          </p>
+        </div>
+
+        <!-- Pilar 2 -->
+        <div class="p-6 rounded-2xl border-2 border-stone-100 hover:border-teal-300 bg-teal-50/40 transition space-y-4">
+          <div class="w-12 h-12 rounded-xl bg-teal-600 text-white flex items-center justify-center text-2xl shadow-md">
+            🏥
+          </div>
+          <h3 class="font-serif text-xl font-bold text-stone-900">Cirugía &amp; Quirófano</h3>
+          <p class="text-xs text-stone-600 leading-relaxed">
+            Esterilizaciones y cirugías de tejidos blandos monitoreadas con anestesia inhalatoria y oxigenoterapia para máxima seguridad.
+          </p>
+        </div>
+
+        <!-- Pilar 3 -->
+        <div class="p-6 rounded-2xl border-2 border-stone-100 hover:border-purple-300 bg-purple-50/40 transition space-y-4">
+          <div class="w-12 h-12 rounded-xl bg-purple-600 text-white flex items-center justify-center text-2xl shadow-md">
+            🛁
+          </div>
+          <h3 class="font-serif text-xl font-bold text-stone-900">Grooming Spa &amp; Baño Medicado</h3>
+          <p class="text-xs text-stone-600 leading-relaxed">
+            Tratamientos antipulgas, baños con shampoo medicado para dermatitis, corte de uñas y limpieza de oídos sin uso de sedantes.
+          </p>
+        </div>
+
+        <!-- Pilar 4 -->
+        <div class="p-6 rounded-2xl border-2 border-stone-100 hover:border-teal-300 bg-teal-50/40 transition space-y-4">
+          <div class="w-12 h-12 rounded-xl bg-teal-600 text-white flex items-center justify-center text-2xl shadow-md">
+            🔬
+          </div>
+          <h3 class="font-serif text-xl font-bold text-stone-900">Laboratorio &amp; Ecografía</h3>
+          <p class="text-xs text-stone-600 leading-relaxed">
+            Hemogramas en minutos, perfiles bioquímicos prequirúrgicos y ecografía abdominal para un diagnóstico clínico inmediato.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECCIÓN 3: TARIFARIO TRANSPARENTE DE SALUD -->
+  <section id="vet-tarifario" class="py-16 sm:py-24 px-4 bg-[#fbf9fd] text-stone-900 border-b border-purple-100">
+    <div class="max-w-6xl mx-auto">
+      <div class="flex flex-col md:flex-row md:items-end justify-between pb-8 border-b border-purple-200 gap-4">
+        <div>
+          <span class="font-mono text-xs uppercase tracking-[0.2em] text-[#581c87] font-bold">PRECIOS CLAROS Y TRANSPARENTES</span>
+          <h2 class="font-serif text-3xl sm:text-5xl font-extrabold text-stone-900 mt-1">Tarifario de Servicios Médicos</h2>
+        </div>
+        <div id="vet-category-tabs" class="flex flex-wrap gap-2">
+          <!-- Pestañas de categorías inyectadas por JS -->
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 pt-10 items-start">
+        <div class="lg:col-span-8">
+          <div id="vet-services-list" class="divide-y divide-purple-100 border-t border-purple-200">
+            <!-- Inyectado por JS -->
+          </div>
+        </div>
+
+        <!-- Tarjeta de Confianza Médica y Contacto -->
+        <div class="lg:col-span-4 bg-white border-2 border-purple-300 p-6 sm:p-8 rounded-2xl shadow-lg space-y-4">
+          <div class="border-b border-purple-100 pb-4">
+            <span class="font-mono text-[10px] uppercase tracking-wider text-teal-600 font-bold">GARANTÍA CLÍNICA</span>
+            <h3 class="font-serif text-xl font-bold text-purple-950 mt-1">Atención Médica Colegiada</h3>
+            <p class="text-xs text-stone-600 mt-1">Egresados de la Universidad Nacional Mayor de San Marcos con colegiatura activa CMVP.</p>
+          </div>
+
+          <div class="space-y-3 text-xs font-mono">
+            <div class="p-3 bg-purple-50 rounded-xl">
+              <span class="text-purple-900 font-bold block">CONSULTORIO VETERINARIO:</span>
+              <span id="vet-ticket-name" class="text-stone-700">Veterinaria Mikelas</span>
+            </div>
+            <div class="p-3 bg-teal-50 rounded-xl">
+              <span class="text-teal-900 font-bold block">WHATSAPP / URGENCIAS:</span>
+              <span id="vet-ticket-phone" class="text-stone-700 font-bold">Teléfono</span>
+            </div>
+          </div>
+
+          <a href="#vet-triaje" class="block text-center py-3.5 bg-gradient-to-r from-[#581c87] to-[#7e22ce] text-white font-bold font-mono text-xs uppercase tracking-wider rounded-xl transition hover:brightness-110 shadow-md">
+            Llenar Ficha del Paciente
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECCIÓN 4: CLÍNICA, SEDE & MAPA -->
+  <section id="vet-ubicacion" class="py-16 sm:py-24 px-4 bg-white text-stone-900 border-b border-purple-100">
+    <div class="max-w-6xl mx-auto space-y-12">
+      <div class="grid grid-cols-1 lg:grid-cols-12 border-2 border-purple-200 rounded-3xl overflow-hidden bg-purple-50/30">
+        <div class="lg:col-span-5 p-6 sm:p-10 flex flex-col justify-between space-y-6 border-b lg:border-b-0 lg:border-r border-purple-200">
+          <div class="space-y-4">
+            <span class="font-mono text-xs uppercase tracking-[0.2em] text-[#581c87] font-bold">SEDE DE ATENCIÓN</span>
+            <h3 id="vet-loc-name" class="font-serif text-3xl sm:text-4xl font-extrabold text-stone-900">Veterinaria Mikelas</h3>
+
+            <div class="space-y-3 pt-2 text-sm">
+              <div>
+                <span class="font-mono text-[10px] uppercase tracking-wider text-stone-500 block">DIRECCIÓN DE LA CLÍNICA</span>
+                <span id="vet-loc-address" class="text-stone-800 font-medium">Jr. Cádiz 490 - 494, Pueblo Libre</span>
+              </div>
+              <div>
+                <span class="font-mono text-[10px] uppercase tracking-wider text-stone-500 block">TELÉFONO DE CONSULTORIO</span>
+                <span id="vet-loc-phone" class="font-mono text-[#581c87] font-bold text-base">Teléfono</span>
+              </div>
+              <div>
+                <span class="font-mono text-[10px] uppercase tracking-wider text-stone-500 block">HORARIOS</span>
+                <span class="text-stone-700 text-xs block font-medium">Lunes a Sábado: 8:30 a. m. – 8:00 p. m. · Domingos y Feriados con guardia</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-4 border-t border-purple-200 font-mono">
+            <a id="vet-maps-link" href="#" target="_blank" rel="noopener noreferrer" class="bg-[#581c87] hover:bg-[#4c1973] text-white font-bold py-3 px-4 text-center text-xs uppercase tracking-wider rounded-xl transition">
+              Google Maps ↗
+            </a>
+            <a id="vet-call-link" href="#" class="py-3 px-4 border border-purple-300 hover:border-purple-600 text-center text-xs uppercase tracking-wider text-purple-950 font-bold transition rounded-xl bg-white">
+              Llamar a Consultorio
+            </a>
+          </div>
+        </div>
+
+        <div class="lg:col-span-7 min-h-[360px] bg-stone-100">
+          <iframe id="vet-gmap-iframe" class="w-full h-full min-h-[360px]" style="border:0;" loading="lazy" allowfullscreen src="about:blank"></iframe>
+        </div>
+      </div>
+
+      <!-- Reseñas Familiares -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 font-sans">
+        <div class="bg-purple-50/50 border border-purple-100 p-6 rounded-2xl space-y-3">
+          <div class="font-mono text-xs text-[#581c87] flex items-center justify-between">
+            <span>★★★★★ · ATENCIÓN MÉDICA</span>
+            <span class="text-teal-700 font-semibold text-[10px] bg-teal-100 px-2 py-0.5 rounded">FAMILIA VERIFICADA</span>
+          </div>
+          <p class="font-serif text-lg italic text-stone-800">"Traje a mi perrita de urgencia un domingo y la salvaron. La calidad humana y el profesionalismo de los veterinarios de San Marcos no tiene comparación."</p>
+          <p class="font-mono text-[11px] text-stone-500 uppercase">— Paciente habitual en Google</p>
+        </div>
+
+        <div class="bg-purple-50/50 border border-purple-100 p-6 rounded-2xl space-y-3">
+          <div class="font-mono text-xs text-[#581c87] flex items-center justify-between">
+            <span>★★★★★ · BAÑO SIN ESTRÉS</span>
+            <span class="text-teal-700 font-semibold text-[10px] bg-teal-100 px-2 py-0.5 rounded">FAMILIA VERIFICADA</span>
+          </div>
+          <p class="font-serif text-lg italic text-stone-800">"El servicio de baño medicado es impecable. Tratan a los perritos con mucho cariño y paciencia, jamás los sedan. 100% recomendado."</p>
+          <p class="font-mono text-[11px] text-stone-500 uppercase">— Ficha pública Google</p>
+        </div>
+
+        <div class="bg-purple-50/50 border border-purple-100 p-6 rounded-2xl space-y-3">
+          <div class="font-mono text-xs text-[#581c87] flex items-center justify-between">
+            <span>★ <span id="vet-rev-rating">4.8</span> PROMEDIO</span>
+            <span class="text-teal-700 font-semibold text-[10px] bg-teal-100 px-2 py-0.5 rounded">FAMILIA VERIFICADA</span>
+          </div>
+          <p class="font-serif text-lg italic text-stone-800">"Instalaciones limpias, sin olores fuertes, y precios justos sin sorpresas. Es la veterinaria de confianza para toda mi familia."</p>
+          <p class="font-mono text-[11px] text-stone-500 uppercase">— Reseña 5 estrellas</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer Veterinario -->
+  <footer class="border-t border-purple-900/40 py-8 px-4 text-xs text-purple-300 font-mono bg-[#1f0730]">
+    <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div class="flex items-center gap-3">
+        <img id="vet-footer-logo" src="/logos/p003-mikelas.svg" alt="Logo de pie" class="h-8 w-auto object-contain bg-white rounded p-1" />
+        <p>© 2026 <span id="vet-footer-name" class="text-white font-semibold">Veterinaria</span>. Médicos Veterinarios UNMSM.</p>
+      </div>
+      <p class="text-teal-300">Medicina Veterinaria Preventiva &amp; Citas por WhatsApp</p>
+    </div>
+  </footer>
+</div>

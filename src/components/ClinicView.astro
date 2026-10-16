@@ -1,0 +1,464 @@
+---
+// ClinicView.astro — Vista clínica y dental inspirada en centros odontológicos de prestigio
+---
+
+<div id="clinic-prototype-view" class="prototype-view" style="display: none;">
+  <!-- Cintillo de Bioseguridad y Respaldo COP -->
+  <div class="bg-cyan-950 text-cyan-100 text-[11px] font-mono py-1.5 px-4 border-b border-cyan-900">
+    <div class="max-w-6xl mx-auto flex flex-wrap items-center justify-between gap-2">
+      <div class="flex items-center gap-2">
+        <span class="inline-block w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></span>
+        <span>Especialistas Colegiados COP · Bioseguridad Hospitalaria Clase B · Esterilización Digital</span>
+      </div>
+      <div class="flex items-center gap-4">
+        <span>Urgencias &amp; Consultas: <strong id="clinic-top-phone" class="text-white">Teléfono</strong></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Cabecera Odontológica / Clínica -->
+  <header class="border-b hairline-border sticky top-0 z-40 bg-[var(--bg-main)]/95 backdrop-blur-md">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between gap-4">
+      <div class="flex items-center gap-3">
+        <img id="clinic-nav-logo" src="/logos/p137-mundo-odontic.svg" alt="Logotipo Oficial" class="h-10 sm:h-12 w-auto max-w-[240px] object-contain" />
+        <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[10px] font-mono bg-cyan-100/90 text-cyan-800 font-semibold border border-cyan-300 hidden sm:inline-flex">
+          <span class="w-2 h-2 rounded-full bg-cyan-500"></span> Citas Médicas Hoy
+        </span>
+      </div>
+
+      <nav class="hidden md:flex items-center gap-6 text-xs uppercase tracking-[0.14em] font-medium text-stone-600">
+        <a href="#clinic-especialidades" class="hover:text-[var(--accent)] transition-colors">Especialidades</a>
+        <a href="#clinic-tecnologia" class="hover:text-[var(--accent)] transition-colors">Bioseguridad</a>
+        <a href="#clinic-tarifario" class="hover:text-[var(--accent)] transition-colors">Tarifario</a>
+        <a href="#clinic-ubicacion" class="hover:text-[var(--accent)] transition-colors">Sede</a>
+        <a id="clinic-social-pill" href="#" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-mono border hairline-border bg-[var(--bg-alt)] hover:border-stone-800 transition">
+          <span class="w-1.5 h-1.5 rounded-full bg-[var(--accent)]"></span>
+          <span id="clinic-social-text">@odontologia</span>
+        </a>
+      </nav>
+
+      <a href="#clinic-tarifario" class="btn-editorial px-5 py-2.5 text-xs uppercase tracking-[0.12em] font-semibold">
+        <span>Agendar Consulta</span>
+      </a>
+    </div>
+  </header>
+
+  <!-- Hero Odontológico / Clínico -->
+  <section class="border-b hairline-border relative overflow-hidden bg-gradient-to-b from-[var(--bg-main)] to-[var(--bg-alt)]/40">
+    <div class="absolute -top-32 -right-32 w-[420px] h-[420px] rounded-full opacity-25 pointer-events-none blur-3xl bg-[var(--accent)]"></div>
+
+    <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-12 relative z-10">
+      <!-- Columna Izquierda -->
+      <div class="lg:col-span-7 p-6 sm:p-10 lg:p-14 flex flex-col justify-between border-b lg:border-b-0 lg:border-r hairline-border">
+        <div class="space-y-6">
+          <div class="flex flex-wrap items-center gap-2.5">
+            <span class="inline-flex items-center gap-2 border hairline-border px-3 py-1 bg-white rounded-full font-mono text-[11px] uppercase tracking-wider text-stone-800 shadow-2xs">
+              <span class="w-2 h-2 rounded-full bg-[var(--accent)]"></span>
+              <span id="clinic-hero-kicker">CENTRO CLÍNICO ESPECIALIZADO</span>
+            </span>
+            <span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-[11px] font-mono bg-cyan-100 text-cyan-900 border border-cyan-300 font-semibold">
+              ✦ Diagnóstico Digital 3D
+            </span>
+          </div>
+
+          <h1 class="font-serif text-4xl sm:text-6xl lg:text-[58px] font-semibold leading-[1.04] tracking-tight text-[var(--ink)]">
+            <span id="clinic-hero-title">Tu salud y sonrisa en manos de</span>
+            <em id="clinic-hero-sub" class="font-normal italic block mt-1 text-[var(--accent)]">Mundo Odontic.</em>
+          </h1>
+
+          <blockquote class="border-l-3 border-[var(--accent)] pl-4 py-1 italic font-serif text-lg sm:text-xl text-stone-800 bg-white/60 rounded-r-md">
+            <span id="clinic-hero-lema">«Expertos en ortodoncia, rehabilitación oral y estética dental con tecnología de vanguardia y atención personalizada.»</span>
+          </blockquote>
+
+          <p id="clinic-hero-lead" class="text-stone-600 text-base sm:text-lg leading-relaxed max-w-xl font-normal">
+            Tratamientos indoloros guiados con tecnología digital, instrumental esterilizado bajo norma hospitalaria y especialistas de postgrado. Revisa nuestro tarifario y asegura tu evaluación.
+          </p>
+        </div>
+
+        <div class="pt-8 mt-8 border-t hairline-border space-y-6">
+          <div class="flex flex-wrap items-center gap-3">
+            <a href="#clinic-tarifario" class="btn-editorial px-7 py-4 text-xs sm:text-sm uppercase tracking-[0.14em] font-semibold inline-flex items-center gap-3 shadow-md">
+              <span>Ver Tarifario &amp; Agendar</span>
+              <span>↓</span>
+            </a>
+            <a href="#clinic-ubicacion" class="px-6 py-4 border hairline-border hover:border-stone-900 text-xs sm:text-sm uppercase tracking-[0.12em] font-medium transition bg-white/80">
+              Ubicación de la Clínica
+            </a>
+          </div>
+
+          <!-- Ficha de Confianza Médica -->
+          <div class="grid grid-cols-3 gap-4 pt-2 font-mono">
+            <div>
+              <span class="block text-[10px] uppercase tracking-wider text-stone-500">CALIFICACIÓN</span>
+              <span class="text-base sm:text-lg font-semibold"><span id="clinic-stat-rating">4.8</span> / 5.0 ★</span>
+            </div>
+            <div class="border-l hairline-border pl-4">
+              <span class="block text-[10px] uppercase tracking-wider text-stone-500">PACIENTES</span>
+              <span class="text-base sm:text-lg font-semibold" id="clinic-stat-reviews">+1,000 atendidos</span>
+            </div>
+            <div class="border-l hairline-border pl-4">
+              <span class="block text-[10px] uppercase tracking-wider text-stone-500">DISTRITO</span>
+              <span class="text-base sm:text-lg font-semibold" id="clinic-stat-zone">Jesús María</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Columna Derecha: Foto de la Clínica / Tratamiento -->
+      <div class="lg:col-span-5 flex flex-col justify-between bg-surface-alt">
+        <div class="relative aspect-[4/4.8] w-full overflow-hidden border-b hairline-border group">
+          <img id="clinic-hero-photo" src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1200&q=85" alt="Clínica y Especialistas" class="w-full h-full object-cover contrast-[1.03] transition-transform duration-700 group-hover:scale-105" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none"></div>
+
+          <div class="absolute bottom-4 left-4 right-4 bg-white/95 backdrop-blur-md p-4 border hairline-border shadow-xl rounded-sm">
+            <div class="flex items-center justify-between">
+              <span class="font-mono text-[10px] uppercase tracking-widest text-stone-500 font-bold" id="clinic-featured-label">TRATAMIENTO ESTRELLA</span>
+              <span class="font-mono text-sm font-semibold text-[var(--accent)]" id="clinic-featured-price">S/ 180</span>
+            </div>
+            <h4 class="font-serif text-lg font-semibold text-stone-900 mt-1" id="clinic-featured-title">Limpieza Profunda Ultrasónica + Profilaxis</h4>
+            <p class="text-xs text-stone-600 mt-0.5" id="clinic-featured-sub">Eliminación completa de sarro y pulido dental sin dolor ni sensibilidad.</p>
+          </div>
+        </div>
+
+        <div class="p-4 sm:p-6 bg-white flex items-center justify-between text-xs font-mono">
+          <div class="flex items-center gap-2">
+            <span class="w-2 h-2 rounded-full bg-cyan-600"></span>
+            <span id="clinic-address-caption" class="text-stone-700 truncate max-w-[280px]">Av. Arnaldo Márquez 1234</span>
+          </div>
+          <span class="text-[var(--accent)] font-semibold">Citas Programadas →</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4 Especialidades Médicas -->
+  <section id="clinic-especialidades" class="border-b hairline-border py-16 px-4 bg-white">
+    <div class="max-w-6xl mx-auto space-y-12">
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
+        <div>
+          <span class="font-mono text-xs uppercase tracking-[0.2em] text-[var(--accent)] font-semibold block mb-1">
+            EXCELENCIA MÉDICA Y PRECISIÓN
+          </span>
+          <h2 class="font-serif text-3xl sm:text-4xl text-stone-900 font-semibold">
+            Nuestras Principales Especialidades
+          </h2>
+        </div>
+        <p class="text-stone-600 text-sm max-w-md">
+          Atención integral con especialistas dedicados en cada rama para garantizar resultados duraderos, estéticos y funcionales.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- Tarjeta 1: Ortodoncia -->
+        <div class="border hairline-border p-6 rounded-sm bg-gradient-to-b from-stone-50/50 to-white hover:border-[var(--accent)] transition-all group hover:shadow-lg">
+          <div class="w-12 h-12 rounded-full bg-cyan-100 flex items-center justify-center text-2xl mb-4 group-hover:scale-110 transition-transform">
+            🦷
+          </div>
+          <span class="font-mono text-[10px] text-cyan-800 uppercase tracking-widest font-semibold block mb-1">ALINEACIÓN PERFECTA</span>
+          <h3 class="font-serif text-lg font-semibold text-stone-900 mb-2">Ortodoncia &amp; Brackets</h3>
+          <p class="text-xs text-stone-600 leading-relaxed">
+            Brackets metálicos, estéticos de zafiro y autoligado rápido. Corrige tu mordida y alinea tu sonrisa sin molestias innecesarias.
+          </p>
+          <div class="mt-4 pt-3 border-t hairline-border flex items-center justify-between text-xs font-mono">
+            <span class="text-stone-500">Evaluación inicial</span>
+            <span class="font-semibold text-[var(--accent)]">Desde S/ 150/mes</span>
+          </div>
+        </div>
+
+        <!-- Tarjeta 2: Estética y Blanqueamiento -->
+        <div class="border hairline-border p-6 rounded-sm bg-gradient-to-b from-stone-50/50 to-white hover:border-[var(--accent)] transition-all group hover:shadow-lg">
+          <div class="w-12 h-12 rounded-full bg-amber-100 flex items-center justify-center text-2xl mb-4 group-hover:scale-110 transition-transform">
+            ✨
+          </div>
+          <span class="font-mono text-[10px] text-amber-800 uppercase tracking-widest font-semibold block mb-1">BRILLO NATURAL</span>
+          <h3 class="font-serif text-lg font-semibold text-stone-900 mb-2">Estética &amp; Blanqueamiento</h3>
+          <p class="text-xs text-stone-600 leading-relaxed">
+            Blanqueamiento LED en 1 sola sesión de 45 min y carillas de resina de alta estética. Recupera el tono blanco natural sin dañar tu esmalte.
+          </p>
+          <div class="mt-4 pt-3 border-t hairline-border flex items-center justify-between text-xs font-mono">
+            <span class="text-stone-500">1 Sesión completa</span>
+            <span class="font-semibold text-[var(--accent)]">Desde S/ 250</span>
+          </div>
+        </div>
+
+        <!-- Tarjeta 3: Implantes & Cirugía -->
+        <div class="border hairline-border p-6 rounded-sm bg-gradient-to-b from-stone-50/50 to-white hover:border-[var(--accent)] transition-all group hover:shadow-lg">
+          <div class="w-12 h-12 rounded-full bg-emerald-100 flex items-center justify-center text-2xl mb-4 group-hover:scale-110 transition-transform">
+            🩺
+          </div>
+          <span class="font-mono text-[10px] text-emerald-800 uppercase tracking-widest font-semibold block mb-1">REHABILITACIÓN ORAL</span>
+          <h3 class="font-serif text-lg font-semibold text-stone-900 mb-2">Implantes &amp; Cirugía</h3>
+          <p class="text-xs text-stone-600 leading-relaxed">
+            Implantes de titanio grado quirúrgico, extracción indolora de terceros molares y coronas de circonio de máxima resistencia.
+          </p>
+          <div class="mt-4 pt-3 border-t hairline-border flex items-center justify-between text-xs font-mono">
+            <span class="text-stone-500">Titanio garantizado</span>
+            <span class="font-semibold text-[var(--accent)]">Diagnóstico 3D</span>
+          </div>
+        </div>
+
+        <!-- Tarjeta 4: Cuidado Integral -->
+        <div class="border hairline-border p-6 rounded-sm bg-gradient-to-b from-stone-50/50 to-white hover:border-[var(--accent)] transition-all group hover:shadow-lg">
+          <div class="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center text-2xl mb-4 group-hover:scale-110 transition-transform">
+            🛡️
+          </div>
+          <span class="font-mono text-[10px] text-blue-800 uppercase tracking-widest font-semibold block mb-1">PREVENCIÓN Y SALUD</span>
+          <h3 class="font-serif text-lg font-semibold text-stone-900 mb-2">Odontología Integral</h3>
+          <p class="text-xs text-stone-600 leading-relaxed">
+            Limpieza ultrasónica, curaciones estéticas con resina 3M, endodoncia mecanizada y atención odontopediátrica con trato cariñoso.
+          </p>
+          <div class="mt-4 pt-3 border-t hairline-border flex items-center justify-between text-xs font-mono">
+            <span class="text-stone-500">Toda la familia</span>
+            <span class="font-semibold text-[var(--accent)]">Desde S/ 80</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tecnología & Protocolos de Bioseguridad -->
+  <section id="clinic-tecnologia" class="border-b hairline-border py-12 px-4 bg-[var(--bg-alt)]/60">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center max-w-2xl mx-auto mb-10">
+        <span class="font-mono text-[11px] uppercase tracking-widest text-[var(--accent)] font-semibold">
+          SEGURIDAD CLÍNICA COMPROBADA
+        </span>
+        <h3 class="font-serif text-2xl sm:text-3xl text-stone-900 font-semibold mt-1">
+          ¿Por qué confiar tu salud en nuestro equipo?
+        </h3>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="bg-white p-5 rounded-sm border hairline-border shadow-xs">
+          <span class="text-2xl block mb-2">🔬</span>
+          <h4 class="font-serif text-base font-semibold text-stone-900 mb-1">Radiografía Digital</h4>
+          <p class="text-xs text-stone-600">80% menos radiación y diagnóstico visual inmediato en pantalla con el paciente.</p>
+        </div>
+
+        <div class="bg-white p-5 rounded-sm border hairline-border shadow-xs">
+          <span class="text-2xl block mb-2">♨️</span>
+          <h4 class="font-serif text-base font-semibold text-stone-900 mb-1">Autoclave Clase B</h4>
+          <p class="text-xs text-stone-600">Esterilización hospitalaria con sobres individuales abiertos frente a ti en cada cita.</p>
+        </div>
+
+        <div class="bg-white p-5 rounded-sm border hairline-border shadow-xs">
+          <span class="text-2xl block mb-2">🕊️</span>
+          <h4 class="font-serif text-base font-semibold text-stone-900 mb-1">Tratamientos Sin Dolor</h4>
+          <p class="text-xs text-stone-600">Anestesia tópica previa de alta eficacia y ultrasonido para cero molestias en tu sesión.</p>
+        </div>
+
+        <div class="bg-white p-5 rounded-sm border hairline-border shadow-xs">
+          <span class="text-2xl block mb-2">💳</span>
+          <h4 class="font-serif text-base font-semibold text-stone-900 mb-1">Facilidades de Pago</h4>
+          <p class="text-xs text-stone-600">Aceptamos todas las tarjetas, pagos fraccionados por cita y transferencias directas.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tarifario & Agenda Interactiva -->
+  <section id="clinic-tarifario" class="border-b hairline-border py-16 px-4 bg-[var(--bg-main)]">
+    <div class="max-w-6xl mx-auto space-y-10">
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
+        <div>
+          <span class="font-mono text-xs uppercase tracking-[0.2em] text-[var(--accent)] font-semibold block mb-1">
+            TARIFARIO CLÍNICO TRANSPARENTE
+          </span>
+          <h2 class="font-serif text-3xl sm:text-4xl text-stone-900 font-semibold">
+            Consulta los Precios y Arma tu Cita
+          </h2>
+        </div>
+        <p class="text-stone-600 text-sm max-w-md">
+          Selecciona los procedimientos que deseas realizarte. Tu presupuesto se calcula al instante y puedes coordinar día y hora por WhatsApp.
+        </p>
+      </div>
+
+      <!-- Filtros de Categoría -->
+      <div class="flex flex-wrap items-center gap-2 border-b hairline-border pb-4" id="clinic-category-tabs">
+        <!-- Renderizado dinámico de categorías -->
+      </div>
+
+      <!-- Grid de Servicios & Ticket Lateral -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        <!-- Catálogo de Tratamientos -->
+        <div class="lg:col-span-8 space-y-4">
+          <div id="clinic-services-list" class="divide-y hairline-border border-t hairline-border">
+            <!-- Inyectado por JS -->
+          </div>
+        </div>
+
+        <!-- Presupuesto / Ficha de Consulta -->
+        <div class="lg:col-span-4 sticky top-20">
+          <div class="border hairline-border bg-white rounded-sm p-6 shadow-md space-y-5">
+            <div class="border-b hairline-border pb-3 flex items-start justify-between">
+              <div>
+                <span class="font-mono text-[10px] uppercase tracking-widest text-[var(--accent)] font-semibold block">FICHA DE ATENCIÓN</span>
+                <h3 class="font-serif text-xl font-semibold text-stone-900">Tu Cita Médica</h3>
+              </div>
+              <span id="clinic-cart-count-badge" class="font-mono text-xs px-2.5 py-1 bg-cyan-950 text-white font-semibold">0 servicios</span>
+            </div>
+
+            <!-- Datos del Paciente -->
+            <div class="space-y-3 font-mono text-xs">
+              <div>
+                <label for="clinic-client-name" class="block text-stone-600 mb-1">NOMBRE DEL PACIENTE:</label>
+                <input id="clinic-client-name" type="text" placeholder="Ej: Patricia Morales" class="w-full px-3 py-2 border hairline-border text-xs rounded-xs focus:border-[var(--accent)] outline-none" />
+              </div>
+              <div class="grid grid-cols-2 gap-2">
+                <div>
+                  <label for="clinic-client-day" class="block text-stone-600 mb-1">DÍA PREFERIDO:</label>
+                  <select id="clinic-client-day" class="w-full px-2 py-2 border hairline-border text-xs rounded-xs focus:border-[var(--accent)] outline-none bg-white">
+                    <option value="Para hoy">Para hoy</option>
+                    <option value="Para mañana">Para mañana</option>
+                    <option value="Esta semana">Esta semana</option>
+                  </select>
+                </div>
+                <div>
+                  <label for="clinic-client-time" class="block text-stone-600 mb-1">TURNO:</label>
+                  <select id="clinic-client-time" class="w-full px-2 py-2 border hairline-border text-xs rounded-xs focus:border-[var(--accent)] outline-none bg-white">
+                    <option value="Turno Mañana (9am - 1pm)">Mañana</option>
+                    <option value="Turno Tarde (2pm - 6pm)">Tarde</option>
+                    <option value="Turno Noche (6pm - 8:30pm)">Noche</option>
+                    <option value="Urgencia Dental">Urgencia</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <!-- Tratamientos Seleccionados -->
+            <div class="space-y-2 border-t border-b hairline-border py-4 min-h-[90px] max-h-56 overflow-y-auto" id="clinic-cart-items">
+              <p class="text-xs text-stone-400 italic text-center py-6">
+                Selecciona uno o más tratamientos de la lista para calcular tu presupuesto.
+              </p>
+            </div>
+
+            <!-- Total y Botón de Confirmación -->
+            <div class="space-y-4">
+              <div class="flex items-center justify-between font-mono">
+                <span class="text-xs text-stone-600 uppercase">Total Estimado:</span>
+                <span class="text-2xl font-bold text-[var(--ink)]" id="clinic-cart-total">S/ 0.00</span>
+              </div>
+
+              <button
+                id="btn-clinic-send-whatsapp"
+                type="button"
+                class="w-full py-3.5 px-4 rounded-xs bg-emerald-600 hover:bg-emerald-700 text-white font-mono text-xs uppercase tracking-wider font-semibold transition-all shadow-md flex items-center justify-center gap-2 group cursor-pointer"
+              >
+                <span>Agendar Cita vía WhatsApp</span>
+                <span class="group-hover:translate-x-1 transition-transform">→</span>
+              </button>
+
+              <p class="text-[11px] text-stone-500 text-center font-mono">
+                ✦ Respuesta directa con el especialista de turno
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reseñas y Experiencias de Pacientes -->
+  <section class="border-b hairline-border py-14 px-4 bg-white">
+    <div class="max-w-6xl mx-auto space-y-8">
+      <div class="text-center max-w-xl mx-auto">
+        <span class="font-mono text-xs uppercase tracking-widest text-[var(--accent)] font-semibold">TESTIMONIOS REALES EN GOOGLE</span>
+        <h3 class="font-serif text-2xl sm:text-3xl text-stone-900 font-semibold mt-1">
+          Lo que dicen nuestros pacientes
+        </h3>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6" id="clinic-reviews-container">
+        <!-- Renderizado dinámico de testimonios clínicos -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Ubicación & Consultorio -->
+  <section id="clinic-ubicacion" class="py-16 px-4 bg-[var(--bg-alt)]/40">
+    <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+      <div class="lg:col-span-5 p-8 bg-white border hairline-border rounded-sm flex flex-col justify-between space-y-6">
+        <div class="space-y-4">
+          <span class="font-mono text-xs uppercase tracking-widest text-[var(--accent)] font-semibold" id="clinic-loc-zone">JESÚS MARÍA</span>
+          <h3 class="font-serif text-3xl font-semibold text-stone-900" id="clinic-loc-name">Mundo Odontic</h3>
+          
+          <div class="space-y-3 font-mono text-xs text-stone-700 pt-2">
+            <div class="flex items-start gap-3">
+              <span class="text-base text-[var(--accent)]">📍</span>
+              <div>
+                <strong class="block text-stone-900">Dirección:</strong>
+                <span id="clinic-loc-address">Av. Arnaldo Márquez 1234, Jesús María</span>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3">
+              <span class="text-base text-[var(--accent)]">⏰</span>
+              <div>
+                <strong class="block text-stone-900">Horario de Consultorio:</strong>
+                <span id="clinic-loc-hours">Lunes a Sábado: 9:00 a. m. – 8:00 p. m.</span>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3">
+              <span class="text-base text-[var(--accent)]">📞</span>
+              <div>
+                <strong class="block text-stone-900">Teléfono Directo:</strong>
+                <span id="clinic-loc-phone">999 888 777</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="pt-4 border-t hairline-border flex flex-wrap gap-3">
+          <a id="clinic-loc-maps-link" href="#" target="_blank" rel="noopener noreferrer" class="btn-editorial px-5 py-3 text-xs uppercase tracking-wider font-semibold">
+            Abrir en Google Maps
+          </a>
+          <a id="clinic-loc-call-link" href="#" class="px-5 py-3 border hairline-border hover:border-stone-900 text-xs uppercase tracking-wider font-semibold transition bg-white">
+            Llamar a la Clínica
+          </a>
+        </div>
+      </div>
+
+      <div class="lg:col-span-7 border hairline-border rounded-sm overflow-hidden min-h-[360px] bg-stone-200">
+        <iframe
+          id="clinic-gmap-iframe"
+          title="Ubicación de la Clínica"
+          class="w-full h-full min-h-[360px] border-0"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          src=""
+        ></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer Clínico -->
+  <footer class="border-t hairline-border bg-stone-900 text-stone-300 py-10 px-4">
+    <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-6 text-xs font-mono">
+      <div class="flex items-center gap-3">
+        <img id="clinic-footer-logo" src="/logos/p137-mundo-odontic.svg" alt="Logotipo" class="h-8 w-auto brightness-0 invert opacity-80" />
+        <span class="text-stone-400">© 2026 <span id="clinic-footer-name">Mundo Odontic</span>. Todos los derechos reservados.</span>
+      </div>
+      <div class="flex items-center gap-4 text-stone-400">
+        <span>Bioseguridad Clase B</span>
+        <span>·</span>
+        <span>Atención con Previa Cita</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Botón Flotante WhatsApp -->
+  <div class="fixed bottom-6 right-6 z-40">
+    <a
+      id="clinic-floating-wa"
+      href="#"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="flex items-center gap-2.5 px-4 py-3 rounded-full bg-emerald-600 hover:bg-emerald-700 text-white shadow-xl hover:shadow-2xl transition-all duration-300 font-mono text-xs uppercase tracking-wider group hover:scale-105"
+      title="Agendar Cita por WhatsApp"
+    >
+      <span class="w-2.5 h-2.5 rounded-full bg-white animate-pulse"></span>
+      <span class="font-bold">WhatsApp Directo</span>
+    </a>
+  </div>
+</div>

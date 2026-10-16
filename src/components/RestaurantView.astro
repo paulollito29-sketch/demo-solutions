@@ -1,0 +1,553 @@
+---
+// RestaurantView.astro — Vista gastronómica inspirada en Mis Costillitas y Las Rejas de La Molina
+---
+
+<div id="restaurant-prototype-view" class="prototype-view" style="display: none;">
+  <!-- Barra Superior de Promociones de Brasa y Cumpleaños (Estilo Mis Costillitas) -->
+  <aside aria-label="Aviso promocional" class="bg-gradient-to-r from-amber-600 via-orange-600 to-red-600 text-white text-xs font-mono py-2 px-4 shadow-md sticky top-0 z-50">
+    <div class="max-w-6xl mx-auto flex flex-wrap items-center justify-between gap-2">
+      <div class="flex items-center gap-2">
+        <span class="inline-block animate-bounce text-sm">🔥</span>
+        <span class="font-bold tracking-wide">¡CELEBRA TU CUMPLEAÑOS AQUÍ!</span>
+        <span class="hidden sm:inline text-amber-100">Postre cumpleañero + Ronda de chilcanos de cortesía para mesas de 4 a más.</span>
+      </div>
+      <a href="#rest-carta" class="bg-black/30 hover:bg-black/50 px-3 py-0.5 rounded-full text-[11px] font-semibold tracking-wider transition border border-white/20">
+        RESERVAR AHORA →
+      </a>
+    </div>
+  </aside>
+
+  <!-- Cabecera Gastronómica Dark & Amber -->
+  <header class="border-b border-stone-800 bg-[#121110]/95 backdrop-blur-md text-stone-200 sticky top-8 z-40">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between gap-4">
+      <div class="flex items-center gap-3">
+        <div class="p-1.5 rounded-lg bg-stone-900 border border-stone-800 shadow-inner flex items-center">
+          <img id="rest-nav-logo" src="/logos/p038-tentaciones.svg" alt="Logotipo Oficial" class="h-10 sm:h-12 w-auto max-w-[200px] object-contain rounded" />
+        </div>
+        <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[10px] font-mono bg-emerald-950 text-emerald-400 font-semibold border border-emerald-800 hidden sm:inline-flex">
+          <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span> Cocina y Brasa Activa
+        </span>
+      </div>
+
+      <nav class="hidden md:flex items-center gap-6 text-xs uppercase tracking-[0.15em] font-medium text-stone-400">
+        <a href="#rest-combos" class="hover:text-amber-400 transition-colors">Combos &amp; Parrillas</a>
+        <a href="#rest-pizarra" class="hover:text-amber-400 transition-colors">Pizarra del Día</a>
+        <a href="#rest-carta" class="hover:text-amber-400 transition-colors">Carta Completa</a>
+        <a href="#rest-ubicacion" class="hover:text-amber-400 transition-colors">Salón &amp; Mapa</a>
+        <a id="rest-social-pill" href="#" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-mono border border-stone-700 bg-stone-900 text-stone-300 hover:border-amber-500 transition">
+          <span class="w-1.5 h-1.5 rounded-full bg-amber-500"></span>
+          <span id="rest-social-text">@redsocial</span>
+        </a>
+      </nav>
+
+      <a href="#rest-carta" class="bg-gradient-to-r from-amber-500 to-orange-600 hover:from-amber-600 hover:to-orange-700 text-stone-950 font-bold px-5 py-2.5 rounded text-xs uppercase tracking-[0.14em] shadow-lg shadow-orange-950/40 transition">
+        <span>Pedir a WhatsApp</span>
+      </a>
+    </div>
+  </header>
+
+  <!-- Hero de Fuego y Pesca Fresca (Estilo Mis Costillitas + Las Rejas) -->
+  <section class="relative overflow-hidden bg-[#141211] text-white border-b border-stone-800">
+    <!-- Glow ambiental de brasa -->
+    <div class="absolute -top-40 right-1/4 w-[500px] h-[500px] rounded-full opacity-20 pointer-events-none blur-3xl bg-orange-600"></div>
+    <div class="absolute bottom-0 left-0 w-[400px] h-[400px] rounded-full opacity-15 pointer-events-none blur-3xl bg-amber-600"></div>
+
+    <div class="max-w-6xl mx-auto px-4 py-16 sm:py-24 relative z-10">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+        <!-- Columna Izquierda: Copy de Apetito y Autoridad -->
+        <div class="lg:col-span-7 space-y-6">
+          <div class="flex flex-wrap items-center gap-2.5">
+            <span class="inline-flex items-center gap-2 border border-amber-500/40 px-3 py-1 bg-amber-950/40 rounded-full font-mono text-[11px] uppercase tracking-wider text-amber-300">
+              <span class="w-2 h-2 rounded-full bg-amber-400 animate-pulse"></span>
+              <span id="rest-hero-kicker">FUEGO, BRASA Y PESCA FRESCA DEL DÍA</span>
+            </span>
+            <span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-[11px] font-mono bg-red-950/80 text-red-300 border border-red-800 font-semibold">
+              ✦ Chilcano de Cortesía Web
+            </span>
+          </div>
+
+          <h1 class="font-serif text-4xl sm:text-6xl lg:text-[62px] font-extrabold leading-[1.04] tracking-tight text-white">
+            <span id="rest-hero-title">El verdadero sabor de</span>
+            <em id="rest-hero-sub" class="font-normal italic block mt-1 text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-orange-400 to-amber-200">Tentaciones.</em>
+          </h1>
+
+          <!-- Lema Oficial -->
+          <blockquote class="border-l-4 border-amber-500 pl-4 py-1.5 italic font-serif text-lg sm:text-xl text-stone-300 bg-stone-900/60 rounded-r-md">
+            <span id="rest-hero-lema">«¡Preparación al instante y al gusto del cliente! Frescura marina insuperable en San Miguel.»</span>
+          </blockquote>
+
+          <p id="rest-hero-lead" class="text-stone-300 text-base sm:text-lg leading-relaxed max-w-xl font-normal">
+            Pescado fresco del día seleccionado a primera hora, leche de tigre aromática, cortes a la brasa y porciones generosas servidas al instante. Revisa nuestra carta de precios, pide delivery o reserva tu mesa directo por WhatsApp.
+          </p>
+
+          <!-- CTAs Principales -->
+          <div class="pt-4 flex flex-wrap items-center gap-4">
+            <a href="#rest-carta" class="bg-gradient-to-r from-amber-500 via-orange-500 to-amber-600 hover:from-amber-600 hover:to-orange-700 text-stone-950 font-bold px-8 py-4 rounded text-xs sm:text-sm uppercase tracking-[0.15em] shadow-xl shadow-orange-950/50 inline-flex items-center gap-3 transition transform hover:scale-[1.02]">
+              <span>Ver Carta y Combos</span>
+              <span>↓</span>
+            </a>
+            <a href="#rest-ubicacion" class="px-7 py-4 border border-stone-700 hover:border-amber-400 text-xs sm:text-sm uppercase tracking-[0.12em] font-medium transition bg-stone-900/80 text-stone-200 rounded">
+              Cómo llegar al local
+            </a>
+          </div>
+
+          <!-- Métricas de Confianza Foodie -->
+          <div class="grid grid-cols-3 gap-4 pt-6 border-t border-stone-800 font-mono">
+            <div>
+              <span class="block text-[10px] uppercase tracking-wider text-stone-400">CALIFICACIÓN</span>
+              <span class="text-lg sm:text-xl font-bold text-amber-400"><span id="rest-stat-rating">4.7</span> / 5.0 ★</span>
+            </div>
+            <div class="border-l border-stone-800 pl-4">
+              <span class="block text-[10px] uppercase tracking-wider text-stone-400">RESEÑAS GOOGLE</span>
+              <span class="text-lg sm:text-xl font-bold text-stone-100" id="rest-stat-reviews">+100 clientes</span>
+            </div>
+            <div class="border-l border-stone-800 pl-4">
+              <span class="block text-[10px] uppercase tracking-wider text-stone-400">DISTRITO</span>
+              <span class="text-lg sm:text-xl font-bold text-stone-100" id="rest-stat-zone">San Miguel</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Columna Derecha: Plato Insignia con Tarjeta de Oferta Flotante -->
+        <div class="lg:col-span-5 relative">
+          <div class="relative rounded-2xl overflow-hidden border-2 border-stone-800 shadow-2xl shadow-black/80 group">
+            <img id="rest-hero-photo" src="https://images.unsplash.com/photo-1535399831218-d5bd36d1a6b3?auto=format&fit=crop&w=1200&q=85" alt="Plato Insignia" class="w-full aspect-[4/4.6] object-cover group-hover:scale-105 transition-transform duration-700" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black via-black/30 to-transparent pointer-events-none"></div>
+
+            <!-- Badge Superior -->
+            <div class="absolute top-4 left-4 bg-orange-600 text-white text-[10px] font-mono font-bold uppercase tracking-wider px-3 py-1 rounded-full shadow-md">
+              🔥 ESPECIALIDAD DE LA CASA
+            </div>
+
+            <!-- Tarjeta Flotante Inferior -->
+            <div class="absolute bottom-4 left-4 right-4 bg-stone-900/90 backdrop-blur-md p-5 border border-stone-700 rounded-xl shadow-2xl text-stone-100">
+              <div class="flex items-center justify-between">
+                <span class="font-mono text-[10px] uppercase tracking-widest text-amber-400 font-bold" id="rest-featured-label">PLATO ESTRELLA</span>
+                <span class="font-mono text-base font-extrabold text-amber-400" id="rest-featured-price">S/ 38</span>
+              </div>
+              <h2 class="font-serif text-xl font-bold mt-1 text-white" id="rest-featured-title">Ceviche Clásico Carretillero</h2>
+              <p class="text-xs text-stone-300 mt-1 line-clamp-2" id="rest-featured-sub">Pesca fresca del día, camote glaseado, choclo desgranado y canchita chulpi.</p>
+              <div class="mt-3 pt-3 border-t border-stone-800 flex items-center justify-between text-[11px] font-mono text-stone-400">
+                <span id="rest-address-caption">San Miguel</span>
+                <span class="text-amber-400 font-bold">Hecho al momento</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cinta Ticker de Fuego y Pesca -->
+  <div class="border-b border-stone-800 py-3 overflow-hidden bg-black text-amber-400 text-[11px] font-mono uppercase tracking-[0.25em]">
+    <div class="marquee-track" id="rest-marquee-content">
+      <span class="mx-6 font-semibold">✦ PESCA FRESCA DEL DÍA</span>
+      <span class="mx-6 font-semibold text-white">✦ CEVICHE CLÁSICO CARRETILLERO</span>
+      <span class="mx-6 font-semibold text-orange-400">✦ ARROZ CON MARISCOS AL WOK</span>
+      <span class="mx-6 font-semibold">✦ CHICHARRÓN DE CALAMAR CROCANTE</span>
+      <span class="mx-6 font-semibold text-amber-300">✦ CHILCANO DE CORTESÍA WEB</span>
+      <span class="mx-6 font-semibold text-white">✦ PEDIDOS DIRECTOS A WHATSAPP SIN COMISIONES</span>
+      <span class="mx-6 font-semibold">✦ PESCA FRESCA DEL DÍA</span>
+      <span class="mx-6 font-semibold text-white">✦ CEVICHE CLÁSICO CARRETILLERO</span>
+    </div>
+  </div>
+
+  <!-- SECCIÓN 1: COMBOS & BANQUETES (El Estilo Mis Costillitas) -->
+  <section id="rest-combos" class="py-16 sm:py-20 px-4 bg-[#181614] text-stone-100 border-b border-stone-800">
+    <div class="max-w-6xl mx-auto space-y-12">
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
+        <div>
+          <span class="font-mono text-xs uppercase tracking-[0.22em] text-amber-400 font-bold">PROMOCIONES DE IMPACTO</span>
+          <h2 class="font-serif text-3xl sm:text-5xl font-extrabold text-white mt-1">Combos Parrilleros &amp; Duplas Marinas</h2>
+        </div>
+        <p class="text-stone-400 text-sm max-w-md">
+          Diseñados para compartir en pareja, familia o con amigos. Porciones bien despachadas con bebidas y complementos incluidos.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Combo 1 -->
+        <div class="bg-stone-900 border-2 border-stone-800 hover:border-amber-500 rounded-2xl overflow-hidden transition-all duration-300 flex flex-col justify-between group shadow-xl">
+          <div class="relative aspect-[16/10] overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=700&q=85" alt="Combo Dúo Marino" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+            <div class="absolute top-3 left-3 bg-red-600 text-white font-mono text-[10px] font-bold px-2.5 py-1 rounded shadow">
+              🔥 MÁS PEDIDO
+            </div>
+            <div class="absolute bottom-3 right-3 bg-black/80 backdrop-blur-md px-2.5 py-1 rounded text-[11px] font-mono text-amber-300 font-bold border border-amber-500/30">
+              Para 2 Personas
+            </div>
+          </div>
+          <div class="p-6 space-y-4 flex-1 flex flex-col justify-between">
+            <div>
+              <div class="flex items-baseline justify-between gap-2">
+                <h3 class="font-serif text-xl font-bold text-white">Dúo Marino Festival</h3>
+                <div class="text-right">
+                  <span class="text-xs text-stone-500 line-through">S/ 68</span>
+                  <span class="block font-mono text-lg font-extrabold text-amber-400">S/ 52</span>
+                </div>
+              </div>
+              <p class="text-xs text-stone-400 mt-2">
+                Ceviche de pescado fresco al limón norteño + Arroz con mariscos ahumado al wok + Chicharrón crocante de calamar.
+              </p>
+              <div class="mt-3 inline-flex items-center gap-1.5 text-[11px] font-mono text-emerald-400 bg-emerald-950/60 px-2.5 py-1 rounded border border-emerald-800">
+                <span>✓</span> Incluye 2 vasos de chicha morada artesanal
+              </div>
+            </div>
+            <a href="#rest-carta" class="block text-center py-3 bg-amber-500 hover:bg-amber-400 text-stone-950 font-bold font-mono text-xs uppercase tracking-wider rounded transition">
+              Pedir este Combo
+            </a>
+          </div>
+        </div>
+
+        <!-- Combo 2 -->
+        <div class="bg-stone-900 border-2 border-stone-800 hover:border-orange-500 rounded-2xl overflow-hidden transition-all duration-300 flex flex-col justify-between group shadow-xl">
+          <div class="relative aspect-[16/10] overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=700&q=85" alt="Parrilla Familiar" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+            <div class="absolute top-3 left-3 bg-orange-600 text-white font-mono text-[10px] font-bold px-2.5 py-1 rounded shadow">
+              👑 BANQUETE FAMILIAR
+            </div>
+            <div class="absolute bottom-3 right-3 bg-black/80 backdrop-blur-md px-2.5 py-1 rounded text-[11px] font-mono text-amber-300 font-bold border border-amber-500/30">
+              Para 3 a 4 Personas
+            </div>
+          </div>
+          <div class="p-6 space-y-4 flex-1 flex flex-col justify-between">
+            <div>
+              <div class="flex items-baseline justify-between gap-2">
+                <h3 class="font-serif text-xl font-bold text-white">Banquete Criollo &amp; Brasa</h3>
+                <div class="text-right">
+                  <span class="text-xs text-stone-500 line-through">S/ 115</span>
+                  <span class="block font-mono text-lg font-extrabold text-amber-400">S/ 89</span>
+                </div>
+              </div>
+              <p class="text-xs text-stone-400 mt-2">
+                Costillitas glaseadas a la brasa + Anticuchos carretilleros + Papas nativas doradas + Ensalada fresca parrillera.
+              </p>
+              <div class="mt-3 inline-flex items-center gap-1.5 text-[11px] font-mono text-emerald-400 bg-emerald-950/60 px-2.5 py-1 rounded border border-emerald-800">
+                <span>✓</span> Incluye 1 Jarra de Chicha 1.5L + salsas de la casa
+              </div>
+            </div>
+            <a href="#rest-carta" class="block text-center py-3 bg-orange-500 hover:bg-orange-400 text-stone-950 font-bold font-mono text-xs uppercase tracking-wider rounded transition">
+              Pedir este Combo
+            </a>
+          </div>
+        </div>
+
+        <!-- Combo 3 -->
+        <div class="bg-stone-900 border-2 border-stone-800 hover:border-amber-500 rounded-2xl overflow-hidden transition-all duration-300 flex flex-col justify-between group shadow-xl">
+          <div class="relative aspect-[16/10] overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1512058564366-18510be2db19?auto=format&fit=crop&w=700&q=85" alt="Ronda Caliente" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+            <div class="absolute top-3 left-3 bg-amber-600 text-white font-mono text-[10px] font-bold px-2.5 py-1 rounded shadow">
+              🔥 RONDA CALIENTE
+            </div>
+            <div class="absolute bottom-3 right-3 bg-black/80 backdrop-blur-md px-2.5 py-1 rounded text-[11px] font-mono text-amber-300 font-bold border border-amber-500/30">
+              Para Picar &amp; Brindar
+            </div>
+          </div>
+          <div class="p-6 space-y-4 flex-1 flex flex-col justify-between">
+            <div>
+              <div class="flex items-baseline justify-between gap-2">
+                <h3 class="font-serif text-xl font-bold text-white">Trilogía Caliente al Wok</h3>
+                <div class="text-right">
+                  <span class="text-xs text-stone-500 line-through">S/ 72</span>
+                  <span class="block font-mono text-lg font-extrabold text-amber-400">S/ 58</span>
+                </div>
+              </div>
+              <p class="text-xs text-stone-400 mt-2">
+                Arroz chaufa de mariscos + Wantanes rellenos de pulpa de cangrejo + Chicharrón de pescado con salsa tártara casera.
+              </p>
+              <div class="mt-3 inline-flex items-center gap-1.5 text-[11px] font-mono text-emerald-400 bg-emerald-950/60 px-2.5 py-1 rounded border border-emerald-800">
+                <span>✓</span> 2 Chilcanos de Pisco gratis por web
+              </div>
+            </div>
+            <a href="#rest-carta" class="block text-center py-3 bg-amber-500 hover:bg-amber-400 text-stone-950 font-bold font-mono text-xs uppercase tracking-wider rounded transition">
+              Pedir este Combo
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECCIÓN 2: LA PIZARRA DEL DÍA (El Estilo Las Rejas de La Molina) -->
+  <section id="rest-pizarra" class="py-16 sm:py-20 px-4 bg-[#100f0e] border-b border-stone-800 text-white">
+    <div class="max-w-6xl mx-auto">
+      <div class="bg-gradient-to-b from-stone-900 to-stone-950 border-4 border-amber-900/60 rounded-3xl p-6 sm:p-12 shadow-2xl relative overflow-hidden">
+        <!-- Textura de pizarra rústica -->
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between border-b border-stone-800 pb-6 gap-4">
+          <div>
+            <span class="font-mono text-amber-400 text-xs uppercase tracking-[0.25em] font-bold">PIZARRA TRADICIONAL DEL CHEF</span>
+            <h2 class="font-serif text-3xl sm:text-4xl font-extrabold mt-1 text-white">Especialidades Frescas de Hoy</h2>
+          </div>
+          <span class="inline-flex items-center gap-2 bg-amber-950/70 border border-amber-600/50 text-amber-300 font-mono text-xs px-4 py-2 rounded-full self-start sm:self-auto">
+            <span class="w-2.5 h-2.5 rounded-full bg-amber-400 animate-ping"></span>
+            Disponibilidad limitada de hoy
+          </span>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 pt-8 font-mono">
+          <!-- Plato Pizarra 1 -->
+          <div class="p-5 rounded-xl bg-stone-900/80 border border-stone-800 hover:border-amber-500/50 transition">
+            <div class="flex justify-between items-start">
+              <span class="text-amber-400 font-bold text-xs uppercase">PESCA DE HOY: CORVINA</span>
+              <span class="text-white font-bold text-base">S/ 42</span>
+            </div>
+            <h3 class="font-serif font-bold text-lg text-stone-100 mt-2">Ceviche Puro de Corvina</h3>
+            <p class="text-xs text-stone-400 font-sans mt-1">Corte grueso en cubos, limón recién exprimido y crema de ají limo.</p>
+            <div class="mt-4 flex items-center justify-between text-[11px] text-stone-500">
+              <span>🌶️ Picante: Medio</span>
+              <span class="text-amber-400">Quedan 9 porciones</span>
+            </div>
+          </div>
+
+          <!-- Plato Pizarra 2 -->
+          <div class="p-5 rounded-xl bg-stone-900/80 border border-stone-800 hover:border-amber-500/50 transition">
+            <div class="flex justify-between items-start">
+              <span class="text-amber-400 font-bold text-xs uppercase">AL WOK AHUMADO</span>
+              <span class="text-white font-bold text-base">S/ 39</span>
+            </div>
+            <h3 class="font-serif font-bold text-lg text-stone-100 mt-2">Tacú Tacú con Mariscos</h3>
+            <p class="text-xs text-stone-400 font-sans mt-1">Sábana crocante de frejol canario bañada en salsa cremosa de mariscos selectos.</p>
+            <div class="mt-4 flex items-center justify-between text-[11px] text-stone-500">
+              <span>🌶️ Picante: Suave</span>
+              <span class="text-amber-400">Quedan 6 porciones</span>
+            </div>
+          </div>
+
+          <!-- Plato Pizarra 3 -->
+          <div class="p-5 rounded-xl bg-stone-900/80 border border-stone-800 hover:border-amber-500/50 transition">
+            <div class="flex justify-between items-start">
+              <span class="text-amber-400 font-bold text-xs uppercase">FONDO CRIOLLO</span>
+              <span class="text-white font-bold text-base">S/ 36</span>
+            </div>
+            <h3 class="font-serif font-bold text-lg text-stone-100 mt-2">Sudado Marino en Chicha de Jora</h3>
+            <p class="text-xs text-stone-400 font-sans mt-1">Filete entero cocido a fuego lento con tomate, cebolla roja, culantro y yucas suaves.</p>
+            <div class="mt-4 flex items-center justify-between text-[11px] text-stone-500">
+              <span>🌶️ Caliente &amp; Vigorizante</span>
+              <span class="text-amber-400">Quedan 11 porciones</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECCIÓN 3: CARTA COMPLETA + HUB INTERACTIVO DE PEDIDO & CUMPLEAÑOS -->
+  <section id="rest-carta" class="py-16 sm:py-24 px-4 bg-[#141211] text-stone-100 border-b border-stone-800">
+    <div class="max-w-6xl mx-auto">
+      <div class="flex flex-col md:flex-row md:items-end justify-between pb-8 border-b border-stone-800 gap-4">
+        <div>
+          <span class="font-mono text-xs uppercase tracking-[0.2em] text-amber-400 font-bold">CARTA OFICIAL &amp; PRECIOS</span>
+          <h2 class="font-serif text-3xl sm:text-5xl font-extrabold text-white mt-1">Nuestra Carta Completa</h2>
+        </div>
+        <div id="rest-category-tabs" class="flex flex-wrap gap-2">
+          <!-- Pestañas de categorías inyectadas por JS -->
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 pt-10 items-start">
+        <!-- Lista de Platos de la Carta -->
+        <div class="lg:col-span-7">
+          <div id="rest-services-list" class="divide-y divide-stone-800 border-t border-stone-800">
+            <!-- Inyectado por JS -->
+          </div>
+          <p class="text-xs text-stone-500 mt-6 font-mono">
+            * Precios expresados en Soles (S/) e incluyen IGV. Preparación artesanal al momento.
+          </p>
+        </div>
+
+        <!-- HUB DUAL DE PEDIDO / CUMPLEAÑOS (Estilo Mis Costillitas) -->
+        <div class="lg:col-span-5 lg:sticky lg:top-24 bg-stone-900 border-2 border-amber-600/40 p-6 sm:p-8 rounded-2xl shadow-2xl text-stone-200">
+          <!-- Header del Hub -->
+          <div class="border-b border-stone-800 pb-4">
+            <span class="font-mono text-[10px] uppercase tracking-[0.2em] text-amber-400 font-bold">ATENCIÓN DIRECTA AL RESTAURANTE</span>
+            <h3 class="font-serif text-2xl font-bold text-white mt-1">Arma tu Pedido o Reserva</h3>
+          </div>
+
+          <!-- Selector de Modo: Delivery vs Mesa/Cumpleaños -->
+          <div class="grid grid-cols-2 gap-2 mt-4 p-1 bg-stone-950 rounded-lg text-xs font-mono">
+            <button id="rest-mode-delivery" type="button" class="py-2.5 px-3 rounded text-center font-bold bg-amber-500 text-stone-950 transition">
+              🛵 Delivery / Recojo
+            </button>
+            <button id="rest-mode-table" type="button" class="py-2.5 px-3 rounded text-center font-bold text-stone-400 hover:text-white transition">
+              🎂 Mesa / Cumpleaños
+            </button>
+          </div>
+
+          <!-- Resumen de Platos Seleccionados -->
+          <div class="mt-4">
+            <div class="flex items-center justify-between text-xs font-mono text-stone-400 pb-2">
+              <span>PLATOS EN TU ORDEN:</span>
+              <span id="rest-cart-count-badge" class="px-2 py-0.5 bg-stone-800 text-amber-400 font-bold rounded">0 platos</span>
+            </div>
+            <div id="rest-cart-items" class="py-3 space-y-2 min-h-[80px] max-h-48 overflow-y-auto border-y border-stone-800 text-xs">
+              <p class="text-stone-500 italic py-4 text-center font-serif">Selecciona platos de la carta para armar tu pedido.</p>
+            </div>
+          </div>
+
+          <!-- Total Estimado -->
+          <div class="py-4 border-b border-stone-800 flex items-baseline justify-between">
+            <span class="font-mono text-xs uppercase tracking-wider text-stone-400">Total de tu pedido:</span>
+            <span id="rest-cart-total" class="font-mono text-2xl font-extrabold text-amber-400">S/ 0.00</span>
+          </div>
+
+          <!-- Campos del Cliente -->
+          <div class="space-y-3 pt-4 text-xs font-mono">
+            <div>
+              <label for="rest-client-name" class="block text-[10px] uppercase tracking-wider text-stone-400 mb-1">TU NOMBRE</label>
+              <input id="rest-client-name" type="text" placeholder="Ej. Carlos Mendoza" class="w-full bg-stone-950 border border-stone-700 px-3 py-2.5 text-white rounded focus:outline-none focus:border-amber-400" />
+            </div>
+
+            <!-- Campos Condicionales Delivery -->
+            <div id="rest-delivery-fields" class="space-y-3">
+              <div class="grid grid-cols-2 gap-3">
+                <div>
+                  <label for="rest-client-day" class="block text-[10px] uppercase tracking-wider text-stone-400 mb-1">MODALIDAD</label>
+                  <select id="rest-client-day" class="w-full bg-stone-950 border border-stone-700 px-2.5 py-2.5 text-white rounded focus:outline-none">
+                    <option value="Para comer en salón">Comer en salón</option>
+                    <option value="Para llevar / recoger">Para llevar</option>
+                    <option value="Delivery por WhatsApp">Delivery directo</option>
+                  </select>
+                </div>
+                <div>
+                  <label for="rest-client-time" class="block text-[10px] uppercase tracking-wider text-stone-400 mb-1">HORA APROX.</label>
+                  <select id="rest-client-time" class="w-full bg-stone-950 border border-stone-700 px-2.5 py-2.5 text-white rounded focus:outline-none">
+                    <option value="En 25-35 minutos">En 25-35 min</option>
+                    <option value="Almuerzo 1:00 PM">Almuerzo 1:00 PM</option>
+                    <option value="Almuerzo 2:30 PM">Almuerzo 2:30 PM</option>
+                    <option value="Tarde 4:00 PM">Tarde 4:00 PM</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <!-- Campos Condicionales Cumpleaños / Mesa -->
+            <div id="rest-table-fields" class="space-y-3" style="display: none;">
+              <div class="grid grid-cols-2 gap-3">
+                <div>
+                  <label for="rest-guests-count" class="block text-[10px] uppercase tracking-wider text-stone-400 mb-1">Nº DE PERSONAS</label>
+                  <select id="rest-guests-count" class="w-full bg-stone-950 border border-stone-700 px-2.5 py-2.5 text-white rounded focus:outline-none">
+                    <option value="2 personas">2 personas</option>
+                    <option value="4 personas (con cortesía)">4 personas (con cortesía)</option>
+                    <option value="6 a 8 personas">6 a 8 personas</option>
+                    <option value="10+ personas (Grupo grande)">10+ personas</option>
+                  </select>
+                </div>
+                <div>
+                  <label for="rest-celebration-type" class="block text-[10px] uppercase tracking-wider text-stone-400 mb-1">MOTIVO</label>
+                  <select id="rest-celebration-type" class="w-full bg-stone-950 border border-stone-700 px-2.5 py-2.5 text-white rounded focus:outline-none">
+                    <option value="¡Cumpleaños!">¡Cumpleaños!</option>
+                    <option value="Almuerzo Familiar">Almuerzo Familiar</option>
+                    <option value="Reunión de Amigos / Trabajo">Reunión Amigos</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Botón de Envío WhatsApp -->
+          <button id="btn-rest-send-whatsapp" type="button" class="mt-6 w-full py-4 bg-gradient-to-r from-amber-500 via-orange-500 to-amber-600 hover:from-amber-600 hover:to-orange-700 text-stone-950 font-bold font-mono text-xs uppercase tracking-[0.16em] rounded-lg shadow-xl shadow-orange-950/40 flex items-center justify-center gap-2 cursor-pointer transition transform hover:scale-[1.01]">
+            <span>Enviar Pedido a WhatsApp</span>
+            <span>→</span>
+          </button>
+
+          <!-- Badges de Confianza -->
+          <div class="flex items-center justify-center gap-2 text-[10px] text-stone-400 font-mono mt-4 pt-3 border-t border-stone-800">
+            <span>✓ Sin comisiones</span>
+            <span>•</span>
+            <span>✓ Confirmación al instante</span>
+            <span>•</span>
+            <span>✓ Pago con Yape/Plin</span>
+          </div>
+
+          <div class="mt-3 flex items-center justify-between text-[11px] text-stone-500 font-mono">
+            <span id="rest-ticket-name">Cevichería</span>
+            <span id="rest-ticket-phone" class="text-amber-400">Teléfono</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECCIÓN 4: SALÓN, MAPA & RESEÑAS FOODIE -->
+  <section id="rest-ubicacion" class="py-16 sm:py-24 px-4 bg-[#100f0e] text-white border-b border-stone-800">
+    <div class="max-w-6xl mx-auto space-y-12">
+      <div class="grid grid-cols-1 lg:grid-cols-12 border-2 border-stone-800 rounded-2xl overflow-hidden bg-stone-900">
+        <div class="lg:col-span-5 p-6 sm:p-10 flex flex-col justify-between space-y-6 border-b lg:border-b-0 lg:border-r border-stone-800">
+          <div class="space-y-4">
+            <span class="font-mono text-xs uppercase tracking-[0.2em] text-amber-400 font-bold">VEN A DISFRUTAR EN SALÓN</span>
+            <h3 id="rest-loc-name" class="font-serif text-3xl sm:text-4xl font-extrabold text-white">Restaurante Marino</h3>
+
+            <div class="space-y-3 pt-2 text-sm">
+              <div>
+                <span class="font-mono text-[10px] uppercase tracking-wider text-stone-400 block">DIRECCIÓN REGISTRADA</span>
+                <span id="rest-loc-address" class="text-stone-200 font-medium">Dirección exacta</span>
+              </div>
+              <div>
+                <span class="font-mono text-[10px] uppercase tracking-wider text-stone-400 block">TELÉFONO / PEDIDOS WHATSAPP</span>
+                <span id="rest-loc-phone" class="font-mono text-amber-400 font-bold text-base">Teléfono</span>
+              </div>
+              <div>
+                <span class="font-mono text-[10px] uppercase tracking-wider text-stone-400 block">HORARIO DE ATENCIÓN</span>
+                <span class="text-stone-300 text-xs block font-medium">Martes a Domingo: 11:30 a. m. – 5:30 p. m. (Lunes descanso)</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-4 border-t border-stone-800 font-mono">
+            <a id="rest-maps-link" href="#" target="_blank" rel="noopener noreferrer" class="bg-amber-500 hover:bg-amber-400 text-stone-950 font-bold py-3 px-4 text-center text-xs uppercase tracking-wider rounded transition">
+              Abrir Google Maps ↗
+            </a>
+            <a id="rest-call-link" href="#" class="py-3 px-4 border border-stone-700 hover:border-amber-400 text-center text-xs uppercase tracking-wider text-stone-300 hover:text-white transition rounded bg-stone-950">
+              Llamar al local
+            </a>
+          </div>
+        </div>
+
+        <div class="lg:col-span-7 min-h-[360px] bg-stone-950">
+          <iframe id="rest-gmap-iframe" class="w-full h-full min-h-[360px]" style="border:0;" loading="lazy" allowfullscreen src="about:blank"></iframe>
+        </div>
+      </div>
+
+      <!-- Reseñas Foodie Verificadas -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 font-sans">
+        <div class="bg-stone-900 border border-stone-800 p-6 rounded-xl space-y-3">
+          <div class="font-mono text-xs text-amber-400 flex items-center justify-between">
+            <span>★★★★★ · PESCA DEL DÍA</span>
+            <span class="text-emerald-400 font-semibold text-[10px] bg-emerald-950 px-2 py-0.5 rounded">VERIFICADO</span>
+          </div>
+          <p class="font-serif text-lg italic text-stone-200">"El ceviche y los chicharrones son insuperables. Pesca fresca del día y porciones bien servidas. ¡Súper recomendado!"</p>
+          <p class="font-mono text-[11px] text-stone-500 uppercase">— Cliente frecuente en Google Maps</p>
+        </div>
+
+        <div class="bg-stone-900 border border-stone-800 p-6 rounded-xl space-y-3">
+          <div class="font-mono text-xs text-amber-400 flex items-center justify-between">
+            <span>★★★★★ · PEDIDO RÁPIDO</span>
+            <span class="text-emerald-400 font-semibold text-[10px] bg-emerald-950 px-2 py-0.5 rounded">VERIFICADO</span>
+          </div>
+          <p class="font-serif text-lg italic text-stone-200">"Poder ver la carta y pedir por WhatsApp antes de llegar nos ahorró un montón de tiempo. La leche de tigre es espectacular."</p>
+          <p class="font-mono text-[11px] text-stone-500 uppercase">— Cliente verificado en salón</p>
+        </div>
+
+        <div class="bg-stone-900 border border-stone-800 p-6 rounded-xl space-y-3">
+          <div class="font-mono text-xs text-amber-400 flex items-center justify-between">
+            <span>★ <span id="rest-rev-rating">4.7</span> PROMEDIO GOOGLE</span>
+            <span class="text-emerald-400 font-semibold text-[10px] bg-emerald-950 px-2 py-0.5 rounded">VERIFICADO</span>
+          </div>
+          <p class="font-serif text-lg italic text-stone-200">"Excelente sazón norteña y marina. Atención amable, ambiente limpio y precios totalmente justos para la calidad."</p>
+          <p class="font-mono text-[11px] text-stone-500 uppercase">— Ficha pública Google</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer Gastronómico Dark -->
+  <footer class="border-t border-stone-800 py-8 px-4 text-xs text-stone-400 font-mono bg-black">
+    <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div class="flex items-center gap-3">
+        <img id="rest-footer-logo" src="/logos/p038-tentaciones.svg" alt="Logo de pie" class="h-8 w-auto object-contain opacity-90" />
+        <p>© 2026 <span id="rest-footer-name" class="text-white font-semibold">Restaurante</span>. Todos los derechos reservados.</p>
+      </div>
+      <p class="text-amber-400/80">Carta Gastronómica Oficial &amp; Pedidos Directos a WhatsApp</p>
+    </div>
+  </footer>
+</div>
