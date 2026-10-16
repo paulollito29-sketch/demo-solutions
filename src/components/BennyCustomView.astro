@@ -1,0 +1,54 @@
+---
+import { NavbarMotion } from './react/NavbarMotion';
+import { HeroMotion } from './react/HeroMotion';
+import { StoreShowcaseMotion } from './react/StoreShowcaseMotion';
+import { ServicesCartMotion } from './react/ServicesCartMotion';
+import { BeforeAfterMotion } from './react/BeforeAfterMotion';
+import { SocialReelsMotion } from './react/SocialReelsMotion';
+import { LocationMotion } from './react/LocationMotion';
+import { FooterMotion } from './react/FooterMotion';
+import { FloatingWAMotion } from './react/FloatingWAMotion';
+---
+
+<div class="benny-custom-wrapper">
+  <!-- Cabecera de navegación editorial animada con Framer Motion -->
+  <NavbarMotion client:load />
+
+  <!-- Hero principal con tipografía editorial y Framer Motion -->
+  <HeroMotion client:load />
+
+  <!-- Cinta rotativa con badges de confianza en morado y rosa -->
+  <div class="border-b hairline-border py-2.5 overflow-hidden bg-benny-purple text-white text-[11px] font-mono uppercase tracking-[0.2em]">
+    <div class="marquee-track">
+      <span class="mx-6">✦ MÁS DE 21 AÑOS REALZANDO LO MEJOR DE TI</span>
+      <span class="mx-6 text-benny-pink">✦ PRODUCTOS PROFESIONALES WELLA & ALFAPARF</span>
+      <span class="mx-6">✦ ATENCIÓN PERSONALIZADA EN SURQUILLO</span>
+      <span class="mx-6 text-benny-pink">✦ BALAYAGE, ALISADOS ORGÁNICOS & MANICURE SPA</span>
+      <span class="mx-6">✦ RESERVAS DIRECTAS SIN COMISIONES POR WHATSAPP</span>
+      <span class="mx-6 text-benny-pink">✦ MÁS DE 21 AÑOS REALZANDO LO MEJOR DE TI</span>
+      <span class="mx-6">✦ PRODUCTOS PROFESIONALES WELLA & ALFAPARF</span>
+      <span class="mx-6 text-benny-pink">✦ ATENCIÓN PERSONALIZADA EN SURQUILLO</span>
+    </div>
+  </div>
+
+  <!-- Galería interactiva con las fotos reales de Benny y Framer Motion -->
+  <StoreShowcaseMotion client:visible />
+
+  <!-- Carta / Tarifario interactivo con servicios Wella/Alfaparf y Framer Motion -->
+  <ServicesCartMotion client:load />
+
+  <!-- Comparador antes/después con slider táctil y Framer Motion -->
+  <BeforeAfterMotion client:visible />
+
+  <!-- Sección de Reels y Comunidad Facebook & Instagram -->
+  <SocialReelsMotion client:visible />
+
+  <!-- Ubicación con mapa interactivo de Google y datos de contacto -->
+  <LocationMotion client:visible />
+
+  <!-- Pie de página editorial con logo oficial y slogan -->
+  <FooterMotion client:load />
+
+  <!-- Botón flotante animado de WhatsApp con Framer Motion -->
+  <FloatingWAMotion client:load />
+</div>

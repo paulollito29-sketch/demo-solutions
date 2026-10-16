@@ -69,12 +69,27 @@ function setProspect(id: string) {
     select.value = id;
   }
 
-  // Apply Theme CSS variables
-  document.documentElement.style.setProperty('--bg-main', currentTheme.bgMain);
-  document.documentElement.style.setProperty('--bg-alt', currentTheme.bgAlt);
-  document.documentElement.style.setProperty('--ink', currentTheme.ink);
-  document.documentElement.style.setProperty('--accent', currentTheme.accent);
-  document.documentElement.style.setProperty('--border-hair', currentTheme.border);
+  const isBenny = found.id === 'P001' || found.name.toLowerCase().includes('benny');
+  const bennyView = document.getElementById('benny-prototype-view');
+  const generalView = document.getElementById('general-prototype-view');
+
+  if (isBenny) {
+    if (bennyView) bennyView.style.display = 'block';
+    if (generalView) generalView.style.display = 'none';
+    document.documentElement.style.setProperty('--bg-main', '#FAF7FC');
+    document.documentElement.style.setProperty('--bg-alt', '#F5EEF9');
+    document.documentElement.style.setProperty('--ink', '#1F142B');
+    document.documentElement.style.setProperty('--accent', '#512680');
+    document.documentElement.style.setProperty('--border-hair', '#E8DEF0');
+  } else {
+    if (bennyView) bennyView.style.display = 'none';
+    if (generalView) generalView.style.display = 'block';
+    document.documentElement.style.setProperty('--bg-main', currentTheme.bgMain);
+    document.documentElement.style.setProperty('--bg-alt', currentTheme.bgAlt);
+    document.documentElement.style.setProperty('--ink', currentTheme.ink);
+    document.documentElement.style.setProperty('--accent', currentTheme.accent);
+    document.documentElement.style.setProperty('--border-hair', currentTheme.border);
+  }
 
   // Dynamic Content Updates
   const p = currentProspect;
