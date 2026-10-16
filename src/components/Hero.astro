@@ -1,0 +1,80 @@
+---
+// Hero.astro
+---
+
+<section class="border-b hairline-border">
+  <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-12">
+    
+    <!-- Columna Editorial Izquierda -->
+    <div class="lg:col-span-7 p-6 sm:p-10 lg:p-14 flex flex-col justify-between border-b lg:border-b-0 lg:border-r hairline-border">
+      <div class="space-y-6">
+        <div class="inline-flex items-center gap-3 border hairline-border px-3 py-1 bg-surface-alt">
+          <span class="font-mono text-[11px] uppercase tracking-wider" id="hero-kicker">ATENCIÓN EN SURQUILLO</span>
+          <span class="text-stone-400">|</span>
+          <span class="font-mono text-[11px] font-semibold text-[var(--accent)]" id="hero-status-tag">RESERVAS DIRECTAS SIN COMISIÓN</span>
+        </div>
+
+        <h1 class="font-serif text-4xl sm:text-6xl lg:text-[64px] font-semibold leading-[1.02] tracking-tight">
+          <span id="hero-headline-main">El arte del cuidado personal en</span>
+          <em id="hero-headline-italic" class="font-normal italic block mt-1 text-[var(--accent)]">Benny Salón & Spa.</em>
+        </h1>
+
+        <p id="hero-lead" class="text-stone-600 text-base sm:text-lg leading-relaxed max-w-xl font-normal">
+          Más de un centenar de clientes en Surquillo respaldan nuestro trabajo. Consulta nuestra lista de precios actualizada, arma tu cita en línea y confírmala directo por WhatsApp con nuestro equipo.
+        </p>
+      </div>
+
+      <div class="pt-8 mt-8 border-t hairline-border space-y-6">
+        <div class="flex flex-wrap items-center gap-3">
+          <a href="#carta" class="btn-editorial px-7 py-4 text-xs sm:text-sm uppercase tracking-[0.14em] font-semibold inline-flex items-center gap-3">
+            <span id="hero-primary-btn">Ver Precios y Agendar</span>
+            <span>↓</span>
+          </a>
+          <a id="hero-map-anchor" href="#ubicacion" class="px-6 py-4 border hairline-border hover:border-stone-900 text-xs sm:text-sm uppercase tracking-[0.12em] font-medium transition">
+            Cómo llegar al local
+          </a>
+        </div>
+
+        <!-- Ficha Técnica de Credibilidad Local -->
+        <div class="grid grid-cols-3 gap-4 pt-2 font-mono">
+          <div>
+            <span class="block text-[10px] uppercase tracking-wider text-stone-500">CALIFICACIÓN GOOGLE</span>
+            <span class="text-base sm:text-lg font-semibold"><span id="stat-rating">4.7</span> / 5.0 ★</span>
+          </div>
+          <div class="border-l hairline-border pl-4">
+            <span class="block text-[10px] uppercase tracking-wider text-stone-500">RESEÑAS PÚBLICAS</span>
+            <span class="text-base sm:text-lg font-semibold" id="stat-reviews">+100 clientes</span>
+          </div>
+          <div class="border-l hairline-border pl-4">
+            <span class="block text-[10px] uppercase tracking-wider text-stone-500">DISTRITO</span>
+            <span class="text-base sm:text-lg font-semibold" id="stat-zone">Surquillo</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Columna Derecha: Fotografía Editorial a Sangre + Nota Destacada -->
+    <div class="lg:col-span-5 flex flex-col justify-between bg-surface-alt">
+      <div class="relative aspect-[4/4.6] w-full overflow-hidden border-b hairline-border">
+        <img id="hero-photo" src="https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=1000&q=85" alt="Fotografía del local" class="w-full h-full object-cover contrast-[1.03]" />
+        <div class="absolute bottom-4 left-4 right-4 bg-[var(--bg-main)]/95 backdrop-blur-sm p-4 border hairline-border">
+          <div class="flex items-center justify-between">
+            <span class="font-mono text-[10px] uppercase tracking-widest text-stone-500" id="featured-label">ESPECIALIDAD DE LA CASA</span>
+            <span class="font-mono text-xs font-semibold text-[var(--accent)]" id="featured-price">S/ 180</span>
+          </div>
+          <p class="font-serif text-xl font-semibold mt-0.5" id="featured-title">Balayage & Nutrición Capilar Profunda</p>
+          <p class="text-xs text-stone-600 mt-0.5" id="featured-sub">Incluye diagnóstico previo sin costo agendando por web.</p>
+        </div>
+      </div>
+
+      <div class="p-5 flex items-center justify-between text-xs">
+        <div>
+          <span class="font-mono text-[10px] uppercase tracking-wider text-stone-500 block">DIRECCIÓN REGISTRADA</span>
+          <span id="hero-address-caption" class="font-medium text-stone-800">Jr. Narciso de la Colina 869, Surquillo</span>
+        </div>
+        <a href="#ubicacion" class="font-mono text-[11px] underline uppercase tracking-wider shrink-0 ml-3">Ver Mapa →</a>
+      </div>
+    </div>
+
+  </div>
+</section>

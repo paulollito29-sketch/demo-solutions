@@ -1,0 +1,88 @@
+---
+// MenuSection.astro
+---
+
+<section id="carta" class="py-16 sm:py-20 px-4 border-b hairline-border">
+  <div class="max-w-6xl mx-auto">
+    
+    <!-- Encabezado de Carta -->
+    <div class="flex flex-col md:flex-row md:items-end justify-between pb-8 border-b hairline-border gap-4">
+      <div>
+        <span class="font-mono text-[11px] uppercase tracking-[0.2em] text-stone-500" id="menu-kicker">ÍNDICE DE SERVICIOS & TARIFAS</span>
+        <h2 id="menu-heading" class="font-serif text-4xl sm:text-5xl font-semibold mt-1">Nuestra Carta & Especialidades</h2>
+      </div>
+      <!-- Pestañas limpias estilo editorial -->
+      <div id="category-tabs" class="flex flex-wrap gap-1.5"></div>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 pt-8 items-start">
+      
+      <!-- Listado de Carta estilo Restaurante La Mar / Salón Boutique -->
+      <div class="lg:col-span-7">
+        <div id="services-list" class="divide-y hairline-border border-t hairline-border"></div>
+        <p class="text-xs text-stone-500 mt-4 font-mono">
+          * Todos los precios están expresados en Soles (S/) e incluyen impuestos. Puedes combinar varios ítems antes de enviar tu mensaje.
+        </p>
+      </div>
+
+      <!-- Ticket / Recibo de Solicitud Directa a WhatsApp (Estilo Papelería / Boutique) -->
+      <div id="reservar" class="lg:col-span-5 lg:sticky lg:top-24 bg-white border border-stone-300 p-6 sm:p-8 shadow-[0_12px_30px_rgba(0,0,0,0.05)]">
+        <div class="border-b-2 border-stone-900 pb-4 flex items-start justify-between">
+          <div>
+            <span class="font-mono text-[10px] uppercase tracking-[0.2em] text-stone-500">SOLICITUD DIRECTA · SIN INTERMEDIARIOS</span>
+            <h3 id="ticket-title" class="font-serif text-2xl sm:text-3xl font-bold text-stone-900 mt-0.5">Resumen de Reserva</h3>
+          </div>
+          <span id="cart-count-badge" class="font-mono text-xs px-2.5 py-1 bg-stone-900 text-white font-semibold">0 ítems</span>
+        </div>
+
+        <!-- Lista tipo recibo -->
+        <div id="cart-items" class="py-4 space-y-2.5 min-h-[90px] max-h-56 overflow-y-auto border-b border-dashed border-stone-300 text-xs">
+        </div>
+
+        <!-- Subtotal -->
+        <div class="py-3 border-b border-stone-200 flex items-baseline justify-between">
+          <span class="font-mono text-xs uppercase tracking-wider text-stone-600">Total Estimado:</span>
+          <span id="cart-total" class="font-mono text-2xl font-bold text-stone-900">S/ 0.00</span>
+        </div>
+
+        <!-- Datos rápidos del cliente -->
+        <div class="space-y-3 pt-4 text-xs">
+          <div>
+            <label for="client-name" class="block font-mono text-[10px] uppercase tracking-wider text-stone-600 mb-1">TU NOMBRE COMPLETO</label>
+            <input id="client-name" type="text" placeholder="Ej. Mariana Montes" class="w-full bg-[#FAF7F2] border border-stone-300 px-3 py-2.5 text-stone-900 focus:outline-none focus:border-stone-900" />
+          </div>
+          <div class="grid grid-cols-2 gap-3">
+            <div>
+              <label for="client-day" class="block font-mono text-[10px] uppercase tracking-wider text-stone-600 mb-1">FECHA / DÍA</label>
+              <select id="client-day" class="w-full bg-[#FAF7F2] border border-stone-300 px-2.5 py-2.5 text-stone-900 focus:outline-none">
+                <option value="Para hoy">Para hoy</option>
+                <option value="Para mañana">Para mañana</option>
+                <option value="Este fin de semana">Fin de semana</option>
+                <option value="Próxima semana">Próxima semana</option>
+              </select>
+            </div>
+            <div>
+              <label id="slot-label" for="client-time" class="block font-mono text-[10px] uppercase tracking-wider text-stone-600 mb-1">HORARIO / MODALIDAD</label>
+              <select id="client-time" class="w-full bg-[#FAF7F2] border border-stone-300 px-2.5 py-2.5 text-stone-900 focus:outline-none">
+                <option value="Turno Mañana (10am - 1pm)">Mañana (10am - 1pm)</option>
+                <option value="Turno Tarde (1pm - 5pm)">Tarde (1pm - 5pm)</option>
+                <option value="Turno Noche (5pm - 8pm)">Noche (5pm - 8pm)</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <button id="btn-send-whatsapp" type="button" class="mt-5 w-full py-4 btn-accent font-mono text-xs uppercase tracking-[0.15em] font-semibold flex items-center justify-center gap-2 cursor-pointer">
+          <span>Confirmar por WhatsApp Oficial</span>
+          <span>→</span>
+        </button>
+
+        <div class="mt-3 pt-3 border-t border-stone-200 flex items-center justify-between text-[11px] text-stone-500 font-mono">
+          <span id="ticket-biz-name">Benny Salón & Spa</span>
+          <span id="ticket-biz-phone">(01) 2340267</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>

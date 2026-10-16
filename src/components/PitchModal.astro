@@ -1,0 +1,36 @@
+---
+// PitchModal.astro
+---
+
+<div id="pitch-modal" class="fixed inset-0 z-50 hidden bg-black/75 flex items-center justify-center p-4">
+  <div class="bg-[#FAF7F2] text-[#191817] max-w-2xl w-full p-6 sm:p-8 border border-stone-300 shadow-2xl space-y-5 max-h-[90vh] overflow-y-auto">
+    <div class="flex items-start justify-between border-b border-stone-300 pb-4">
+      <div>
+        <span class="font-mono text-[10px] uppercase tracking-widest text-stone-500">Prospección B2B Lima</span>
+        <h3 class="font-serif text-2xl font-bold mt-0.5">Propuesta Lista para Enviar</h3>
+        <p id="modal-sub" class="text-xs text-stone-600 mt-1"></p>
+      </div>
+      <button id="btn-close-pitch" type="button" class="text-stone-500 hover:text-black text-lg font-bold px-2 cursor-pointer">✕</button>
+    </div>
+    <div class="space-y-4 text-xs">
+      <div>
+        <div class="flex justify-between items-center mb-1.5">
+          <span class="font-bold uppercase tracking-wider text-stone-700">1. WhatsApp / Instagram DM Directo</span>
+          <button id="btn-copy-wa" type="button" class="px-2.5 py-1 bg-stone-900 text-white text-[11px] cursor-pointer hover:bg-stone-800">Copiar texto</button>
+        </div>
+        <textarea id="pitch-wa" rows={5} class="w-full bg-white border border-stone-300 p-3 text-stone-800 font-mono text-xs focus:outline-none"></textarea>
+      </div>
+      <div>
+        <div class="flex justify-between items-center mb-1.5">
+          <span class="font-bold uppercase tracking-wider text-stone-700">2. Correo Formal con Enlace a su Demo</span>
+          <button id="btn-copy-email" type="button" class="px-2.5 py-1 bg-stone-900 text-white text-[11px] cursor-pointer hover:bg-stone-800">Copiar correo</button>
+        </div>
+        <textarea id="pitch-email" rows={8} class="w-full bg-white border border-stone-300 p-3 text-stone-800 font-mono text-xs focus:outline-none"></textarea>
+      </div>
+    </div>
+    <div class="flex justify-end gap-3 pt-2 border-t border-stone-200">
+      <a id="modal-wa-trigger" href="#" target="_blank" rel="noopener noreferrer" class="px-4 py-2 bg-emerald-700 hover:bg-emerald-600 text-white font-semibold text-xs transition">Enviar por WhatsApp ↗</a>
+      <button id="btn-close-pitch-bottom" type="button" class="px-4 py-2 border border-stone-400 text-stone-700 text-xs font-medium cursor-pointer hover:bg-stone-200">Cerrar</button>
+    </div>
+  </div>
+</div>
