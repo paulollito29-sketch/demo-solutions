@@ -3,13 +3,15 @@
 @tailwind utilities;
 
 :root {
-  --bg-main: #FAF7F2;
-  --bg-alt: #F1ECE3;
-  --ink: #191817;
-  --ink-muted: #65605B;
-  --accent: #7A2E3A;
-  --accent-soft: #EFE4E6;
-  --border-hair: #DDD6CC;
+  --bg-main: #FAF7FC;
+  --bg-alt: #F5EEF9;
+  --ink: #1F142B;
+  --ink-muted: #6B5E78;
+  --accent: #512680;
+  --accent-pink: #EF91BC;
+  --accent-soft: #FDF2F7;
+  --accent-lilac: #C084FC;
+  --border-hair: #E8DEF0;
 }
 
 body {
@@ -22,6 +24,10 @@ body {
 
 .font-editorial {
   font-family: 'Cormorant Garamond', Georgia, serif;
+}
+
+.font-script {
+  font-family: 'Dancing Script', cursive;
 }
 
 .font-mono-price {

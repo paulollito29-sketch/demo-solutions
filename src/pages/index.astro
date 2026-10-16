@@ -3,45 +3,60 @@ import Layout from '../layouts/Layout.astro';
 import AgencyBar from '../components/AgencyBar.astro';
 import PitchModal from '../components/PitchModal.astro';
 import TopBar from '../components/TopBar.astro';
-import NavBar from '../components/NavBar.astro';
-import Hero from '../components/Hero.astro';
+import { NavbarMotion } from '../components/react/NavbarMotion';
+import { HeroMotion } from '../components/react/HeroMotion';
 import Marquee from '../components/Marquee.astro';
-import MenuSection from '../components/MenuSection.astro';
-import BeforeAfter from '../components/BeforeAfter.astro';
-import LocationSection from '../components/LocationSection.astro';
-import Footer from '../components/Footer.astro';
+import { StoreShowcaseMotion } from '../components/react/StoreShowcaseMotion';
+import { ServicesCartMotion } from '../components/react/ServicesCartMotion';
+import { BeforeAfterMotion } from '../components/react/BeforeAfterMotion';
+import { LocationMotion } from '../components/react/LocationMotion';
+import { SocialReelsMotion } from '../components/react/SocialReelsMotion';
+import { FooterMotion } from '../components/react/FooterMotion';
+import { FloatingWAMotion } from '../components/react/FloatingWAMotion';
 ---
 
-<Layout>
+<Layout 
+  title="Benny Salón & Spa — Más de 21 años realzando lo mejor de ti | Surquillo"
+  description="Salón de belleza y spa en Surquillo. Especialistas en balayage Wella, colorimetría, alisados Alfaparf y manicure spa. Más de 21 años de trayectoria."
+>
   <!-- Barra de prospección interna de agencia -->
   <AgencyBar />
 
   <!-- Modal generador de propuesta lista para WhatsApp y Correo -->
   <PitchModal />
 
-  <!-- Cintillo superior con dirección y rating -->
+  <!-- Cintillo superior con dirección y rating de Google -->
   <TopBar />
 
-  <!-- Cabecera de navegación editorial -->
-  <NavBar />
+  <!-- Cabecera de navegación editorial animada con Framer Motion -->
+  <NavbarMotion client:load />
 
-  <!-- Hero principal asimétrico y tipográfico -->
-  <Hero />
+  <!-- Hero principal con tipografía editorial y Framer Motion -->
+  <HeroMotion client:load />
 
-  <!-- Cinta rotativa con badges de confianza -->
+  <!-- Cinta rotativa con badges de confianza en morado y rosa -->
   <Marquee />
 
-  <!-- Carta / Tarifario dinámico interactivo con carrito -->
-  <MenuSection />
+  <!-- Galería interactiva con las fotos reales de Benny y Framer Motion -->
+  <StoreShowcaseMotion client:visible />
 
-  <!-- Comparador antes/después con slider táctil -->
-  <BeforeAfter />
+  <!-- Carta / Tarifario interactivo con servicios Wella/Alfaparf y Framer Motion -->
+  <ServicesCartMotion client:load />
 
-  <!-- Ubicación con mapa dinámico de Google y reseñas -->
-  <LocationSection />
+  <!-- Comparador antes/después con slider táctil y Framer Motion -->
+  <BeforeAfterMotion client:visible />
 
-  <!-- Pie de página editorial -->
-  <Footer />
+  <!-- Sección de Reels y Comunidad Facebook & Instagram -->
+  <SocialReelsMotion client:visible />
+
+  <!-- Ubicación con mapa interactivo de Google y datos de contacto -->
+  <LocationMotion client:visible />
+
+  <!-- Pie de página editorial con logo oficial y slogan -->
+  <FooterMotion client:load />
+
+  <!-- Botón flotante animado de WhatsApp con Framer Motion -->
+  <FloatingWAMotion client:load />
 
   <script src="../scripts/client.ts"></script>
 </Layout>
