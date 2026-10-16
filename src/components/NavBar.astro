@@ -2,20 +2,33 @@
 // NavBar.astro
 ---
 
-<header class="border-b hairline-border sticky top-0 z-40 bg-[var(--bg-main)]/95 backdrop-blur-sm">
-  <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
-    <div class="flex items-center gap-6">
-      <a href="#" class="block">
-        <span id="nav-rubro-tag" class="block font-mono text-[10px] uppercase tracking-[0.22em] text-stone-500">ESTUDIO & BIENESTAR · SURQUILLO</span>
-        <span id="nav-name" class="font-serif text-2xl sm:text-3xl font-semibold tracking-tight leading-none block mt-0.5">Benny Salón & Spa</span>
+<header class="border-b hairline-border sticky top-0 z-40 bg-[var(--bg-main)]/95 backdrop-blur-md transition-colors duration-300">
+  <div class="max-w-6xl mx-auto px-4 py-3 sm:py-3.5 flex items-center justify-between gap-4">
+    <div class="flex items-center gap-3">
+      <a href="#" class="block group flex items-center gap-3">
+        <div class="h-10 sm:h-12 flex items-center">
+          <img id="nav-brand-logo" src="/logos/p002-paolas.svg" alt="Logotipo Oficial" class="h-9 sm:h-11 w-auto max-w-[240px] object-contain transition-transform group-hover:scale-102" />
+          <div id="nav-monogram" class="w-10 h-10 rounded-lg flex items-center justify-center font-serif text-base font-bold text-white shadow-sm shrink-0 bg-[var(--accent)] tracking-tighter select-none hidden">
+            BS
+          </div>
+        </div>
       </a>
+      <span class="inline-flex items-center gap-1 px-2 py-0.5 rounded text-[9px] font-mono bg-emerald-100/90 text-emerald-800 font-medium border border-emerald-300/70 hidden lg:inline-flex">
+        <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span> Abierto Hoy
+      </span>
     </div>
-    <nav class="hidden md:flex items-center gap-8 text-xs uppercase tracking-[0.15em] font-medium text-stone-600">
-      <a href="#carta" class="hover:text-black transition" id="nav-menu-label">Carta de Servicios</a>
-      <a href="#galeria" class="hover:text-black transition">Resultados & Estudio</a>
-      <a href="#ubicacion" class="hover:text-black transition">Ubicación</a>
+
+    <nav class="hidden md:flex items-center gap-6 lg:gap-8 text-xs uppercase tracking-[0.14em] font-medium text-stone-600">
+      <a href="#carta" class="hover:text-[var(--accent)] transition-colors" id="nav-menu-label">Carta & Precios</a>
+      <a href="#galeria" class="hover:text-[var(--accent)] transition-colors">Resultados</a>
+      <a href="#ubicacion" class="hover:text-[var(--accent)] transition-colors">Ubicación</a>
+      <a id="nav-social-link" href="#" target="_blank" rel="noopener noreferrer" class="hidden lg:inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[11px] font-mono border hairline-border bg-[var(--bg-alt)] hover:border-stone-800 transition">
+        <span class="w-1.5 h-1.5 rounded-full bg-[var(--accent)]"></span>
+        <span id="nav-social-text">@instagram</span>
+      </a>
     </nav>
-    <a href="#carta" class="btn-editorial px-4 py-2.5 text-xs uppercase tracking-[0.12em] font-semibold">
+
+    <a href="#carta" id="nav-cta-btn" class="btn-editorial px-4 sm:px-5 py-2.5 text-xs uppercase tracking-[0.12em] font-semibold shrink-0">
       <span id="nav-cta-text">Reservar Turno</span>
     </a>
   </div>

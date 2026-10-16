@@ -4,10 +4,12 @@
 
 :root {
   --bg-main: #FAF7F2;
+  --bg-panel: #FFFFFF;
   --bg-alt: #F1ECE3;
   --ink: #191817;
   --ink-muted: #65605B;
   --accent: #7A2E3A;
+  --accent-dark: #4A1A22;
   --accent-soft: #EFE4E6;
   --border-hair: #DDD6CC;
 }
@@ -38,6 +40,10 @@ body {
 
 .bg-surface-alt {
   background-color: var(--bg-alt);
+}
+
+.bg-panel {
+  background-color: var(--bg-panel);
 }
 
 .btn-editorial {

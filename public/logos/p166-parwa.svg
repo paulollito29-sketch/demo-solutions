@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 68" width="340" height="68">
+  <defs>
+    <style>
+      .brand-title { font-family: 'Cormorant Garamond', 'Cinzel', 'Playfair Display', Georgia, serif; font-size: 24px; font-weight: 700; letter-spacing: 0.12em; fill: #1C1418; }
+      .brand-sub { font-family: 'JetBrains Mono', 'DM Sans', -apple-system, monospace; font-size: 8.5px; font-weight: 600; letter-spacing: 0.22em; fill: #732645; }
+    </style>
+  </defs>
+  
+  <!-- Emblem Badge -->
+  <g transform="translate(6, 4)">
+    <rect x="0" y="0" width="56" height="56" rx="12" fill="#EFE5E9" stroke="#732645" stroke-width="1.2" opacity="0.95"/>
+    <g transform="translate(-2, -4)">
+      <polygon points="30,14 36,26 48,26 38,34 42,46 30,38 18,46 22,34 12,26 24,26" fill="#732645"/>
+    </g>
+  </g>
+  
+  <!-- Typography -->
+  <g transform="translate(74, 33)">
+    <text x="0" y="0" class="brand-title">PARWA</text>
+    <text x="1" y="16" class="brand-sub">SALÓN & SPA · BREÑA</text>
+  </g>
+</svg>

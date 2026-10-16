@@ -1,3 +1,14 @@
+export interface ProspectPalette {
+  name: string;
+  bg_page: string;
+  bg_panel: string;
+  bg_tint: string;
+  ink: string;
+  accent: string;
+  accent_dark: string;
+  line: string;
+}
+
 export interface Prospect {
   id: string;
   name: string;
@@ -12,6 +23,23 @@ export interface Prospect {
   estrellas: string;
   resenas: string;
   franja: string;
+  facebook?: string;
+  instagram?: string;
+  estadoWeb?: string;
+  lema?: string;
+  logoUrl?: string;
+  heroPhoto?: string;
+  featuredLabel?: string;
+  featuredPrice?: string;
+  featuredTitle?: string;
+  featuredSub?: string;
+  baKicker?: string;
+  baTitle?: string;
+  baDesc?: string;
+  baBefore?: string;
+  baAfter?: string;
+  palette?: ProspectPalette;
+  customServices?: ServiceItem[];
 }
 
 export interface ServiceItem {

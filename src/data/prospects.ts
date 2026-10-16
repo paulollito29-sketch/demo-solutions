@@ -14,7 +14,8 @@ export const PROSPECTS: Prospect[] = [
     "es_celular": "Fijo (Llamar / Pedir WA)",
     "estrellas": "4.7",
     "resenas": "más de 100",
-    "franja": "10:00–12:00 o 15:00–17:00 (supuesto)"
+    "franja": "10:00–12:00 o 15:00–17:00 (supuesto)",
+    "logoUrl": "/benny/logo-transparent.png"
   },
   {
     "id": "P002",
@@ -23,13 +24,72 @@ export const PROSPECTS: Prospect[] = [
     "rubro": "Belleza y bienestar",
     "prioridad": "Alta",
     "indice": 96,
-    "direccion": "Grau 295, Magdalena del Mar 15086, Peru",
-    "tel": "954 717 197",
-    "wa": "51954717197",
+    "direccion": "Calle Grau 295, Magdalena del Mar 15086",
+    "tel": "954 717 197 / 919 188 421 / 925 610 420",
+    "wa": "51919188421",
     "es_celular": "Sí (WhatsApp Directo)",
     "estrellas": "4.5",
     "resenas": "más de 100",
-    "franja": "10:00–12:00 o 15:00–17:00 (supuesto)"
+    "franja": "10:00–12:00 o 15:00–17:00 (supuesto)",
+    "facebook": "https://www.facebook.com/PaolaSpa.Salon/",
+    "instagram": "@paolasalon_urbanspa",
+    "estadoWeb": "Sin web oficial · Calificación 4.5★ (+100 reseñas en Google)",
+    "lema": "«En Paola's Salón & Urban Spa, no solo cambiamos tu cabello, transformamos tu actitud. El look de tus sueños está a solo una cita de distancia.»",
+    "palette": {
+      "name": "Chocó Glam & Gold Reina",
+      "bg_page": "#F9F5F1",
+      "bg_panel": "#FFFFFF",
+      "bg_tint": "#EFE4DA",
+      "ink": "#1C130E",
+      "accent": "#6E3518",
+      "accent_dark": "#4E230E",
+      "line": "#DFCFC2"
+    },
+    "customServices": [
+      {
+        "id": "p2-1",
+        "cat": "Color & Brillo",
+        "name": "Experiencia Chocó Glam (Color Chocolate + Hidratación)",
+        "desc": "Coloración chocolate rica en reflejos cálidos y nutrición profunda a base de cacao.",
+        "price": 160,
+        "time": "120 min"
+      },
+      {
+        "id": "p2-2",
+        "cat": "Color & Brillo",
+        "name": "Balayage Hair Glow con Matizado",
+        "desc": "Degradé luminoso sin maltrato con protección de fibra capilar y cepillado final.",
+        "price": 180,
+        "time": "150 min"
+      },
+      {
+        "id": "p2-3",
+        "cat": "Styling & Eventos",
+        "name": "Maquillaje & Styling Miss Perú",
+        "desc": "Maquillaje profesional HD de larga duración y peinado de gala de alto impacto.",
+        "price": 120,
+        "time": "90 min"
+      },
+      {
+        "id": "p2-4",
+        "cat": "Tratamientos",
+        "name": "Botox Capilar 💖 Sellador de Puntas",
+        "desc": "Relleno capilar intensivo, eliminación de frizz y suavidad extrema.",
+        "price": 110,
+        "time": "75 min"
+      }
+    ],
+    "heroPhoto": "https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=1200&q=85",
+    "featuredLabel": "EXPERIENCIA EXCLUSIVA",
+    "featuredPrice": "S/ 160",
+    "featuredTitle": "Chocó Glam: Color Chocolate + Nutrición",
+    "featuredSub": "Styling Miss Perú y tratamiento de cacao puro.",
+    "baKicker": "LOOK DE TUS SUEÑOS · MAGDALENA",
+    "baTitle": "No solo cambiamos tu cabello, transformamos tu actitud.",
+    "baDesc": "Desliza para ver la transformación de brillo y volumen con nuestra línea Chocó Glam.",
+    "baBefore": "https://images.unsplash.com/photo-1519699047748-de8e457a634e?auto=format&fit=crop&w=1000&q=85",
+    "baAfter": "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=1000&q=85",
+    "logoUrl": "/logos/p002-paolas.svg"
   },
   {
     "id": "P003",
@@ -38,13 +98,72 @@ export const PROSPECTS: Prospect[] = [
     "rubro": "Veterinaria",
     "prioridad": "Alta",
     "indice": 96,
-    "direccion": "Cádiz 490, Pueblo Libre LIMA 21, Peru",
-    "tel": "958 156 277",
+    "direccion": "Jr. Cádiz 490 - 494, Pueblo Libre (Lima 21)",
+    "tel": "958 156 277 / (01) 460-2642",
     "wa": "51958156277",
     "es_celular": "Sí (WhatsApp Directo)",
     "estrellas": "4.5",
     "resenas": "más de 50",
-    "franja": "10:00–12:00 o 15:00–17:00 (supuesto)"
+    "franja": "10:00–12:00 o 15:00–17:00 (supuesto)",
+    "facebook": "https://www.facebook.com/veterinariamikelas/",
+    "instagram": "@veterinariamikelas",
+    "estadoWeb": "Sin web oficial · 1,321 seguidores · Médicos UNMSM",
+    "lema": "«Médicos Veterinarios egresados de la UNMSM, comprometidos en velar por el bienestar de tu engreído con mucho amor. ¡Somos todo lo que tu mascota necesita!»",
+    "palette": {
+      "name": "Deep Forest Vet & Warm Ivory",
+      "bg_page": "#F5F7F5",
+      "bg_panel": "#FFFFFF",
+      "bg_tint": "#E3ECE5",
+      "ink": "#101F16",
+      "accent": "#165B3A",
+      "accent_dark": "#0E3F27",
+      "line": "#C5D9CB"
+    },
+    "customServices": [
+      {
+        "id": "p3-1",
+        "cat": "Medicina Clínica",
+        "name": "Consulta Médica Veterinaria Especializada UNMSM",
+        "desc": "Evaluación clínica integral y diagnóstico por profesionales Sanmarquinos.",
+        "price": 40,
+        "time": "30 min"
+      },
+      {
+        "id": "p3-2",
+        "cat": "Grooming & Spa",
+        "name": "Área de Baños Terapéuticos y Grooming Completo",
+        "desc": "Corte de raza, limpieza de oídos, corte de uñas y shampoo especializado.",
+        "price": 35,
+        "time": "60 min"
+      },
+      {
+        "id": "p3-3",
+        "cat": "Odontología Vet",
+        "name": "Profilaxis Dental con Ultrasonido",
+        "desc": "Limpieza profunda de sarro dental para prevenir infecciones bucales y mal aliento.",
+        "price": 90,
+        "time": "45 min"
+      },
+      {
+        "id": "p3-4",
+        "cat": "Prevención & Farmacia",
+        "name": "Plan de Vacunas, Desparasitación y Farmacia",
+        "desc": "Inmunización completa con marcas certificadas y control de parásitos.",
+        "price": 50,
+        "time": "20 min"
+      }
+    ],
+    "heroPhoto": "https://images.unsplash.com/photo-1583337130417-3346a1be7dee?auto=format&fit=crop&w=1200&q=85",
+    "featuredLabel": "ATENCIÓN MÉDICA UNMSM",
+    "featuredPrice": "S/ 40",
+    "featuredTitle": "Consulta Médica Veterinaria Integral",
+    "featuredSub": "Comprometidos en velar por el bienestar de tu engreído.",
+    "baKicker": "GROOMING & BIENESTAR · PUEBLO LIBRE",
+    "baTitle": "Todo lo que tu mascota necesita con mucho amor.",
+    "baDesc": "Baños relajantes, corte de raza higiénico y control médico en un ambiente seguro.",
+    "baBefore": "https://images.unsplash.com/photo-1548767797-d8c844163c4c?auto=format&fit=crop&w=1000&q=85",
+    "baAfter": "https://images.unsplash.com/photo-1583337130417-3346a1be7dee?auto=format&fit=crop&w=1000&q=85",
+    "logoUrl": "/logos/p003-mikelas.svg"
   },
   {
     "id": "P004",
@@ -98,13 +217,72 @@ export const PROSPECTS: Prospect[] = [
     "rubro": "Restaurante y cafetería",
     "prioridad": "Alta",
     "indice": 92,
-    "direccion": "Avenida Agustín de la Rosa Toro 883, San Borja 15021, Peru",
+    "direccion": "Avenida Agustín de la Rosa Toro 883, San Borja / San Luis",
     "tel": "990 997 527",
     "wa": "51990997527",
     "es_celular": "Sí (WhatsApp Directo)",
     "estrellas": "4.2",
     "resenas": "más de 100",
-    "franja": "Antes de 12:00 o después de 16:00 (supuesto)"
+    "franja": "Antes de 12:00 o después de 16:00 (supuesto)",
+    "facebook": "https://www.facebook.com/elcevichitosanluis/",
+    "instagram": "@elcevichitosanluis",
+    "estadoWeb": "Sin web oficial · Desayunos marinos y almuerzos familiares",
+    "lema": "«En El Cevichito no vendemos ceviche… vendemos viajes directos al norte del Perú . ¿Te guardo mesa? Escríbenos y llega directo a lo bueno.»",
+    "palette": {
+      "name": "Terracota Norteño & Pacífico",
+      "bg_page": "#FAF7F2",
+      "bg_panel": "#FFFFFF",
+      "bg_tint": "#F2E9DC",
+      "ink": "#121E24",
+      "accent": "#B84314",
+      "accent_dark": "#8C300B",
+      "line": "#E0D3C1"
+    },
+    "customServices": [
+      {
+        "id": "p7-1",
+        "cat": "Especialidades",
+        "name": "Cremosito Arroz con Mariscos al Ají Amarillo",
+        "desc": "Arroz al dente con sofrito norteño, langostinos, calamares y salsa criolla.",
+        "price": 38,
+        "time": "Plato Fuerte"
+      },
+      {
+        "id": "p7-2",
+        "cat": "Especialidades",
+        "name": "Lenguado en Salsa de Langostinos",
+        "desc": "Filete de lenguado a la plancha bañado en salsa madre cremosa de langostinos.",
+        "price": 48,
+        "time": "Recomendado"
+      },
+      {
+        "id": "p7-3",
+        "cat": "Barra Fría",
+        "name": "Ceviche Norteño de Pesca Fresca",
+        "desc": "Preparado al estilo chiclayano con zarandaja, choclo desgranado y ají mochero.",
+        "price": 35,
+        "time": "Al instante"
+      },
+      {
+        "id": "p7-4",
+        "cat": "Combinados",
+        "name": "Dúos y Tríos de la Casa Rosa Toro",
+        "desc": "Combina Ceviche clásico + Arroz con Mariscos o Chicharrón crocante.",
+        "price": 45,
+        "time": "Contundente"
+      }
+    ],
+    "heroPhoto": "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=1200&q=85",
+    "featuredLabel": "VIAJE AL NORTE",
+    "featuredPrice": "S/ 38",
+    "featuredTitle": "Cremosito Arroz con Mariscos al Ají Amarillo",
+    "featuredSub": "Tradición y sabor chiclayano en Av. Rosa Toro.",
+    "baKicker": "TRADICIÓN NORTEÑA · AV. ROSA TORO",
+    "baTitle": "No vendemos ceviche… vendemos viajes directos al norte.",
+    "baDesc": "Sabor contundente con pesca fresca, sarandaja y ají mochero aromático.",
+    "baBefore": "https://images.unsplash.com/photo-1535399831218-d5bd36d1a6b3?auto=format&fit=crop&w=1000&q=85",
+    "baAfter": "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=1000&q=85",
+    "logoUrl": "/logos/p007-el-cevichito.svg"
   },
   {
     "id": "P008",
@@ -113,13 +291,72 @@ export const PROSPECTS: Prospect[] = [
     "rubro": "Restaurante y cafetería",
     "prioridad": "Alta",
     "indice": 92,
-    "direccion": "Jr, Manuel Irribarren 309, Surquillo 15047, Peru",
-    "tel": "984 327 646",
-    "wa": "51984327646",
+    "direccion": "Jr. Manuel Irribarren 309 (Surquillo) / Av. Joaquín Madrid 125 (San Borja)",
+    "tel": "997 901 276 / 984 327 646",
+    "wa": "51997901276",
     "es_celular": "Sí (WhatsApp Directo)",
     "estrellas": "4.3",
     "resenas": "más de 100",
-    "franja": "Antes de 12:00 o después de 16:00 (supuesto)"
+    "franja": "Antes de 12:00 o después de 16:00 (supuesto)",
+    "facebook": "https://www.facebook.com/labarraderamiro/",
+    "instagram": "@labarraderamiro",
+    "estadoWeb": "Sin web oficial · 2 sedes · Abierto desde las 11:00 AM",
+    "lema": "«¡Del mar a tu mesa! Pura frescura y harrrto cariño ❤️戀 ¡Ven por tu Cevichito Apaltado!»",
+    "palette": {
+      "name": "Palta Intensa & Negro Pizarra",
+      "bg_page": "#F6F8F4",
+      "bg_panel": "#FFFFFF",
+      "bg_tint": "#E6EFE0",
+      "ink": "#131D15",
+      "accent": "#276738",
+      "accent_dark": "#1B4B28",
+      "line": "#C9DBBF"
+    },
+    "customServices": [
+      {
+        "id": "p8-1",
+        "cat": "Plato Insignia",
+        "name": "¡Cevichito Apaltado! (La creación de Ramiro)",
+        "desc": "Ceviche clásico de pescado con cubos de palta fuerte seleccionada y canchita.",
+        "price": 38,
+        "time": "Insignia"
+      },
+      {
+        "id": "p8-2",
+        "cat": "Promociones",
+        "name": "Campaña #ChilcanoGratis reservando por web",
+        "desc": "Chilcano caliente reconcentrado de cortesía al ordenar tu plato de fondo.",
+        "price": 0,
+        "time": "Cortesía"
+      },
+      {
+        "id": "p8-3",
+        "cat": "Calientes",
+        "name": "Arroz con Mariscos y Chicharrón de Calamar",
+        "desc": "Porción bien taipá servida con tártara casera y zarza criolla.",
+        "price": 42,
+        "time": "Generoso"
+      },
+      {
+        "id": "p8-4",
+        "cat": "Barra",
+        "name": "Dúos Marinos de Barra",
+        "desc": "Ceviche fresco + Jalea Mixta o Arroz con Mariscos a elección.",
+        "price": 46,
+        "time": "Clásico"
+      }
+    ],
+    "heroPhoto": "https://images.unsplash.com/photo-1512058564366-18510be2db19?auto=format&fit=crop&w=1200&q=85",
+    "featuredLabel": "CREACIÓN EXCLUSIVA",
+    "featuredPrice": "S/ 38",
+    "featuredTitle": "¡Cevichito Apaltado! (Plato Insignia)",
+    "featuredSub": "Pura frescura y harrrto cariño + Chilcano gratis web.",
+    "baKicker": "DEL MAR A TU MESA · SURQUILLO",
+    "baTitle": "¡Del mar a tu mesa con harrrto cariño!",
+    "baDesc": "Ceviche fresco con cubos de palta seleccionada y leche de tigre cremosa.",
+    "baBefore": "https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?auto=format&fit=crop&w=1000&q=85",
+    "baAfter": "https://images.unsplash.com/photo-1535399831218-d5bd36d1a6b3?auto=format&fit=crop&w=1000&q=85",
+    "logoUrl": "/logos/p008-ramiro.svg"
   },
   {
     "id": "P009",
@@ -233,13 +470,72 @@ export const PROSPECTS: Prospect[] = [
     "rubro": "Veterinaria",
     "prioridad": "Alta",
     "indice": 91,
-    "direccion": "Jr. Medrano Silva 370, Barranco 15063, Peru",
-    "tel": "(01) 2475084",
-    "wa": "51999888777",
-    "es_celular": "Fijo (Llamar / Pedir WA)",
+    "direccion": "Jr. Medrano Silva 370, Barranco 15063",
+    "tel": "992 512 084 / (01) 247-5084",
+    "wa": "51992512084",
+    "es_celular": "Sí (WhatsApp Directo)",
     "estrellas": "4.9",
     "resenas": "más de 10",
-    "franja": "10:00–12:00 o 15:00–17:00 (supuesto)"
+    "franja": "10:00–12:00 o 15:00–17:00 (supuesto)",
+    "facebook": "https://www.facebook.com/vetpetsfarma/",
+    "instagram": "@vetpetsfarma",
+    "estadoWeb": "Sin web oficial · Calificación 4.9★ en Google Maps · Farmacia veterinaria",
+    "lema": "«Somos una veterinaria enfocada en la MEDICINA PREVENTIVA y en mejorar la CALIDAD DE VIDA de tus mascotas en Barranco.»",
+    "palette": {
+      "name": "Botanical Vet & Terracotta",
+      "bg_page": "#F6F8F6",
+      "bg_panel": "#FFFFFF",
+      "bg_tint": "#E4EFE8",
+      "ink": "#12211B",
+      "accent": "#136552",
+      "accent_dark": "#0C4739",
+      "line": "#C6DDD2"
+    },
+    "customServices": [
+      {
+        "id": "p16-1",
+        "cat": "Consulta",
+        "name": "Medicina Preventiva y Chequeo Clínico Integral",
+        "desc": "Evaluación exhaustiva de salud, signos vitales y asesoría nutricional para mascotas.",
+        "price": 45,
+        "time": "30 min"
+      },
+      {
+        "id": "p16-2",
+        "cat": "Farmacia",
+        "name": "Farmacia Veterinaria Especializada",
+        "desc": "Medicamentos de laboratorios certificados, antipulgas y suplementos vitamínicos.",
+        "price": 30,
+        "time": "Inmediato"
+      },
+      {
+        "id": "p16-3",
+        "cat": "Vacunas",
+        "name": "Plan de Vacunación y Desparasitación Interna/Externa",
+        "desc": "Esquema completo para cachorros y adultos con tarjeta de control.",
+        "price": 55,
+        "time": "20 min"
+      },
+      {
+        "id": "p16-4",
+        "cat": "Grooming",
+        "name": "Baños Medicados y Terapéuticos",
+        "desc": "Tratamiento dermatológico para piel sensible, alergias y control de pulgas.",
+        "price": 40,
+        "time": "45 min"
+      }
+    ],
+    "heroPhoto": "https://images.unsplash.com/photo-1583337130417-3346a1be7dee?auto=format&fit=crop&w=1200&q=85",
+    "featuredLabel": "MEDICINA PREVENTIVA",
+    "featuredPrice": "S/ 45",
+    "featuredTitle": "Chequeo Clínico Integral + Plan Preventivo",
+    "featuredSub": "Calificación 4.9★ en Jr. Medrano Silva 370.",
+    "baKicker": "CALIDAD DE VIDA · BARRANCO",
+    "baTitle": "Medicina preventiva para mejorar la vida de tus mascotas.",
+    "baDesc": "Farmacia especializada, vacunas y baños medicados con amor y dedicación.",
+    "baBefore": "https://images.unsplash.com/photo-1548767797-d8c844163c4c?auto=format&fit=crop&w=1000&q=85",
+    "baAfter": "https://images.unsplash.com/photo-1583337130417-3346a1be7dee?auto=format&fit=crop&w=1000&q=85",
+    "logoUrl": "/logos/p016-pets-farma.svg"
   },
   {
     "id": "P017",
@@ -258,18 +554,77 @@ export const PROSPECTS: Prospect[] = [
   },
   {
     "id": "P018",
-    "name": "La Maquinita Del Sabor - Restaurant - Cevichera - San Miguel",
+    "name": "La Maquinita Del Sabor - Restaurant - Cevichería",
     "zona": "San Miguel",
     "rubro": "Restaurante y cafetería",
     "prioridad": "Alta",
     "indice": 88,
-    "direccion": "pando 9etapa, av. vemezuela cdr. 36 mz b lt 5, San Miguel 15088, Peru",
-    "tel": "(01) 3701135",
-    "wa": "51999888777",
-    "es_celular": "Fijo (Llamar / Pedir WA)",
+    "direccion": "Av. Venezuela 3605 (Pando 9na Etapa Mz B Lt 5), San Miguel 15088",
+    "tel": "924 006 824 / (01) 370-1135",
+    "wa": "51924006824",
+    "es_celular": "Sí (WhatsApp Directo)",
     "estrellas": "4.1",
     "resenas": "más de 50",
-    "franja": "Antes de 12:00 o después de 16:00 (supuesto)"
+    "franja": "Antes de 12:00 o después de 16:00 (supuesto)",
+    "facebook": "https://www.facebook.com/lamaquinitadelsabor/",
+    "instagram": "@lamaquinitadelsabor",
+    "estadoWeb": "Sin web oficial · +493 seguidores · Envíos y reservas en Pando",
+    "lema": "«❤️ La Maquinita del Sabor — el verdadero sabor del mar en San Miguel. Porciones generosas para toda la familia.»",
+    "palette": {
+      "name": "Rojo Rocoto & Azul Pando",
+      "bg_page": "#FAF7F5",
+      "bg_panel": "#FFFFFF",
+      "bg_tint": "#F2E7E3",
+      "ink": "#1A1412",
+      "accent": "#A8201A",
+      "accent_dark": "#7D1510",
+      "line": "#E2CFC8"
+    },
+    "customServices": [
+      {
+        "id": "p18-1",
+        "cat": "Fuentes Familiares",
+        "name": "Fuente Familiar de Ceviche con Chicharrón",
+        "desc": "Porción monumental para compartir: ceviche mixto coronado con chicharrón crocante.",
+        "price": 65,
+        "time": "Familiar"
+      },
+      {
+        "id": "p18-2",
+        "cat": "Barra Fría",
+        "name": "Ceviche Mixto al Ají Limo y Culantro",
+        "desc": "Pescado, pulpo, calamar y langostinos en leche de tigre equilibrada.",
+        "price": 38,
+        "time": "Al instante"
+      },
+      {
+        "id": "p18-3",
+        "cat": "Calientes",
+        "name": "Arroz con Mariscos al Wok Estilo Pando",
+        "desc": "Sabor ahumado, pimientos, arvejas y frutos del mar con queso parmesano opcional.",
+        "price": 40,
+        "time": "Taipá"
+      },
+      {
+        "id": "p18-4",
+        "cat": "Dúos",
+        "name": "Dúos Marinos Criollos",
+        "desc": "Combinación de frío y caliente al gusto del comensal.",
+        "price": 44,
+        "time": "Contundente"
+      }
+    ],
+    "heroPhoto": "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=1200&q=85",
+    "featuredLabel": "PORCIÓN MONUMENTAL",
+    "featuredPrice": "S/ 65",
+    "featuredTitle": "Fuente Familiar de Ceviche con Chicharrón",
+    "featuredSub": "El verdadero sabor del mar en Pando 9na Etapa.",
+    "baKicker": "SABOR FAMILIAR · PANDO",
+    "baTitle": "El verdadero sabor del mar en San Miguel.",
+    "baDesc": "Platos contundentes para disfrutar en familia con sazón norteña y criolla.",
+    "baBefore": "https://images.unsplash.com/photo-1535399831218-d5bd36d1a6b3?auto=format&fit=crop&w=1000&q=85",
+    "baAfter": "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=1000&q=85",
+    "logoUrl": "/logos/p018-la-maquinita.svg"
   },
   {
     "id": "P019",
@@ -398,13 +753,72 @@ export const PROSPECTS: Prospect[] = [
     "rubro": "Belleza y bienestar",
     "prioridad": "Alta",
     "indice": 87,
-    "direccion": "Avenida Lima 1385",
-    "tel": "982 234 100",
+    "direccion": "Avenida Lima 1385, San Miguel",
+    "tel": "982 234 100 / 938 801 302 / (01) 491-7314",
     "wa": "51982234100",
     "es_celular": "Sí (WhatsApp Directo)",
     "estrellas": "5.0",
     "resenas": "más de 10",
-    "franja": "10:00–12:00 o 15:00–17:00 (supuesto)"
+    "franja": "10:00–12:00 o 15:00–17:00 (supuesto)",
+    "facebook": "https://www.facebook.com/search/top?q=Kawai%20Salon%20Spa%20San%20Miguel",
+    "instagram": "@kawaisalonspa",
+    "estadoWeb": "Sin web oficial · Calificación perfecta 5.0★ en Google Maps",
+    "lema": "«Calificación 5.0 ★ en San Miguel. Cuidado capilar, uñas y estilo con profesionales de primera.»",
+    "palette": {
+      "name": "Sakura Mauve & Dark Cocoa",
+      "bg_page": "#FAF6F7",
+      "bg_panel": "#FFFFFF",
+      "bg_tint": "#F2E6E9",
+      "ink": "#1D1517",
+      "accent": "#9E3B56",
+      "accent_dark": "#782A3F",
+      "line": "#E3CFD5"
+    },
+    "customServices": [
+      {
+        "id": "p27-1",
+        "cat": "Nail Studio",
+        "name": "Manicure Rusa & Nail Art de Tendencia",
+        "desc": "Limpieza profunda de cutículas con torno y esmaltado en gel con diseños personalizados.",
+        "price": 65,
+        "time": "70 min"
+      },
+      {
+        "id": "p27-2",
+        "cat": "Color",
+        "name": "Balayage y Colorimetría Avanzada",
+        "desc": "Aclarado suave y matizado personalizado para un cabello iluminado y saludable.",
+        "price": 175,
+        "time": "140 min"
+      },
+      {
+        "id": "p27-3",
+        "cat": "Laceados",
+        "name": "Alisados Orgánicos sin Formol",
+        "desc": "Suavidad sedosa y reducción de volumen sin vapores tóxicos.",
+        "price": 145,
+        "time": "120 min"
+      },
+      {
+        "id": "p27-4",
+        "cat": "Faciales",
+        "name": "Hidratación Facial Spa y Rejuvenecimiento",
+        "desc": "Protocolo completo de limpieza y nutrición para una piel luminosa.",
+        "price": 80,
+        "time": "50 min"
+      }
+    ],
+    "heroPhoto": "https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=1200&q=85",
+    "featuredLabel": "NAIL ART & COLOR",
+    "featuredPrice": "S/ 65",
+    "featuredTitle": "Manicure Rusa & Nail Art de Tendencia",
+    "featuredSub": "Calificación 5.0★ en Av. Lima 1385.",
+    "baKicker": "NAIL ART & SPA · SAN MIGUEL",
+    "baTitle": "Calificación 5.0 ★ en San Miguel: estilo y cuidado.",
+    "baDesc": "Manicura rusa, balayage y faciales con profesionales de primera.",
+    "baBefore": "https://images.unsplash.com/photo-1519699047748-de8e457a634e?auto=format&fit=crop&w=1000&q=85",
+    "baAfter": "https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=1000&q=85",
+    "logoUrl": "/logos/p027-kawai.svg"
   },
   {
     "id": "P028",
@@ -413,13 +827,72 @@ export const PROSPECTS: Prospect[] = [
     "rubro": "Belleza y bienestar",
     "prioridad": "Alta",
     "indice": 87,
-    "direccion": "Av. Caminos del Inca 3416, Santiago de Surco 15039, Peru",
-    "tel": "(01) 3144618",
-    "wa": "51999888777",
-    "es_celular": "Fijo (Llamar / Pedir WA)",
+    "direccion": "Av. Caminos del Inca 3416, Santiago de Surco 15039",
+    "tel": "920 045 642 / (01) 314-4618",
+    "wa": "51920045642",
+    "es_celular": "Sí (WhatsApp Directo)",
     "estrellas": "4.8",
     "resenas": "más de 10",
-    "franja": "10:00–12:00 o 15:00–17:00 (supuesto)"
+    "franja": "10:00–12:00 o 15:00–17:00 (supuesto)",
+    "facebook": "https://www.facebook.com/krasotybelleza/",
+    "instagram": "@krasoty_salonspa",
+    "estadoWeb": "Sin web oficial · 4.8★ en Google Maps · Muy activo en Reels",
+    "lema": "«Lo último en corte y color lo encuentras en Krasoty, clientas felices en nuestras manos.»",
+    "palette": {
+      "name": "Espresso Bronze & Silk Cream",
+      "bg_page": "#F9F6F1",
+      "bg_panel": "#FFFFFF",
+      "bg_tint": "#EFE7DC",
+      "ink": "#181411",
+      "accent": "#8C5828",
+      "accent_dark": "#69401A",
+      "line": "#DFD3C3"
+    },
+    "customServices": [
+      {
+        "id": "p28-1",
+        "cat": "Alisados",
+        "name": "Alisado Hialuronic Liss de Kerasilk",
+        "desc": "Tecnología con ácido hialurónico que disciplina el cabello sin perder volumen natural.",
+        "price": 190,
+        "time": "140 min"
+      },
+      {
+        "id": "p28-2",
+        "cat": "Color & Ondas",
+        "name": "Balayage + Ondas de Salón",
+        "desc": "Degradé suave y luminoso con ondas desenfadadas de acabado profesional.",
+        "price": 180,
+        "time": "150 min"
+      },
+      {
+        "id": "p28-3",
+        "cat": "Corte & Color",
+        "name": "Corte Estilizado y Colorimetría",
+        "desc": "Diseño según tipo de rostro y aplicación de tintes con brillo intenso.",
+        "price": 90,
+        "time": "60 min"
+      },
+      {
+        "id": "p28-4",
+        "cat": "Manicure",
+        "name": "Manicure Spa con Esmaltado en Gel",
+        "desc": "Cuidado de uñas y cutículas con acabado duradero por semanas.",
+        "price": 45,
+        "time": "50 min"
+      }
+    ],
+    "heroPhoto": "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=1200&q=85",
+    "featuredLabel": "TECNOLOGÍA KERASILK",
+    "featuredPrice": "S/ 190",
+    "featuredTitle": "Alisado Hialuronic Liss de Kerasilk",
+    "featuredSub": "Lo último en corte y color en Caminos del Inca.",
+    "baKicker": "CORTE & COLOR · CAMINOS DEL INCA",
+    "baTitle": "Lo último en corte y color lo encuentras en Krasoty.",
+    "baDesc": "Clientas felices en nuestras manos con productos de gama internacional.",
+    "baBefore": "https://images.unsplash.com/photo-1519699047748-de8e457a634e?auto=format&fit=crop&w=1000&q=85",
+    "baAfter": "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=1000&q=85",
+    "logoUrl": "/logos/p028-krasoty.svg"
   },
   {
     "id": "P029",
@@ -483,18 +956,77 @@ export const PROSPECTS: Prospect[] = [
   },
   {
     "id": "P033",
-    "name": "Pez Azul Cevicheria",
+    "name": "Cevichería Pez Azul",
     "zona": "Chorrillos",
     "rubro": "Restaurante y cafetería",
     "prioridad": "Alta",
     "indice": 83,
-    "direccion": "C. Andrés Avelino Cáceres 1, Chorrillos 15067, Peru",
-    "tel": "(01) 3867875",
-    "wa": "51999888777",
-    "es_celular": "Fijo (Llamar / Pedir WA)",
+    "direccion": "C. Andrés Avelino Cáceres 1, Chorrillos 15067",
+    "tel": "(01) 386-7875",
+    "wa": "tel:013867875",
+    "es_celular": "Fijo (Llamar)",
     "estrellas": "4.2",
     "resenas": "más de 50",
-    "franja": "Antes de 12:00 o después de 16:00 (supuesto)"
+    "franja": "Antes de 12:00 o después de 16:00 (supuesto)",
+    "facebook": "https://www.facebook.com/CevicheriaPezAzul/",
+    "instagram": "@pezazulcevicheria",
+    "estadoWeb": "Sin web oficial · 763 seguidores en FB · Especialistas marinos",
+    "lema": "«Los especialistas en llevarte lo mejor de nuestra gastronomía marina en Chorrillos. ¡Frescura garantizada!»",
+    "palette": {
+      "name": "Deep Ocean & Dorado Marina",
+      "bg_page": "#F5F8FA",
+      "bg_panel": "#FFFFFF",
+      "bg_tint": "#E4EDF5",
+      "ink": "#0C1A26",
+      "accent": "#0A4D7C",
+      "accent_dark": "#063557",
+      "line": "#C5D7E6"
+    },
+    "customServices": [
+      {
+        "id": "p33-1",
+        "cat": "Clásicos",
+        "name": "Ceviche Clásico Bandera de Pesca del Día",
+        "desc": "Filete de pescado fresco, limón norteño, cebolla crocante, canchita y camote glaseado.",
+        "price": 36,
+        "time": "Al instante"
+      },
+      {
+        "id": "p33-2",
+        "cat": "Frituras",
+        "name": "Jalea Mixta Chorrillana Crocante",
+        "desc": "Pescado, calamar y mariscos fritos al punto con yucas doradas y salsa tártara.",
+        "price": 46,
+        "time": "Generoso"
+      },
+      {
+        "id": "p33-3",
+        "cat": "Arroces",
+        "name": "Arroz con Mariscos al Fuego de Wok",
+        "desc": "Arroz flameado con mixtura de mariscos frescos, culantro y ají amarillo.",
+        "price": 40,
+        "time": "Recomendado"
+      },
+      {
+        "id": "p33-4",
+        "cat": "Copas",
+        "name": "Leche de Tigre Concentrada Pez Azul",
+        "desc": "Vaso concentrado con trozos de pescado y chicharrón crocante de pota.",
+        "price": 24,
+        "time": "Entrada"
+      }
+    ],
+    "heroPhoto": "https://images.unsplash.com/photo-1535399831218-d5bd36d1a6b3?auto=format&fit=crop&w=1200&q=85",
+    "featuredLabel": "ESPECIALIDAD MARINA",
+    "featuredPrice": "S/ 36",
+    "featuredTitle": "Ceviche Clásico Bandera de Pesca del Día",
+    "featuredSub": "Frescura garantizada en Chorrillos.",
+    "baKicker": "PESCA FRESCA · CHORRILLOS",
+    "baTitle": "Los especialistas en gastronomía marina en Chorrillos.",
+    "baDesc": "Jaleas crocantes, arroces bien servidos y ceviches preparados con el limón exacto.",
+    "baBefore": "https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?auto=format&fit=crop&w=1000&q=85",
+    "baAfter": "https://images.unsplash.com/photo-1535399831218-d5bd36d1a6b3?auto=format&fit=crop&w=1000&q=85",
+    "logoUrl": "/logos/p033-pez-azul.svg"
   },
   {
     "id": "P034",
@@ -513,18 +1045,77 @@ export const PROSPECTS: Prospect[] = [
   },
   {
     "id": "P035",
-    "name": "Cevicheria En su Punto",
+    "name": "Cevichería En su Punto",
     "zona": "La Victoria",
     "rubro": "Restaurante y cafetería",
     "prioridad": "Alta",
     "indice": 83,
-    "direccion": "Av. Garcia Naranjo # 112 - La Victoria (Ref. a media cuadra de Polvos Azules)",
+    "direccion": "Av. García Naranjo 112 (A ½ cuadra de Polvos Azules), La Victoria",
     "tel": "926 440 830",
     "wa": "51926440830",
     "es_celular": "Sí (WhatsApp Directo)",
     "estrellas": "5.0",
     "resenas": "más de 10",
-    "franja": "Antes de 12:00 o después de 16:00 (supuesto)"
+    "franja": "Antes de 12:00 o después de 16:00 (supuesto)",
+    "facebook": "https://www.facebook.com/search/top?q=Cevicheria%20En%20su%20Punto%20La%20Victoria",
+    "instagram": "@cevicheria_ensupunto",
+    "estadoWeb": "Sin web oficial · 5.0★ en Google Maps · Alto flujo diario comercial",
+    "lema": "«¡El sabor marino en su punto exacto! A media cuadra de Polvos Azules. Frescura al instante.»",
+    "palette": {
+      "name": "Ají Limo & Carbón Marino",
+      "bg_page": "#FAF8F5",
+      "bg_panel": "#FFFFFF",
+      "bg_tint": "#F2ECE1",
+      "ink": "#16181A",
+      "accent": "#C0392B",
+      "accent_dark": "#962D22",
+      "line": "#E0D6C5"
+    },
+    "customServices": [
+      {
+        "id": "p35-1",
+        "cat": "Especialidad",
+        "name": "Ceviche En Su Punto de Pescado Fresco",
+        "desc": "Corte al momento con el punto exacto de ají limo y limón norteño.",
+        "price": 32,
+        "time": "Al instante"
+      },
+      {
+        "id": "p35-2",
+        "cat": "Tríos Marinos",
+        "name": "Trío Marino Contundente",
+        "desc": "Ceviche fresco + Arroz con Mariscos + Chicharrón bien crocante.",
+        "price": 45,
+        "time": "El Más Pedido"
+      },
+      {
+        "id": "p35-3",
+        "cat": "Concentrados",
+        "name": "Leche de Tigre Potente de la Casa",
+        "desc": "Vaso concentrado con trozos de pescado y chicharrón crocante.",
+        "price": 22,
+        "time": "Al instante"
+      },
+      {
+        "id": "p35-4",
+        "cat": "Frituras",
+        "name": "Chicharrón Crocante de Pota y Pescado",
+        "desc": "Acompañado de yucas fritas, salsa tártara y zarza criolla.",
+        "price": 34,
+        "time": "Caliente"
+      }
+    ],
+    "heroPhoto": "https://images.unsplash.com/photo-1535399831218-d5bd36d1a6b3?auto=format&fit=crop&w=1200&q=85",
+    "featuredLabel": "EL MÁS PEDIDO",
+    "featuredPrice": "S/ 45",
+    "featuredTitle": "Trío Marino Contundente (Ceviche + Arroz + Chicharrón)",
+    "featuredSub": "A media cuadra de Polvos Azules. Calificación 5.0★.",
+    "baKicker": "EN SU PUNTO · LA VICTORIA",
+    "baTitle": "¡El sabor marino en su punto exacto!",
+    "baDesc": "Pesca fresca al instante con chicharrón crocante y ají limo aromático.",
+    "baBefore": "https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?auto=format&fit=crop&w=1000&q=85",
+    "baAfter": "https://images.unsplash.com/photo-1535399831218-d5bd36d1a6b3?auto=format&fit=crop&w=1000&q=85",
+    "logoUrl": "/logos/p035-en-su-punto.svg"
   },
   {
     "id": "P036",
@@ -558,18 +1149,77 @@ export const PROSPECTS: Prospect[] = [
   },
   {
     "id": "P038",
-    "name": "Restaurante Cevicheria Peruana Tentaciones",
+    "name": "Restaurante Cevichería Peruana Tentaciones",
     "zona": "San Miguel",
     "rubro": "Restaurante y cafetería",
     "prioridad": "Alta",
     "indice": 83,
-    "direccion": "Av. La Paz Cdra. 8 Mercado Modelo Puesto 115 - 116, San Miguel San Miguel",
-    "tel": "965 853 698",
-    "wa": "51965853698",
+    "direccion": "Av. La Paz Cdra. 8 Mercado Modelo Puesto 115 - 116, Miramar, San Miguel",
+    "tel": "923 631 244 / 965 853 698",
+    "wa": "51923631244",
     "es_celular": "Sí (WhatsApp Directo)",
     "estrellas": "5.0",
     "resenas": "más de 10",
-    "franja": "Antes de 12:00 o después de 16:00 (supuesto)"
+    "franja": "Antes de 12:00 o después de 16:00 (supuesto)",
+    "facebook": "https://www.facebook.com/CevicheriaTentacionesPeru/",
+    "instagram": "@cevicheria_tentaciones",
+    "estadoWeb": "Sin web oficial · 1,527 seguidores en FB · Abierto 8:30 AM a 6:00 PM todos los días",
+    "lema": "«¡Preparación al instante y al gusto del cliente! Frescura marina insuperable en San Miguel.»",
+    "palette": {
+      "name": "Mar Bravo & Ají Amarillo",
+      "bg_page": "#F6F8FA",
+      "bg_panel": "#FFFFFF",
+      "bg_tint": "#E5EEF5",
+      "ink": "#0B1924",
+      "accent": "#035388",
+      "accent_dark": "#023B61",
+      "line": "#C6D8E8"
+    },
+    "customServices": [
+      {
+        "id": "p38-1",
+        "cat": "Barra Marina",
+        "name": "Ceviche de Pescado Fresco al Instante",
+        "desc": "Pescado del día cortado al momento, leche de tigre aromática, choclo y camote glaseado.",
+        "price": 20,
+        "time": "Al instante"
+      },
+      {
+        "id": "p38-2",
+        "cat": "Barra Marina",
+        "name": "Tiradito de Ají Amarillo Cremoso",
+        "desc": "Finas láminas de pesca del día bañadas en crema de ají amarillo sin picor excesivo.",
+        "price": 20,
+        "time": "Al instante"
+      },
+      {
+        "id": "p38-3",
+        "cat": "Entradas",
+        "name": "Causa de Langostinos a la Criolla",
+        "desc": "Masa de papa amarilla sazonada con ají amarillo y limón, rellena de langostinos en salsa golf.",
+        "price": 22,
+        "time": "Entrada"
+      },
+      {
+        "id": "p38-4",
+        "cat": "Concentrados",
+        "name": "Leche de Tigre Super Power",
+        "desc": "Concentrado marino bien helado con chicharrón crocante y canchita chulpi.",
+        "price": 18,
+        "time": "Al instante"
+      }
+    ],
+    "heroPhoto": "https://images.unsplash.com/photo-1535399831218-d5bd36d1a6b3?auto=format&fit=crop&w=1200&q=85",
+    "featuredLabel": "PREPARACIÓN AL INSTANTE",
+    "featuredPrice": "S/ 20",
+    "featuredTitle": "Ceviche de Pescado Fresco del Día",
+    "featuredSub": "Al gusto del cliente en el Mercado Modelo de San Miguel.",
+    "baKicker": "FRESCO DEL DÍA · SAN MIGUEL",
+    "baTitle": "Frescura marina insuperable preparada al momento.",
+    "baDesc": "Pescado del día con leche de tigre aromática, choclo tierno y camote glaseado.",
+    "baBefore": "https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?auto=format&fit=crop&w=1000&q=85",
+    "baAfter": "https://images.unsplash.com/photo-1535399831218-d5bd36d1a6b3?auto=format&fit=crop&w=1000&q=85",
+    "logoUrl": "/logos/p038-tentaciones.svg"
   },
   {
     "id": "P039",
@@ -578,13 +1228,72 @@ export const PROSPECTS: Prospect[] = [
     "rubro": "Belleza y bienestar",
     "prioridad": "Alta",
     "indice": 82,
-    "direccion": "Av. Los Próceres 283, Santiago de Surco 15056, Peru",
-    "tel": "(01) 2795037",
-    "wa": "51999888777",
-    "es_celular": "Fijo (Llamar / Pedir WA)",
+    "direccion": "Av. Los Próceres 283 (Frente a Prosegur La Bolichera), Surco",
+    "tel": "990 334 527 / (01) 279-5037",
+    "wa": "51990334527",
+    "es_celular": "Sí (WhatsApp Directo)",
     "estrellas": "3.9",
     "resenas": "más de 10",
-    "franja": "10:00–12:00 o 15:00–17:00 (supuesto)"
+    "franja": "10:00–12:00 o 15:00–17:00 (supuesto)",
+    "facebook": "https://www.facebook.com/beasalonyspa/",
+    "instagram": "@beasalonyspa",
+    "estadoWeb": "Sin web oficial · Locales en Surco y Chorrillos",
+    "lema": "«¡Renuévate en Bea Salón & Spa! Especialistas en laceados y uñas acrílicas en Surco y Chorrillos.»",
+    "palette": {
+      "name": "Garnet Rose & Warm Cream",
+      "bg_page": "#FAF6F5",
+      "bg_panel": "#FFFFFF",
+      "bg_tint": "#F2E5E4",
+      "ink": "#1E1515",
+      "accent": "#A63446",
+      "accent_dark": "#7F2433",
+      "line": "#E4CECC"
+    },
+    "customServices": [
+      {
+        "id": "p39-1",
+        "cat": "Promociones",
+        "name": "Promo Uñas Acrílicas Esculpidas",
+        "desc": "Set completo de uñas acrílicas con esmaltado en gel duradero.",
+        "price": 39,
+        "time": "60 min"
+      },
+      {
+        "id": "p39-2",
+        "cat": "Laceados",
+        "name": "Laceado Japonés / Brasileño Especializado",
+        "desc": "Lacio impecable con brillo espejo y reducción profunda de volumen.",
+        "price": 130,
+        "time": "120 min"
+      },
+      {
+        "id": "p39-3",
+        "cat": "Color",
+        "name": "Balayage y Colorimetría Profesional",
+        "desc": "Iluminación gradual sin marcas y matizado en tendencia.",
+        "price": 160,
+        "time": "140 min"
+      },
+      {
+        "id": "p39-4",
+        "cat": "Spa",
+        "name": "Pedicure Spa Relajante con Hidratación",
+        "desc": "Cuidado completo de pies con sales aromáticas y exfoliante suave.",
+        "price": 45,
+        "time": "45 min"
+      }
+    ],
+    "heroPhoto": "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=1200&q=85",
+    "featuredLabel": "PROMO NAILS",
+    "featuredPrice": "S/ 39",
+    "featuredTitle": "Promo Uñas Acrílicas Esculpidas",
+    "featuredSub": "Frente a Prosegur La Bolichera.",
+    "baKicker": "RENOVACIÓN · SURCO & CHORRILLOS",
+    "baTitle": "¡Renuévate en Bea Salón & Spa!",
+    "baDesc": "Especialistas en laceados y uñas acrílicas con promociones todo el año.",
+    "baBefore": "https://images.unsplash.com/photo-1519699047748-de8e457a634e?auto=format&fit=crop&w=1000&q=85",
+    "baAfter": "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=1000&q=85",
+    "logoUrl": "/logos/p039-bea-salon.svg"
   },
   {
     "id": "P040",
@@ -593,13 +1302,72 @@ export const PROSPECTS: Prospect[] = [
     "rubro": "Odontología",
     "prioridad": "Alta",
     "indice": 80,
-    "direccion": "Av.saenz peña 125",
-    "tel": "977 826 160",
-    "wa": "51977826160",
+    "direccion": "Av. Sáenz Peña 125, Barranco 15063",
+    "tel": "993 828 675 / 977 826 160",
+    "wa": "51993828675",
     "es_celular": "Sí (WhatsApp Directo)",
     "estrellas": "5.0",
-    "resenas": "5+",
-    "franja": "10:00–12:00 o 15:00–17:00 (supuesto)"
+    "resenas": "más de 10",
+    "franja": "10:00–12:00 o 15:00–17:00 (supuesto)",
+    "facebook": "https://www.facebook.com/ConsultorioDentalBarrancoOficial/",
+    "instagram": "@consultoriodentalbarranco",
+    "estadoWeb": "consultoriodentalbarrancooficial@outlook.es · 5.0★ en Google Maps",
+    "lema": "«Cuidamos la salud y estética de tu sonrisa en el corazón de Barranco (Av. Sáenz Peña 125).»",
+    "palette": {
+      "name": "Barranco Teal & White Stone",
+      "bg_page": "#F6F9FA",
+      "bg_panel": "#FFFFFF",
+      "bg_tint": "#E5F0F3",
+      "ink": "#0E1D24",
+      "accent": "#0B6477",
+      "accent_dark": "#074754",
+      "line": "#C7DCE2"
+    },
+    "customServices": [
+      {
+        "id": "p40-1",
+        "cat": "Prevención",
+        "name": "Destartraje y Profilaxis con Ultrasonido",
+        "desc": "Limpieza profunda indolora que elimina placa bacteriana y sarro calcificado.",
+        "price": 85,
+        "time": "45 min"
+      },
+      {
+        "id": "p40-2",
+        "cat": "Restauración",
+        "name": "Curaciones en Resina 3M de Alta Estética",
+        "desc": "Material importado que mimetiza la tonalidad y transparencia de tu diente.",
+        "price": 90,
+        "time": "40 min"
+      },
+      {
+        "id": "p40-3",
+        "cat": "Estética",
+        "name": "Blanqueamiento Dental LED Clínico",
+        "desc": "Sonrisa más blanca y brillante en una sesión con protector gingival.",
+        "price": 240,
+        "time": "60 min"
+      },
+      {
+        "id": "p40-4",
+        "cat": "Diagnóstico",
+        "name": "Consulta Odontológica y Diagnóstico Integral",
+        "desc": "Revisión completa, odontograma y plan de tratamiento personalizado.",
+        "price": 40,
+        "time": "30 min"
+      }
+    ],
+    "heroPhoto": "https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=1200&q=85",
+    "featuredLabel": "SONRISA BARRANQUINA",
+    "featuredPrice": "S/ 85",
+    "featuredTitle": "Destartraje & Profilaxis Ultrasónica",
+    "featuredSub": "Calificación 5.0★ en Av. Sáenz Peña 125.",
+    "baKicker": "ESTÉTICA BUCAL · BARRANCO",
+    "baTitle": "Cuidamos la salud y estética de tu sonrisa en Barranco.",
+    "baDesc": "Resinas 3M y blanqueamiento LED en un ambiente relajado y profesional.",
+    "baBefore": "https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=1000&q=85",
+    "baAfter": "https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&w=1000&q=85",
+    "logoUrl": "/logos/p040-dental-barranco.svg"
   },
   {
     "id": "P041",
@@ -713,13 +1481,72 @@ export const PROSPECTS: Prospect[] = [
     "rubro": "Belleza y bienestar",
     "prioridad": "Alta",
     "indice": 76,
-    "direccion": "Av. General Garzon 707-711 Jesus Maria - Lima Perú",
-    "tel": "999 188 861",
-    "wa": "51999188861",
+    "direccion": "Av. General Garzón 707 - 711, Jesús María",
+    "tel": "999 188 816 / 999 188 861",
+    "wa": "51999188816",
     "es_celular": "Sí (WhatsApp Directo)",
     "estrellas": "4.9",
-    "resenas": "5+",
-    "franja": "10:00–12:00 o 15:00–17:00 (supuesto)"
+    "resenas": "más de 5",
+    "franja": "10:00–12:00 o 15:00–17:00 (supuesto)",
+    "facebook": "https://www.facebook.com/EmysLaceados/",
+    "instagram": "@emyssalon",
+    "estadoWeb": "emyssalon@hotmail.com · 1,655 seguidores · Trabajan con ALFAPARF Milano",
+    "lema": "« ¡Hola, somos Emy's Salón! Nos preocupamos por tu belleza y bienestar. Tu fidelidad tiene recompensa.»",
+    "palette": {
+      "name": "Velvet Cherry & Warm Pearl",
+      "bg_page": "#FAF6F6",
+      "bg_panel": "#FFFFFF",
+      "bg_tint": "#F2E4E7",
+      "ink": "#1E1316",
+      "accent": "#8E243D",
+      "accent_dark": "#6B182C",
+      "line": "#E2CDD2"
+    },
+    "customServices": [
+      {
+        "id": "p48-1",
+        "cat": "Promos Especiales",
+        "name": "Promo Limpieza Facial + Manicure Básica",
+        "desc": "Paquete dúo de renovación: rostro libre de impurezas y manos suaves.",
+        "price": 70,
+        "time": "75 min"
+      },
+      {
+        "id": "p48-2",
+        "cat": "Colorimetría",
+        "name": "Mechas de Alto Contraste con Iluminación",
+        "desc": "Técnica para iluminar el contorno facial con fórmulas protectoras.",
+        "price": 150,
+        "time": "120 min"
+      },
+      {
+        "id": "p48-3",
+        "cat": "Laceados & Rizos",
+        "name": "Laceados Termoactivos y Definición de Rulos",
+        "desc": "Opciones según tu estilo: alisado suave o activación de ondas naturales.",
+        "price": 140,
+        "time": "120 min"
+      },
+      {
+        "id": "p48-4",
+        "cat": "Terapia Alfaparf",
+        "name": "Terapia Capilar Reconstructora ALFAPARF Milano",
+        "desc": "Tratamiento intensivo de nutrición con ampolla de brillo Semi di Lino.",
+        "price": 115,
+        "time": "60 min"
+      }
+    ],
+    "heroPhoto": "https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?auto=format&fit=crop&w=1200&q=85",
+    "featuredLabel": "PROMO ESPECIAL",
+    "featuredPrice": "S/ 70",
+    "featuredTitle": "Limpieza Facial + Manicure Básica",
+    "featuredSub": "Antes S/ 110. Cuidado y mimos en Av. Garzón 707.",
+    "baKicker": "BELLEZA & BIENESTAR · JESÚS MARÍA",
+    "baTitle": "Nos preocupamos por tu belleza. Tu fidelidad tiene recompensa.",
+    "baDesc": "Tratamientos capilares con Alfaparf Milano y mechas de alto contraste.",
+    "baBefore": "https://images.unsplash.com/photo-1527799820374-dcf8d9d4a388?auto=format&fit=crop&w=1000&q=85",
+    "baAfter": "https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?auto=format&fit=crop&w=1000&q=85",
+    "logoUrl": "/logos/p048-emys.svg"
   },
   {
     "id": "P049",
@@ -1088,13 +1915,72 @@ export const PROSPECTS: Prospect[] = [
     "rubro": "Odontología",
     "prioridad": "Media",
     "indice": 70,
-    "direccion": "Clínica San Felipe, Jesús María 07001, Peru, Callao",
+    "direccion": "Clínica San Felipe, Jesús María",
     "tel": "928 129 845",
     "wa": "51928129845",
     "es_celular": "Sí (WhatsApp Directo)",
-    "estrellas": "4.8",
-    "resenas": "No publicada en consulta",
-    "franja": "10:00–12:00 o 15:00–17:00 (supuesto)"
+    "estrellas": "4.9",
+    "resenas": "Ubicación Premium",
+    "franja": "10:00–12:00 o 15:00–17:00 (supuesto)",
+    "facebook": "https://www.facebook.com/Dentalyamazato/",
+    "instagram": "@dentalyamazato",
+    "estadoWeb": "Sin web oficial · Ubicación premium médica en Jesús María",
+    "lema": "«¡Vive con una sonrisa radiante! Especialistas odontológicos con precisión y calidez en Jesús María.»",
+    "palette": {
+      "name": "Imperial Navy & Crimson Seal",
+      "bg_page": "#F7F9FB",
+      "bg_panel": "#FFFFFF",
+      "bg_tint": "#E8EEF5",
+      "ink": "#0F1722",
+      "accent": "#1B365D",
+      "accent_dark": "#10223D",
+      "line": "#CBD6E3"
+    },
+    "customServices": [
+      {
+        "id": "p73-1",
+        "cat": "Blanqueamiento",
+        "name": "Blanqueamiento Dental LED en Consultorio",
+        "desc": "Aclaramiento seguro de varios tonos en una sola sesión protegiendo el esmalte.",
+        "price": 220,
+        "time": "60 min"
+      },
+      {
+        "id": "p73-2",
+        "cat": "Restauraciones",
+        "name": "Curaciones Estéticas Invisibles en Resina 3M",
+        "desc": "Restauraciones que imitan el color natural de la pieza dental.",
+        "price": 90,
+        "time": "45 min"
+      },
+      {
+        "id": "p73-3",
+        "cat": "Prevención",
+        "name": "Limpieza Profiláctica y Diagnóstico Clínico",
+        "desc": "Destartraje ultrasónico y aplicación tópica de flúor.",
+        "price": 80,
+        "time": "35 min"
+      },
+      {
+        "id": "p73-4",
+        "cat": "Prótesis",
+        "name": "Prótesis Dental Fija y Removible",
+        "desc": "Devuelve la funcionalidad masticatoria y armonía facial.",
+        "price": 200,
+        "time": "Evaluación"
+      }
+    ],
+    "heroPhoto": "https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1200&q=85",
+    "featuredLabel": "BLANQUEAMIENTO CLÍNICO",
+    "featuredPrice": "S/ 220",
+    "featuredTitle": "Blanqueamiento Dental LED en Consultorio",
+    "featuredSub": "Atención premium en la Clínica San Felipe.",
+    "baKicker": "SONRISA RADIANTE · JESÚS MARÍA",
+    "baTitle": "¡Vive con una sonrisa radiante y saludable!",
+    "baDesc": "Precisión diagnóstica y calidez en el entorno médico de San Felipe.",
+    "baBefore": "https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=1000&q=85",
+    "baAfter": "https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1000&q=85",
+    "logoUrl": "/logos/p073-yamazato.svg"
   },
   {
     "id": "P074",
@@ -2048,13 +2934,72 @@ export const PROSPECTS: Prospect[] = [
     "rubro": "Odontología",
     "prioridad": "Media",
     "indice": 65,
-    "direccion": "Jirón San Martin 604, Magdalena del Mar 15086, Peru",
-    "tel": "(01) 7456982",
-    "wa": "51999888777",
-    "es_celular": "Fijo (Llamar / Pedir WA)",
+    "direccion": "Jirón San Martín 604 / 202, Magdalena del Mar 15086",
+    "tel": "994 464 610 / (01) 745-6982",
+    "wa": "51994464610",
+    "es_celular": "Sí (WhatsApp Directo)",
     "estrellas": "4.8",
-    "resenas": "No publicada en consulta",
-    "franja": "10:00–12:00 o 15:00–17:00 (supuesto)"
+    "resenas": "1,657 seguidores",
+    "franja": "10:00–12:00 o 15:00–17:00 (supuesto)",
+    "facebook": "https://www.facebook.com/mundoodontic/",
+    "instagram": "@mundoodontic",
+    "estadoWeb": "⚠️ Su web mundoodonticodontologiaespecializada.business.site MURIÓ (Google 404). 1,657 seguidores.",
+    "lema": "«En Mundo Odontic queremos verte sonreír más que nunca. Salud bucal y estética dental con especialistas.»",
+    "palette": {
+      "name": "Royal Cobalt & Clinical Ice",
+      "bg_page": "#F5F8FC",
+      "bg_panel": "#FFFFFF",
+      "bg_tint": "#E5EEF9",
+      "ink": "#0D1826",
+      "accent": "#0F4C81",
+      "accent_dark": "#09355C",
+      "line": "#C8D8EB"
+    },
+    "customServices": [
+      {
+        "id": "p137-1",
+        "cat": "Estética Dental",
+        "name": "Diseño de Sonrisa & Carillas Estéticas",
+        "desc": "Planificación digital de sonrisa y carillas en resina o porcelana de alta estética.",
+        "price": 250,
+        "time": "Sesión"
+      },
+      {
+        "id": "p137-2",
+        "cat": "Ortodoncia",
+        "name": "Ortodoncia Estética (Brackets Transparentes)",
+        "desc": "Alineamiento dental con aparatología discreta y evaluación clínica previa.",
+        "price": 180,
+        "time": "Consulta"
+      },
+      {
+        "id": "p137-3",
+        "cat": "Prevención",
+        "name": "Profilaxis y Limpieza Ultrasónica con Pulido",
+        "desc": "Eliminación indolora de sarro y pulido dental para evitar caries y gingivitis.",
+        "price": 80,
+        "time": "40 min"
+      },
+      {
+        "id": "p137-4",
+        "cat": "Rehabilitación",
+        "name": "Rehabilitación Oral e Incrustaciones",
+        "desc": "Restauración de piezas dentales con materiales de máxima resistencia.",
+        "price": 120,
+        "time": "Sesión"
+      }
+    ],
+    "heroPhoto": "https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&w=1200&q=85",
+    "featuredLabel": "ESTÉTICA DENTAL",
+    "featuredPrice": "S/ 250",
+    "featuredTitle": "Diseño de Sonrisa & Carillas Estéticas",
+    "featuredSub": "Queremos verte sonreír más que nunca en Magdalena.",
+    "baKicker": "ODONTOLOGÍA ESPECIALIZADA · MAGDALENA",
+    "baTitle": "En Mundo Odontic queremos verte sonreír más que nunca.",
+    "baDesc": "Odontología integral sin dolor con resinas de alta estética y ortodoncia.",
+    "baBefore": "https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=1000&q=85",
+    "baAfter": "https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&w=1000&q=85",
+    "logoUrl": "/logos/p137-mundo-odontic.svg"
   },
   {
     "id": "P138",
@@ -2453,28 +3398,146 @@ export const PROSPECTS: Prospect[] = [
     "rubro": "Belleza y bienestar",
     "prioridad": "Media",
     "indice": 61,
-    "direccion": "CC Estrella Plaza Avenida República de Venezuela 1179 stand 205 y 245, Breña 15082, Peru",
+    "direccion": "CC Estrella Plaza, Av. Venezuela 1179 Stand 205 y 245, Breña 15082",
     "tel": "973 618 807",
     "wa": "51973618807",
     "es_celular": "Sí (WhatsApp Directo)",
     "estrellas": "4.8",
-    "resenas": "No publicada en consulta",
-    "franja": "10:00–12:00 o 15:00–17:00 (supuesto)"
+    "resenas": "más de 20",
+    "franja": "10:00–12:00 o 15:00–17:00 (supuesto)",
+    "facebook": "https://www.facebook.com/Dolartepodologasyspa/",
+    "instagram": "@dolartepodologas",
+    "estadoWeb": "⚠️ Su web dolarte-podologas-y-spa.negocio.site MURIÓ. Especialistas en salud podológica.",
+    "lema": "«Salud y descanso para tus pies. Especialistas en podología clínica y pedicure con instrumental esterilizado en Breña.»",
+    "palette": {
+      "name": "Medical Emerald & Clean Slate",
+      "bg_page": "#F4F8F7",
+      "bg_panel": "#FFFFFF",
+      "bg_tint": "#E2F0EC",
+      "ink": "#10211E",
+      "accent": "#0D6E61",
+      "accent_dark": "#084F45",
+      "line": "#C4DDD7"
+    },
+    "customServices": [
+      {
+        "id": "p164-1",
+        "cat": "Podología Clínica",
+        "name": "Profilaxis Podológica Integral Completa",
+        "desc": "Corte anatómico de uñas, remoción de durezas y desinfección con instrumental en autoclave.",
+        "price": 60,
+        "time": "45 min"
+      },
+      {
+        "id": "p164-2",
+        "cat": "Especialidades",
+        "name": "Tratamiento de Uñeros y Onicomicosis",
+        "desc": "Desencarnado indoloro y curación especializada de hongos en uñas.",
+        "price": 75,
+        "time": "40 min"
+      },
+      {
+        "id": "p164-3",
+        "cat": "Salud Podal",
+        "name": "Atención Especializada de Pie Diabético",
+        "desc": "Cuidados preventivos sin heridas para pacientes con diabetes.",
+        "price": 70,
+        "time": "50 min"
+      },
+      {
+        "id": "p164-4",
+        "cat": "Relajación",
+        "name": "Reflexología y Spa Podal Hidratante",
+        "desc": "Exfoliación con sales minerales y masaje estimulante en puntos reflejos.",
+        "price": 50,
+        "time": "40 min"
+      }
+    ],
+    "heroPhoto": "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=1200&q=85",
+    "featuredLabel": "PODOLOGÍA CLÍNICA",
+    "featuredPrice": "S/ 60",
+    "featuredTitle": "Profilaxis Podológica Integral Esterilizada",
+    "featuredSub": "Salud y descanso para tus pies en CC Estrella Plaza.",
+    "baKicker": "SALUD & DESCANSO · BREÑA",
+    "baTitle": "Salud y descanso para tus pies con instrumental en autoclave.",
+    "baDesc": "Tratamiento de uñeros, hongos y atención especializada para pie diabético.",
+    "baBefore": "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=1000&q=85",
+    "baAfter": "https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=1000&q=85",
+    "logoUrl": "/logos/p164-dolarte.svg"
   },
   {
     "id": "P165",
-    "name": "Jadifi Salón y Spa",
+    "name": "Jadifi Salón y Spa (Jadifi Salón & Esthetic)",
     "zona": "Chorrillos",
     "rubro": "Belleza y bienestar",
     "prioridad": "Media",
     "indice": 61,
-    "direccion": "Av Paseo de la República 580, Chorrillos 15064, Peru",
+    "direccion": "Av. Paseo de la República 580, Chorrillos 15064",
     "tel": "951 200 464",
     "wa": "51951200464",
     "es_celular": "Sí (WhatsApp Directo)",
-    "estrellas": "4.8",
-    "resenas": "No publicada en consulta",
-    "franja": "10:00–12:00 o 15:00–17:00 (supuesto)"
+    "estrellas": "4.7",
+    "resenas": "más de 15",
+    "franja": "10:00–12:00 o 15:00–17:00 (supuesto)",
+    "facebook": "https://www.facebook.com/jadifisalonyesthetic/",
+    "instagram": "@jadifisalon",
+    "estadoWeb": "Sin web propia (enlace a TikTok en directorio)",
+    "lema": "«En Jadifi Salón & Esthetic creamos Mechas Personalizadas que realzan tu estilo y luminosidad.»",
+    "palette": {
+      "name": "Mocha Satin & Champagne",
+      "bg_page": "#F9F6F2",
+      "bg_panel": "#FFFFFF",
+      "bg_tint": "#EFE8DF",
+      "ink": "#1A1613",
+      "accent": "#7A4B2A",
+      "accent_dark": "#59351C",
+      "line": "#DFD5C8"
+    },
+    "customServices": [
+      {
+        "id": "p165-1",
+        "cat": "Mechas de Autor",
+        "name": "Mechas Personalizadas & Balayage Suave",
+        "desc": "Especialidad de la casa: diseño de mechas adaptado a tu tono de piel y estilo.",
+        "price": 170,
+        "time": "140 min"
+      },
+      {
+        "id": "p165-2",
+        "cat": "Alisados",
+        "name": "Alisados Anti-frizz de Larga Duración",
+        "desc": "Reducción completa del volumen indeseado y sellado de cutículas.",
+        "price": 130,
+        "time": "120 min"
+      },
+      {
+        "id": "p165-3",
+        "cat": "Estética Facial",
+        "name": "Tratamientos Estéticos Faciales Hidratantes",
+        "desc": "Limpieza con extracción, mascarilla colágeno y masaje tonificante.",
+        "price": 85,
+        "time": "60 min"
+      },
+      {
+        "id": "p165-4",
+        "cat": "Nail Spa",
+        "name": "Manicure & Pedicure en Gel",
+        "desc": "Esmaltado de larga duración con colores de temporada y diseño fino.",
+        "price": 65,
+        "time": "60 min"
+      }
+    ],
+    "heroPhoto": "https://images.unsplash.com/photo-1562322140-8baeececf3df?auto=format&fit=crop&w=1200&q=85",
+    "featuredLabel": "MECHAS DE AUTOR",
+    "featuredPrice": "S/ 170",
+    "featuredTitle": "Mechas Personalizadas & Balayage Suave",
+    "featuredSub": "Realzan tu estilo y luminosidad en Chorrillos.",
+    "baKicker": "LUMINOSIDAD · CHORRILLOS",
+    "baTitle": "Mechas personalizadas que realzan tu estilo.",
+    "baDesc": "Tratamientos estéticos faciales y alisados anti-frizz duraderos.",
+    "baBefore": "https://images.unsplash.com/photo-1519699047748-de8e457a634e?auto=format&fit=crop&w=1000&q=85",
+    "baAfter": "https://images.unsplash.com/photo-1562322140-8baeececf3df?auto=format&fit=crop&w=1000&q=85",
+    "logoUrl": "/logos/p165-jadifi.svg"
   },
   {
     "id": "P166",
@@ -2483,28 +3546,146 @@ export const PROSPECTS: Prospect[] = [
     "rubro": "Belleza y bienestar",
     "prioridad": "Media",
     "indice": 61,
-    "direccion": "Venezuela 739, Breña 15082, Peru, Lima, Provincia de Lima",
+    "direccion": "Av. Venezuela 739, Breña 15082",
     "tel": "979 606 670",
     "wa": "51979606670",
     "es_celular": "Sí (WhatsApp Directo)",
-    "estrellas": "4.8",
-    "resenas": "No publicada en consulta",
-    "franja": "10:00–12:00 o 15:00–17:00 (supuesto)"
+    "estrellas": "4.6",
+    "resenas": "más de 15",
+    "franja": "10:00–12:00 o 15:00–17:00 (supuesto)",
+    "facebook": "https://www.facebook.com/parwasalonspa/",
+    "instagram": "@parwa_salon_spa",
+    "estadoWeb": "Sin web oficial (enlace a bit.ly en directorio)",
+    "lema": "«¿Elegante, minimalista o llamativo? Sea cual sea tu estilo, lo hacemos realidad. ¡Devuélvele la salud a tu cabello!»",
+    "palette": {
+      "name": "Plum Wine & Cashmere",
+      "bg_page": "#F9F6F7",
+      "bg_panel": "#FFFFFF",
+      "bg_tint": "#EFE5E9",
+      "ink": "#1C1418",
+      "accent": "#732645",
+      "accent_dark": "#541931",
+      "line": "#DFCFD6"
+    },
+    "customServices": [
+      {
+        "id": "p166-1",
+        "cat": "Nail Art",
+        "name": "Nail Art & Uñas Acrílicas / Gel Esculpidas",
+        "desc": "Diseños personalizados desde minimalistas hasta pedrería y degradé.",
+        "price": 65,
+        "time": "75 min"
+      },
+      {
+        "id": "p166-2",
+        "cat": "Cuidado Capilar",
+        "name": "Terapia Capilar Reconstructora Intensiva",
+        "desc": "Regeneración de hebras dañadas con ampollas de keratina y aminoácidos.",
+        "price": 95,
+        "time": "60 min"
+      },
+      {
+        "id": "p166-3",
+        "cat": "Colorimetría",
+        "name": "Colorimetría Completa y Baño de Luz",
+        "desc": "Aplicación de tinte profesional con cobertura total de canas y brillo.",
+        "price": 140,
+        "time": "110 min"
+      },
+      {
+        "id": "p166-4",
+        "cat": "Corte & Estilo",
+        "name": "Corte de Autor y Peinado Brushing",
+        "desc": "Asesoría de estilo y lavado relajante con masaje craneal.",
+        "price": 40,
+        "time": "45 min"
+      }
+    ],
+    "heroPhoto": "https://images.unsplash.com/photo-1607779097040-26e80aa78e66?auto=format&fit=crop&w=1200&q=85",
+    "featuredLabel": "NAIL ART & DISEÑO",
+    "featuredPrice": "S/ 65",
+    "featuredTitle": "Nail Art & Uñas Acrílicas Esculpidas",
+    "featuredSub": "Elegante, minimalista o llamativo en Av. Venezuela 739.",
+    "baKicker": "ESTILO A TU MEDIDA · BREÑA",
+    "baTitle": "Sea cual sea tu estilo, lo hacemos realidad.",
+    "baDesc": "Devuélvele la salud a tu cabello con terapias capilares reconstructoras.",
+    "baBefore": "https://images.unsplash.com/photo-1527799820374-dcf8d9d4a388?auto=format&fit=crop&w=1000&q=85",
+    "baAfter": "https://images.unsplash.com/photo-1607779097040-26e80aa78e66?auto=format&fit=crop&w=1000&q=85",
+    "logoUrl": "/logos/p166-parwa.svg"
   },
   {
     "id": "P167",
-    "name": "Veroka salón & spa",
+    "name": "Veroka Salón & Spa",
     "zona": "Santiago de Surco",
     "rubro": "Belleza y bienestar",
     "prioridad": "Media",
     "indice": 61,
-    "direccion": "Av. Santiago de Surco 3940, urb, Santiago de Surco 15049, Peru",
+    "direccion": "Av. Tomás Marsano / Santiago de Surco 3940",
     "tel": "973 584 122",
     "wa": "51973584122",
     "es_celular": "Sí (WhatsApp Directo)",
-    "estrellas": "4.8",
-    "resenas": "No publicada en consulta",
-    "franja": "10:00–12:00 o 15:00–17:00 (supuesto)"
+    "estrellas": "4.7",
+    "resenas": "+88k seguidores",
+    "franja": "10:00–12:00 o 15:00–17:00 (supuesto)",
+    "facebook": "https://www.facebook.com/salon.spa.veroka.654/",
+    "instagram": "@verokasalonspa",
+    "estadoWeb": "⚠️ Su web veroka-salon-spa.negocio.site MURIÓ. Tiene 88,455 seguidores en FB.",
+    "lema": "«✨ Creadores de la verdadera fórmula de los LACEADOS TRIALES (+14 años de experiencia). ¡El alisado perfecto que tu cabello merece!»",
+    "palette": {
+      "name": "Obsidian Gold & Keratin Pearl",
+      "bg_page": "#F8F6F2",
+      "bg_panel": "#FFFFFF",
+      "bg_tint": "#EDE8DE",
+      "ink": "#141311",
+      "accent": "#9C712B",
+      "accent_dark": "#78541A",
+      "line": "#DCD4C6"
+    },
+    "customServices": [
+      {
+        "id": "p167-1",
+        "cat": "Laceados Triales",
+        "name": "Laceado Trial Orgánico Permanente (Adultas y Niñas)",
+        "desc": "Fórmula exclusiva con 14 años de perfeccionamiento. Lacio espejo duradero sin químicos agresivos.",
+        "price": 180,
+        "time": "150 min"
+      },
+      {
+        "id": "p167-2",
+        "cat": "Tratamientos",
+        "name": "Reestructuración Capilar Anti-quiebre",
+        "desc": "Terapia de choque para sellar cutícula y fortalecer cabello poroso o decolorado.",
+        "price": 120,
+        "time": "75 min"
+      },
+      {
+        "id": "p167-3",
+        "cat": "Colorimetría",
+        "name": "Colorimetría & Mechas Iluminadas",
+        "desc": "Técnicas de tendencia con líneas profesionales y matiz personalizado.",
+        "price": 150,
+        "time": "120 min"
+      },
+      {
+        "id": "p167-4",
+        "cat": "Spa & Manicure",
+        "name": "Manicure Spa con Esmaltado Duradero",
+        "desc": "Limpieza profunda de cutículas, exfoliación y diseño a elección.",
+        "price": 45,
+        "time": "50 min"
+      }
+    ],
+    "heroPhoto": "https://images.unsplash.com/photo-1607779097040-26e80aa78e66?auto=format&fit=crop&w=1200&q=85",
+    "featuredLabel": "FÓRMULA EXCLUSIVA",
+    "featuredPrice": "S/ 180",
+    "featuredTitle": "Laceado Trial Orgánico Permanente",
+    "featuredSub": "+14 años de experiencia en Surco. Cero formol.",
+    "baKicker": "ALISADO PERFECTO · SURCO",
+    "baTitle": "Creadores de la fórmula de los Laceados Triales.",
+    "baDesc": "Resultados permanentes con brillo espejo y suavidad incomparable para adultas y niñas.",
+    "baBefore": "https://images.unsplash.com/photo-1527799820374-dcf8d9d4a388?auto=format&fit=crop&w=1000&q=85",
+    "baAfter": "https://images.unsplash.com/photo-1607779097040-26e80aa78e66?auto=format&fit=crop&w=1000&q=85",
+    "logoUrl": "/logos/p167-veroka.svg"
   },
   {
     "id": "P168",

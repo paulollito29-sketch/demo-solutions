@@ -72,7 +72,7 @@ const initialCats = ['Todos', ...new Set(initialTheme.services.map(s => s.cat))]
       </div>
 
       <!-- Ticket / Recibo de Solicitud Directa a WhatsApp (Estilo Papelería / Boutique) -->
-      <div id="reservar" class="lg:col-span-5 lg:sticky lg:top-24 bg-white border border-stone-300 p-6 sm:p-8 shadow-[0_12px_30px_rgba(0,0,0,0.05)]">
+      <div id="reservar" class="lg:col-span-5 lg:sticky lg:top-24 bg-panel border hairline-border p-6 sm:p-8 shadow-[0_16px_36px_rgba(0,0,0,0.06)] rounded-sm">
         <div class="border-b-2 border-stone-900 pb-4 flex items-start justify-between">
           <div>
             <span class="font-mono text-[10px] uppercase tracking-[0.2em] text-stone-500">SOLICITUD DIRECTA · SIN INTERMEDIARIOS</span>
@@ -96,12 +96,12 @@ const initialCats = ['Todos', ...new Set(initialTheme.services.map(s => s.cat))]
         <div class="space-y-3 pt-4 text-xs">
           <div>
             <label for="client-name" class="block font-mono text-[10px] uppercase tracking-wider text-stone-600 mb-1">TU NOMBRE COMPLETO</label>
-            <input id="client-name" type="text" placeholder="Ej. Mariana Montes" class="w-full bg-[#FAF7F2] border border-stone-300 px-3 py-2.5 text-stone-900 focus:outline-none focus:border-stone-900" />
+            <input id="client-name" type="text" placeholder="Ej. Mariana Montes" class="w-full bg-[var(--bg-main)] border border-stone-300 px-3 py-2.5 text-stone-900 focus:outline-none focus:border-stone-900" />
           </div>
           <div class="grid grid-cols-2 gap-3">
             <div>
               <label for="client-day" class="block font-mono text-[10px] uppercase tracking-wider text-stone-600 mb-1">FECHA / DÍA</label>
-              <select id="client-day" class="w-full bg-[#FAF7F2] border border-stone-300 px-2.5 py-2.5 text-stone-900 focus:outline-none">
+              <select id="client-day" class="w-full bg-[var(--bg-main)] border border-stone-300 px-2.5 py-2.5 text-stone-900 focus:outline-none">
                 <option value="Para hoy">Para hoy</option>
                 <option value="Para mañana">Para mañana</option>
                 <option value="Este fin de semana">Fin de semana</option>
@@ -110,7 +110,7 @@ const initialCats = ['Todos', ...new Set(initialTheme.services.map(s => s.cat))]
             </div>
             <div>
               <label id="slot-label" for="client-time" class="block font-mono text-[10px] uppercase tracking-wider text-stone-600 mb-1">HORARIO / MODALIDAD</label>
-              <select id="client-time" class="w-full bg-[#FAF7F2] border border-stone-300 px-2.5 py-2.5 text-stone-900 focus:outline-none">
+              <select id="client-time" class="w-full bg-[var(--bg-main)] border border-stone-300 px-2.5 py-2.5 text-stone-900 focus:outline-none">
                 <option value="Turno Mañana (10am - 1pm)">Mañana (10am - 1pm)</option>
                 <option value="Turno Tarde (1pm - 5pm)">Tarde (1pm - 5pm)</option>
                 <option value="Turno Noche (5pm - 8pm)">Noche (5pm - 8pm)</option>
@@ -119,10 +119,18 @@ const initialCats = ['Todos', ...new Set(initialTheme.services.map(s => s.cat))]
           </div>
         </div>
 
-        <button id="btn-send-whatsapp" type="button" class="mt-5 w-full py-4 btn-accent font-mono text-xs uppercase tracking-[0.15em] font-semibold flex items-center justify-center gap-2 cursor-pointer">
+        <button id="btn-send-whatsapp" type="button" class="mt-5 w-full py-4 btn-accent font-mono text-xs uppercase tracking-[0.15em] font-semibold flex items-center justify-center gap-2 cursor-pointer shadow-md">
           <span>Confirmar por WhatsApp Oficial</span>
           <span>→</span>
         </button>
+
+        <div class="flex items-center justify-center gap-3 text-[10px] text-stone-500 font-mono mt-3">
+          <span>✓ Sin comisiones extra</span>
+          <span>•</span>
+          <span>✓ Reserva en 1 clic</span>
+          <span>•</span>
+          <span>✓ Pago en local</span>
+        </div>
 
         <div class="mt-3 pt-3 border-t border-stone-200 flex items-center justify-between text-[11px] text-stone-500 font-mono">
           <span id="ticket-biz-name">{initialProspect.name}</span>

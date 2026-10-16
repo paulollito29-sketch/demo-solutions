@@ -84,11 +84,24 @@ function setProspect(id: string) {
   } else {
     if (bennyView) bennyView.style.display = 'none';
     if (generalView) generalView.style.display = 'block';
-    document.documentElement.style.setProperty('--bg-main', currentTheme.bgMain);
-    document.documentElement.style.setProperty('--bg-alt', currentTheme.bgAlt);
-    document.documentElement.style.setProperty('--ink', currentTheme.ink);
-    document.documentElement.style.setProperty('--accent', currentTheme.accent);
-    document.documentElement.style.setProperty('--border-hair', currentTheme.border);
+
+    if (found.palette) {
+      document.documentElement.style.setProperty('--bg-main', found.palette.bg_page);
+      document.documentElement.style.setProperty('--bg-panel', found.palette.bg_panel);
+      document.documentElement.style.setProperty('--bg-alt', found.palette.bg_tint);
+      document.documentElement.style.setProperty('--ink', found.palette.ink);
+      document.documentElement.style.setProperty('--accent', found.palette.accent);
+      document.documentElement.style.setProperty('--accent-dark', found.palette.accent_dark);
+      document.documentElement.style.setProperty('--border-hair', found.palette.line);
+    } else {
+      document.documentElement.style.setProperty('--bg-main', currentTheme.bgMain);
+      document.documentElement.style.setProperty('--bg-panel', '#FFFFFF');
+      document.documentElement.style.setProperty('--bg-alt', currentTheme.bgAlt);
+      document.documentElement.style.setProperty('--ink', currentTheme.ink);
+      document.documentElement.style.setProperty('--accent', currentTheme.accent);
+      document.documentElement.style.setProperty('--accent-dark', currentTheme.accent);
+      document.documentElement.style.setProperty('--border-hair', currentTheme.border);
+    }
   }
 
   // Dynamic Content Updates
@@ -97,6 +110,40 @@ function setProspect(id: string) {
 
   const pageTitle = document.getElementById('page-title');
   if (pageTitle) pageTitle.textContent = `${p.name} — ${p.zona} | Carta & Reservas`;
+
+  // Logotipos oficiales de marca
+  const navBrandLogo = document.getElementById('nav-brand-logo') as HTMLImageElement | null;
+  const navMonogram = document.getElementById('nav-monogram');
+  const heroBrandLogo = document.getElementById('hero-brand-logo') as HTMLImageElement | null;
+  const footerBrandLogo = document.getElementById('footer-brand-logo') as HTMLImageElement | null;
+
+  if (p.logoUrl) {
+    if (navBrandLogo) {
+      navBrandLogo.src = p.logoUrl;
+      navBrandLogo.alt = `Logotipo de ${p.name}`;
+      navBrandLogo.style.display = 'block';
+    }
+    if (navMonogram) navMonogram.style.display = 'none';
+
+    if (heroBrandLogo) {
+      heroBrandLogo.src = p.logoUrl;
+      heroBrandLogo.alt = `Logotipo de ${p.name}`;
+      heroBrandLogo.style.display = 'block';
+    }
+    if (footerBrandLogo) {
+      footerBrandLogo.src = p.logoUrl;
+      footerBrandLogo.alt = `Logotipo de ${p.name}`;
+      footerBrandLogo.style.display = 'block';
+    }
+  } else {
+    if (navBrandLogo) navBrandLogo.style.display = 'none';
+    if (navMonogram) {
+      navMonogram.textContent = getBrandInitials(p.name);
+      navMonogram.style.display = 'flex';
+    }
+    if (heroBrandLogo) heroBrandLogo.style.display = 'none';
+    if (footerBrandLogo) footerBrandLogo.style.display = 'none';
+  }
 
   const topbarAddress = document.getElementById('topbar-address');
   if (topbarAddress) topbarAddress.textContent = p.direccion;
@@ -125,20 +172,45 @@ function setProspect(id: string) {
   const navMenuLabel = document.getElementById('nav-menu-label');
   if (navMenuLabel) navMenuLabel.textContent = th.menuLabel;
 
+  // Enlaces de redes sociales en cabecera y hero
+  updateSocialLinks(p);
+
+  // Kicker y Tags de Hero
   const heroKicker = document.getElementById('hero-kicker');
   if (heroKicker) heroKicker.textContent = `LOCAL EN ${p.zona.toUpperCase()}`;
 
   const heroStatusTag = document.getElementById('hero-status-tag');
   if (heroStatusTag) heroStatusTag.textContent = p.es_celular.toUpperCase();
 
+  // Headline y Slogan / Lema Oficial
   const heroHeadlineMain = document.getElementById('hero-headline-main');
-  if (heroHeadlineMain) heroHeadlineMain.textContent = th.headlineMain;
-
   const heroHeadlineItalic = document.getElementById('hero-headline-italic');
-  if (heroHeadlineItalic) heroHeadlineItalic.textContent = `${p.name}.`;
-
+  const heroLemaBox = document.getElementById('hero-lema-box');
+  const heroLemaText = document.getElementById('hero-lema-text');
   const heroLead = document.getElementById('hero-lead');
-  if (heroLead) heroLead.textContent = `${th.lead} Encuéntranos en ${p.direccion}.`;
+
+  if (p.lema) {
+    if (heroHeadlineMain) heroHeadlineMain.textContent = p.name;
+    if (heroHeadlineItalic) {
+      heroHeadlineItalic.textContent = `en ${p.zona}.`;
+      heroHeadlineItalic.style.display = 'block';
+    }
+    if (heroLemaBox) heroLemaBox.style.display = 'block';
+    if (heroLemaText) heroLemaText.textContent = p.lema;
+    if (heroLead) {
+      heroLead.textContent = `Atención directa en ${p.direccion}. Consulta nuestra lista de servicios y precios actualizados, arma tu pedido o cita y confírmalo directo por WhatsApp con nuestro equipo.`;
+    }
+  } else {
+    if (heroHeadlineMain) heroHeadlineMain.textContent = th.headlineMain;
+    if (heroHeadlineItalic) {
+      heroHeadlineItalic.textContent = `${p.name}.`;
+      heroHeadlineItalic.style.display = 'block';
+    }
+    if (heroLemaBox) heroLemaBox.style.display = 'none';
+    if (heroLead) {
+      heroLead.textContent = `${th.lead} Encuéntranos en ${p.direccion}.`;
+    }
+  }
 
   const heroPrimaryBtn = document.getElementById('hero-primary-btn');
   if (heroPrimaryBtn) heroPrimaryBtn.textContent = th.primaryBtn;
@@ -152,24 +224,29 @@ function setProspect(id: string) {
   const statZone = document.getElementById('stat-zone');
   if (statZone) statZone.textContent = p.zona;
 
+  // Fotografía Hero y Tarjeta Destacada Específica
   const heroPhoto = document.getElementById('hero-photo') as HTMLImageElement | null;
-  if (heroPhoto) heroPhoto.src = th.heroPhoto;
+  if (heroPhoto) heroPhoto.src = p.heroPhoto || th.heroPhoto;
 
   const featuredLabel = document.getElementById('featured-label');
-  if (featuredLabel) featuredLabel.textContent = th.featuredLabel;
+  if (featuredLabel) featuredLabel.textContent = p.featuredLabel || th.featuredLabel;
 
   const featuredPrice = document.getElementById('featured-price');
-  if (featuredPrice) featuredPrice.textContent = th.featuredPrice;
+  if (featuredPrice) featuredPrice.textContent = p.featuredPrice || th.featuredPrice;
 
   const featuredTitle = document.getElementById('featured-title');
-  if (featuredTitle) featuredTitle.textContent = th.featuredTitle;
+  if (featuredTitle) featuredTitle.textContent = p.featuredTitle || th.featuredTitle;
 
   const featuredSub = document.getElementById('featured-sub');
-  if (featuredSub) featuredSub.textContent = th.featuredSub;
+  if (featuredSub) featuredSub.textContent = p.featuredSub || th.featuredSub;
 
   const heroAddressCaption = document.getElementById('hero-address-caption');
   if (heroAddressCaption) heroAddressCaption.textContent = p.direccion;
 
+  // Cinta dinámica rotativa / Marquee según categoría
+  updateMarquee(p);
+
+  // Carta / Tarifario
   const menuKicker = document.getElementById('menu-kicker');
   if (menuKicker) menuKicker.textContent = th.menuKicker;
 
@@ -185,21 +262,10 @@ function setProspect(id: string) {
   const ticketBizPhone = document.getElementById('ticket-biz-phone');
   if (ticketBizPhone) ticketBizPhone.textContent = p.tel;
 
-  const baKicker = document.getElementById('ba-kicker');
-  if (baKicker) baKicker.textContent = th.baKicker;
+  // Comparador Antes / Después
+  updateBeforeAfterContent(p, th);
 
-  const baTitle = document.getElementById('ba-title');
-  if (baTitle) baTitle.textContent = th.baTitle;
-
-  const baDesc = document.getElementById('ba-desc');
-  if (baDesc) baDesc.textContent = th.baDesc;
-
-  const baImgBefore = document.getElementById('ba-img-before') as HTMLImageElement | null;
-  if (baImgBefore) baImgBefore.src = th.baBefore;
-
-  const baImgAfter = document.getElementById('ba-img-after') as HTMLImageElement | null;
-  if (baImgAfter) baImgAfter.src = th.baAfter;
-
+  // Ubicación y Contacto
   const locZone = document.getElementById('loc-zone');
   if (locZone) locZone.textContent = p.zona.toUpperCase();
 
@@ -212,8 +278,25 @@ function setProspect(id: string) {
   const locPhone = document.getElementById('loc-phone');
   if (locPhone) locPhone.textContent = p.tel;
 
+  const locHours = document.getElementById('loc-hours');
+  if (locHours) {
+    const rubroLow = p.rubro.toLowerCase();
+    if (rubroLow.includes('marina') || rubroLow.includes('gastronom')) {
+      locHours.textContent = 'Martes a Domingo: 11:30 a. m. – 5:30 p. m. (Lunes descanso)';
+    } else if (rubroLow.includes('veterin')) {
+      locHours.textContent = 'Lunes a Sábado: 9:00 a. m. – 7:30 p. m. | Emergencias previa consulta';
+    } else if (rubroLow.includes('dental') || rubroLow.includes('salud') || rubroLow.includes('odontol')) {
+      locHours.textContent = 'Lunes a Sábado: 9:00 a. m. – 8:00 p. m. (Citas programadas)';
+    } else {
+      locHours.textContent = 'Lunes a Sábado: 9:30 a. m. – 8:30 p. m. | Domingos previa cita';
+    }
+  }
+
   const revRatingInline = document.getElementById('rev-rating-inline');
   if (revRatingInline) revRatingInline.textContent = p.estrellas;
+
+  // Testimonios contextuales según el rubro
+  updateReviewsForProspect(p);
 
   const footerName = document.getElementById('footer-name');
   if (footerName) footerName.textContent = p.name;
@@ -234,6 +317,14 @@ function setProspect(id: string) {
     locCallLink.href = `tel:${p.tel.replace(/[^0-9+]/g, '')}`;
   }
 
+  // Botón flotante directo de WhatsApp
+  const floatingWA = document.getElementById('general-floating-wa') as HTMLAnchorElement | null;
+  if (floatingWA) {
+    const waNum = p.wa || '51999888777';
+    const waMsg = encodeURIComponent(`¡Hola ${p.name}! Vi su catálogo web y deseo consultar disponibilidad en su local de ${p.zona}.`);
+    floatingWA.href = `https://wa.me/${waNum}?text=${waMsg}`;
+  }
+
   const prospectMeta = document.getElementById('prospect-meta');
   if (prospectMeta) {
     prospectMeta.textContent = `${p.es_celular} | ${p.tel} | ${p.franja}`;
@@ -244,8 +335,232 @@ function setProspect(id: string) {
   renderCart();
 }
 
+function getBrandInitials(name: string): string {
+  const clean = name.replace(/(Salón|Salon|Spa|Urban|Restaurante|Cevichería|Cevicheria|Veterinaria|Studio|Odontic|Pet|Shop|de|la|del|d'|d)/gi, '').trim();
+  const parts = (clean || name).split(/\s+/).filter(Boolean);
+  if (parts.length >= 2) {
+    return (parts[0][0] + parts[1][0]).toUpperCase();
+  }
+  return name.slice(0, 2).toUpperCase();
+}
+
+function updateSocialLinks(p: Prospect) {
+  const navSocialLink = document.getElementById('nav-social-link') as HTMLAnchorElement | null;
+  const navSocialText = document.getElementById('nav-social-text');
+  const heroSocialPill = document.getElementById('hero-social-pill') as HTMLAnchorElement | null;
+  const heroSocialText = document.getElementById('hero-social-text');
+  const heroSocialIcon = document.getElementById('hero-social-icon');
+
+  if (p.instagram) {
+    const igHandle = p.instagram.startsWith('@') ? p.instagram : `@${p.instagram}`;
+    const igUrl = `https://instagram.com/${igHandle.replace('@', '')}`;
+    if (navSocialLink) {
+      navSocialLink.href = igUrl;
+      navSocialLink.style.display = 'inline-flex';
+    }
+    if (navSocialText) navSocialText.textContent = igHandle;
+
+    if (heroSocialPill) {
+      heroSocialPill.href = igUrl;
+      heroSocialPill.style.display = 'inline-flex';
+    }
+    if (heroSocialText) heroSocialText.textContent = igHandle;
+    if (heroSocialIcon) heroSocialIcon.textContent = '📸';
+  } else if (p.facebook) {
+    if (navSocialLink) {
+      navSocialLink.href = p.facebook;
+      navSocialLink.style.display = 'inline-flex';
+    }
+    if (navSocialText) navSocialText.textContent = 'Facebook';
+
+    if (heroSocialPill) {
+      heroSocialPill.href = p.facebook;
+      heroSocialPill.style.display = 'inline-flex';
+    }
+    if (heroSocialText) heroSocialText.textContent = 'Página Facebook';
+    if (heroSocialIcon) heroSocialIcon.textContent = '👍';
+  } else {
+    if (navSocialLink) navSocialLink.style.display = 'none';
+    if (heroSocialPill) {
+      heroSocialPill.href = `https://maps.google.com/?q=${encodeURIComponent(p.name + ' ' + p.zona)}`;
+      heroSocialPill.style.display = 'inline-flex';
+    }
+    if (heroSocialText) heroSocialText.textContent = `${p.estrellas}★ Google Maps`;
+    if (heroSocialIcon) heroSocialIcon.textContent = '📍';
+  }
+}
+
+function updateMarquee(p: Prospect) {
+  const marqueeContent = document.getElementById('marquee-content');
+  if (!marqueeContent) return;
+
+  const rub = p.rubro.toLowerCase();
+  const zona = p.zona.toUpperCase();
+  let items: string[] = [];
+
+  if (rub.includes('marina') || rub.includes('gastronom')) {
+    items = [
+      `✦ PESCA FRESCA DEL DÍA EN ${zona}`,
+      `✦ CHILCANO DE CORTESÍA EN TU PRIMER PEDIDO`,
+      `✦ LECHE DE TIGRE PREPARADA AL MOMENTO`,
+      `✦ RESERVAS DIRECTAS SIN COMISIONES POR WHATSAPP`,
+      `✦ ACEPTAMOS YAPE, PLIN, TARJETAS Y EFECTIVO`,
+      `✦ UBICACIÓN VERIFICADA EN ${zona}`,
+      `✦ PLATOS MARINOS CONTUNDENTES Y FRESCOS`
+    ];
+  } else if (rub.includes('veterin')) {
+    items = [
+      `✦ MÉDICOS VETERINARIOS TITULADOS UNMSM`,
+      `✦ BAÑOS RELAJANTES & GROOMING PROFESIONAL`,
+      `✦ CONSULTA MÉDICA INTEGRAL EN ${zona}`,
+      `✦ VACUNACIÓN Y MEDICINA PREVENTIVA`,
+      `✦ CUIDAMOS A TU ENGREÍDO CON MUCHO AMOR`,
+      `✦ CITAS RÁPIDAS POR WHATSAPP EN ${zona}`
+    ];
+  } else if (rub.includes('dental') || rub.includes('salud') || rub.includes('odontol')) {
+    items = [
+      `✦ ODONTOLOGÍA INTEGRAL Y ESPECIALIZADA EN ${zona}`,
+      `✦ BLANQUEAMIENTO DENTAL LED CLÍNICO`,
+      `✦ ATENCIÓN SIN DOLOR CON TECNOLOGÍA DIGITAL`,
+      `✦ EVALUACIÓN Y DIAGNÓSTICO DIGITAL`,
+      `✦ RESINAS 3M Y DISEÑO DE SONRISA`,
+      `✦ CITAS DIRECTAS POR WHATSAPP`
+    ];
+  } else if (rub.includes('podol')) {
+    items = [
+      `✦ PODOLOGÍA CLÍNICA ESPECIALIZADA EN ${zona}`,
+      `✦ INSTRUMENTAL 100% ESTERILIZADO EN AUTOCLAVE`,
+      `✦ ATENCIÓN DE UÑEROS, HONGOS Y PIE DIABÉTICO`,
+      `✦ ALIVIO INMEDIATO EN LA PRIMERA SESIÓN`,
+      `✦ SALUD Y DESCANSO PARA TUS PIES`
+    ];
+  } else {
+    items = [
+      `✦ ATENCIÓN PERSONALIZADA EN ${zona}`,
+      `✦ PRODUCTOS PROFESIONALES DE ALTA GAMA`,
+      `✦ BALAYAGE, ALISADOS & NAIL ART DE TENDENCIA`,
+      `✦ RESERVAS DIRECTAS SIN COMISIONES`,
+      `✦ ASESORÍA Y DIAGNÓSTICO SIN COSTO`
+    ];
+  }
+
+  const repeated = [...items, ...items];
+  marqueeContent.innerHTML = repeated.map(it => `<span class="mx-6 font-semibold">${it}</span>`).join('');
+}
+
+function updateBeforeAfterContent(p: Prospect, th: RubroTheme) {
+  const baKicker = document.getElementById('ba-kicker');
+  if (baKicker) baKicker.textContent = p.baKicker || th.baKicker;
+
+  const baTitle = document.getElementById('ba-title');
+  if (baTitle) baTitle.textContent = p.baTitle || th.baTitle;
+
+  const baDesc = document.getElementById('ba-desc');
+  if (baDesc) baDesc.textContent = p.baDesc || th.baDesc;
+
+  const baImgBefore = document.getElementById('ba-img-before') as HTMLImageElement | null;
+  if (baImgBefore) baImgBefore.src = p.baBefore || th.baBefore;
+
+  const baImgAfter = document.getElementById('ba-img-after') as HTMLImageElement | null;
+  if (baImgAfter) baImgAfter.src = p.baAfter || th.baAfter;
+
+  const baLabelBefore = document.getElementById('ba-label-before');
+  const baLabelAfter = document.getElementById('ba-label-after');
+  const baBullet1 = document.getElementById('ba-bullet-1');
+  const baBullet2 = document.getElementById('ba-bullet-2');
+  const baBullet3 = document.getElementById('ba-bullet-3');
+
+  const rubroLow = p.rubro.toLowerCase();
+  if (rubroLow.includes('marina') || rubroLow.includes('gastronom')) {
+    if (baLabelBefore) baLabelBefore.textContent = 'PESCA FRESCA DEL DÍA';
+    if (baLabelAfter) baLabelAfter.textContent = 'PLATO SERVIDO EN MESA';
+    if (baBullet1) baBullet1.textContent = '01 / PESCA ARTESANAL SELECCIONADA DEL DÍA';
+    if (baBullet2) baBullet2.textContent = '02 / LECHE DE TIGRE PREPARADA AL MOMENTO';
+    if (baBullet3) baBullet3.textContent = '03 / CUMPLIMIENTO SANITARIO & SAZÓN MARINA REAL';
+  } else if (rubroLow.includes('veterin')) {
+    if (baLabelBefore) baLabelBefore.textContent = 'PREVIO AL SERVICIO';
+    if (baLabelAfter) baLabelAfter.textContent = 'RESULTADO DE SPA & SALUD';
+    if (baBullet1) baBullet1.textContent = '01 / MÉDICOS VETERINARIOS TITULADOS UNMSM';
+    if (baBullet2) baBullet2.textContent = '02 / MANEJO AMABLE Y AMBIENTE LIBRE DE ESTRÉS';
+    if (baBullet3) baBullet3.textContent = '03 / PRODUCTOS DERMATOLÓGICOS HIPOALERGÉNICOS';
+  } else if (rubroLow.includes('dental') || rubroLow.includes('salud') || rubroLow.includes('odontol')) {
+    if (baLabelBefore) baLabelBefore.textContent = 'EVALUACIÓN INICIAL';
+    if (baLabelAfter) baLabelAfter.textContent = 'SONRISA RADIANTE FINAL';
+    if (baBullet1) baBullet1.textContent = '01 / MATERIALES BIOCOMPATIBLES Y ESTÉTICOS 3M';
+    if (baBullet2) baBullet2.textContent = '02 / INSTRUMENTAL 100% ESTERILIZADO EN AUTOCLAVE';
+    if (baBullet3) baBullet3.textContent = '03 / ATENCIÓN ODONTOLÓGICA CÁLIDA Y SIN DOLOR';
+  } else if (rubroLow.includes('podol')) {
+    if (baLabelBefore) baLabelBefore.textContent = 'VALORACIÓN PODOLÓGICA';
+    if (baLabelAfter) baLabelAfter.textContent = 'ALIVIO & RECUPERACIÓN';
+    if (baBullet1) baBullet1.textContent = '01 / ESTERILIZACIÓN HOSPITALARIA EN AUTOCLAVE';
+    if (baBullet2) baBullet2.textContent = '02 / ATENCIÓN DE UÑEROS, HONGOS Y PIE DIABÉTICO';
+    if (baBullet3) baBullet3.textContent = '03 / DESCANSO INMEDIATO DESDE LA PRIMERA VISITA';
+  } else {
+    if (baLabelBefore) baLabelBefore.textContent = 'PREPARACIÓN / ANTES';
+    if (baLabelAfter) baLabelAfter.textContent = 'ACABADO FINAL';
+    if (baBullet1) baBullet1.textContent = '01 / PRODUCTOS PROFESIONALES DE LÍNEA OFICIAL';
+    if (baBullet2) baBullet2.textContent = '02 / ATENCIÓN PUNTUAL CON CITA PREVIA';
+    if (baBullet3) baBullet3.textContent = '03 / ASESORÍA PERSONALIZADA SEGÚN TU ESTILO';
+  }
+}
+
+function updateReviewsForProspect(p: Prospect) {
+  const rev1Title = document.getElementById('rev-1-title');
+  const rev1Text = document.getElementById('rev-1-text');
+  const rev2Title = document.getElementById('rev-2-title');
+  const rev2Text = document.getElementById('rev-2-text');
+  const rev3Title = document.getElementById('rev-3-title');
+  const rev3Text = document.getElementById('rev-3-text');
+
+  const rub = p.rubro.toLowerCase();
+  if (rub.includes('marina') || rub.includes('gastronom')) {
+    if (rev1Title) rev1Title.textContent = `★★★★★ · FRESCURA DEL DÍA`;
+    if (rev1Text) rev1Text.textContent = `"El ceviche y los chicharrones son insuperables. Pesca fresquísima y porciones bien servidas. ¡Súper recomendado en ${p.zona}!"`;
+    if (rev2Title) rev2Title.textContent = `★★★★★ · CARTA CLARA`;
+    if (rev2Text) rev2Text.textContent = `"Poder ver la carta y pedir por WhatsApp antes de llegar nos ahorró un montón de tiempo. La leche de tigre es espectacular."`;
+    if (rev3Title) rev3Title.textContent = `★ ${p.estrellas} · SAZÓN DE PRIMERA`;
+    if (rev3Text) rev3Text.textContent = `"Excelente sazón norteña y marina. Atención amable, ambiente limpio y precios totalmente justos para la calidad que dan."`;
+  } else if (rub.includes('veterin')) {
+    if (rev1Title) rev1Title.textContent = `★★★★★ · TRATO CON AMOR`;
+    if (rev1Text) rev1Text.textContent = `"Los doctores de la San Marcos atienden con un amor increíble a mis engreídos. El baño medicado y el corte quedaron preciosos."`;
+    if (rev2Title) rev2Title.textContent = `★★★★★ · ATENCIÓN MÉDICA`;
+    if (rev2Text) rev2Text.textContent = `"Diagnóstico acertado y seguimiento por WhatsApp. Te da total tranquilidad saber que tu mascota está en tan buenas manos."`;
+    if (rev3Title) rev3Title.textContent = `★ ${p.estrellas} · VETERINARIA DESTACADA`;
+    if (rev3Text) rev3Text.textContent = `"Ambiente limpio, sin olores y súper acogedor. Precios justos en medicamentos y grooming. ¡Los recomiendo al 100%!"`;
+  } else if (rub.includes('dental') || rub.includes('salud') || rub.includes('odontol')) {
+    if (rev1Title) rev1Title.textContent = `★★★★★ · SIN DOLOR`;
+    if (rev1Text) rev1Text.textContent = `"Tenía pánico al dentista y la experiencia fue completamente sin dolor. Los doctores son sumamente minuciosos y profesionales."`;
+    if (rev2Title) rev2Title.textContent = `★★★★★ · RESULTADOS ESTÉTICOS`;
+    if (rev2Text) rev2Text.textContent = `"El blanqueamiento y las curaciones estéticas superaron mis expectativas. Mi sonrisa quedó radiante y natural."`;
+    if (rev3Title) rev3Title.textContent = `★ ${p.estrellas} · BIOSEGURIDAD`;
+    if (rev3Text) rev3Text.textContent = `"Instalaciones de primer nivel, todo desinfectado y sellado. Agendar por la web y confirmar por WhatsApp fue comodísimo."`;
+  } else if (rub.includes('podol')) {
+    if (rev1Title) rev1Title.textContent = `★★★★★ · ALIVIO INMEDIATO`;
+    if (rev1Text) rev1Text.textContent = `"Llegué con un uñero muy doloroso y salí caminando sin ninguna molestia. Profesionalismo de primera y trato muy suave."`;
+    if (rev2Title) rev2Title.textContent = `★★★★★ · ESTERILIZACIÓN`;
+    if (rev2Text) rev2Text.textContent = `"Instrumental en sobre cerrado y esterilizado frente a ti en autoclave. Súper confiable para el cuidado de los pies."`;
+    if (rev3Title) rev3Title.textContent = `★ ${p.estrellas} · RECOMENDADO`;
+    if (rev3Text) rev3Text.textContent = `"Excelente atención en ${p.zona}. Mis pies descansaron como nunca. Volveré cada mes para mi control podológico."`;
+  } else {
+    if (rev1Title) rev1Title.textContent = `★★★★★ · RESULTADOS TOP`;
+    if (rev1Text) rev1Text.textContent = `"Me encantó el cambio de look. El color y el acabado del cabello quedaron brillantes y sedosos, exactamente como lo pedí."`;
+    if (rev2Title) rev2Title.textContent = `★★★★★ · ATENCIÓN PUNTUAL`;
+    if (rev2Text) rev2Text.textContent = `"Agendé por la web con los precios claros y me atendieron a la hora exacta. Productos de alta calidad que no maltratan."`;
+    if (rev3Title) rev3Title.textContent = `★ ${p.estrellas} · CALIFICACIÓN GOOGLE`;
+    if (rev3Text) rev3Text.textContent = `"El mejor salón de ${p.zona}. Todo el equipo es muy atento y el ambiente es súper relajante y limpio. ¡10 de 10!"`;
+  }
+}
+
+function getAvailableServices(): ServiceItem[] {
+  if (currentProspect.customServices && currentProspect.customServices.length > 0) {
+    return currentProspect.customServices;
+  }
+  return currentTheme.services;
+}
+
 function renderCategories() {
-  const cats = ['Todos', ...new Set(currentTheme.services.map(s => s.cat))];
+  const services = getAvailableServices();
+  const cats = ['Todos', ...new Set(services.map(s => s.cat))];
   const container = document.getElementById('category-tabs');
   if (!container) return;
 
@@ -275,9 +590,10 @@ function renderServices() {
   const container = document.getElementById('services-list');
   if (!container) return;
 
+  const services = getAvailableServices();
   const list = activeCategory === 'Todos'
-    ? currentTheme.services
-    : currentTheme.services.filter(s => s.cat === activeCategory);
+    ? services
+    : services.filter(s => s.cat === activeCategory);
 
   container.innerHTML = list.map((s, idx) => {
     const inCart = cart.some(item => item.id === s.id);
@@ -320,7 +636,8 @@ function toggleService(id: string) {
   if (idx >= 0) {
     cart.splice(idx, 1);
   } else {
-    const found = currentTheme.services.find(s => s.id === id);
+    const available = getAvailableServices();
+    const found = available.find(s => s.id === id);
     if (found) cart.push(found);
   }
   renderServices();

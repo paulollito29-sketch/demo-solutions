@@ -2,22 +2,43 @@
 // Hero.astro
 ---
 
-<section class="border-b hairline-border">
-  <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-12">
+<section class="border-b hairline-border relative overflow-hidden">
+  <!-- Sutil brillo ambiental de marca -->
+  <div class="absolute -top-24 -right-24 w-96 h-96 rounded-full opacity-20 pointer-events-none blur-3xl bg-[var(--accent)]"></div>
+
+  <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-12 relative z-10">
     
     <!-- Columna Editorial Izquierda -->
     <div class="lg:col-span-7 p-6 sm:p-10 lg:p-14 flex flex-col justify-between border-b lg:border-b-0 lg:border-r hairline-border">
       <div class="space-y-6">
-        <div class="inline-flex items-center gap-3 border hairline-border px-3 py-1 bg-surface-alt">
-          <span class="font-mono text-[11px] uppercase tracking-wider" id="hero-kicker">ATENCIÓN EN SURQUILLO</span>
-          <span class="text-stone-400">|</span>
-          <span class="font-mono text-[11px] font-semibold text-[var(--accent)]" id="hero-status-tag">RESERVAS DIRECTAS SIN COMISIÓN</span>
+        <div class="flex flex-wrap items-center gap-2.5">
+          <div class="inline-flex items-center gap-2 border hairline-border px-3 py-1 bg-surface-alt rounded-sm">
+            <span class="w-2 h-2 rounded-full bg-[var(--accent)]"></span>
+            <span class="font-mono text-[11px] uppercase tracking-wider" id="hero-kicker">ATENCIÓN EN SURQUILLO</span>
+            <span class="text-stone-300">|</span>
+            <span class="font-mono text-[11px] font-semibold text-[var(--accent)]" id="hero-status-tag">RESERVAS DIRECTAS SIN COMISIÓN</span>
+          </div>
+
+          <a id="hero-social-pill" href="#" target="_blank" rel="noopener noreferrer" class="hidden sm:inline-flex items-center gap-1.5 px-3 py-1 rounded-sm text-[11px] font-mono border hairline-border bg-white text-stone-700 hover:border-stone-900 transition shadow-2xs">
+            <span id="hero-social-icon">📸</span>
+            <span id="hero-social-text">@perfil</span>
+          </a>
         </div>
 
-        <h1 class="font-serif text-4xl sm:text-6xl lg:text-[64px] font-semibold leading-[1.02] tracking-tight">
+        <!-- Logotipo Oficial del Negocio -->
+        <div id="hero-logo-box" class="pt-1">
+          <img id="hero-brand-logo" src="/logos/p002-paolas.svg" alt="Insignia oficial" class="h-11 sm:h-13 w-auto object-contain" />
+        </div>
+
+        <h1 class="font-serif text-3xl sm:text-5xl lg:text-[56px] font-semibold leading-[1.04] tracking-tight text-[var(--ink)]">
           <span id="hero-headline-main">El arte del cuidado personal en</span>
           <em id="hero-headline-italic" class="font-normal italic block mt-1 text-[var(--accent)]">Benny Salón & Spa.</em>
         </h1>
+
+        <!-- Slogan / Lema Oficial de Marca -->
+        <blockquote id="hero-lema-box" class="border-l-2 border-[var(--accent)] pl-4 py-1 italic font-serif text-lg sm:text-xl text-stone-700 hidden">
+          <span id="hero-lema-text">«Slogan del local»</span>
+        </blockquote>
 
         <p id="hero-lead" class="text-stone-600 text-base sm:text-lg leading-relaxed max-w-xl font-normal">
           Más de un centenar de clientes en Surquillo respaldan nuestro trabajo. Consulta nuestra lista de precios actualizada, arma tu cita en línea y confírmala directo por WhatsApp con nuestro equipo.
@@ -26,11 +47,11 @@
 
       <div class="pt-8 mt-8 border-t hairline-border space-y-6">
         <div class="flex flex-wrap items-center gap-3">
-          <a href="#carta" class="btn-editorial px-7 py-4 text-xs sm:text-sm uppercase tracking-[0.14em] font-semibold inline-flex items-center gap-3">
+          <a href="#carta" class="btn-editorial px-7 py-4 text-xs sm:text-sm uppercase tracking-[0.14em] font-semibold inline-flex items-center gap-3 shadow-xs">
             <span id="hero-primary-btn">Ver Precios y Agendar</span>
             <span>↓</span>
           </a>
-          <a id="hero-map-anchor" href="#ubicacion" class="px-6 py-4 border hairline-border hover:border-stone-900 text-xs sm:text-sm uppercase tracking-[0.12em] font-medium transition">
+          <a id="hero-map-anchor" href="#ubicacion" class="px-6 py-4 border hairline-border hover:border-stone-900 text-xs sm:text-sm uppercase tracking-[0.12em] font-medium transition bg-white/70">
             Cómo llegar al local
           </a>
         </div>
@@ -55,24 +76,25 @@
 
     <!-- Columna Derecha: Fotografía Editorial a Sangre + Nota Destacada -->
     <div class="lg:col-span-5 flex flex-col justify-between bg-surface-alt">
-      <div class="relative aspect-[4/4.6] w-full overflow-hidden border-b hairline-border">
-        <img id="hero-photo" src="https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=1000&q=85" alt="Fotografía del local" class="w-full h-full object-cover contrast-[1.03]" />
-        <div class="absolute bottom-4 left-4 right-4 bg-[var(--bg-main)]/95 backdrop-blur-sm p-4 border hairline-border">
+      <div class="relative aspect-[4/4.6] w-full overflow-hidden border-b hairline-border group">
+        <img id="hero-photo" src="https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=1000&q=85" alt="Fotografía del local" class="w-full h-full object-cover contrast-[1.03] transition-transform duration-700 group-hover:scale-105" />
+        <div class="absolute inset-0 bg-gradient-to-t from-black/55 via-transparent to-transparent pointer-events-none"></div>
+        <div class="absolute bottom-4 left-4 right-4 bg-[var(--bg-main)]/95 backdrop-blur-md p-4 border hairline-border shadow-lg">
           <div class="flex items-center justify-between">
-            <span class="font-mono text-[10px] uppercase tracking-widest text-stone-500" id="featured-label">ESPECIALIDAD DE LA CASA</span>
-            <span class="font-mono text-xs font-semibold text-[var(--accent)]" id="featured-price">S/ 180</span>
+            <span class="font-mono text-[10px] uppercase tracking-widest text-stone-500 font-semibold" id="featured-label">ESPECIALIDAD DE LA CASA</span>
+            <span class="font-mono text-xs font-bold text-[var(--accent)]" id="featured-price">S/ 180</span>
           </div>
-          <p class="font-serif text-xl font-semibold mt-0.5" id="featured-title">Balayage & Nutrición Capilar Profunda</p>
-          <p class="text-xs text-stone-600 mt-0.5" id="featured-sub">Incluye diagnóstico previo sin costo agendando por web.</p>
+          <p class="font-serif text-xl font-semibold mt-1 text-[var(--ink)]" id="featured-title">Balayage & Nutrición Capilar Profunda</p>
+          <p class="text-xs text-stone-600 mt-0.5 line-clamp-2" id="featured-sub">Incluye diagnóstico previo sin costo agendando por web.</p>
         </div>
       </div>
 
-      <div class="p-5 flex items-center justify-between text-xs">
+      <div class="p-5 flex items-center justify-between text-xs bg-white/40">
         <div>
           <span class="font-mono text-[10px] uppercase tracking-wider text-stone-500 block">DIRECCIÓN REGISTRADA</span>
           <span id="hero-address-caption" class="font-medium text-stone-800">Jr. Narciso de la Colina 869, Surquillo</span>
         </div>
-        <a href="#ubicacion" class="font-mono text-[11px] underline uppercase tracking-wider shrink-0 ml-3">Ver Mapa →</a>
+        <a href="#ubicacion" class="font-mono text-[11px] underline uppercase tracking-wider shrink-0 ml-3 hover:text-[var(--accent)]">Ver Mapa →</a>
       </div>
     </div>
 

@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 68" width="340" height="68">
+  <defs>
+    <style>
+      .brand-title { font-family: 'Cormorant Garamond', 'Cinzel', 'Playfair Display', Georgia, serif; font-size: 24px; font-weight: 700; letter-spacing: 0.12em; fill: #0C1A26; }
+      .brand-sub { font-family: 'JetBrains Mono', 'DM Sans', -apple-system, monospace; font-size: 8.5px; font-weight: 600; letter-spacing: 0.22em; fill: #0A4D7C; }
+    </style>
+  </defs>
+  
+  <!-- Emblem Badge -->
+  <g transform="translate(6, 4)">
+    <rect x="0" y="0" width="56" height="56" rx="12" fill="#E4EDF5" stroke="#0A4D7C" stroke-width="1.2" opacity="0.95"/>
+    <g transform="translate(-2, -4)">
+      <path d="M14 32 C24 20 40 22 46 32 C40 42 24 44 14 32 Z" fill="#0A4D7C"/><polygon points="46,32 54,24 54,40" fill="#0A4D7C"/><circle cx="24" cy="30" r="2.5" fill="#FFFFFF"/>
+    </g>
+  </g>
+  
+  <!-- Typography -->
+  <g transform="translate(74, 33)">
+    <text x="0" y="0" class="brand-title">PEZ AZUL</text>
+    <text x="1" y="16" class="brand-sub">CEVICHERÍA · CHORRILLOS</text>
+  </g>
+</svg>
