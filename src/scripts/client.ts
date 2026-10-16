@@ -70,20 +70,18 @@ function setProspect(id: string) {
   }
 
   // Apply Theme CSS variables
-  document.documentElement.style.setProperty('--bg-main', currentTheme.colors.bgMain);
-  document.documentElement.style.setProperty('--bg-alt', currentTheme.colors.bgAlt);
-  document.documentElement.style.setProperty('--ink', currentTheme.colors.ink);
-  document.documentElement.style.setProperty('--ink-muted', currentTheme.colors.inkMuted);
-  document.documentElement.style.setProperty('--accent', currentTheme.colors.accent);
-  document.documentElement.style.setProperty('--accent-soft', currentTheme.colors.accentSoft);
-  document.documentElement.style.setProperty('--border-hair', currentTheme.colors.borderHair);
+  document.documentElement.style.setProperty('--bg-main', currentTheme.bgMain);
+  document.documentElement.style.setProperty('--bg-alt', currentTheme.bgAlt);
+  document.documentElement.style.setProperty('--ink', currentTheme.ink);
+  document.documentElement.style.setProperty('--accent', currentTheme.accent);
+  document.documentElement.style.setProperty('--border-hair', currentTheme.border);
 
   // Dynamic Content Updates
   const p = currentProspect;
   const th = currentTheme;
 
   const pageTitle = document.getElementById('page-title');
-  if (pageTitle) pageTitle.textContent = `${p.name} — ${p.zona} · Lima`;
+  if (pageTitle) pageTitle.textContent = `${p.name} — ${p.zona} | Carta & Reservas`;
 
   const topbarAddress = document.getElementById('topbar-address');
   if (topbarAddress) topbarAddress.textContent = p.direccion;
@@ -92,7 +90,7 @@ function setProspect(id: string) {
   if (topbarRating) topbarRating.textContent = p.estrellas;
 
   const topbarReviews = document.getElementById('topbar-reviews');
-  if (topbarReviews) topbarReviews.textContent = `${p.resenas} reseñas`;
+  if (topbarReviews) topbarReviews.textContent = p.resenas;
 
   const topbarPhone = document.getElementById('topbar-phone') as HTMLAnchorElement | null;
   if (topbarPhone) {
@@ -101,73 +99,70 @@ function setProspect(id: string) {
   }
 
   const navRubroTag = document.getElementById('nav-rubro-tag');
-  if (navRubroTag) navRubroTag.textContent = `${p.rubro.toUpperCase()} · ${p.zona.toUpperCase()}`;
+  if (navRubroTag) navRubroTag.textContent = `${th.rubroTag} · ${p.zona.toUpperCase()}`;
 
   const navName = document.getElementById('nav-name');
   if (navName) navName.textContent = p.name;
 
   const navCtaText = document.getElementById('nav-cta-text');
-  if (navCtaText) navCtaText.textContent = th.copy.heroBtn;
+  if (navCtaText) navCtaText.textContent = th.ctaText;
 
   const navMenuLabel = document.getElementById('nav-menu-label');
-  if (navMenuLabel) navMenuLabel.textContent = th.labels.menuTitle;
+  if (navMenuLabel) navMenuLabel.textContent = th.menuLabel;
 
   const heroKicker = document.getElementById('hero-kicker');
-  if (heroKicker) heroKicker.textContent = `ATENCIÓN EN ${p.zona.toUpperCase()}`;
+  if (heroKicker) heroKicker.textContent = `LOCAL EN ${p.zona.toUpperCase()}`;
 
   const heroStatusTag = document.getElementById('hero-status-tag');
   if (heroStatusTag) heroStatusTag.textContent = p.es_celular.toUpperCase();
 
   const heroHeadlineMain = document.getElementById('hero-headline-main');
-  if (heroHeadlineMain) heroHeadlineMain.textContent = th.copy.heroLeadStart;
+  if (heroHeadlineMain) heroHeadlineMain.textContent = th.headlineMain;
 
   const heroHeadlineItalic = document.getElementById('hero-headline-italic');
   if (heroHeadlineItalic) heroHeadlineItalic.textContent = `${p.name}.`;
 
   const heroLead = document.getElementById('hero-lead');
-  if (heroLead) heroLead.textContent = `${p.resenas.includes('más') ? 'Más de un centenar de vecinos' : 'Vecinos y clientes'} en ${p.zona} respaldan nuestro trabajo (${p.estrellas}★). ${th.copy.heroLeadEnd}`;
+  if (heroLead) heroLead.textContent = `${th.lead} Encuéntranos en ${p.direccion}.`;
 
   const heroPrimaryBtn = document.getElementById('hero-primary-btn');
-  if (heroPrimaryBtn) heroPrimaryBtn.textContent = th.copy.heroBtn;
+  if (heroPrimaryBtn) heroPrimaryBtn.textContent = th.primaryBtn;
 
   const statRating = document.getElementById('stat-rating');
   if (statRating) statRating.textContent = p.estrellas;
 
   const statReviews = document.getElementById('stat-reviews');
-  if (statReviews) statReviews.textContent = `${p.resenas} clientes`;
+  if (statReviews) statReviews.textContent = p.resenas;
 
   const statZone = document.getElementById('stat-zone');
   if (statZone) statZone.textContent = p.zona;
 
   const heroPhoto = document.getElementById('hero-photo') as HTMLImageElement | null;
-  if (heroPhoto) heroPhoto.src = th.photos.hero;
+  if (heroPhoto) heroPhoto.src = th.heroPhoto;
 
   const featuredLabel = document.getElementById('featured-label');
-  if (featuredLabel) featuredLabel.textContent = th.featured.label;
+  if (featuredLabel) featuredLabel.textContent = th.featuredLabel;
 
   const featuredPrice = document.getElementById('featured-price');
-  if (featuredPrice) featuredPrice.textContent = `S/ ${th.featured.price}`;
+  if (featuredPrice) featuredPrice.textContent = th.featuredPrice;
 
   const featuredTitle = document.getElementById('featured-title');
-  if (featuredTitle) featuredTitle.textContent = th.featured.title;
+  if (featuredTitle) featuredTitle.textContent = th.featuredTitle;
 
   const featuredSub = document.getElementById('featured-sub');
-  if (featuredSub) featuredSub.textContent = th.featured.sub;
+  if (featuredSub) featuredSub.textContent = th.featuredSub;
 
   const heroAddressCaption = document.getElementById('hero-address-caption');
   if (heroAddressCaption) heroAddressCaption.textContent = p.direccion;
 
   const menuKicker = document.getElementById('menu-kicker');
-  if (menuKicker) menuKicker.textContent = `ÍNDICE DE SERVICIOS · ${p.rubro.toUpperCase()}`;
+  if (menuKicker) menuKicker.textContent = th.menuKicker;
 
   const menuHeading = document.getElementById('menu-heading');
-  if (menuHeading) menuHeading.textContent = th.labels.menuTitle;
+  if (menuHeading) menuHeading.textContent = th.menuHeading;
 
   const ticketTitle = document.getElementById('ticket-title');
-  if (ticketTitle) ticketTitle.textContent = th.labels.orderReceipt;
-
-  const slotLabel = document.getElementById('slot-label');
-  if (slotLabel) slotLabel.textContent = th.labels.slotLabel;
+  if (ticketTitle) ticketTitle.textContent = th.ticketTitle;
 
   const ticketBizName = document.getElementById('ticket-biz-name');
   if (ticketBizName) ticketBizName.textContent = p.name;
@@ -176,19 +171,19 @@ function setProspect(id: string) {
   if (ticketBizPhone) ticketBizPhone.textContent = p.tel;
 
   const baKicker = document.getElementById('ba-kicker');
-  if (baKicker) baKicker.textContent = `CALIDAD & DETALLE · ${p.zona.toUpperCase()}`;
+  if (baKicker) baKicker.textContent = th.baKicker;
 
   const baTitle = document.getElementById('ba-title');
-  if (baTitle) baTitle.textContent = th.copy.baTitle;
+  if (baTitle) baTitle.textContent = th.baTitle;
 
   const baDesc = document.getElementById('ba-desc');
-  if (baDesc) baDesc.textContent = th.copy.baDesc;
+  if (baDesc) baDesc.textContent = th.baDesc;
 
   const baImgBefore = document.getElementById('ba-img-before') as HTMLImageElement | null;
-  if (baImgBefore) baImgBefore.src = th.photos.before;
+  if (baImgBefore) baImgBefore.src = th.baBefore;
 
   const baImgAfter = document.getElementById('ba-img-after') as HTMLImageElement | null;
-  if (baImgAfter) baImgAfter.src = th.photos.after;
+  if (baImgAfter) baImgAfter.src = th.baAfter;
 
   const locZone = document.getElementById('loc-zone');
   if (locZone) locZone.textContent = p.zona.toUpperCase();
@@ -392,7 +387,7 @@ function hideAgencyBar() {
 function getCleanDemoUrl(p: Prospect): string {
   const base = window.location.origin && window.location.origin !== 'null'
     ? window.location.origin + window.location.pathname
-    : 'https://demo-solutions.vercel.app';
+    : 'https://demo-solutions-livid.vercel.app';
   return `${base}?id=${p.id}&demo=1`;
 }
 

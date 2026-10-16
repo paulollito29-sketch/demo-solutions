@@ -1,5 +1,11 @@
 ---
 // MenuSection.astro
+import { PROSPECTS } from '../data/prospects';
+import { getThemeForRubro } from '../data/themes';
+
+const initialProspect = PROSPECTS[0];
+const initialTheme = getThemeForRubro(initialProspect.rubro);
+const initialCats = ['Todos', ...new Set(initialTheme.services.map(s => s.cat))];
 ---
 
 <section id="carta" class="py-16 sm:py-20 px-4 border-b hairline-border">
@@ -8,18 +14,58 @@
     <!-- Encabezado de Carta -->
     <div class="flex flex-col md:flex-row md:items-end justify-between pb-8 border-b hairline-border gap-4">
       <div>
-        <span class="font-mono text-[11px] uppercase tracking-[0.2em] text-stone-500" id="menu-kicker">ÍNDICE DE SERVICIOS & TARIFAS</span>
-        <h2 id="menu-heading" class="font-serif text-4xl sm:text-5xl font-semibold mt-1">Nuestra Carta & Especialidades</h2>
+        <span class="font-mono text-[11px] uppercase tracking-[0.2em] text-stone-500" id="menu-kicker">{initialTheme.menuKicker}</span>
+        <h2 id="menu-heading" class="font-serif text-4xl sm:text-5xl font-semibold mt-1">{initialTheme.menuHeading}</h2>
       </div>
       <!-- Pestañas limpias estilo editorial -->
-      <div id="category-tabs" class="flex flex-wrap gap-1.5"></div>
+      <div id="category-tabs" class="flex flex-wrap gap-1.5">
+        {initialCats.map((c, idx) => (
+          <button
+            type="button"
+            data-cat={c}
+            class={`btn-category-tab px-3.5 py-2 font-mono text-[11px] uppercase tracking-wider border transition cursor-pointer ${
+              idx === 0
+                ? 'bg-stone-900 text-white border-stone-900'
+                : 'bg-transparent text-stone-700 hairline-border hover:border-stone-900'
+            }`}
+          >
+            {c}
+          </button>
+        ))}
+      </div>
     </div>
 
     <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 pt-8 items-start">
       
       <!-- Listado de Carta estilo Restaurante La Mar / Salón Boutique -->
       <div class="lg:col-span-7">
-        <div id="services-list" class="divide-y hairline-border border-t hairline-border"></div>
+        <div id="services-list" class="divide-y hairline-border border-t hairline-border">
+          {initialTheme.services.map((s, idx) => (
+            <div class="menu-row py-5 flex items-start justify-between gap-4">
+              <div class="space-y-1 pr-3">
+                <div class="flex items-center gap-2 font-mono text-[10px] uppercase tracking-widest text-stone-500">
+                  <span>0{idx + 1}</span>
+                  <span>·</span>
+                  <span>{s.cat}</span>
+                  <span>·</span>
+                  <span>{s.time}</span>
+                </div>
+                <h4 class="font-serif text-xl sm:text-2xl font-semibold text-stone-900">{s.name}</h4>
+                <p class="text-xs sm:text-sm text-stone-600 leading-relaxed max-w-lg">{s.desc}</p>
+              </div>
+              <div class="flex flex-col items-end shrink-0 gap-2">
+                <span class="font-mono text-base sm:text-lg font-bold text-stone-900">S/ {s.price}</span>
+                <button
+                  type="button"
+                  data-service-id={s.id}
+                  class="btn-toggle-service px-3.5 py-1.5 font-mono text-[11px] uppercase tracking-wider border transition cursor-pointer border-stone-900 text-stone-900 hover:bg-stone-900 hover:text-white"
+                >
+                  + Seleccionar
+                </button>
+              </div>
+            </div>
+          ))}
+        </div>
         <p class="text-xs text-stone-500 mt-4 font-mono">
           * Todos los precios están expresados en Soles (S/) e incluyen impuestos. Puedes combinar varios ítems antes de enviar tu mensaje.
         </p>
@@ -30,13 +76,14 @@
         <div class="border-b-2 border-stone-900 pb-4 flex items-start justify-between">
           <div>
             <span class="font-mono text-[10px] uppercase tracking-[0.2em] text-stone-500">SOLICITUD DIRECTA · SIN INTERMEDIARIOS</span>
-            <h3 id="ticket-title" class="font-serif text-2xl sm:text-3xl font-bold text-stone-900 mt-0.5">Resumen de Reserva</h3>
+            <h3 id="ticket-title" class="font-serif text-2xl sm:text-3xl font-bold text-stone-900 mt-0.5">{initialTheme.ticketTitle}</h3>
           </div>
           <span id="cart-count-badge" class="font-mono text-xs px-2.5 py-1 bg-stone-900 text-white font-semibold">0 ítems</span>
         </div>
 
         <!-- Lista tipo recibo -->
         <div id="cart-items" class="py-4 space-y-2.5 min-h-[90px] max-h-56 overflow-y-auto border-b border-dashed border-stone-300 text-xs">
+          <p class="text-stone-400 italic py-4 text-center font-serif">Selecciona uno o más ítems de la carta a la izquierda para armar tu reserva.</p>
         </div>
 
         <!-- Subtotal -->
@@ -78,8 +125,8 @@
         </button>
 
         <div class="mt-3 pt-3 border-t border-stone-200 flex items-center justify-between text-[11px] text-stone-500 font-mono">
-          <span id="ticket-biz-name">Benny Salón & Spa</span>
-          <span id="ticket-biz-phone">(01) 2340267</span>
+          <span id="ticket-biz-name">{initialProspect.name}</span>
+          <span id="ticket-biz-phone">{initialProspect.tel}</span>
         </div>
       </div>
 

@@ -1,5 +1,8 @@
 ---
 // AgencyBar.astro
+import { PROSPECTS } from '../data/prospects';
+
+const initialProspect = PROSPECTS[0];
 ---
 
 <div id="agency-bar" class="sticky top-0 z-50 bg-[#141413] text-stone-200 border-b border-stone-800 px-3 py-2 text-xs">
@@ -7,8 +10,13 @@
     <div class="flex items-center gap-2">
       <span class="px-2 py-0.5 bg-amber-400 text-stone-950 font-mono font-bold uppercase tracking-wider text-[10px]">ESTUDIO EDITORIAL v2</span>
       <select id="prospect-select" class="bg-stone-900 text-stone-100 border border-stone-700 px-2.5 py-1 text-xs focus:outline-none focus:border-amber-400 max-w-xs sm:max-w-md">
+        {PROSPECTS.map(p => (
+          <option value={p.id}>[{p.id}] {p.name} · {p.zona} ({p.rubro})</option>
+        ))}
       </select>
-      <span id="prospect-meta" class="hidden lg:inline-block text-stone-400 font-mono text-[11px]"></span>
+      <span id="prospect-meta" class="hidden lg:inline-block text-stone-400 font-mono text-[11px]">
+        {initialProspect.es_celular} | {initialProspect.tel} | {initialProspect.franja}
+      </span>
     </div>
     <div class="flex items-center gap-2">
       <button id="btn-open-pitch" type="button" class="px-3 py-1 bg-emerald-700 hover:bg-emerald-600 text-white font-medium transition cursor-pointer">
