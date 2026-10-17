@@ -40,6 +40,7 @@ export interface Prospect {
   baAfter?: string;
   palette?: ProspectPalette;
   customServices?: ServiceItem[];
+  lead?: string;
 }
 
 export interface ServiceItem {

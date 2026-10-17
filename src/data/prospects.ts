@@ -73,7 +73,7 @@ export const PROSPECTS: Prospect[] = [
       {
         "id": "p2-4",
         "cat": "Tratamientos",
-        "name": "Botox Capilar 💖 Sellador de Puntas",
+        "name": "Botox Capilar & Sellador de Puntas",
         "desc": "Relleno capilar intensivo, eliminación de frizz y suavidad extrema.",
         "price": 110,
         "time": "75 min"
@@ -110,14 +110,14 @@ export const PROSPECTS: Prospect[] = [
     "estadoWeb": "Sin web oficial · 1,321 seguidores · Médicos UNMSM",
     "lema": "«Médicos Veterinarios egresados de la UNMSM, comprometidos en velar por el bienestar de tu engreído con mucho amor. ¡Somos todo lo que tu mascota necesita!»",
     "palette": {
-      "name": "Deep Forest Vet & Warm Ivory",
-      "bg_page": "#F5F7F5",
+      "name": "Clinical Mint & Fresh White",
+      "bg_page": "#F8FAFC",
       "bg_panel": "#FFFFFF",
-      "bg_tint": "#E3ECE5",
-      "ink": "#101F16",
-      "accent": "#165B3A",
-      "accent_dark": "#0E3F27",
-      "line": "#C5D9CB"
+      "bg_tint": "#F0FDFA",
+      "ink": "#0F172A",
+      "accent": "#0D9488",
+      "accent_dark": "#0F766E",
+      "line": "#CCFBF1"
     },
     "customServices": [
       {
@@ -164,6 +164,420 @@ export const PROSPECTS: Prospect[] = [
     "baBefore": "https://images.unsplash.com/photo-1548767797-d8c844163c4c?auto=format&fit=crop&w=1000&q=85",
     "baAfter": "https://images.unsplash.com/photo-1583337130417-3346a1be7dee?auto=format&fit=crop&w=1000&q=85",
     "logoUrl": "/logos/p003-brand.jpg"
+  },
+  {
+    "id": "P-MISCOSTILLITAS",
+    "name": "MIS COSTILLITAS – Ribs y Piqueos Parrilleros",
+    "zona": "Surco / San Miguel",
+    "rubro": "Restaurante y cafetería",
+    "prioridad": "Alta",
+    "indice": 99,
+    "direccion": "Av. Primavera 1230, Santiago de Surco",
+    "tel": "(01) 612-4545",
+    "wa": "51987654321",
+    "es_celular": "Sí (WhatsApp Directo)",
+    "estrellas": "4.8",
+    "resenas": "más de 1,200",
+    "franja": "12:00–16:00 y 19:00–23:00",
+    "facebook": "https://www.facebook.com/miscostillitasperu/",
+    "instagram": "@miscostillitas",
+    "estadoWeb": "Web de alta conversión con reserva y delivery directo",
+    "lema": "«¡Las mejores costillitas BBQ del Perú, piqueos parrilleros bien servidos y chilcanos para brindar!»",
+    "palette": {
+      "name": "Ember Flame & Charred Wood",
+      "bg_page": "#141211",
+      "bg_panel": "#1E1A18",
+      "bg_tint": "#2B231F",
+      "ink": "#FFFFFF",
+      "accent": "#EA580C",
+      "accent_dark": "#C2410C",
+      "line": "#44342E"
+    },
+    "customServices": [
+      {
+        "id": "mc-1",
+        "cat": "Costillas & Ribs",
+        "name": "Costillar Clásico BBQ con Papas Nativas",
+        "desc": "Corte premium ahumado por 6 horas con salsa BBQ de la casa y ensalada coleslaw.",
+        "price": 58,
+        "time": "25 min"
+      },
+      {
+        "id": "mc-2",
+        "cat": "Combos Parrilleros",
+        "name": "Banquete Parrillero Costillero (4 Personas)",
+        "desc": "Full costillas glaseadas, anticuchos carretilleros, papas doradas y jarra de chicha.",
+        "price": 98,
+        "time": "30 min"
+      },
+      {
+        "id": "mc-3",
+        "cat": "Piqueos & Alitas",
+        "name": "Ronda de Piqueos Parrilleros + Alitas BBQ",
+        "desc": "Alitas crujientes, tequeños rellenos de queso y lomo y salsas tártara y golf.",
+        "price": 48,
+        "time": "20 min"
+      },
+      {
+        "id": "mc-4",
+        "cat": "Costillas & Ribs",
+        "name": "Trilogía de Costillitas: BBQ, Maracuyá & Miel Mostaza",
+        "desc": "Tres cortes glaseados con reducciones artesanales para compartir.",
+        "price": 65,
+        "time": "25 min"
+      }
+    ],
+    "heroPhoto": "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=1200&q=85",
+    "featuredLabel": "ESPECIALIDAD INSIGNIA",
+    "featuredPrice": "S/ 58",
+    "featuredTitle": "Costillar Glaseado BBQ Tradicional",
+    "featuredSub": "Ahumado a fuego lento con leña selecta y glaseado al carbón.",
+    "logoUrl": "/logos/mis-costillitas.svg"
+  },
+  {
+    "id": "P-LASREJAS",
+    "name": "Las Rejas de La Molina Eirl",
+    "zona": "La Molina",
+    "rubro": "Restaurante y cafetería",
+    "prioridad": "Alta",
+    "indice": 97,
+    "direccion": "Av. Los Constructores 345, La Molina",
+    "tel": "(01) 348-1200",
+    "wa": "51998877665",
+    "es_celular": "Sí (WhatsApp Directo)",
+    "estrellas": "4.6",
+    "resenas": "más de 450",
+    "franja": "11:30–17:00",
+    "facebook": "https://www.facebook.com/lasrejasdelamolina/",
+    "instagram": "@lasrejasdelamolina",
+    "estadoWeb": "Pizarra de pescados del día y cocina criolla de autor",
+    "lema": "«Auténtico sabor criollo y marino en La Molina: pescados seleccionados y fogón tradicional.»",
+    "palette": {
+      "name": "Warm Gold & Sazón Criolla",
+      "bg_page": "#171513",
+      "bg_panel": "#221F1C",
+      "bg_tint": "#2F2A25",
+      "ink": "#FFFFFF",
+      "accent": "#D97706",
+      "accent_dark": "#B45309",
+      "line": "#4A3F35"
+    },
+    "customServices": [
+      {
+        "id": "lr-1",
+        "cat": "Mariscos al Wok",
+        "name": "Tacú Tacú en Salsa de Mariscos al Wok",
+        "desc": "Sábana dorada de frejol canario bañada en salsa cremosa con calamar, pulpo y langostinos.",
+        "price": 42,
+        "time": "20 min"
+      },
+      {
+        "id": "lr-2",
+        "cat": "Ceviches & Pizarra",
+        "name": "Ceviche Puro de Lenguado al Limón del Norte",
+        "desc": "Lenguado fresco curado al instante con camote glaseado y chicharrón crocante.",
+        "price": 46,
+        "time": "15 min"
+      },
+      {
+        "id": "lr-3",
+        "cat": "Criollos al Fogón",
+        "name": "Lomo Saltado Tradicional al Wok Fuerte",
+        "desc": "Trozos de lomo fino flambeados con cebolla crocante, tomate y papas amarillas fritas.",
+        "price": 44,
+        "time": "18 min"
+      },
+      {
+        "id": "lr-4",
+        "cat": "Combos de Salón",
+        "name": "Dúo Las Rejas: Ceviche Clásico + Chicharrón Mixto",
+        "desc": "El favorito de las mesas familiares en La Molina con chicha morada artesanal.",
+        "price": 52,
+        "time": "20 min"
+      }
+    ],
+    "heroPhoto": "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=1200&q=85",
+    "featuredLabel": "PIZARRA DEL CHEF",
+    "featuredPrice": "S/ 46",
+    "featuredTitle": "Ceviche Puro de Lenguado",
+    "featuredSub": "Pesca artesanal del día curada al instante en limón norteño.",
+    "logoUrl": "/logos/las-rejas.svg"
+  },
+  {
+    "id": "P-VETFLORES",
+    "name": "Veterinaria FLORES - Los Olivos",
+    "zona": "Los Olivos",
+    "rubro": "Veterinaria",
+    "prioridad": "Alta",
+    "indice": 98,
+    "direccion": "Av. Antúnez de Mayolo 890, Los Olivos",
+    "tel": "(01) 521-8890",
+    "wa": "51977665544",
+    "es_celular": "Sí (WhatsApp Directo)",
+    "estrellas": "4.7",
+    "resenas": "más de 380",
+    "franja": "09:00–20:00",
+    "facebook": "https://www.facebook.com/VeterinariaFloresLosOlivos/",
+    "instagram": "@vetflores_losolivos",
+    "estadoWeb": "Clínica médica, ecografía y atención preventiva sin dolor",
+    "lema": "«Médicos veterinarios dedicados al cuidado preventivo y clínico de tu engreído en Los Olivos.»",
+    "palette": {
+      "name": "Clinical Mint & Ocean Light",
+      "bg_page": "#F0FDFA",
+      "bg_panel": "#FFFFFF",
+      "bg_tint": "#CCFBF1",
+      "ink": "#0F172A",
+      "accent": "#0F766E",
+      "accent_dark": "#115E59",
+      "line": "#99F6E4"
+    },
+    "customServices": [
+      {
+        "id": "vf-1",
+        "cat": "Consulta Médica",
+        "name": "Consulta Médica Veterinaria & Triaje Clínico",
+        "desc": "Evaluación general completa, control de peso, auscultación cardíaca y temperatura.",
+        "price": 35,
+        "time": "30 min"
+      },
+      {
+        "id": "vf-2",
+        "cat": "Grooming & Spa",
+        "name": "Baño Medicado Hipoalergénico con Deslanado",
+        "desc": "Agua temperada, shampoo de avena y corte higiénico sin sedación.",
+        "price": 40,
+        "time": "60 min"
+      },
+      {
+        "id": "vf-3",
+        "cat": "Inmunidad & Vacunas",
+        "name": "Esquema Séxtuple Canina / Triple Felina WSAVA",
+        "desc": "Biológicos certificados con cadena de frío garantizada y carnet oficial.",
+        "price": 55,
+        "time": "20 min"
+      },
+      {
+        "id": "vf-4",
+        "cat": "Diagnóstico",
+        "name": "Ecografía Abdominal Preventiva & Laboratorio",
+        "desc": "Diagnóstico de órganos internos con entrega inmediata de informe médico.",
+        "price": 80,
+        "time": "30 min"
+      }
+    ],
+    "heroPhoto": "https://images.unsplash.com/photo-1628009368231-7bb7cfcb0def?auto=format&fit=crop&w=1200&q=85",
+    "featuredLabel": "ATENCIÓN PROFESIONAL",
+    "featuredPrice": "S/ 35",
+    "featuredTitle": "Consulta Médica & Evaluación General",
+    "featuredSub": "Chequeo clínico minucioso con médicos colegiados CMVP.",
+    "logoUrl": "/logos/veterinaria-flores.svg"
+  },
+  {
+    "id": "P-ARISTOCAT",
+    "name": "Inicio - Aristocat Clínica Veterinaria",
+    "zona": "San Isidro / Miraflores",
+    "rubro": "Veterinaria",
+    "prioridad": "Alta",
+    "indice": 99,
+    "direccion": "Av. Conquistadores 412, San Isidro",
+    "tel": "(01) 441-9920",
+    "wa": "51966554433",
+    "es_celular": "Sí (WhatsApp Directo)",
+    "estrellas": "4.9",
+    "resenas": "más de 620",
+    "franja": "08:30–20:30",
+    "facebook": "https://www.facebook.com/aristocatperu/",
+    "instagram": "@aristocat.pe",
+    "estadoWeb": "Medicina felina exclusiva y manejo libre de estrés ('Fear-Free')",
+    "lema": "«Especialistas en medicina y bienestar felino y canino. Atención compasiva sin sedación.»",
+    "palette": {
+      "name": "Sage Green & Calm Pearl",
+      "bg_page": "#F0FDF4",
+      "bg_panel": "#FFFFFF",
+      "bg_tint": "#DCFCE7",
+      "ink": "#14251B",
+      "accent": "#047857",
+      "accent_dark": "#065F46",
+      "line": "#A7F3D0"
+    },
+    "customServices": [
+      {
+        "id": "ac-1",
+        "cat": "Medicina Felina",
+        "name": "Consulta Especializada Felina Fear-Free",
+        "desc": "Consultorio adaptado con difusores de feromonas Feliway para atención sin ansiedad.",
+        "price": 60,
+        "time": "40 min"
+      },
+      {
+        "id": "ac-2",
+        "cat": "Spa & Grooming",
+        "name": "Spa Felino & Canino con Hidromasaje",
+        "desc": "Baño con agua tibia, secado silencioso y cepillado profundo deslanador.",
+        "price": 55,
+        "time": "50 min"
+      },
+      {
+        "id": "ac-3",
+        "cat": "Chequeo Preventivo",
+        "name": "Chequeo Geriátrico Integral & Perfil Renal",
+        "desc": "Ecografía preventiva, control de presión arterial y función renal.",
+        "price": 130,
+        "time": "45 min"
+      },
+      {
+        "id": "ac-4",
+        "cat": "Vacunación",
+        "name": "Protocolo Vacunal WSAVA con Carnet Digital",
+        "desc": "Triple felina pura o séxtuple canina con refuerzo de rabia y desparasitación.",
+        "price": 70,
+        "time": "25 min"
+      }
+    ],
+    "heroPhoto": "https://images.unsplash.com/photo-1583337130417-3346a1be7dee?auto=format&fit=crop&w=1200&q=85",
+    "featuredLabel": "CENTRO FEAR-FREE",
+    "featuredPrice": "S/ 60",
+    "featuredTitle": "Atención Felina Especializada",
+    "featuredSub": "Ambiente tranquilo, sin perros cerca y con enriquecimiento sensorial.",
+    "logoUrl": "/logos/aristocat.svg"
+  },
+  {
+    "id": "P-MONTALVO",
+    "name": "Montalvo Salón & Spa",
+    "zona": "Miraflores / San Isidro",
+    "rubro": "Belleza y bienestar",
+    "prioridad": "Alta",
+    "indice": 99,
+    "direccion": "Av. Larco 880, Miraflores",
+    "tel": "(01) 445-6677",
+    "wa": "51955443322",
+    "es_celular": "Sí (WhatsApp Directo)",
+    "estrellas": "4.8",
+    "resenas": "más de 1,800",
+    "franja": "09:00–21:00",
+    "facebook": "https://www.facebook.com/montalvosalonspa/",
+    "instagram": "@montalvo_salonspa",
+    "estadoWeb": "Referente nacional en estilismo, colorimetría y spa de lujo",
+    "lema": "«Líderes indiscutibles en estilismo y bienestar capilar. El look de pasarela hecho realidad.»",
+    "palette": {
+      "name": "Gold Royal & Noir Couture",
+      "bg_page": "#121017",
+      "bg_panel": "#1B1724",
+      "bg_tint": "#282235",
+      "ink": "#FFFFFF",
+      "accent": "#D4AF37",
+      "accent_dark": "#B89628",
+      "line": "#4A3F5B"
+    },
+    "customServices": [
+      {
+        "id": "mv-1",
+        "cat": "Colorimetría",
+        "name": "Balayage Iluminación Sublime + Matizado Plex",
+        "desc": "Técnica de aclarado gradual con protección de plex para máxima luminosidad sin quiebre.",
+        "price": 220,
+        "time": "180 min"
+      },
+      {
+        "id": "mv-2",
+        "cat": "Alisados",
+        "name": "Alisado Brasilero Orgánico Termoactivo",
+        "desc": "Fórmula 100% libre de formol con keratina pura para un lacio espejo de larga duración.",
+        "price": 150,
+        "time": "120 min"
+      },
+      {
+        "id": "mv-3",
+        "cat": "Terapia Capilar",
+        "name": "Botox Capilar Gloss Reparador de Puntas",
+        "desc": "Nutrición con aminoácidos y ácido hialurónico para devolver el movimiento al cabello.",
+        "price": 110,
+        "time": "60 min"
+      },
+      {
+        "id": "mv-4",
+        "cat": "Nails & Spa",
+        "name": "Manicura & Pedicura Spa con Esmalte en Gel",
+        "desc": "Exfoliación hidratante, sales minerales y esmaltado semipermanente de alta duración.",
+        "price": 65,
+        "time": "60 min"
+      }
+    ],
+    "heroPhoto": "https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=1200&q=85",
+    "featuredLabel": "EXPERIENCIA DE AUTOR",
+    "featuredPrice": "S/ 220",
+    "featuredTitle": "Balayage Sublime & Tratamiento Plex",
+    "featuredSub": "Coloración personalizada de alta gama para un rubio radiante y saludable.",
+    "logoUrl": "/logos/montalvo.svg"
+  },
+  {
+    "id": "P-FORTUBEAUTY",
+    "name": "Fortu Beauty - Peluquería a Domicilio",
+    "zona": "Lima Metropolitana",
+    "rubro": "Belleza y bienestar",
+    "prioridad": "Alta",
+    "indice": 98,
+    "direccion": "Atención VIP a Domicilio (San Borja / Surco / Miraflores / La Molina)",
+    "tel": "914 887 799",
+    "wa": "51914887799",
+    "es_celular": "Sí (WhatsApp Directo)",
+    "estrellas": "4.9",
+    "resenas": "más de 240",
+    "franja": "08:00–20:00",
+    "facebook": "https://www.facebook.com/fortubeauty/",
+    "instagram": "@fortu_beauty",
+    "estadoWeb": "Peluquería y spa premium a domicilio con puntualidad garantizada",
+    "lema": "«Tu salón de belleza favorito directo en tu casa: puntualidad, bioseguridad y cero tráfico.»",
+    "palette": {
+      "name": "Rose Silk & Satin Pink",
+      "bg_page": "#19121B",
+      "bg_panel": "#251928",
+      "bg_tint": "#36223B",
+      "ink": "#FFFFFF",
+      "accent": "#EC4899",
+      "accent_dark": "#DB2777",
+      "line": "#54335C"
+    },
+    "customServices": [
+      {
+        "id": "fb-1",
+        "cat": "Estilismo a Domicilio",
+        "name": "Corte de Diseño & Cepillado Glam en Casa",
+        "desc": "Asesoría de visagismo y peinado en la comodidad de tu hogar con equipamiento profesional.",
+        "price": 80,
+        "time": "60 min"
+      },
+      {
+        "id": "fb-2",
+        "cat": "Alisados a Domicilio",
+        "name": "Alisado Orgánico Termoactivo Sin Formol",
+        "desc": "Lacio duradero sin vapores tóxicos en tu propia sala o terraza.",
+        "price": 160,
+        "time": "120 min"
+      },
+      {
+        "id": "fb-3",
+        "cat": "Color a Domicilio",
+        "name": "Tinte Completo & Baño de Brillo Glaze",
+        "desc": "Cobertura 100% de canas con pigmentos botánicos y nutrición capilar.",
+        "price": 120,
+        "time": "90 min"
+      },
+      {
+        "id": "fb-4",
+        "cat": "Nails a Domicilio",
+        "name": "Manicura Rusa & Esmaltado en Gel a Domicilio",
+        "desc": "Kit desechable personal y esmaltes importados de secado LED.",
+        "price": 55,
+        "time": "60 min"
+      }
+    ],
+    "heroPhoto": "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=1200&q=85",
+    "featuredLabel": "SERVICIO A DOMICILIO",
+    "featuredPrice": "S/ 160",
+    "featuredTitle": "Alisado Orgánico Termoactivo en Casa",
+    "featuredSub": "Lacio espejo sin salir de tu hogar y sin lidiar con el tráfico de Lima.",
+    "logoUrl": "/logos/fortubeauty.svg"
   },
   {
     "id": "P004",
@@ -301,7 +715,7 @@ export const PROSPECTS: Prospect[] = [
     "facebook": "https://www.facebook.com/labarraderamiro/",
     "instagram": "@labarraderamiro",
     "estadoWeb": "Sin web oficial · 2 sedes · Abierto desde las 11:00 AM",
-    "lema": "«¡Del mar a tu mesa! Pura frescura y harrrto cariño ❤️戀 ¡Ven por tu Cevichito Apaltado!»",
+    "lema": "«¡Del mar a tu mesa! Pura frescura y harto cariño. ¡Ven por tu Cevichito Apaltado!»",
     "palette": {
       "name": "Palta Intensa & Negro Pizarra",
       "bg_page": "#F6F8F4",
@@ -569,7 +983,7 @@ export const PROSPECTS: Prospect[] = [
     "facebook": "https://www.facebook.com/lamaquinitadelsabor/",
     "instagram": "@lamaquinitadelsabor",
     "estadoWeb": "Sin web oficial · +493 seguidores · Envíos y reservas en Pando",
-    "lema": "«❤️ La Maquinita del Sabor — el verdadero sabor del mar en San Miguel. Porciones generosas para toda la familia.»",
+    "lema": "«La Maquinita del Sabor — el verdadero sabor del mar en San Miguel. Porciones generosas para toda la familia.»",
     "palette": {
       "name": "Rojo Rocoto & Azul Pando",
       "bg_page": "#FAF7F5",
@@ -2943,7 +3357,7 @@ export const PROSPECTS: Prospect[] = [
     "franja": "10:00–12:00 o 15:00–17:00 (supuesto)",
     "facebook": "https://www.facebook.com/mundoodontic/",
     "instagram": "@mundoodontic",
-    "estadoWeb": "⚠️ Su web mundoodonticodontologiaespecializada.business.site MURIÓ (Google 404). 1,657 seguidores.",
+    "estadoWeb": "Alerta: Su web mundoodonticodontologiaespecializada.business.site MURIÓ (Google 404). 1,657 seguidores.",
     "lema": "«En Mundo Odontic queremos verte sonreír más que nunca. Salud bucal y estética dental con especialistas.»",
     "palette": {
       "name": "Royal Cobalt & Clinical Ice",
@@ -3407,7 +3821,7 @@ export const PROSPECTS: Prospect[] = [
     "franja": "10:00–12:00 o 15:00–17:00 (supuesto)",
     "facebook": "https://www.facebook.com/Dolartepodologasyspa/",
     "instagram": "@dolartepodologas",
-    "estadoWeb": "⚠️ Su web dolarte-podologas-y-spa.negocio.site MURIÓ. Especialistas en salud podológica.",
+    "estadoWeb": "Alerta: Su web dolarte-podologas-y-spa.negocio.site MURIÓ. Especialistas en salud podológica.",
     "lema": "«Salud y descanso para tus pies. Especialistas en podología clínica y pedicure con instrumental esterilizado en Breña.»",
     "palette": {
       "name": "Medical Emerald & Clean Slate",
@@ -3629,8 +4043,8 @@ export const PROSPECTS: Prospect[] = [
     "franja": "10:00–12:00 o 15:00–17:00 (supuesto)",
     "facebook": "https://www.facebook.com/salon.spa.veroka.654/",
     "instagram": "@verokasalonspa",
-    "estadoWeb": "⚠️ Su web veroka-salon-spa.negocio.site MURIÓ. Tiene 88,455 seguidores en FB.",
-    "lema": "«✨ Creadores de la verdadera fórmula de los LACEADOS TRIALES (+14 años de experiencia). ¡El alisado perfecto que tu cabello merece!»",
+    "estadoWeb": "Alerta: Su web veroka-salon-spa.negocio.site MURIÓ. Tiene 88,455 seguidores en FB.",
+    "lema": "«Creadores de la verdadera fórmula de los LACEADOS TRIALES (+14 años de experiencia). ¡El alisado perfecto que tu cabello merece!»",
     "palette": {
       "name": "Obsidian Gold & Keratin Pearl",
       "bg_page": "#F8F6F2",

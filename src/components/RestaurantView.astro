@@ -7,7 +7,7 @@
   <aside aria-label="Aviso promocional" class="bg-gradient-to-r from-amber-600 via-orange-600 to-red-600 text-white text-xs font-mono py-2 px-4 shadow-md sticky top-0 z-50">
     <div class="max-w-6xl mx-auto flex flex-wrap items-center justify-between gap-2">
       <div class="flex items-center gap-2">
-        <span class="inline-block animate-bounce text-sm">🔥</span>
+        <svg class="w-4 h-4 text-amber-300 inline-block shrink-0 animate-pulse" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M12.395 2.553a1 1 0 00-1.45-.385c-.345.23-.614.558-.822.88-.316.492-.533 1.035-.694 1.576l-.01.036c-.457 1.564-.813 2.784-1.637 3.513C7.03 9.006 6.27 9.877 5.753 10.98c-.529 1.127-.753 2.39-.753 3.52 0 3.86 3.14 7 7 7s7-3.14 7-7c0-2.02-.756-3.856-1.996-5.244a10.942 10.942 0 00-2.31-1.968l-.053-.035c-.71-.47-1.42-.99-1.967-1.67-.323-.402-.56-.84-.717-1.298a4.992 4.992 0 01-.262-.732zM12 11a1 1 0 011 1c0 .666-.35 1.523-.935 2.378-.57.834-1.378 1.622-2.365 2.222a1 1 0 11-1.04-1.708c.683-.415 1.25-.972 1.66-1.572.433-.632.68-1.196.68-1.32a1 1 0 011-1z" clip-rule="evenodd" /></svg>
         <span class="font-bold tracking-wide">¡CELEBRA TU CUMPLEAÑOS AQUÍ!</span>
         <span class="hidden sm:inline text-amber-100">Postre cumpleañero + Ronda de chilcanos de cortesía para mesas de 4 a más.</span>
       </div>
@@ -30,10 +30,12 @@
       </div>
 
       <nav class="hidden md:flex items-center gap-6 text-xs uppercase tracking-[0.15em] font-medium text-stone-400">
+        <a href="#rest-nosotros" class="hover:text-amber-400 transition-colors">Nosotros</a>
         <a href="#rest-combos" class="hover:text-amber-400 transition-colors">Combos &amp; Parrillas</a>
-        <a href="#rest-pizarra" class="hover:text-amber-400 transition-colors">Pizarra del Día</a>
+        <a href="#rest-pizarra" class="hover:text-amber-400 transition-colors">Pizarra</a>
+        <a href="#rest-calculadora" class="hover:text-amber-400 transition-colors">Calculadora</a>
         <a href="#rest-carta" class="hover:text-amber-400 transition-colors">Carta Completa</a>
-        <a href="#rest-ubicacion" class="hover:text-amber-400 transition-colors">Salón &amp; Mapa</a>
+        <a href="#rest-ubicacion" class="hover:text-amber-400 transition-colors">Salón</a>
         <a id="rest-social-pill" href="#" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-mono border border-stone-700 bg-stone-900 text-stone-300 hover:border-amber-500 transition">
           <span class="w-1.5 h-1.5 rounded-full bg-amber-500"></span>
           <span id="rest-social-text">@redsocial</span>
@@ -115,8 +117,9 @@
             <div class="absolute inset-0 bg-gradient-to-t from-black via-black/30 to-transparent pointer-events-none"></div>
 
             <!-- Badge Superior -->
-            <div class="absolute top-4 left-4 bg-orange-600 text-white text-[10px] font-mono font-bold uppercase tracking-wider px-3 py-1 rounded-full shadow-md">
-              🔥 ESPECIALIDAD DE LA CASA
+            <div class="absolute top-4 left-4 bg-orange-600 text-white text-[10px] font-mono font-bold uppercase tracking-wider px-3 py-1 rounded-full shadow-md flex items-center gap-1.5">
+              <svg class="w-3.5 h-3.5 text-amber-200 inline-block shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M12.395 2.553a1 1 0 00-1.45-.385c-.345.23-.614.558-.822.88-.316.492-.533 1.035-.694 1.576l-.01.036c-.457 1.564-.813 2.784-1.637 3.513C7.03 9.006 6.27 9.877 5.753 10.98c-.529 1.127-.753 2.39-.753 3.52 0 3.86 3.14 7 7 7s7-3.14 7-7c0-2.02-.756-3.856-1.996-5.244a10.942 10.942 0 00-2.31-1.968l-.053-.035c-.71-.47-1.42-.99-1.967-1.67-.323-.402-.56-.84-.717-1.298a4.992 4.992 0 01-.262-.732zM12 11a1 1 0 011 1c0 .666-.35 1.523-.935 2.378-.57.834-1.378 1.622-2.365 2.222a1 1 0 11-1.04-1.708c.683-.415 1.25-.972 1.66-1.572.433-.632.68-1.196.68-1.32a1 1 0 011-1z" clip-rule="evenodd" /></svg>
+              ESPECIALIDAD DE LA CASA
             </div>
 
             <!-- Tarjeta Flotante Inferior -->
@@ -152,26 +155,122 @@
     </div>
   </div>
 
+  <!-- SECCIÓN SOBRE NOSOTROS: QUIÉNES SOMOS & TRADICIÓN DE FOGÓN -->
+  <section id="rest-nosotros" class="py-16 sm:py-24 px-4 bg-[#121110] text-stone-100 border-b border-stone-800">
+    <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+      <div class="lg:col-span-7 space-y-6">
+        <div class="space-y-2">
+          <span id="rest-about-kicker" class="font-mono text-xs uppercase tracking-[0.25em] text-amber-400 font-bold">
+            HISTORIA, PASIÓN Y RESPETO AL MAR
+          </span>
+          <h2 id="rest-about-title" class="font-serif text-3xl sm:text-5xl font-extrabold text-white leading-tight">
+            Quiénes Somos: El Sabor Auténtico de Nuestro Fogón
+          </h2>
+        </div>
+
+        <p id="rest-about-p1" class="text-stone-300 text-sm sm:text-base leading-relaxed font-sans">
+          Nacimos con una promesa inquebrantable: <strong>honrar la verdadera sazón criolla y marina del Perú</strong>. Cada madrugada seleccionamos personalmente la pesca fresca del día, garantizando platos con textura firme, frescura viva y cero ingredientes congelados.
+        </p>
+
+        <p id="rest-about-p2" class="text-stone-400 text-xs sm:text-sm leading-relaxed font-sans">
+          En nuestra cocina no usamos saborizantes artificiales ni atajos industriales: el ceviche se cura en limón norteño recién exprimido a mano, las leches de tigre se preparan con caldos concentrados de más de 5 horas a fuego lento, y los lomos y mariscos se saltean al fuego vivo en wok tradicional.
+        </p>
+
+        <div id="rest-about-cards" class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4 font-mono text-xs">
+          <div class="p-4 rounded-xl bg-stone-900/80 border border-stone-800 flex items-start gap-3">
+            <div class="w-8 h-8 rounded-lg bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400 shrink-0">
+              <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3 13.5c1.5-2 3.5-3 6-3s4.5 1 6 3c2-1 4-1 6 0-1.5 2-3.5 3-6 3s-4.5-1-6-3c-2 1-4 1-6 0zM12 3v7.5m0 0L8.5 7M12 10.5l3.5-3.5" />
+              </svg>
+            </div>
+            <div>
+              <strong class="text-white block font-sans">Pesca Artesanal Seleccionada</strong>
+              <span class="text-stone-400 text-[11px]">Directo del muelle a la mesa, respetando tallas y temporadas.</span>
+            </div>
+          </div>
+
+          <div class="p-4 rounded-xl bg-stone-900/80 border border-stone-800 flex items-start gap-3">
+            <div class="w-8 h-8 rounded-lg bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400 shrink-0">
+              <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+              </svg>
+            </div>
+            <div>
+              <strong class="text-white block font-sans">Limón del Norte Recién Exprimido</strong>
+              <span class="text-stone-400 text-[11px]">Prensado suave al momento para no amargar la leche de tigre.</span>
+            </div>
+          </div>
+
+          <div class="p-4 rounded-xl bg-stone-900/80 border border-stone-800 flex items-start gap-3">
+            <div class="w-8 h-8 rounded-lg bg-orange-500/10 border border-orange-500/30 flex items-center justify-center text-orange-400 shrink-0">
+              <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343a7.975 7.975 0 012.344 5.657c0 2.12-.83 4.14-2.343 5.657z" />
+              </svg>
+            </div>
+            <div>
+              <strong class="text-white block font-sans">Wok &amp; Carbón al Rojo Vivo</strong>
+              <span class="text-stone-400 text-[11px]">Ahumado criollo auténtico que potencia cada marinado.</span>
+            </div>
+          </div>
+
+          <div class="p-4 rounded-xl bg-stone-900/80 border border-stone-800 flex items-start gap-3">
+            <div class="w-8 h-8 rounded-lg bg-red-500/10 border border-red-500/30 flex items-center justify-center text-red-400 shrink-0">
+              <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+              </svg>
+            </div>
+            <div>
+              <strong class="text-white block font-sans">Calidez Familiar en Salón</strong>
+              <span class="text-stone-400 text-[11px]">Porciones generosas y trato cercano para celebraciones memorables.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="lg:col-span-5 relative">
+        <div class="relative rounded-3xl overflow-hidden border-2 border-stone-800 shadow-2xl">
+          <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=900&q=85" alt="Cocina y Salón" class="w-full aspect-[4/5] object-cover" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent"></div>
+
+          <div class="absolute bottom-6 left-6 right-6 bg-stone-950/95 backdrop-blur-md p-5 rounded-2xl border border-amber-500/40 text-stone-200 space-y-2">
+            <div class="flex items-center gap-2 text-amber-400 font-mono text-xs font-bold uppercase">
+              <span>✦</span> <span>SELLO DE COMPROMISO GASTRONÓMICO</span>
+            </div>
+            <p class="font-serif text-base italic text-white">
+              «Cocinar no es un trabajo, es el orgullo de compartir lo mejor de nuestra tierra y nuestro mar con cada familia.»
+            </p>
+            <p class="font-mono text-[10px] text-stone-400 uppercase tracking-widest pt-1 border-t border-stone-800">
+              — Equipo de Cocina &amp; Maestros Cebicheros
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- SECCIÓN 1: COMBOS & BANQUETES (El Estilo Mis Costillitas) -->
   <section id="rest-combos" class="py-16 sm:py-20 px-4 bg-[#181614] text-stone-100 border-b border-stone-800">
     <div class="max-w-6xl mx-auto space-y-12">
       <div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
         <div>
-          <span class="font-mono text-xs uppercase tracking-[0.22em] text-amber-400 font-bold">PROMOCIONES DE IMPACTO</span>
-          <h2 class="font-serif text-3xl sm:text-5xl font-extrabold text-white mt-1">Combos Parrilleros &amp; Duplas Marinas</h2>
+          <span id="rest-combos-kicker" class="font-mono text-xs uppercase tracking-[0.22em] text-amber-400 font-bold">PROMOCIONES DE IMPACTO</span>
+          <h2 id="rest-combos-title" class="font-serif text-3xl sm:text-5xl font-extrabold text-white mt-1">Combos Parrilleros &amp; Duplas Marinas</h2>
         </div>
-        <p class="text-stone-400 text-sm max-w-md">
+        <p id="rest-combos-desc" class="text-stone-400 text-sm max-w-md">
           Diseñados para compartir en pareja, familia o con amigos. Porciones bien despachadas con bebidas y complementos incluidos.
         </p>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div id="rest-combos-container" class="grid grid-cols-1 md:grid-cols-3 gap-8">
         <!-- Combo 1 -->
         <div class="bg-stone-900 border-2 border-stone-800 hover:border-amber-500 rounded-2xl overflow-hidden transition-all duration-300 flex flex-col justify-between group shadow-xl">
           <div class="relative aspect-[16/10] overflow-hidden">
             <img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=700&q=85" alt="Combo Dúo Marino" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
-            <div class="absolute top-3 left-3 bg-red-600 text-white font-mono text-[10px] font-bold px-2.5 py-1 rounded shadow">
-              🔥 MÁS PEDIDO
+            <div class="absolute top-3 left-3 bg-red-600 text-white font-mono text-[10px] font-bold px-2.5 py-1 rounded shadow flex items-center gap-1.5">
+              <svg class="w-3 h-3 text-amber-300" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M12.395 2.553a1 1 0 00-1.45-.385c-.345.23-.614.558-.822.88-.316.492-.533 1.035-.722 1.58-.209.6-.39 1.228-.616 1.845a16.042 16.042 0 01-1.088 2.224 8.75 8.75 0 00-.77 1.706A6.996 6.996 0 006 14c0 3.314 2.686 6 6 6s6-2.686 6-6a7.03 7.03 0 00-1.748-4.66 13.6 13.6 0 01-1.39-2.128 14.372 14.372 0 00-1.285-2.036c-.4-.52-.802-1.028-1.182-1.623zM9.5 14a2.5 2.5 0 004.992.202 1 1 0 00-.992-1.202h-.5a1 1 0 01-1-1c0-.442-.257-.834-.64-1.03a1 1 0 00-1.36.93 2.5 2.5 0 00-.5 1.1z" clip-rule="evenodd" />
+              </svg>
+              <span>MÁS PEDIDO</span>
             </div>
             <div class="absolute bottom-3 right-3 bg-black/80 backdrop-blur-md px-2.5 py-1 rounded text-[11px] font-mono text-amber-300 font-bold border border-amber-500/30">
               Para 2 Personas
@@ -193,9 +292,17 @@
                 <span>✓</span> Incluye 2 vasos de chicha morada artesanal
               </div>
             </div>
-            <a href="#rest-carta" class="block text-center py-3 bg-amber-500 hover:bg-amber-400 text-stone-950 font-bold font-mono text-xs uppercase tracking-wider rounded transition">
-              Pedir este Combo
-            </a>
+            <button 
+              type="button" 
+              data-combo-id="combo-duo-marino"
+              data-combo-name="Dúo Marino Festival"
+              data-combo-price="52"
+              data-combo-cat="Combos"
+              data-combo-time="20 min"
+              class="btn-add-combo w-full py-3 bg-amber-500 hover:bg-amber-400 text-stone-950 font-bold font-mono text-xs uppercase tracking-wider rounded transition cursor-pointer shadow-md flex items-center justify-center gap-2 hover:scale-[1.01]"
+            >
+              <span>+ Agregar Combo a mi Orden</span>
+            </button>
           </div>
         </div>
 
@@ -203,8 +310,11 @@
         <div class="bg-stone-900 border-2 border-stone-800 hover:border-orange-500 rounded-2xl overflow-hidden transition-all duration-300 flex flex-col justify-between group shadow-xl">
           <div class="relative aspect-[16/10] overflow-hidden">
             <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=700&q=85" alt="Parrilla Familiar" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
-            <div class="absolute top-3 left-3 bg-orange-600 text-white font-mono text-[10px] font-bold px-2.5 py-1 rounded shadow">
-              👑 BANQUETE FAMILIAR
+            <div class="absolute top-3 left-3 bg-orange-600 text-white font-mono text-[10px] font-bold px-2.5 py-1 rounded shadow flex items-center gap-1.5">
+              <svg class="w-3 h-3 text-amber-200" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+              </svg>
+              <span>BANQUETE FAMILIAR</span>
             </div>
             <div class="absolute bottom-3 right-3 bg-black/80 backdrop-blur-md px-2.5 py-1 rounded text-[11px] font-mono text-amber-300 font-bold border border-amber-500/30">
               Para 3 a 4 Personas
@@ -226,9 +336,17 @@
                 <span>✓</span> Incluye 1 Jarra de Chicha 1.5L + salsas de la casa
               </div>
             </div>
-            <a href="#rest-carta" class="block text-center py-3 bg-orange-500 hover:bg-orange-400 text-stone-950 font-bold font-mono text-xs uppercase tracking-wider rounded transition">
-              Pedir este Combo
-            </a>
+            <button 
+              type="button" 
+              data-combo-id="combo-banquete-criollo"
+              data-combo-name="Banquete Criollo & Brasa"
+              data-combo-price="89"
+              data-combo-cat="Combos"
+              data-combo-time="25 min"
+              class="btn-add-combo w-full py-3 bg-orange-500 hover:bg-orange-400 text-stone-950 font-bold font-mono text-xs uppercase tracking-wider rounded transition cursor-pointer shadow-md flex items-center justify-center gap-2 hover:scale-[1.01]"
+            >
+              <span>+ Agregar Banquete a mi Orden</span>
+            </button>
           </div>
         </div>
 
@@ -236,8 +354,11 @@
         <div class="bg-stone-900 border-2 border-stone-800 hover:border-amber-500 rounded-2xl overflow-hidden transition-all duration-300 flex flex-col justify-between group shadow-xl">
           <div class="relative aspect-[16/10] overflow-hidden">
             <img src="https://images.unsplash.com/photo-1512058564366-18510be2db19?auto=format&fit=crop&w=700&q=85" alt="Ronda Caliente" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
-            <div class="absolute top-3 left-3 bg-amber-600 text-white font-mono text-[10px] font-bold px-2.5 py-1 rounded shadow">
-              🔥 RONDA CALIENTE
+            <div class="absolute top-3 left-3 bg-amber-600 text-white font-mono text-[10px] font-bold px-2.5 py-1 rounded shadow flex items-center gap-1.5">
+              <svg class="w-3 h-3 text-amber-200" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M12.395 2.553a1 1 0 00-1.45-.385c-.345.23-.614.558-.822.88-.316.492-.533 1.035-.722 1.58-.209.6-.39 1.228-.616 1.845a16.042 16.042 0 01-1.088 2.224 8.75 8.75 0 00-.77 1.706A6.996 6.996 0 006 14c0 3.314 2.686 6 6 6s6-2.686 6-6a7.03 7.03 0 00-1.748-4.66 13.6 13.6 0 01-1.39-2.128 14.372 14.372 0 00-1.285-2.036c-.4-.52-.802-1.028-1.182-1.623zM9.5 14a2.5 2.5 0 004.992.202 1 1 0 00-.992-1.202h-.5a1 1 0 01-1-1c0-.442-.257-.834-.64-1.03a1 1 0 00-1.36.93 2.5 2.5 0 00-.5 1.1z" clip-rule="evenodd" />
+              </svg>
+              <span>RONDA CALIENTE</span>
             </div>
             <div class="absolute bottom-3 right-3 bg-black/80 backdrop-blur-md px-2.5 py-1 rounded text-[11px] font-mono text-amber-300 font-bold border border-amber-500/30">
               Para Picar &amp; Brindar
@@ -259,9 +380,17 @@
                 <span>✓</span> 2 Chilcanos de Pisco gratis por web
               </div>
             </div>
-            <a href="#rest-carta" class="block text-center py-3 bg-amber-500 hover:bg-amber-400 text-stone-950 font-bold font-mono text-xs uppercase tracking-wider rounded transition">
-              Pedir este Combo
-            </a>
+            <button 
+              type="button" 
+              data-combo-id="combo-trilogia-caliente"
+              data-combo-name="Trilogía Caliente al Wok"
+              data-combo-price="58"
+              data-combo-cat="Combos"
+              data-combo-time="20 min"
+              class="btn-add-combo w-full py-3 bg-amber-500 hover:bg-amber-400 text-stone-950 font-bold font-mono text-xs uppercase tracking-wider rounded transition cursor-pointer shadow-md flex items-center justify-center gap-2 hover:scale-[1.01]"
+            >
+              <span>+ Agregar Trilogía a mi Orden</span>
+            </button>
           </div>
         </div>
       </div>
@@ -275,8 +404,8 @@
         <!-- Textura de pizarra rústica -->
         <div class="flex flex-col sm:flex-row sm:items-center justify-between border-b border-stone-800 pb-6 gap-4">
           <div>
-            <span class="font-mono text-amber-400 text-xs uppercase tracking-[0.25em] font-bold">PIZARRA TRADICIONAL DEL CHEF</span>
-            <h2 class="font-serif text-3xl sm:text-4xl font-extrabold mt-1 text-white">Especialidades Frescas de Hoy</h2>
+            <span id="rest-pizarra-kicker" class="font-mono text-amber-400 text-xs uppercase tracking-[0.25em] font-bold">PIZARRA TRADICIONAL DEL CHEF</span>
+            <h2 id="rest-pizarra-title" class="font-serif text-3xl sm:text-4xl font-extrabold mt-1 text-white">Especialidades Frescas de Hoy</h2>
           </div>
           <span class="inline-flex items-center gap-2 bg-amber-950/70 border border-amber-600/50 text-amber-300 font-mono text-xs px-4 py-2 rounded-full self-start sm:self-auto">
             <span class="w-2.5 h-2.5 rounded-full bg-amber-400 animate-ping"></span>
@@ -284,7 +413,7 @@
           </span>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 pt-8 font-mono">
+        <div id="rest-pizarra-container" class="grid grid-cols-1 md:grid-cols-3 gap-6 pt-8 font-mono">
           <!-- Plato Pizarra 1 -->
           <div class="p-5 rounded-xl bg-stone-900/80 border border-stone-800 hover:border-amber-500/50 transition">
             <div class="flex justify-between items-start">
@@ -294,37 +423,215 @@
             <h3 class="font-serif font-bold text-lg text-stone-100 mt-2">Ceviche Puro de Corvina</h3>
             <p class="text-xs text-stone-400 font-sans mt-1">Corte grueso en cubos, limón recién exprimido y crema de ají limo.</p>
             <div class="mt-4 flex items-center justify-between text-[11px] text-stone-500">
-              <span>🌶️ Picante: Medio</span>
+              <span class="inline-flex items-center gap-1">
+                <svg class="w-3.5 h-3.5 text-red-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343a7.975 7.975 0 012.344 5.657c0 2.12-.83 4.14-2.343 5.657z" />
+                </svg>
+                <span>Picante: Medio</span>
+              </span>
               <span class="text-amber-400">Quedan 9 porciones</span>
             </div>
+            <button 
+              type="button" 
+              data-combo-id="pizarra-corvina"
+              data-combo-name="Ceviche Puro de Corvina (Pizarra)"
+              data-combo-price="42"
+              data-combo-cat="Pizarra del Chef"
+              data-combo-time="15 min"
+              class="btn-add-combo mt-3 w-full py-2.5 bg-stone-800 hover:bg-amber-500 hover:text-stone-950 text-amber-300 font-mono text-[11px] uppercase tracking-wider rounded transition cursor-pointer border border-amber-500/30 font-semibold flex items-center justify-center gap-1.5"
+            >
+              <span>+ Pedir Especialidad (S/ 42)</span>
+            </button>
           </div>
 
           <!-- Plato Pizarra 2 -->
-          <div class="p-5 rounded-xl bg-stone-900/80 border border-stone-800 hover:border-amber-500/50 transition">
-            <div class="flex justify-between items-start">
-              <span class="text-amber-400 font-bold text-xs uppercase">AL WOK AHUMADO</span>
-              <span class="text-white font-bold text-base">S/ 39</span>
+          <div class="p-5 rounded-xl bg-stone-900/80 border border-stone-800 hover:border-amber-500/50 transition flex flex-col justify-between">
+            <div>
+              <div class="flex justify-between items-start">
+                <span class="text-amber-400 font-bold text-xs uppercase">AL WOK AHUMADO</span>
+                <span class="text-white font-bold text-base">S/ 39</span>
+              </div>
+              <h3 class="font-serif font-bold text-lg text-stone-100 mt-2">Tacú Tacú con Mariscos</h3>
+              <p class="text-xs text-stone-400 font-sans mt-1">Sábana crocante de frejol canario bañada en salsa cremosa de mariscos selectos.</p>
             </div>
-            <h3 class="font-serif font-bold text-lg text-stone-100 mt-2">Tacú Tacú con Mariscos</h3>
-            <p class="text-xs text-stone-400 font-sans mt-1">Sábana crocante de frejol canario bañada en salsa cremosa de mariscos selectos.</p>
             <div class="mt-4 flex items-center justify-between text-[11px] text-stone-500">
-              <span>🌶️ Picante: Suave</span>
+              <span class="inline-flex items-center gap-1">
+                <svg class="w-3.5 h-3.5 text-orange-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343a7.975 7.975 0 012.344 5.657c0 2.12-.83 4.14-2.343 5.657z" />
+                </svg>
+                <span>Picante: Suave</span>
+              </span>
               <span class="text-amber-400">Quedan 6 porciones</span>
             </div>
+            <button 
+              type="button" 
+              data-combo-id="pizarra-tacu-tacu"
+              data-combo-name="Tacú Tacú con Mariscos (Pizarra)"
+              data-combo-price="39"
+              data-combo-cat="Pizarra del Chef"
+              data-combo-time="18 min"
+              class="btn-add-combo mt-3 w-full py-2.5 bg-stone-800 hover:bg-amber-500 hover:text-stone-950 text-amber-300 font-mono text-[11px] uppercase tracking-wider rounded transition cursor-pointer border border-amber-500/30 font-semibold flex items-center justify-center gap-1.5"
+            >
+              <span>+ Pedir Especialidad (S/ 39)</span>
+            </button>
           </div>
 
           <!-- Plato Pizarra 3 -->
-          <div class="p-5 rounded-xl bg-stone-900/80 border border-stone-800 hover:border-amber-500/50 transition">
-            <div class="flex justify-between items-start">
-              <span class="text-amber-400 font-bold text-xs uppercase">FONDO CRIOLLO</span>
-              <span class="text-white font-bold text-base">S/ 36</span>
+          <div class="p-5 rounded-xl bg-stone-900/80 border border-stone-800 hover:border-amber-500/50 transition flex flex-col justify-between">
+            <div>
+              <div class="flex justify-between items-start">
+                <span class="text-amber-400 font-bold text-xs uppercase">FONDO CRIOLLO</span>
+                <span class="text-white font-bold text-base">S/ 36</span>
+              </div>
+              <h3 class="font-serif font-bold text-lg text-stone-100 mt-2">Sudado Marino en Chicha de Jora</h3>
+              <p class="text-xs text-stone-400 font-sans mt-1">Filete entero cocido a fuego lento con tomate, cebolla roja, culantro y yucas suaves.</p>
             </div>
-            <h3 class="font-serif font-bold text-lg text-stone-100 mt-2">Sudado Marino en Chicha de Jora</h3>
-            <p class="text-xs text-stone-400 font-sans mt-1">Filete entero cocido a fuego lento con tomate, cebolla roja, culantro y yucas suaves.</p>
             <div class="mt-4 flex items-center justify-between text-[11px] text-stone-500">
-              <span>🌶️ Caliente &amp; Vigorizante</span>
+              <span class="inline-flex items-center gap-1">
+                <svg class="w-3.5 h-3.5 text-amber-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343a7.975 7.975 0 012.344 5.657c0 2.12-.83 4.14-2.343 5.657z" />
+                </svg>
+                <span>Caliente &amp; Vigorizante</span>
+              </span>
               <span class="text-amber-400">Quedan 11 porciones</span>
             </div>
+            <button 
+              type="button" 
+              data-combo-id="pizarra-sudado"
+              data-combo-name="Sudado Marino en Chicha de Jora (Pizarra)"
+              data-combo-price="36"
+              data-combo-cat="Pizarra del Chef"
+              data-combo-time="20 min"
+              class="btn-add-combo mt-3 w-full py-2.5 bg-stone-800 hover:bg-amber-500 hover:text-stone-950 text-amber-300 font-mono text-[11px] uppercase tracking-wider rounded transition cursor-pointer border border-amber-500/30 font-semibold flex items-center justify-center gap-1.5"
+            >
+              <span>+ Pedir Especialidad (S/ 36)</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CALCULADORA INTERACTIVA DE CONSUMO GRUPAL / FAMILIAR (Split Bill & Sugerencia) -->
+  <section id="rest-calculadora" class="py-16 sm:py-20 px-4 bg-[#161413] text-stone-100 border-b border-stone-800">
+    <div class="max-w-5xl mx-auto space-y-8">
+      <div class="text-center max-w-2xl mx-auto space-y-2">
+        <span class="font-mono text-xs uppercase tracking-[0.25em] text-amber-400 font-bold">HERRAMIENTA PARA GRUPOS Y FAMILIAS</span>
+        <h2 class="font-serif text-3xl sm:text-5xl font-extrabold text-white">Calculadora de Consumo por Persona</h2>
+        <p class="text-stone-400 text-sm leading-relaxed">
+          ¿Planeas venir con amigos, pareja o familia? Elige la cantidad de personas y el estilo de salida para conocer el costo aproximado y la combinación ideal de platos.
+        </p>
+      </div>
+
+      <div class="bg-stone-900 border-2 border-stone-800 rounded-3xl p-6 sm:p-10 shadow-2xl space-y-8">
+        <!-- Paso 1: Número de personas -->
+        <div>
+          <label class="block font-mono text-xs uppercase tracking-wider text-amber-400 font-bold mb-3">
+            1. ¿CUÁNTAS PERSONAS COMPARTIRÁN LA MESA?
+          </label>
+          <div class="grid grid-cols-2 sm:grid-cols-5 gap-3 font-mono text-xs">
+            <button type="button" data-calc-guests="2" class="rest-calc-guest-btn py-3 px-3 rounded-xl border border-stone-700 bg-stone-950 text-stone-300 font-bold hover:border-amber-400 transition cursor-pointer">2 Personas (Pareja)</button>
+            <button type="button" data-calc-guests="4" class="rest-calc-guest-btn py-3 px-3 rounded-xl border-2 border-amber-500 bg-amber-950/60 text-amber-300 font-bold transition cursor-pointer shadow">4 Personas (Familia)</button>
+            <button type="button" data-calc-guests="6" class="rest-calc-guest-btn py-3 px-3 rounded-xl border border-stone-700 bg-stone-950 text-stone-300 font-bold hover:border-amber-400 transition cursor-pointer">6 Personas (Amigos)</button>
+            <button type="button" data-calc-guests="8" class="rest-calc-guest-btn py-3 px-3 rounded-xl border border-stone-700 bg-stone-950 text-stone-300 font-bold hover:border-amber-400 transition cursor-pointer">8 Personas (Grupo)</button>
+            <button type="button" data-calc-guests="10" class="rest-calc-guest-btn py-3 px-3 rounded-xl border border-stone-700 bg-stone-950 text-stone-300 font-bold hover:border-amber-400 transition cursor-pointer">10+ Personas (Reunión)</button>
+          </div>
+        </div>
+
+        <!-- Paso 2: Nivel de Apetito / Ocasión -->
+        <div>
+          <label class="block font-mono text-xs uppercase tracking-wider text-amber-400 font-bold mb-3">
+            2. ¿QUÉ TIPO DE EXPERIENCIA BUSCAN?
+          </label>
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 font-mono text-xs">
+            <button type="button" data-calc-tier="light" class="rest-calc-tier-btn py-3.5 px-4 rounded-xl border border-stone-700 bg-stone-950 text-stone-300 font-bold hover:border-amber-400 transition cursor-pointer text-left flex items-center justify-between">
+              <div>
+                <span class="block text-white font-bold">Almuerzo Ligero</span>
+                <span class="text-stone-400 text-[11px] font-sans">Ceviche personal + bebida</span>
+              </div>
+              <div class="w-8 h-8 rounded-lg bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400 shrink-0">
+                <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M4 10h16a8 8 0 01-16 0zM12 4v6" />
+                </svg>
+              </div>
+            </button>
+            <button type="button" data-calc-tier="standard" class="rest-calc-tier-btn py-3.5 px-4 rounded-xl border-2 border-amber-500 bg-amber-950/60 text-amber-300 font-bold transition cursor-pointer text-left flex items-center justify-between shadow">
+              <div>
+                <span class="block text-white font-bold">Banquete Completo</span>
+                <span class="text-amber-200/80 text-[11px] font-sans">Ceviche, Arroz mariscos, Chicharrón + jarra</span>
+              </div>
+              <div class="w-8 h-8 rounded-lg bg-amber-500/20 border border-amber-500/40 flex items-center justify-center text-amber-300 shrink-0">
+                <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M3 13.5c1.5-2 3.5-3 6-3s4.5 1 6 3c2-1 4-1 6 0-1.5 2-3.5 3-6 3s-4.5-1-6-3c-2 1-4 1-6 0z" />
+                </svg>
+              </div>
+            </button>
+            <button type="button" data-calc-tier="celebration" class="rest-calc-tier-btn py-3.5 px-4 rounded-xl border border-stone-700 bg-stone-950 text-stone-300 font-bold hover:border-amber-400 transition cursor-pointer text-left flex items-center justify-between">
+              <div>
+                <span class="block text-white font-bold">Celebración &amp; Chilcanos</span>
+                <span class="text-stone-400 text-[11px] font-sans">Ronda caliente, fuentes + brindis con pisco</span>
+              </div>
+              <div class="w-8 h-8 rounded-lg bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400 shrink-0">
+                <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 7a3 3 0 01-6 0L8 4zm4 10v7m-3 0h6" />
+                </svg>
+              </div>
+            </button>
+          </div>
+        </div>
+
+        <!-- Tarjeta de Resultado Dinámico del Consumo -->
+        <div class="p-6 sm:p-8 rounded-2xl bg-gradient-to-r from-stone-950 via-stone-900 to-stone-950 border-2 border-amber-500/50 shadow-2xl space-y-4">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between border-b border-stone-800 pb-4 gap-2">
+            <div>
+              <span class="font-mono text-xs uppercase tracking-widest text-amber-400 font-bold flex items-center gap-2">
+                <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"></span>
+                ESTIMADO DE CONSUMO SUGERIDO
+              </span>
+              <span id="rest-calc-summary-title" class="text-stone-300 text-xs font-mono mt-0.5 block">Para 4 personas · Banquete Completo</span>
+            </div>
+            <div class="text-right">
+              <span class="text-[10px] text-stone-400 uppercase font-mono block">PROMEDIO POR PERSONA</span>
+              <span id="rest-calc-per-person" class="font-mono text-2xl sm:text-3xl font-extrabold text-amber-400">S/ 27.50</span>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs font-mono pt-2">
+            <div class="space-y-2 bg-stone-950/60 p-4 rounded-xl border border-stone-800">
+              <span class="text-amber-400 font-bold uppercase tracking-wider flex items-center gap-1.5">
+                <svg class="w-4 h-4 text-amber-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                </svg>
+                <span>MENÚ RECOMENDADO PARA ESTA MESA:</span>
+              </span>
+              <p id="rest-calc-menu-desc" class="text-stone-300 font-sans leading-relaxed">
+                1 Dúo Marino Festival + 1 Ceviche Mixto Carretillero + 1 Jarra de Chicha Morada Especial 1.5L.
+              </p>
+            </div>
+            <div class="space-y-2 bg-stone-950/60 p-4 rounded-xl border border-stone-800 flex flex-col justify-between">
+              <div>
+                <span class="text-emerald-400 font-bold uppercase tracking-wider flex items-center gap-1.5">
+                  <svg class="w-4 h-4 text-emerald-400" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M5 2a1 1 0 011 1v1h1a1 1 0 010 2H6v1a1 1 0 01-2 0V6H3a1 1 0 010-2h1V3a1 1 0 011-1zm0 10a1 1 0 011 1v1h1a1 1 0 110 2H6v1a1 1 0 11-2 0v-1H3a1 1 0 110-2h1v-1a1 1 0 011-1zM12 2a1 1 0 01.967.744L14.146 7.2 17.5 9.134a1 1 0 010 1.732l-3.354 1.935-1.18 4.455a1 1 0 01-1.933 0L9.854 12.8 6.5 10.866a1 1 0 010-1.732l3.354-1.935 1.18-4.455A1 1 0 0112 2z" clip-rule="evenodd" />
+                  </svg>
+                  <span>BENEFICIO WEB INCLUIDO:</span>
+                </span>
+                <p id="rest-calc-perk-desc" class="text-stone-300 font-sans leading-relaxed">
+                  Por consumo grupal web: ¡Postre de la casa o ronda de cortesía confirmando por WhatsApp!
+                </p>
+              </div>
+              <div class="flex justify-between items-baseline pt-2 border-t border-stone-800">
+                <span class="text-stone-400">Total mesa aproximado:</span>
+                <span id="rest-calc-total" class="text-lg font-bold text-white">S/ 110.00</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="pt-3 flex flex-col sm:flex-row items-center justify-between gap-3">
+            <span class="text-stone-400 text-xs font-mono">¿Te gusta esta sugerencia? Agrégala con un solo clic:</span>
+            <button id="btn-apply-calc-suggestion" type="button" class="w-full sm:w-auto px-6 py-3.5 bg-amber-500 hover:bg-amber-400 text-stone-950 font-bold font-mono text-xs uppercase tracking-wider rounded-xl transition cursor-pointer shadow-lg flex items-center justify-center gap-2">
+              <span>+ Agregar Sugerencia a mi Orden</span>
+            </button>
           </div>
         </div>
       </div>
@@ -365,11 +672,17 @@
 
           <!-- Selector de Modo: Delivery vs Mesa/Cumpleaños -->
           <div class="grid grid-cols-2 gap-2 mt-4 p-1 bg-stone-950 rounded-lg text-xs font-mono">
-            <button id="rest-mode-delivery" type="button" class="py-2.5 px-3 rounded text-center font-bold bg-amber-500 text-stone-950 transition">
-              🛵 Delivery / Recojo
+            <button id="rest-mode-delivery" type="button" class="py-2.5 px-3 rounded text-center font-bold bg-amber-500 text-stone-950 transition flex items-center justify-center gap-1.5">
+              <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
+              </svg>
+              <span>Delivery / Recojo</span>
             </button>
-            <button id="rest-mode-table" type="button" class="py-2.5 px-3 rounded text-center font-bold text-stone-400 hover:text-white transition">
-              🎂 Mesa / Cumpleaños
+            <button id="rest-mode-table" type="button" class="py-2.5 px-3 rounded text-center font-bold text-stone-400 hover:text-white transition flex items-center justify-center gap-1.5">
+              <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V5.5A2.5 2.5 0 109.5 8H12zm-7 4h14M5 12a2 2 0 110-4h14a2 2 0 110 4M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7" />
+              </svg>
+              <span>Mesa / Cumpleaños</span>
             </button>
           </div>
 
@@ -440,6 +753,21 @@
                     <option value="Reunión de Amigos / Trabajo">Reunión Amigos</option>
                   </select>
                 </div>
+              </div>
+
+              <!-- Beneficio Cumpleañero Dinámico (Mis Costillitas) -->
+              <div id="rest-birthday-perk-box" class="p-3.5 bg-amber-950/40 border border-amber-500/40 rounded-xl text-xs font-mono text-amber-200">
+                <div class="flex items-center gap-2">
+                  <div class="w-6 h-6 rounded-full bg-amber-500/20 text-amber-400 flex items-center justify-center shrink-0">
+                    <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V5.5A2.5 2.5 0 109.5 8H12zm-7 4h14M5 12a2 2 0 110-4h14a2 2 0 110 4M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7" />
+                    </svg>
+                  </div>
+                  <span class="font-bold text-amber-300">BENEFICIO CUMPLEAÑERO ACTIVADO</span>
+                </div>
+                <p class="text-[11px] text-stone-300 mt-1">
+                  ¡Postre de la casa + 1 ronda de chilcanos de cortesía incluida para tu mesa de 4 o más personas!
+                </p>
               </div>
             </div>
           </div>
@@ -550,4 +878,16 @@
       <p class="text-amber-400/80">Carta Gastronómica Oficial &amp; Pedidos Directos a WhatsApp</p>
     </div>
   </footer>
+
+  <!-- Barra Flotante de Pedido Activo (Estilo Delivery App) -->
+  <div id="rest-floating-bar" class="fixed bottom-6 right-6 z-40 transition-all duration-300 transform translate-y-24 opacity-0 pointer-events-none">
+    <a href="#rest-carta" class="flex items-center gap-3 px-5 py-3.5 bg-gradient-to-r from-amber-500 via-orange-500 to-amber-600 text-stone-950 font-bold rounded-full shadow-2xl hover:scale-105 transition border-2 border-stone-900 font-mono text-xs uppercase tracking-wider">
+      <span class="w-2.5 h-2.5 rounded-full bg-stone-950 animate-ping"></span>
+      <svg class="w-4 h-4 text-stone-950 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+      </svg>
+      <span id="rest-floating-bar-text">1 plato · S/ 52.00</span>
+      <span class="bg-stone-950 text-amber-400 px-2.5 py-0.5 rounded-full text-[10px]">Ver Orden →</span>
+    </a>
+  </div>
 </div>

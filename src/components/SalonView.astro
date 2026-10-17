@@ -7,7 +7,9 @@
   <aside aria-label="Aviso promocional" class="bg-[#0b0a0d] border-b border-[#2a2438] text-[#e6cfb3] text-xs font-mono py-2 px-4 shadow-sm sticky top-0 z-50">
     <div class="max-w-6xl mx-auto flex flex-wrap items-center justify-between gap-2">
       <div class="flex items-center gap-2">
-        <span class="text-amber-400">✨</span>
+        <svg class="w-3.5 h-3.5 text-amber-400 shrink-0" fill="currentColor" viewBox="0 0 20 20">
+          <path fill-rule="evenodd" d="M5 2a1 1 0 011 1v1h1a1 1 0 010 2H6v1a1 1 0 01-2 0V6H3a1 1 0 010-2h1V3a1 1 0 011-1zm0 10a1 1 0 011 1v1h1a1 1 0 110 2H6v1a1 1 0 11-2 0v-1H3a1 1 0 110-2h1v-1a1 1 0 011-1zM12 2a1 1 0 01.967.744L14.146 7.2 17.5 9.134a1 1 0 010 1.732l-3.354 1.935-1.18 4.455a1 1 0 01-1.933 0L9.854 12.8 6.5 10.866a1 1 0 010-1.732l3.354-1.935 1.18-4.455A1 1 0 0112 2z" clip-rule="evenodd" />
+        </svg>
         <span class="font-bold tracking-widest uppercase text-[11px] text-amber-200">EXPERIENCIA VIP SALÓN:</span>
         <span class="hidden sm:inline text-stone-300">Agenda tu cita online y obtén 15% OFF en tu primera visita + Diagnóstico capilar gratuito.</span>
       </div>
@@ -25,15 +27,20 @@
           <img id="salon-nav-logo" src="/logos/p002-paolas.svg" alt="Logotipo Oficial" class="h-10 sm:h-12 w-auto max-w-[200px] object-contain" />
         </div>
         <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[10px] font-mono bg-amber-950/60 text-amber-300 font-semibold border border-amber-800/60 hidden sm:inline-flex">
-          ✨ Citas Disponibles Hoy
+          <svg class="w-3 h-3 text-amber-400" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd" />
+          </svg>
+          <span>Citas Disponibles Hoy</span>
         </span>
       </div>
 
       <nav class="hidden md:flex items-center gap-6 text-xs uppercase tracking-[0.16em] font-medium text-stone-400">
+        <a href="#salon-nosotros" class="hover:text-[#c5a880] transition-colors">Nosotros</a>
         <a href="#salon-lookbook" class="hover:text-[#c5a880] transition-colors">Lookbook 2026</a>
-        <a href="#salon-comparador" class="hover:text-[#c5a880] transition-colors">Antes &amp; Después</a>
-        <a href="#salon-tarifario" class="hover:text-[#c5a880] transition-colors">Servicios &amp; Precios</a>
-        <a href="#salon-ubicacion" class="hover:text-[#c5a880] transition-colors">Salón &amp; Sede</a>
+        <a href="#salon-diagnostico" class="hover:text-[#c5a880] transition-colors">Test Capilar</a>
+        <a href="#salon-comparador" class="hover:text-[#c5a880] transition-colors">Antes/Después</a>
+        <a href="#salon-faq" class="hover:text-[#c5a880] transition-colors">Dudas Frecuentes</a>
+        <a href="#salon-tarifario" class="hover:text-[#c5a880] transition-colors">Tarifario</a>
         <a id="salon-social-pill" href="#" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-mono border border-stone-800 bg-[#16141c] text-stone-300 hover:border-[#c5a880] transition">
           <span class="w-1.5 h-1.5 rounded-full bg-[#c5a880]"></span>
           <span id="salon-social-text">@instagram</span>
@@ -113,8 +120,11 @@
             <img id="salon-hero-photo" src="https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=1200&q=85" alt="Look de Salón" class="w-full aspect-[4/4.8] object-cover group-hover:scale-105 transition-transform duration-700" />
             <div class="absolute inset-0 bg-gradient-to-t from-black via-black/30 to-transparent pointer-events-none"></div>
 
-            <div class="absolute top-4 left-4 bg-black/70 backdrop-blur-md text-[#dfcaaa] border border-[#c5a880]/40 text-[10px] font-mono font-bold uppercase tracking-wider px-3 py-1 rounded-full">
-              ✨ SERVICIO DESTACADO
+            <div class="absolute top-4 left-4 bg-black/70 backdrop-blur-md text-[#dfcaaa] border border-[#c5a880]/40 text-[10px] font-mono font-bold uppercase tracking-wider px-3 py-1 rounded-full flex items-center gap-1.5">
+              <svg class="w-3 h-3 text-[#dfcaaa]" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M5 2a1 1 0 011 1v1h1a1 1 0 010 2H6v1a1 1 0 01-2 0V6H3a1 1 0 010-2h1V3a1 1 0 011-1zm0 10a1 1 0 011 1v1h1a1 1 0 110 2H6v1a1 1 0 11-2 0v-1H3a1 1 0 110-2h1v-1a1 1 0 011-1zM12 2a1 1 0 01.967.744L14.146 7.2 17.5 9.134a1 1 0 010 1.732l-3.354 1.935-1.18 4.455a1 1 0 01-1.933 0L9.854 12.8 6.5 10.866a1 1 0 010-1.732l3.354-1.935 1.18-4.455A1 1 0 0112 2z" clip-rule="evenodd" />
+              </svg>
+              <span>SERVICIO DESTACADO</span>
             </div>
 
             <div class="absolute bottom-4 left-4 right-4 bg-[#14121a]/90 backdrop-blur-md p-5 border border-[#3b334a] rounded-xl shadow-2xl text-stone-100">
@@ -147,20 +157,113 @@
     </div>
   </div>
 
+  <!-- SECCIÓN SOBRE NOSOTROS: QUIÉNES SOMOS & FILOSOFÍA DE ATELIER -->
+  <section id="salon-nosotros" class="py-16 sm:py-24 px-4 bg-[#110f17] text-stone-100 border-b border-[#24202b]">
+    <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+      <div class="lg:col-span-7 space-y-6">
+        <div class="space-y-2">
+          <span id="salon-about-kicker" class="font-mono text-xs uppercase tracking-[0.25em] text-[#dfcaaa] font-bold">
+            EXPERIENCIA EDITORIAL &amp; CUIDADO CAPILAR
+          </span>
+          <h2 id="salon-about-title" class="font-serif text-3xl sm:text-5xl font-normal text-white leading-tight">
+            Quiénes Somos: Pasión por la Salud &amp; Brillo de tu Cabello
+          </h2>
+        </div>
+
+        <p id="salon-about-p1" class="text-stone-300 text-sm sm:text-base leading-relaxed font-sans">
+          En nuestro salón creemos firmemente que <strong>la verdadera belleza jamás debe comprometer la salud de tu fibra capilar</strong>. Nos alejamos de los tratamientos invasivos genéricos para ofrecer una experiencia de atelier boutique donde cada servicio es un ritual a medida.
+        </p>
+
+        <p id="salon-about-p2" class="text-stone-400 text-xs sm:text-sm leading-relaxed font-sans">
+          Trabajamos exclusivamente con casas profesionales de renombre internacional (Kérastase, Olaplex, Wella Professionals y pigmentos botánicos orgánicos). Cada sesión comienza con una prueba de elasticidad y porosidad para asegurar que tu cabello conserve su fuerza, sedosidad y movimiento natural.
+        </p>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4 font-mono text-xs">
+          <div class="p-4 rounded-xl bg-[#181522] border border-[#2d263a] flex items-start gap-3">
+            <div class="w-8 h-8 rounded-lg bg-[#c5a880]/10 border border-[#c5a880]/30 flex items-center justify-center text-[#dfcaaa] shrink-0">
+              <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 2l8 6-8 14L4 8l8-6zM4 8h16" />
+              </svg>
+            </div>
+            <div>
+              <strong class="text-[#dfcaaa] block font-sans">Diagnóstico Previo Sin Costo</strong>
+              <span class="text-stone-400 text-[11px]">Evaluamos tu hebra antes de cualquier proceso químico.</span>
+            </div>
+          </div>
+
+          <div class="p-4 rounded-xl bg-[#181522] border border-[#2d263a] flex items-start gap-3">
+            <div class="w-8 h-8 rounded-lg bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400 shrink-0">
+              <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+              </svg>
+            </div>
+            <div>
+              <strong class="text-[#dfcaaa] block font-sans">Alisados 100% Libres de Formol</strong>
+              <span class="text-stone-400 text-[11px]">Nutrición termoactiva con aminoácidos y mantecas puras.</span>
+            </div>
+          </div>
+
+          <div class="p-4 rounded-xl bg-[#181522] border border-[#2d263a] flex items-start gap-3">
+            <div class="w-8 h-8 rounded-lg bg-blue-500/10 border border-blue-500/30 flex items-center justify-center text-blue-400 shrink-0">
+              <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+              </svg>
+            </div>
+            <div>
+              <strong class="text-[#dfcaaa] block font-sans">Bioseguridad en Nails &amp; Spa</strong>
+              <span class="text-stone-400 text-[11px]">Sobres de instrumental esterilizado abiertos frente a ti.</span>
+            </div>
+          </div>
+
+          <div class="p-4 rounded-xl bg-[#181522] border border-[#2d263a] flex items-start gap-3">
+            <div class="w-8 h-8 rounded-lg bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-300 shrink-0">
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+              </svg>
+            </div>
+            <div>
+              <strong class="text-[#dfcaaa] block font-sans">Garantía VIP 48 Horas</strong>
+              <span class="text-stone-400 text-[11px]">Ajuste o matizado de color sin costo si lo necesitas.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="lg:col-span-5 relative">
+        <div class="relative rounded-3xl overflow-hidden border-2 border-[#3b324a] shadow-2xl">
+          <img src="https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?auto=format&fit=crop&w=900&q=85" alt="Atelier de Belleza" class="w-full aspect-[4/5] object-cover" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent"></div>
+
+          <div class="absolute bottom-6 left-6 right-6 bg-[#121017]/95 backdrop-blur-md p-5 rounded-2xl border border-[#c5a880]/40 text-stone-200 space-y-2">
+            <div class="flex items-center gap-2 text-[#dfcaaa] font-mono text-xs font-bold uppercase">
+              <span>✦</span> <span>SELLO DE EXCELENCIA TÉCNICA</span>
+            </div>
+            <p class="font-serif text-base italic text-white">
+              «Tu cabello es tu corona diaria. Lo tratamos con la delicadeza, ciencia y pasión que merece.»
+            </p>
+            <p class="font-mono text-[10px] text-stone-400 uppercase tracking-widest pt-1 border-t border-[#292233]">
+              — Equipo de Coloristas &amp; Estilistas Master
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- SECCIÓN 1: LOOKBOOK MONTALVO (4 Grandes Categorías Visuales) -->
   <section id="salon-lookbook" class="py-16 sm:py-24 px-4 bg-[#14121a] text-stone-100 border-b border-[#24202b]">
     <div class="max-w-6xl mx-auto space-y-12">
       <div class="text-center max-w-2xl mx-auto space-y-2">
-        <span class="font-mono text-xs uppercase tracking-[0.22em] text-[#dfcaaa] font-bold">LOOKBOOK &amp; ESPECIALIDADES</span>
-        <h2 class="font-serif text-3xl sm:text-5xl font-normal text-white">Colecciones &amp; Tendencias 2026</h2>
-        <p class="text-stone-400 text-sm leading-relaxed">
+        <span id="salon-lookbook-kicker" class="font-mono text-xs uppercase tracking-[0.22em] text-[#dfcaaa] font-bold">LOOKBOOK &amp; ESPECIALIDADES</span>
+        <h2 id="salon-lookbook-title" class="font-serif text-3xl sm:text-5xl font-normal text-white">Colecciones &amp; Tendencias 2026</h2>
+        <p id="salon-lookbook-desc" class="text-stone-400 text-sm leading-relaxed">
           Inspiradas en las pasarelas internacionales. Técnicas de autor ejecutadas por profesionales apasionados.
         </p>
       </div>
 
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div id="salon-lookbook-container" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
         <!-- Colección 1 -->
-        <div class="group relative rounded-2xl overflow-hidden border border-[#2d2739] hover:border-[#c5a880] transition-all duration-500 bg-[#191622] flex flex-col justify-between">
+        <div data-lookbook-id="color" class="btn-open-lookbook group relative rounded-2xl overflow-hidden border border-[#2d2739] hover:border-[#c5a880] transition-all duration-500 bg-[#191622] flex flex-col justify-between cursor-pointer">
           <div class="relative aspect-[3/4] overflow-hidden">
             <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=700&q=85" alt="Colorimetría y Balayage" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
             <div class="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent"></div>
@@ -174,12 +277,12 @@
           </div>
           <div class="p-4 border-t border-[#292333] flex items-center justify-between text-xs font-mono">
             <span class="text-[#dfcaaa]">Desde S/ 180</span>
-            <a href="#salon-tarifario" class="text-white hover:text-[#dfcaaa] underline uppercase text-[11px]">Ver Servicios →</a>
+            <span class="text-white group-hover:text-[#dfcaaa] underline uppercase text-[11px]">Ver Técnicas →</span>
           </div>
         </div>
 
         <!-- Colección 2 -->
-        <div class="group relative rounded-2xl overflow-hidden border border-[#2d2739] hover:border-[#c5a880] transition-all duration-500 bg-[#191622] flex flex-col justify-between">
+        <div data-lookbook-id="alisados" class="btn-open-lookbook group relative rounded-2xl overflow-hidden border border-[#2d2739] hover:border-[#c5a880] transition-all duration-500 bg-[#191622] flex flex-col justify-between cursor-pointer">
           <div class="relative aspect-[3/4] overflow-hidden">
             <img src="https://images.unsplash.com/photo-1607779097040-26e80aa78e66?auto=format&fit=crop&w=700&q=85" alt="Alisados y Tratamientos" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
             <div class="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent"></div>
@@ -193,12 +296,12 @@
           </div>
           <div class="p-4 border-t border-[#292333] flex items-center justify-between text-xs font-mono">
             <span class="text-[#dfcaaa]">Desde S/ 110</span>
-            <a href="#salon-tarifario" class="text-white hover:text-[#dfcaaa] underline uppercase text-[11px]">Ver Servicios →</a>
+            <span class="text-white group-hover:text-[#dfcaaa] underline uppercase text-[11px]">Ver Técnicas →</span>
           </div>
         </div>
 
         <!-- Colección 3 -->
-        <div class="group relative rounded-2xl overflow-hidden border border-[#2d2739] hover:border-[#c5a880] transition-all duration-500 bg-[#191622] flex flex-col justify-between">
+        <div data-lookbook-id="nails" class="btn-open-lookbook group relative rounded-2xl overflow-hidden border border-[#2d2739] hover:border-[#c5a880] transition-all duration-500 bg-[#191622] flex flex-col justify-between cursor-pointer">
           <div class="relative aspect-[3/4] overflow-hidden">
             <img src="https://images.unsplash.com/photo-1632345031435-8727f6897d53?auto=format&fit=crop&w=700&q=85" alt="Nails & Spa" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
             <div class="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent"></div>
@@ -212,12 +315,12 @@
           </div>
           <div class="p-4 border-t border-[#292333] flex items-center justify-between text-xs font-mono">
             <span class="text-[#dfcaaa]">Desde S/ 45</span>
-            <a href="#salon-tarifario" class="text-white hover:text-[#dfcaaa] underline uppercase text-[11px]">Ver Servicios →</a>
+            <span class="text-white group-hover:text-[#dfcaaa] underline uppercase text-[11px]">Ver Técnicas →</span>
           </div>
         </div>
 
         <!-- Colección 4 -->
-        <div class="group relative rounded-2xl overflow-hidden border border-[#2d2739] hover:border-[#c5a880] transition-all duration-500 bg-[#191622] flex flex-col justify-between">
+        <div data-lookbook-id="makeup" class="btn-open-lookbook group relative rounded-2xl overflow-hidden border border-[#2d2739] hover:border-[#c5a880] transition-all duration-500 bg-[#191622] flex flex-col justify-between cursor-pointer">
           <div class="relative aspect-[3/4] overflow-hidden">
             <img src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=700&q=85" alt="Maquillaje y Novias" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
             <div class="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent"></div>
@@ -231,7 +334,89 @@
           </div>
           <div class="p-4 border-t border-[#292333] flex items-center justify-between text-xs font-mono">
             <span class="text-[#dfcaaa]">Desde S/ 120</span>
-            <a href="#salon-tarifario" class="text-white hover:text-[#dfcaaa] underline uppercase text-[11px]">Ver Servicios →</a>
+            <span class="text-white group-hover:text-[#dfcaaa] underline uppercase text-[11px]">Ver Técnicas →</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DIAGNÓSTICO CAPILAR EXPRESS (Estilo Fortu Beauty) -->
+  <section id="salon-diagnostico" class="py-16 sm:py-24 px-4 bg-[#100e16] text-stone-100 border-b border-[#24202b]">
+    <div class="max-w-4xl mx-auto space-y-10">
+      <div class="text-center space-y-2">
+        <span class="font-mono text-xs uppercase tracking-[0.22em] text-[#dfcaaa] font-bold">TEST DE BELLEZA PERSONALIZADO</span>
+        <h2 class="font-serif text-3xl sm:text-5xl font-normal text-white">Diagnóstico Capilar en 20 Segundos</h2>
+        <p class="text-stone-400 text-sm max-w-xl mx-auto">
+          Responde según el estado de tu cabello y recibe la recomendación experta de nuestro equipo técnico.
+        </p>
+      </div>
+
+      <div class="bg-[#181522] border-2 border-[#362e45] rounded-3xl p-6 sm:p-10 shadow-2xl space-y-8">
+        <!-- Pregunta 1: Largo -->
+        <div>
+          <span class="block font-mono text-xs uppercase tracking-wider text-[#dfcaaa] font-bold mb-3">1. LARGO DE TU CABELLO:</span>
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-2.5 font-mono text-xs">
+            <button type="button" data-quiz-len="corto" class="quiz-len-btn py-3 px-3 rounded-xl border border-[#3b3447] bg-[#121017] hover:border-[#c5a880] text-stone-300 font-semibold transition cursor-pointer">Corto / Pixie</button>
+            <button type="button" data-quiz-len="medio" class="quiz-len-btn py-3 px-3 rounded-xl border-2 border-[#c5a880] bg-[#2a2334] text-[#dfcaaa] font-bold transition cursor-pointer">A los Hombros</button>
+            <button type="button" data-quiz-len="largo" class="quiz-len-btn py-3 px-3 rounded-xl border border-[#3b3447] bg-[#121017] hover:border-[#c5a880] text-stone-300 font-semibold transition cursor-pointer">Largo Medio</button>
+            <button type="button" data-quiz-len="extralargo" class="quiz-len-btn py-3 px-3 rounded-xl border border-[#3b3447] bg-[#121017] hover:border-[#c5a880] text-stone-300 font-semibold transition cursor-pointer">Extra Largo</button>
+          </div>
+        </div>
+
+        <!-- Pregunta 2: Necesidad -->
+        <div>
+          <span class="block font-mono text-xs uppercase tracking-wider text-[#dfcaaa] font-bold mb-3">2. TU MAYOR PRIORIDAD HOY:</span>
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-2.5 font-mono text-xs">
+            <button type="button" data-quiz-need="frizz" class="quiz-need-btn py-3 px-3 rounded-xl border-2 border-[#c5a880] bg-[#2a2334] text-[#dfcaaa] font-bold transition text-left flex items-center gap-2 cursor-pointer">
+              <svg class="w-4 h-4 text-[#c5a880] shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+              </svg>
+              <span>Eliminar Frizz &amp; Alisar</span>
+            </button>
+            <button type="button" data-quiz-need="decolorado" class="quiz-need-btn py-3 px-3 rounded-xl border border-[#3b3447] bg-[#121017] hover:border-[#c5a880] text-stone-300 font-semibold transition text-left flex items-center gap-2 cursor-pointer">
+              <svg class="w-4 h-4 text-emerald-400 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 7a3 3 0 01-6 0L8 4zm4 10v7m-3 0h6" />
+              </svg>
+              <span>Hidratar Cabello Seco</span>
+            </button>
+            <button type="button" data-quiz-need="color" class="quiz-need-btn py-3 px-3 rounded-xl border border-[#3b3447] bg-[#121017] hover:border-[#c5a880] text-stone-300 font-semibold transition text-left flex items-center gap-2 cursor-pointer">
+              <svg class="w-4 h-4 text-amber-400 shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M4 2a2 2 0 00-2 2v11a3 3 0 106 0V4a2 2 0 00-2-2H4zm1 14a1 1 0 100-2 1 1 0 000 2zm5-1.757l4.9-4.9a2 2 0 000-2.828L13.485 5.1a2 2 0 00-2.828 0L10 5.757v8.486zM16 18H9.071l6-6H16a2 2 0 012 2v2a2 2 0 01-2 2z" clip-rule="evenodd" />
+              </svg>
+              <span>Balayage &amp; Brillo Glow</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Resultado Dinámico del Test -->
+        <div id="quiz-result-card" class="p-6 rounded-2xl bg-gradient-to-r from-[#201c2c] via-[#282136] to-[#1c1726] border-2 border-[#c5a880]/50 shadow-xl space-y-4 font-mono">
+          <div class="flex items-center justify-between border-b border-[#3b324a] pb-3">
+            <span class="text-xs uppercase tracking-widest text-[#dfcaaa] font-bold flex items-center gap-2">
+              <span class="w-2 h-2 rounded-full bg-[#c5a880] animate-pulse"></span>
+              TRATAMIENTO RECOMENDADO PARA TI
+            </span>
+            <span class="text-[10px] text-stone-400">15% OFF APLICABLE</span>
+          </div>
+          <div>
+            <div class="flex items-baseline justify-between gap-2">
+              <h3 id="quiz-rec-title" class="font-serif text-2xl font-bold text-white">Botox Capilar Orgánico &amp; Sellador de Puntas</h3>
+              <span id="quiz-rec-price" class="font-mono text-xl font-extrabold text-[#dfcaaa]">S/ 110</span>
+            </div>
+            <p id="quiz-rec-desc" class="text-xs font-sans text-stone-300 mt-2 leading-relaxed">
+              Tratamiento de nutrición profunda con aminoácidos y manteca de cacao. Rellena la hebra capilar, elimina el frizz y devuelve el brillo sin maltratar la fibra capilar.
+            </p>
+          </div>
+          <div class="pt-2 flex flex-col sm:flex-row items-center justify-between gap-3">
+            <span class="text-[11px] text-[#dfcaaa] flex items-center gap-1.5">
+              <svg class="w-3.5 h-3.5 text-[#dfcaaa]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              <span>Duración: aprox. 75 minutos</span>
+            </span>
+            <button id="btn-apply-quiz" type="button" class="w-full sm:w-auto px-6 py-3 bg-gradient-to-r from-[#c5a880] to-[#dfcaaa] text-stone-950 font-bold text-xs uppercase tracking-wider rounded-xl transition hover:brightness-110 cursor-pointer shadow-lg flex items-center justify-center gap-2">
+              <span>+ Aplicar este Tratamiento a mi Cita VIP</span>
+            </button>
           </div>
         </div>
       </div>
@@ -394,6 +579,83 @@
     </div>
   </section>
 
+  <!-- SECCIÓN FAQ: PREGUNTAS FRECUENTES & GARANTÍAS VIP -->
+  <section id="salon-faq" class="py-16 sm:py-24 px-4 bg-[#14121a] text-stone-100 border-b border-[#24202b]">
+    <div class="max-w-4xl mx-auto space-y-10">
+      <div class="text-center space-y-2">
+        <span class="font-mono text-xs uppercase tracking-[0.22em] text-[#dfcaaa] font-bold">TRANSPARENCIA &amp; CONFIANZA TOTAL</span>
+        <h2 class="font-serif text-3xl sm:text-5xl font-normal text-white">Preguntas Frecuentes de Nuestras Clientas</h2>
+        <p class="text-stone-400 text-sm max-w-xl mx-auto">
+          Todo lo que necesitas saber antes de tu visita para sentirte 100% segura y respaldada.
+        </p>
+      </div>
+
+      <div class="space-y-4 font-mono text-xs">
+        <details class="group bg-[#191622] border border-[#2d263a] rounded-2xl p-5 hover:border-[#c5a880]/60 transition cursor-pointer">
+          <summary class="flex items-center justify-between font-bold text-white text-sm list-none select-none">
+            <span class="inline-flex items-center gap-2">
+              <svg class="w-4 h-4 text-[#c5a880]" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M5 2a1 1 0 011 1v1h1a1 1 0 010 2H6v1a1 1 0 01-2 0V6H3a1 1 0 010-2h1V3a1 1 0 011-1zm0 10a1 1 0 011 1v1h1a1 1 0 110 2H6v1a1 1 0 11-2 0v-1H3a1 1 0 110-2h1v-1a1 1 0 011-1zM12 2a1 1 0 01.967.744L14.146 7.2 17.5 9.134a1 1 0 010 1.732l-3.354 1.935-1.18 4.455a1 1 0 01-1.933 0L9.854 12.8 6.5 10.866a1 1 0 010-1.732l3.354-1.935 1.18-4.455A1 1 0 0112 2z" clip-rule="evenodd" />
+              </svg>
+              <span>¿Cuánto tiempo dura el alisado orgánico y cómo cuidarlo?</span>
+            </span>
+            <span class="text-[#dfcaaa] group-open:rotate-180 transition-transform duration-300 text-lg">▾</span>
+          </summary>
+          <div class="mt-4 pt-3 border-t border-[#292233] text-stone-300 font-sans text-xs leading-relaxed space-y-2">
+            <p>El alisado orgánico tiene una duración promedio de <strong>3 a 5 meses</strong>, dependiendo del crecimiento natural de tu raíz y de la rutina de lavado en casa.</p>
+            <p class="text-stone-400">Recomendamos utilizar champús sin sal ni sulfatos y activar el brillo pasando aire tibio de secadora después de cada lavado.</p>
+          </div>
+        </details>
+
+        <details class="group bg-[#191622] border border-[#2d263a] rounded-2xl p-5 hover:border-[#c5a880]/60 transition cursor-pointer">
+          <summary class="flex items-center justify-between font-bold text-white text-sm list-none select-none">
+            <span class="inline-flex items-center gap-2">
+              <svg class="w-4 h-4 text-[#c5a880]" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M4 2a2 2 0 00-2 2v11a3 3 0 106 0V4a2 2 0 00-2-2H4zm1 14a1 1 0 100-2 1 1 0 000 2zm5-1.757l4.9-4.9a2 2 0 000-2.828L13.485 5.1a2 2 0 00-2.828 0L10 5.757v8.486zM16 18H9.071l6-6H16a2 2 0 012 2v2a2 2 0 01-2 2z" clip-rule="evenodd" />
+              </svg>
+              <span>¿La decoloración maltrata el cabello? ¿Cómo lo protegen?</span>
+            </span>
+            <span class="text-[#dfcaaa] group-open:rotate-180 transition-transform duration-300 text-lg">▾</span>
+          </summary>
+          <div class="mt-4 pt-3 border-t border-[#292233] text-stone-300 font-sans text-xs leading-relaxed space-y-2">
+            <p>Utilizamos aditivos protectores de enlaces (<strong>complejo Plex / Olaplex</strong>) en todas nuestras mezclas de aclarado. Esto evita la rotura de los enlaces de queratina durante el proceso químico.</p>
+            <p class="text-stone-400">Además, si en la prueba de mechón previa detectamos que la fibra no resistirá el tono deseado, te asesoramos con honestidad sobre un plan de nutrición previo.</p>
+          </div>
+        </details>
+
+        <details class="group bg-[#191622] border border-[#2d263a] rounded-2xl p-5 hover:border-[#c5a880]/60 transition cursor-pointer">
+          <summary class="flex items-center justify-between font-bold text-white text-sm list-none select-none">
+            <span class="inline-flex items-center gap-2">
+              <svg class="w-4 h-4 text-[#c5a880]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+              </svg>
+              <span>¿Qué garantía tengo en caso de que necesite un ajuste?</span>
+            </span>
+            <span class="text-[#dfcaaa] group-open:rotate-180 transition-transform duration-300 text-lg">▾</span>
+          </summary>
+          <div class="mt-4 pt-3 border-t border-[#292233] text-stone-300 font-sans text-xs leading-relaxed space-y-2">
+            <p>Contamos con nuestra <strong>Garantía de Satisfacción VIP de 48 Horas</strong>. Si consideras que el matiz necesita un refuerzo o ajuste menor, puedes regresar a cabina sin costo adicional.</p>
+          </div>
+        </details>
+
+        <details class="group bg-[#191622] border border-[#2d263a] rounded-2xl p-5 hover:border-[#c5a880]/60 transition cursor-pointer">
+          <summary class="flex items-center justify-between font-bold text-white text-sm list-none select-none">
+            <span class="inline-flex items-center gap-2">
+              <svg class="w-4 h-4 text-[#c5a880]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" />
+              </svg>
+              <span>¿Qué medios de pago aceptan en el salón?</span>
+            </span>
+            <span class="text-[#dfcaaa] group-open:rotate-180 transition-transform duration-300 text-lg">▾</span>
+          </summary>
+          <div class="mt-4 pt-3 border-t border-[#292233] text-stone-300 font-sans text-xs leading-relaxed space-y-2">
+            <p>Aceptamos todas las tarjetas de crédito y débito (Visa, Mastercard, Amex), pagos digitales vía Yape, Plin y transferencias bancarias directas (BCP, BBVA, Interbank) sin recargos.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
   <!-- SECCIÓN 4: SALÓN, MAPA & OPINIONES VIP -->
   <section id="salon-ubicacion" class="py-16 sm:py-24 px-4 bg-[#0f0d14] text-white border-b border-[#24202b]">
     <div class="max-w-6xl mx-auto space-y-12">
@@ -476,4 +738,45 @@
       <p class="text-[#dfcaaa]">Haute Coiffure &amp; Citas Concierge por WhatsApp</p>
     </div>
   </footer>
+
+  <!-- Modal Lookbook Montalvo -->
+  <div id="salon-lookbook-modal" class="fixed inset-0 z-50 bg-black/85 backdrop-blur-md flex items-center justify-center p-4 hidden">
+    <div class="bg-[#181522] border-2 border-[#c5a880]/60 max-w-2xl w-full rounded-3xl p-6 sm:p-8 space-y-6 text-stone-200 relative shadow-2xl">
+      <button id="btn-close-lookbook" type="button" class="absolute top-5 right-5 text-stone-400 hover:text-white text-xl font-bold p-1 cursor-pointer">✕</button>
+      <div class="border-b border-[#2d263a] pb-4">
+        <span class="font-mono text-[10px] uppercase tracking-widest text-[#dfcaaa] font-bold" id="lookbook-modal-kicker">COLECCIÓN 2026</span>
+        <h3 class="font-serif text-3xl font-bold text-white mt-1" id="lookbook-modal-title">Colorimetría &amp; Balayage</h3>
+      </div>
+      <div class="relative aspect-[16/9] rounded-xl overflow-hidden border border-[#3b324a]">
+        <img id="lookbook-modal-img" src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=1000&q=85" alt="Lookbook" class="w-full h-full object-cover" />
+      </div>
+      <p id="lookbook-modal-desc" class="text-sm text-stone-300 leading-relaxed font-sans">
+        Técnicas personalizadas de aclarado gradual con protección de plex. Logra rubios luminosos, morena iluminada o tonos cobrizos con máxima suavidad y brillo espejo.
+      </p>
+      <div class="p-3.5 bg-[#121017] rounded-xl border border-[#2d263a] flex items-center justify-between text-xs font-mono">
+        <span class="text-stone-400">Tratamiento de Gama: Olaplex &amp; Kérastase</span>
+        <span id="lookbook-modal-price" class="font-bold text-[#dfcaaa]">Desde S/ 180</span>
+      </div>
+      <div class="pt-2">
+        <button id="btn-lookbook-book" type="button" class="w-full py-4 bg-gradient-to-r from-[#c5a880] to-[#dfcaaa] text-stone-950 font-bold font-mono text-xs uppercase tracking-[0.15em] rounded-xl transition hover:brightness-110 shadow-lg cursor-pointer flex items-center justify-center gap-2">
+          <svg class="w-4 h-4 text-stone-950" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M5 2a1 1 0 011 1v1h1a1 1 0 010 2H6v1a1 1 0 01-2 0V6H3a1 1 0 010-2h1V3a1 1 0 011-1zm0 10a1 1 0 011 1v1h1a1 1 0 110 2H6v1a1 1 0 11-2 0v-1H3a1 1 0 110-2h1v-1a1 1 0 011-1zM12 2a1 1 0 01.967.744L14.146 7.2 17.5 9.134a1 1 0 010 1.732l-3.354 1.935-1.18 4.455a1 1 0 01-1.933 0L9.854 12.8 6.5 10.866a1 1 0 010-1.732l3.354-1.935 1.18-4.455A1 1 0 0112 2z" clip-rule="evenodd" />
+          </svg>
+          <span>Agendar este Look por WhatsApp</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Barra Flotante VIP Concierge -->
+  <div id="salon-floating-bar" class="fixed bottom-6 right-6 z-40 transition-all duration-300 transform translate-y-24 opacity-0 pointer-events-none">
+    <a href="#salon-tarifario" class="flex items-center gap-3 px-5 py-3.5 bg-gradient-to-r from-[#c5a880] via-[#dfcaaa] to-[#c5a880] text-stone-950 font-bold rounded-full shadow-2xl hover:scale-105 transition border-2 border-stone-950 font-mono text-xs uppercase tracking-wider">
+      <span class="w-2.5 h-2.5 rounded-full bg-stone-950 animate-ping"></span>
+      <svg class="w-4 h-4 text-stone-950 shrink-0" fill="currentColor" viewBox="0 0 20 20">
+        <path fill-rule="evenodd" d="M5 2a1 1 0 011 1v1h1a1 1 0 010 2H6v1a1 1 0 01-2 0V6H3a1 1 0 010-2h1V3a1 1 0 011-1zm0 10a1 1 0 011 1v1h1a1 1 0 110 2H6v1a1 1 0 11-2 0v-1H3a1 1 0 110-2h1v-1a1 1 0 011-1zM12 2a1 1 0 01.967.744L14.146 7.2 17.5 9.134a1 1 0 010 1.732l-3.354 1.935-1.18 4.455a1 1 0 01-1.933 0L9.854 12.8 6.5 10.866a1 1 0 010-1.732l3.354-1.935 1.18-4.455A1 1 0 0112 2z" clip-rule="evenodd" />
+      </svg>
+      <span id="salon-floating-bar-text">1 servicio · S/ 160.00</span>
+      <span class="bg-stone-950 text-[#dfcaaa] px-2.5 py-0.5 rounded-full text-[10px]">Ver Cita →</span>
+    </a>
+  </div>
 </div>

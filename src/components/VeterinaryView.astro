@@ -8,7 +8,10 @@
     <div class="max-w-6xl mx-auto flex flex-wrap items-center justify-between gap-2">
       <div class="flex items-center gap-2">
         <span class="inline-block w-2.5 h-2.5 rounded-full bg-white animate-ping"></span>
-        <span class="font-bold tracking-wider">🚨 URGENCIAS VETERINARIAS 24 HORAS:</span>
+        <span class="inline-flex items-center gap-1.5 font-bold tracking-wider">
+          <svg class="w-4 h-4 text-white inline-block shrink-0 animate-pulse" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" /></svg>
+          URGENCIAS VETERINARIAS 24 HORAS:
+        </span>
         <span class="hidden sm:inline text-red-100">Guardia médica activa en clínica. Si tu mascota tiene una emergencia, llámanos de inmediato.</span>
       </div>
       <a id="vet-top-call" href="#" class="bg-white text-red-700 hover:bg-red-50 px-3 py-0.5 rounded-full text-[11px] font-bold tracking-wider transition">
@@ -17,115 +20,118 @@
     </div>
   </aside>
 
-  <!-- Cabecera Médica Púrpura & Mint -->
-  <header class="border-b border-purple-900/40 bg-[#3b1259]/95 backdrop-blur-md text-white sticky top-8 z-40">
+  <!-- Cabecera Médica Mint & Blanco Clínico -->
+  <header class="border-b border-teal-100 bg-white/95 backdrop-blur-md text-stone-800 sticky top-8 z-40 shadow-xs">
     <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between gap-4">
       <div class="flex items-center gap-3">
-        <div class="p-1.5 rounded-xl bg-white border border-purple-200 shadow-md flex items-center">
+        <div class="p-1.5 rounded-xl bg-teal-50/60 border border-teal-200 shadow-xs flex items-center">
           <img id="vet-nav-logo" src="/logos/p003-mikelas.svg" alt="Logotipo Oficial" class="h-10 sm:h-12 w-auto max-w-[200px] object-contain" />
         </div>
-        <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[10px] font-mono bg-teal-950 text-teal-300 font-semibold border border-teal-700 hidden sm:inline-flex">
-          <span class="w-2 h-2 rounded-full bg-teal-400 animate-pulse"></span> Consultorio &amp; Tópico Abierto
+        <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[10px] font-mono bg-teal-50 text-teal-800 font-semibold border border-teal-200 hidden sm:inline-flex">
+          <span class="w-2 h-2 rounded-full bg-teal-500 animate-pulse"></span> Consultorio &amp; Tópico Abierto
         </span>
       </div>
 
-      <nav class="hidden md:flex items-center gap-6 text-xs uppercase tracking-[0.14em] font-medium text-purple-200">
-        <a href="#vet-servicios" class="hover:text-teal-300 transition-colors">Especialidades</a>
-        <a href="#vet-triaje" class="hover:text-teal-300 transition-colors">Ficha Médica Express</a>
-        <a href="#vet-tarifario" class="hover:text-teal-300 transition-colors">Tarifario de Salud</a>
-        <a href="#vet-ubicacion" class="hover:text-teal-300 transition-colors">Clínica &amp; Sede</a>
-        <a id="vet-social-pill" href="#" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-mono border border-purple-800 bg-[#4c1973] text-purple-200 hover:border-teal-400 transition">
-          <span class="w-1.5 h-1.5 rounded-full bg-teal-400"></span>
+      <nav class="hidden md:flex items-center gap-6 text-xs uppercase tracking-[0.14em] font-medium text-stone-600">
+        <a href="#vet-nosotros" class="hover:text-teal-700 transition-colors">Nosotros</a>
+        <a href="#vet-triaje" class="hover:text-teal-700 transition-colors">Ficha Express</a>
+        <a href="#vet-protocolos" class="hover:text-teal-700 transition-colors">Protocolos</a>
+        <a href="#vet-calculadora-vacunas" class="hover:text-teal-700 transition-colors">Vacunas</a>
+        <a href="#vet-semaforo-urgencias" class="hover:text-teal-700 transition-colors">Urgencias</a>
+        <a href="#vet-tarifario" class="hover:text-teal-700 transition-colors">Tarifario</a>
+        <a id="vet-social-pill" href="#" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-mono border border-teal-200 bg-teal-50 text-teal-800 hover:border-teal-400 hover:bg-teal-100 transition">
+          <span class="w-1.5 h-1.5 rounded-full bg-teal-600"></span>
           <span id="vet-social-text">@veterinaria</span>
         </a>
       </nav>
 
-      <a href="#vet-triaje" class="bg-gradient-to-r from-teal-400 to-emerald-500 hover:from-teal-500 hover:to-emerald-600 text-stone-950 font-bold px-5 py-2.5 rounded-full text-xs uppercase tracking-[0.14em] shadow-lg shadow-teal-950/40 transition">
+      <a href="#vet-triaje" class="bg-teal-600 hover:bg-teal-700 text-white font-bold px-5 py-2.5 rounded-full text-xs uppercase tracking-[0.14em] shadow-md shadow-teal-900/10 transition">
         <span>Agendar Cita</span>
       </a>
     </div>
   </header>
 
-  <!-- Hero Veterinario Afectuoso & Profesional (Estilo Aristocat & Flores) -->
-  <section class="relative overflow-hidden bg-gradient-to-b from-[#2e0e47] via-[#3a1257] to-[#250b38] text-white border-b border-purple-900/40">
-    <div class="absolute -top-32 right-1/4 w-[500px] h-[500px] rounded-full opacity-20 pointer-events-none blur-3xl bg-teal-500"></div>
+  <!-- Hero Veterinario Luminoso, Afectuoso & Profesional (Estilo Aristocat & Flores) -->
+  <section class="relative overflow-hidden bg-gradient-to-b from-[#f0fdfa] via-[#ecfdf5]/50 to-white text-stone-900 border-b border-teal-100">
+    <div class="absolute -top-32 right-1/4 w-[500px] h-[500px] rounded-full opacity-30 pointer-events-none blur-3xl bg-teal-200"></div>
 
     <div class="max-w-6xl mx-auto px-4 py-16 sm:py-24 relative z-10">
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
         <!-- Columna Izquierda: Copy de Cuidado y Confianza UNMSM -->
         <div class="lg:col-span-7 space-y-6">
           <div class="flex flex-wrap items-center gap-2.5">
-            <span class="inline-flex items-center gap-2 border border-teal-400/40 px-3.5 py-1 bg-teal-950/60 rounded-full font-mono text-[11px] uppercase tracking-wider text-teal-300">
-              <span class="w-2 h-2 rounded-full bg-teal-400 animate-pulse"></span>
+            <span class="inline-flex items-center gap-2 border border-teal-300 px-3.5 py-1 bg-white/90 rounded-full font-mono text-[11px] uppercase tracking-wider text-teal-800 shadow-xs">
+              <span class="w-2 h-2 rounded-full bg-teal-500 animate-pulse"></span>
               <span id="vet-hero-kicker">MÉDICOS VETERINARIOS TITULADOS UNMSM · CMVP</span>
             </span>
-            <span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-[11px] font-mono bg-purple-900/80 text-purple-200 border border-purple-700 font-semibold">
-              🐾 Cuidado con Amor Real
+            <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[11px] font-mono bg-teal-100/70 text-teal-900 border border-teal-200 font-semibold">
+              <svg class="w-3.5 h-3.5 text-teal-700 inline-block shrink-0" fill="currentColor" viewBox="0 0 24 24"><path d="M12 10c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm-4.5-1c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm9 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm-4.5 6.5c-2.33 0-4.32 1.45-5.12 3.5h10.24c-.8-2.05-2.79-3.5-5.12-3.5zM4.5 13c-.83 0-1.5.67-1.5 1.5S3.67 16 4.5 16s1.5-.67 1.5-1.5S5.33 13 4.5 13zm15 0c-.83 0-1.5.67-1.5 1.5s.67 1.5 1.5 1.5 1.5-.67 1.5-1.5-.67-1.5-1.5-1.5z"/></svg>
+              Cuidado con Amor Real
             </span>
           </div>
 
-          <h1 class="font-serif text-4xl sm:text-6xl lg:text-[58px] font-extrabold leading-[1.06] tracking-tight text-white">
+          <h1 class="font-serif text-4xl sm:text-6xl lg:text-[58px] font-extrabold leading-[1.06] tracking-tight text-stone-950">
             <span id="vet-hero-title">El bienestar de tu engreído en</span>
-            <em id="vet-hero-sub" class="font-normal italic block mt-1 text-transparent bg-clip-text bg-gradient-to-r from-teal-300 via-emerald-200 to-teal-400">Veterinaria Mikelas.</em>
+            <em id="vet-hero-sub" class="font-normal italic block mt-1 text-transparent bg-clip-text bg-gradient-to-r from-teal-700 via-emerald-600 to-teal-800">Veterinaria Mikelas.</em>
           </h1>
 
           <!-- Lema Oficial -->
-          <blockquote class="border-l-4 border-teal-400 pl-4 py-1.5 italic font-serif text-lg sm:text-xl text-purple-100 bg-purple-950/50 rounded-r-md">
+          <blockquote class="border-l-4 border-teal-600 pl-4 py-2 italic font-serif text-lg sm:text-xl text-stone-800 bg-white/80 rounded-r-xl border border-teal-100 shadow-xs">
             <span id="vet-hero-lema">«Médicos Veterinarios egresados de la UNMSM, comprometidos en velar por el bienestar de tu engreído con mucho amor en Pueblo Libre.»</span>
           </blockquote>
 
-          <p id="vet-hero-lead" class="text-purple-200 text-base sm:text-lg leading-relaxed max-w-xl font-normal">
+          <p id="vet-hero-lead" class="text-stone-600 text-base sm:text-lg leading-relaxed max-w-xl font-normal">
             Atención clínica preventiva, vacunación séxtuple y triple felina, desparasitación completa, cirugías con anestesia inhalatoria y baños medicados en un ambiente seguro, higiénico y libre de estrés.
           </p>
 
           <!-- CTAs -->
           <div class="pt-4 flex flex-wrap items-center gap-4">
-            <a href="#vet-triaje" class="bg-gradient-to-r from-teal-400 to-emerald-400 hover:from-teal-500 hover:to-emerald-500 text-stone-950 font-bold px-8 py-4 rounded-full text-xs sm:text-sm uppercase tracking-[0.15em] shadow-xl inline-flex items-center gap-3 transition transform hover:scale-[1.02]">
+            <a href="#vet-triaje" class="bg-teal-600 hover:bg-teal-700 text-white font-bold px-8 py-4 rounded-full text-xs sm:text-sm uppercase tracking-[0.15em] shadow-lg shadow-teal-900/15 inline-flex items-center gap-3 transition transform hover:scale-[1.02]">
               <span>Llenar Ficha Médica Express</span>
               <span>↓</span>
             </a>
-            <a href="#vet-tarifario" class="px-7 py-4 border border-purple-700 hover:border-teal-400 text-xs sm:text-sm uppercase tracking-[0.12em] font-medium transition bg-purple-900/60 text-purple-100 rounded-full">
+            <a href="#vet-tarifario" class="px-7 py-4 border border-teal-200 hover:border-teal-400 text-xs sm:text-sm uppercase tracking-[0.12em] font-bold transition bg-white text-teal-900 rounded-full shadow-xs">
               Ver Tarifario de Salud
             </a>
           </div>
 
           <!-- Métricas de Confianza Médica -->
-          <div class="grid grid-cols-3 gap-4 pt-6 border-t border-purple-900/60 font-mono">
+          <div class="grid grid-cols-3 gap-4 pt-6 border-t border-teal-100 font-mono">
             <div>
-              <span class="block text-[10px] uppercase tracking-wider text-purple-300">CALIFICACIÓN</span>
-              <span class="text-lg sm:text-xl font-bold text-teal-300"><span id="vet-stat-rating">4.8</span> / 5.0 ★</span>
+              <span class="block text-[10px] uppercase tracking-wider text-stone-500">CALIFICACIÓN</span>
+              <span class="text-lg sm:text-xl font-bold text-teal-800"><span id="vet-stat-rating">4.8</span> / 5.0 ★</span>
             </div>
-            <div class="border-l border-purple-900/60 pl-4">
-              <span class="block text-[10px] uppercase tracking-wider text-purple-300">PACIENTES FELICES</span>
-              <span class="text-lg sm:text-xl font-bold text-white" id="vet-stat-reviews">+1,300 familias</span>
+            <div class="border-l border-teal-100 pl-4">
+              <span class="block text-[10px] uppercase tracking-wider text-stone-500">PACIENTES FELICES</span>
+              <span class="text-lg sm:text-xl font-bold text-stone-900" id="vet-stat-reviews">+1,300 familias</span>
             </div>
-            <div class="border-l border-purple-900/60 pl-4">
-              <span class="block text-[10px] uppercase tracking-wider text-purple-300">DISTRITO</span>
-              <span class="text-lg sm:text-xl font-bold text-white" id="vet-stat-zone">Pueblo Libre</span>
+            <div class="border-l border-teal-100 pl-4">
+              <span class="block text-[10px] uppercase tracking-wider text-stone-500">DISTRITO</span>
+              <span class="text-lg sm:text-xl font-bold text-stone-900" id="vet-stat-zone">Pueblo Libre</span>
             </div>
           </div>
         </div>
 
         <!-- Columna Derecha: Paciente en Consulta -->
         <div class="lg:col-span-5 relative">
-          <div class="relative rounded-3xl overflow-hidden border-2 border-purple-700/60 shadow-2xl shadow-purple-950/80 group">
+          <div class="relative rounded-3xl overflow-hidden border-2 border-teal-200 shadow-xl shadow-teal-900/10 group">
             <img id="vet-hero-photo" src="https://images.unsplash.com/photo-1583337130417-3346a1be7dee?auto=format&fit=crop&w=1200&q=85" alt="Paciente en consulta" class="w-full aspect-[4/4.8] object-cover group-hover:scale-105 transition-transform duration-700" />
-            <div class="absolute inset-0 bg-gradient-to-t from-black via-black/30 to-transparent pointer-events-none"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-stone-950/80 via-stone-950/20 to-transparent pointer-events-none"></div>
 
-            <div class="absolute top-4 left-4 bg-teal-600 text-stone-950 font-mono text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-full shadow-md">
+            <div class="absolute top-4 left-4 bg-teal-600 text-white font-mono text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-full shadow-md">
               🩺 ATENCIÓN PROFESIONAL UNMSM
             </div>
 
-            <div class="absolute bottom-4 left-4 right-4 bg-[#2f1047]/90 backdrop-blur-md p-5 border border-purple-600/50 rounded-2xl shadow-2xl text-purple-100">
+            <div class="absolute bottom-4 left-4 right-4 bg-white/95 backdrop-blur-md p-5 border border-teal-100 rounded-2xl shadow-xl text-stone-800">
               <div class="flex items-center justify-between">
-                <span class="font-mono text-[10px] uppercase tracking-widest text-teal-300 font-bold" id="vet-featured-label">CONSULTA COMPLETA</span>
-                <span class="font-mono text-base font-extrabold text-teal-300" id="vet-featured-price">S/ 40</span>
+                <span class="font-mono text-[10px] uppercase tracking-widest text-teal-700 font-bold" id="vet-featured-label">CONSULTA COMPLETA</span>
+                <span class="font-mono text-base font-extrabold text-teal-800" id="vet-featured-price">S/ 40</span>
               </div>
-              <h2 class="font-serif text-xl font-bold mt-1 text-white" id="vet-featured-title">Chequeo Clínico Integral</h2>
-              <p class="text-xs text-purple-200 mt-1 line-clamp-2" id="vet-featured-sub">Examen físico de cabeza a cola, signos vitales, control de peso, oídos y dentadura.</p>
-              <div class="mt-3 pt-3 border-t border-purple-800 flex items-center justify-between text-[11px] font-mono text-purple-300">
+              <h2 class="font-serif text-xl font-bold mt-1 text-stone-950" id="vet-featured-title">Chequeo Clínico Integral</h2>
+              <p class="text-xs text-stone-600 mt-1 line-clamp-2" id="vet-featured-sub">Examen físico de cabeza a cola, signos vitales, control de peso, oídos y dentadura.</p>
+              <div class="mt-3 pt-3 border-t border-teal-100 flex items-center justify-between text-[11px] font-mono text-stone-500">
                 <span id="vet-address-caption">Pueblo Libre</span>
-                <span class="text-teal-300">Sin estrés</span>
+                <span class="text-teal-700 font-bold">Sin estrés</span>
               </div>
             </div>
           </div>
@@ -135,45 +141,144 @@
   </section>
 
   <!-- Cinta Ticker Veterinaria -->
-  <div class="border-b border-purple-900/40 py-3 overflow-hidden bg-[#1f0730] text-teal-300 text-[11px] font-mono uppercase tracking-[0.22em]">
+  <div class="border-b border-teal-900/40 py-3 overflow-hidden bg-teal-900 text-teal-100 text-[11px] font-mono uppercase tracking-[0.22em]">
     <div class="marquee-track" id="vet-marquee-content">
       <span class="mx-6 font-semibold">✦ MÉDICOS VETERINARIOS TITULADOS UNMSM</span>
       <span class="mx-6 font-semibold text-white">✦ BAÑOS RELAJANTES &amp; GROOMING SIN SEDANTES</span>
-      <span class="mx-6 font-semibold text-teal-200">✦ VACUNAS &amp; DESPARASITACIÓN CON REGISTRO OFICIAL</span>
+      <span class="mx-6 font-semibold text-teal-300">✦ VACUNAS &amp; DESPARASITACIÓN CON REGISTRO OFICIAL</span>
       <span class="mx-6 font-semibold text-white">✦ CONSULTAS RÁPIDAS POR WHATSAPP</span>
-      <span class="mx-6 font-semibold">✦ FARMACIA Y PET SHOP ESPECIALIZADO</span>
+      <span class="mx-6 font-semibold text-teal-200">✦ FARMACIA Y PET SHOP ESPECIALIZADO</span>
       <span class="mx-6 font-semibold text-white">✦ QUIRÓFANO Y HOSPITALIZACIÓN EQUIPADA</span>
     </div>
   </div>
 
+  <!-- SECCIÓN SOBRE NOSOTROS: QUIÉNES SOMOS & VOCACIÓN MÉDICA -->
+  <section id="vet-nosotros" class="py-16 sm:py-24 px-4 bg-white text-stone-900 border-b border-teal-100">
+    <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+      <div class="lg:col-span-7 space-y-6">
+        <div class="space-y-2">
+          <span id="vet-about-kicker" class="font-mono text-xs uppercase tracking-[0.25em] text-teal-700 font-bold">
+            CIENCIA CLÍNICA, ÉTICA &amp; AMOR ANIMAL
+          </span>
+          <h2 id="vet-about-title" class="font-serif text-3xl sm:text-5xl font-extrabold text-stone-950 leading-tight">
+            Quiénes Somos: Pasión Médica al Servicio de tu Familia
+          </h2>
+        </div>
+
+        <p id="vet-about-p1" class="text-stone-700 text-sm sm:text-base leading-relaxed font-sans">
+          Somos un equipo de <strong>Médicos Veterinarios colegiados egresados de la Universidad Nacional Mayor de San Marcos (UNMSM) y UPCH</strong>. Entendemos que tu mascota no es solo un paciente: es un integrante irremplazable de tu hogar que merece el más alto estándar de atención médica y compasión.
+        </p>
+
+        <p id="vet-about-p2" class="text-stone-600 text-xs sm:text-sm leading-relaxed font-sans">
+          Trabajamos bajo el estándar internacional de <em>Manejo Sin Estrés («Fear-Free»)</em>: jamás recurrimos a la sedación para procedimientos estéticos o baños, y procuramos un ambiente tranquilo, sin olores intimidantes y con recompensas positivas en cada etapa de la consulta.
+        </p>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4 font-mono text-xs">
+          <div class="p-4 rounded-2xl bg-teal-50/70 border border-teal-200 flex items-start gap-3">
+            <div class="w-8 h-8 rounded-xl bg-teal-100 text-teal-800 flex items-center justify-center shrink-0">
+              <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5" />
+              </svg>
+            </div>
+            <div>
+              <strong class="text-teal-950 block font-sans text-sm">Médicos Colegiados CMVP</strong>
+              <span class="text-stone-600 text-[11px]">Titulados con formación continua en medicina interna y cirugía de tejidos blandos.</span>
+            </div>
+          </div>
+
+          <div class="p-4 rounded-2xl bg-emerald-50/70 border border-emerald-200 flex items-start gap-3">
+            <div class="w-8 h-8 rounded-xl bg-emerald-100 text-emerald-800 flex items-center justify-center shrink-0">
+              <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+              </svg>
+            </div>
+            <div>
+              <strong class="text-emerald-950 block font-sans text-sm">Cero Sedación en Spa &amp; Baños</strong>
+              <span class="text-stone-600 text-[11px]">Paciencia, agua temperada y trato cariñoso para cuidar su salud cardíaca.</span>
+            </div>
+          </div>
+
+          <div class="p-4 rounded-2xl bg-teal-50/70 border border-teal-200 flex items-start gap-3">
+            <div class="w-8 h-8 rounded-xl bg-teal-100 text-teal-800 flex items-center justify-center shrink-0">
+              <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
+              </svg>
+            </div>
+            <div>
+              <strong class="text-teal-950 block font-sans text-sm">Cadena de Frío Digital 24/7</strong>
+              <span class="text-stone-600 text-[11px]">Biológicos originales (Zoetis, MSD) con eficacia inmunológica garantizada.</span>
+            </div>
+          </div>
+
+          <div class="p-4 rounded-2xl bg-emerald-50/70 border border-emerald-200 flex items-start gap-3">
+            <div class="w-8 h-8 rounded-xl bg-emerald-100 text-emerald-800 flex items-center justify-center shrink-0">
+              <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+              </svg>
+            </div>
+            <div>
+              <strong class="text-emerald-950 block font-sans text-sm">Quirófano Inhalatorio Seguro</strong>
+              <span class="text-stone-600 text-[11px]">Monitoreo multiparámetro cardíaco y saturación continua en cada intervención.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="lg:col-span-5 relative">
+        <div class="relative rounded-3xl overflow-hidden border-2 border-teal-200 shadow-xl shadow-teal-900/10">
+          <img src="https://images.unsplash.com/photo-1628009368231-7bb7cfcb0def?auto=format&fit=crop&w=900&q=85" alt="Médico Veterinario con Paciente" class="w-full aspect-[4/5] object-cover" />
+          <div class="absolute inset-0 bg-gradient-to-t from-stone-950/80 via-stone-950/20 to-transparent"></div>
+
+          <div class="absolute bottom-6 left-6 right-6 bg-white/95 backdrop-blur-md p-5 rounded-2xl border border-teal-100 text-stone-800 space-y-2 shadow-xl">
+            <div class="flex items-center gap-2 text-teal-800 font-mono text-xs font-bold uppercase">
+              <span>✦</span> <span>JURAMENTO VETERINARIO</span>
+            </div>
+            <p class="font-serif text-base italic text-stone-900">
+              «Dedicar nuestros conocimientos al alivio del dolor animal y a la prevención de enfermedades con empatía humana.»
+            </p>
+            <p class="font-mono text-[10px] text-stone-500 uppercase tracking-widest pt-1 border-t border-teal-100">
+              — Cuerpo Médico Veterinario Titulado
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- SECCIÓN 1: WIDGET INTERACTIVO DE TRIAJE MÉDICO EXPRESS (El Corazón de Aristocat & Flores) -->
-  <section id="vet-triaje" class="py-16 sm:py-24 px-4 bg-[#f8f5fb] text-stone-900 border-b border-purple-100">
+  <section id="vet-triaje" class="py-16 sm:py-24 px-4 bg-[#f8fafc] text-stone-900 border-b border-teal-100">
     <div class="max-w-5xl mx-auto">
       <div class="text-center max-w-2xl mx-auto space-y-2 mb-12">
-        <span class="font-mono text-xs uppercase tracking-[0.25em] text-[#581c87] font-bold">FICHA MÉDICA EXPRESS</span>
-        <h2 class="font-serif text-3xl sm:text-5xl font-extrabold text-stone-900">Agenda la Cita de tu Engreído</h2>
+        <span class="font-mono text-xs uppercase tracking-[0.25em] text-teal-700 font-bold">FICHA MÉDICA EXPRESS</span>
+        <h2 class="font-serif text-3xl sm:text-5xl font-extrabold text-stone-950">Agenda la Cita de tu Engreído</h2>
         <p class="text-stone-600 text-sm leading-relaxed">
           Cuéntanos sobre tu mascota para que el médico veterinario tenga su ficha lista antes de tu llegada.
         </p>
       </div>
 
-      <div class="bg-white border-2 border-purple-200 rounded-3xl p-6 sm:p-12 shadow-xl space-y-8">
+      <div class="bg-white border-2 border-teal-200 rounded-3xl p-6 sm:p-12 shadow-xl space-y-8">
         <!-- Paso 1: Tipo de Mascota -->
         <div>
-          <span class="block font-mono text-xs uppercase tracking-wider text-purple-900 font-bold mb-3">
+          <span class="block font-mono text-xs uppercase tracking-wider text-teal-900 font-bold mb-3">
             PASO 1: ¿QUIÉN ES TU ENGREÍDO?
           </span>
           <div class="grid grid-cols-3 gap-3 font-mono text-sm">
-            <button id="vet-pet-dog" type="button" class="vet-pet-btn py-4 px-3 rounded-2xl border-2 border-purple-600 bg-purple-50 text-purple-950 font-bold flex flex-col items-center justify-center gap-2 hover:bg-purple-100 transition">
-              <span class="text-3xl">🐶</span>
+            <button id="vet-pet-dog" type="button" class="vet-pet-btn py-4 px-3 rounded-2xl border-2 border-teal-600 bg-teal-50 text-teal-950 font-bold flex flex-col items-center justify-center gap-2 hover:bg-teal-100 transition cursor-pointer">
+              <svg class="w-8 h-8 text-teal-800" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 10c-1.5 0-3 1.5-3 3.5S4.5 17 6 17m12-7c1.5 0 3 1.5 3 3.5S19.5 17 18 17M6 10c0-3 2.5-6 6-6s6 3 6 6m-12 0v5a6 6 0 0012 0v-5M9 11h.01M15 11h.01M11 14h2" />
+              </svg>
               <span>Perrito</span>
             </button>
-            <button id="vet-pet-cat" type="button" class="vet-pet-btn py-4 px-3 rounded-2xl border-2 border-stone-200 bg-stone-50 text-stone-700 font-bold flex flex-col items-center justify-center gap-2 hover:bg-purple-50 hover:border-purple-300 transition">
-              <span class="text-3xl">🐱</span>
+            <button id="vet-pet-cat" type="button" class="vet-pet-btn py-4 px-3 rounded-2xl border-2 border-stone-200 bg-stone-50 text-stone-700 font-bold flex flex-col items-center justify-center gap-2 hover:bg-teal-50 hover:border-teal-300 transition cursor-pointer">
+              <svg class="w-8 h-8 text-stone-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M4 5l3 4h10l3-4v8a7 7 0 01-14 0V5zM9 13h.01M15 13h.01M11 16h2M2 13h4m12 0h4" />
+              </svg>
               <span>Gatito</span>
             </button>
-            <button id="vet-pet-other" type="button" class="vet-pet-btn py-4 px-3 rounded-2xl border-2 border-stone-200 bg-stone-50 text-stone-700 font-bold flex flex-col items-center justify-center gap-2 hover:bg-purple-50 hover:border-purple-300 transition">
-              <span class="text-3xl">🐰</span>
+            <button id="vet-pet-other" type="button" class="vet-pet-btn py-4 px-3 rounded-2xl border-2 border-stone-200 bg-stone-50 text-stone-700 font-bold flex flex-col items-center justify-center gap-2 hover:bg-teal-50 hover:border-teal-300 transition cursor-pointer">
+              <svg class="w-8 h-8 text-stone-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M7 3c-1.5 2-1 6 1 7m8-7c1.5 2 1 6-1 7m-8 0a6 6 0 108 0c-1-1-7-1-8 0zm3 5h.01M13 15h.01M11 18h2" />
+              </svg>
               <span>Exótico / Otro</span>
             </button>
           </div>
@@ -181,90 +286,140 @@
 
         <!-- Paso 2: Datos del Paciente -->
         <div>
-          <span class="block font-mono text-xs uppercase tracking-wider text-purple-900 font-bold mb-3">
+          <span class="block font-mono text-xs uppercase tracking-wider text-teal-900 font-bold mb-3">
             PASO 2: DATOS DEL PACIENTE
           </span>
           <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 font-mono text-xs">
             <div>
               <label for="vet-patient-name" class="block text-stone-500 uppercase tracking-wider mb-1">Nombre de la Mascota</label>
-              <input id="vet-patient-name" type="text" placeholder="Ej. Toby / Luna" class="w-full bg-stone-50 border border-stone-300 rounded-xl px-4 py-3 text-stone-900 focus:outline-none focus:border-purple-600 font-sans text-sm" />
+              <input id="vet-patient-name" type="text" placeholder="Ej. Toby / Luna" class="w-full bg-stone-50 border border-stone-300 rounded-xl px-4 py-3 text-stone-900 focus:outline-none focus:border-teal-600 font-sans text-sm" />
             </div>
             <div>
               <label for="vet-patient-age" class="block text-stone-500 uppercase tracking-wider mb-1">Edad Aproximada</label>
-              <input id="vet-patient-age" type="text" placeholder="Ej. 2 años / 6 meses" class="w-full bg-stone-50 border border-stone-300 rounded-xl px-4 py-3 text-stone-900 focus:outline-none focus:border-purple-600 font-sans text-sm" />
+              <input id="vet-patient-age" type="text" placeholder="Ej. 2 años / 6 meses" class="w-full bg-stone-50 border border-stone-300 rounded-xl px-4 py-3 text-stone-900 focus:outline-none focus:border-teal-600 font-sans text-sm" />
             </div>
             <div>
               <label for="vet-tutor-name" class="block text-stone-500 uppercase tracking-wider mb-1">Nombre del Tutor / Dueño</label>
-              <input id="vet-tutor-name" type="text" placeholder="Tu nombre" class="w-full bg-stone-50 border border-stone-300 rounded-xl px-4 py-3 text-stone-900 focus:outline-none focus:border-purple-600 font-sans text-sm" />
+              <input id="vet-tutor-name" type="text" placeholder="Tu nombre" class="w-full bg-stone-50 border border-stone-300 rounded-xl px-4 py-3 text-stone-900 focus:outline-none focus:border-teal-600 font-sans text-sm" />
             </div>
           </div>
         </div>
 
         <!-- Paso 3: Motivo de la Consulta -->
         <div>
-          <span class="block font-mono text-xs uppercase tracking-wider text-purple-900 font-bold mb-3">
+          <span class="block font-mono text-xs uppercase tracking-wider text-teal-900 font-bold mb-3">
             PASO 3: MOTIVO DE ATENCIÓN
           </span>
           <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 text-xs font-mono">
-            <label class="flex items-center gap-3 p-3.5 rounded-xl border border-stone-200 bg-stone-50 hover:bg-purple-50 cursor-pointer transition">
-              <input type="radio" name="vet-reason" value="Consulta Médica General" checked class="w-4 h-4 text-purple-600" />
+            <label class="flex items-center gap-3 p-3.5 rounded-xl border border-stone-200 bg-stone-50 hover:bg-teal-50 cursor-pointer transition">
+              <input type="radio" name="vet-reason" value="Consulta Médica General" checked class="w-4 h-4 text-teal-600" />
               <div>
-                <span class="font-bold text-stone-900 block">🩺 Consulta Médica General</span>
-                <span class="text-stone-500 text-[11px] font-sans">Chequeo, inapetencia, malestar</span>
+                <span class="font-bold text-stone-900 flex items-center gap-1.5">
+                  <svg class="w-4 h-4 text-teal-700 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                  Consulta Médica General
+                </span>
+                <span class="text-stone-500 text-[11px] font-sans block mt-0.5">Chequeo, inapetencia, malestar</span>
               </div>
             </label>
 
-            <label class="flex items-center gap-3 p-3.5 rounded-xl border border-stone-200 bg-stone-50 hover:bg-purple-50 cursor-pointer transition">
-              <input type="radio" name="vet-reason" value="Vacunas y Desparasitación" class="w-4 h-4 text-purple-600" />
+            <label class="flex items-center gap-3 p-3.5 rounded-xl border border-stone-200 bg-stone-50 hover:bg-teal-50 cursor-pointer transition">
+              <input type="radio" name="vet-reason" value="Vacunas y Desparasitación" class="w-4 h-4 text-teal-600" />
               <div>
-                <span class="font-bold text-stone-900 block">💉 Vacunación &amp; Parásitos</span>
-                <span class="text-stone-500 text-[11px] font-sans">Triple, Séxtuple, Antirrábica</span>
+                <span class="font-bold text-stone-900 flex items-center gap-1.5">
+                  <svg class="w-4 h-4 text-teal-700 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/></svg>
+                  Vacunación &amp; Parásitos
+                </span>
+                <span class="text-stone-500 text-[11px] font-sans block mt-0.5">Triple, Séxtuple, Antirrábica</span>
               </div>
             </label>
 
-            <label class="flex items-center gap-3 p-3.5 rounded-xl border border-stone-200 bg-stone-50 hover:bg-purple-50 cursor-pointer transition">
-              <input type="radio" name="vet-reason" value="Baño Medicado y Grooming" class="w-4 h-4 text-purple-600" />
+            <label class="flex items-center gap-3 p-3.5 rounded-xl border border-stone-200 bg-stone-50 hover:bg-teal-50 cursor-pointer transition">
+              <input type="radio" name="vet-reason" value="Baño Medicado y Grooming" class="w-4 h-4 text-teal-600" />
               <div>
-                <span class="font-bold text-stone-900 block">🛁 Baño Medicado &amp; Spa</span>
-                <span class="text-stone-500 text-[11px] font-sans">Dermatológico, corte higiénico</span>
+                <span class="font-bold text-stone-900 flex items-center gap-1.5">
+                  <svg class="w-4 h-4 text-teal-700 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/></svg>
+                  Baño Medicado &amp; Spa
+                </span>
+                <span class="text-stone-500 text-[11px] font-sans block mt-0.5">Dermatológico, corte higiénico</span>
               </div>
             </label>
 
-            <label class="flex items-center gap-3 p-3.5 rounded-xl border border-stone-200 bg-stone-50 hover:bg-purple-50 cursor-pointer transition">
-              <input type="radio" name="vet-reason" value="Profilaxis Dental" class="w-4 h-4 text-purple-600" />
+            <label class="flex items-center gap-3 p-3.5 rounded-xl border border-stone-200 bg-stone-50 hover:bg-teal-50 cursor-pointer transition">
+              <input type="radio" name="vet-reason" value="Profilaxis Dental" class="w-4 h-4 text-teal-600" />
               <div>
-                <span class="font-bold text-stone-900 block">🦷 Profilaxis Dental</span>
-                <span class="text-stone-500 text-[11px] font-sans">Limpieza de sarro por ultrasonido</span>
+                <span class="font-bold text-stone-900 flex items-center gap-1.5">
+                  <svg class="w-4 h-4 text-teal-700 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                  Profilaxis Dental
+                </span>
+                <span class="text-stone-500 text-[11px] font-sans block mt-0.5">Limpieza de sarro por ultrasonido</span>
               </div>
             </label>
 
-            <label class="flex items-center gap-3 p-3.5 rounded-xl border border-stone-200 bg-stone-50 hover:bg-purple-50 cursor-pointer transition">
-              <input type="radio" name="vet-reason" value="Cirugía o Esterilización" class="w-4 h-4 text-purple-600" />
+            <label class="flex items-center gap-3 p-3.5 rounded-xl border border-stone-200 bg-stone-50 hover:bg-teal-50 cursor-pointer transition">
+              <input type="radio" name="vet-reason" value="Cirugía o Esterilización" class="w-4 h-4 text-teal-600" />
               <div>
-                <span class="font-bold text-stone-900 block">🏥 Cirugía / Esterilización</span>
-                <span class="text-stone-500 text-[11px] font-sans">Con anestesia inhalatoria segura</span>
+                <span class="font-bold text-stone-900 flex items-center gap-1.5">
+                  <svg class="w-4 h-4 text-teal-700 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4"/></svg>
+                  Cirugía / Esterilización
+                </span>
+                <span class="text-stone-500 text-[11px] font-sans block mt-0.5">Con anestesia inhalatoria segura</span>
               </div>
             </label>
 
             <label class="flex items-center gap-3 p-3.5 rounded-xl border border-red-300 bg-red-50 hover:bg-red-100 cursor-pointer transition">
               <input type="radio" name="vet-reason" value="Urgencia Médica Inmediata" class="w-4 h-4 text-red-600" />
               <div>
-                <span class="font-bold text-red-900 block">🚨 Urgencia Inmediata</span>
-                <span class="text-red-700 text-[11px] font-sans">Atención prioritaria inmediata</span>
+                <span class="font-bold text-red-900 flex items-center gap-1.5">
+                  <svg class="w-4 h-4 text-red-600 shrink-0 animate-pulse" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>
+                  Urgencia Inmediata
+                </span>
+                <span class="text-red-700 text-[11px] font-sans block mt-0.5">Atención prioritaria inmediata</span>
               </div>
             </label>
           </div>
         </div>
 
+        <!-- Ficha Clínica Digital en Tiempo Real -->
+        <div id="vet-live-card" class="p-5 rounded-2xl bg-gradient-to-r from-teal-800 via-teal-900 to-emerald-900 text-white border-2 border-teal-400 shadow-xl space-y-3 font-mono">
+          <div class="flex items-center justify-between border-b border-teal-700/80 pb-2.5">
+            <div class="flex items-center gap-2">
+              <span class="w-2.5 h-2.5 rounded-full bg-teal-400 animate-pulse"></span>
+              <span class="text-[11px] text-teal-200 font-bold uppercase tracking-wider">FICHA CLÍNICA DIGITAL EN VIVO</span>
+            </div>
+            <span class="text-[10px] text-teal-200 bg-teal-950/80 px-2.5 py-0.5 rounded-full border border-teal-600">CMVP COLEGIADO</span>
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs">
+            <div>
+              <span class="text-[10px] text-teal-300 block uppercase">PACIENTE:</span>
+              <span id="vet-live-patient" class="font-bold text-white text-sm">Perrito — "Toby"</span>
+            </div>
+            <div>
+              <span class="text-[10px] text-teal-300 block uppercase">EDAD ESTIMADA:</span>
+              <span id="vet-live-age" class="font-bold text-white">2 años</span>
+            </div>
+            <div>
+              <span class="text-[10px] text-teal-300 block uppercase">MOTIVO DE ATENCIÓN:</span>
+              <span id="vet-live-reason" class="font-bold text-teal-300">Consulta Médica General</span>
+            </div>
+          </div>
+          <div class="pt-1 flex flex-col sm:flex-row sm:items-center justify-between gap-1 text-[11px] text-teal-200 border-t border-teal-700/60">
+            <span id="vet-live-tutor">Tutor: Pendiente de ingreso</span>
+            <span class="text-teal-300 font-bold">✓ Lista para despacho inmediato al WhatsApp del Doctor</span>
+          </div>
+        </div>
+
         <!-- Paso 4: Botón WhatsApp -->
-        <div class="pt-4 border-t border-purple-100 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div class="pt-4 border-t border-teal-100 flex flex-col sm:flex-row items-center justify-between gap-4">
           <div class="text-xs text-stone-500 font-mono">
             <span>✓ Ficha enviada directamente al médico de turno</span>
-            <span class="block text-purple-900 font-bold mt-0.5">Sin tiempos de espera innecesarios en sala</span>
+            <span class="block text-teal-900 font-bold mt-0.5">Sin tiempos de espera innecesarios en sala</span>
           </div>
 
-          <button id="btn-vet-send-whatsapp" type="button" class="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-[#581c87] to-[#7e22ce] hover:from-[#4c1973] hover:to-[#6b21a8] text-white font-bold font-mono text-xs uppercase tracking-[0.16em] rounded-full shadow-lg shadow-purple-900/30 flex items-center justify-center gap-3 cursor-pointer transition transform hover:scale-[1.02]">
-            <span>🐾 Enviar Ficha a WhatsApp</span>
+          <button id="btn-vet-send-whatsapp" type="button" class="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-teal-600 to-emerald-600 hover:from-teal-700 hover:to-emerald-700 text-white font-bold font-mono text-xs uppercase tracking-[0.16em] rounded-full shadow-lg shadow-teal-900/20 flex items-center justify-center gap-3 cursor-pointer transition transform hover:scale-[1.02]">
+            <span class="inline-flex items-center gap-2">
+              <svg class="w-4 h-4 fill-none stroke-current" stroke-width="2.2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+              Enviar Ficha a WhatsApp
+            </span>
             <span>→</span>
           </button>
         </div>
@@ -272,13 +427,276 @@
     </div>
   </section>
 
+  <!-- PROTOCOLOS PREVENTIVOS POR EDAD (Estilo Aristocat) -->
+  <section id="vet-protocolos" class="py-16 sm:py-20 px-4 bg-white text-stone-900 border-b border-teal-100">
+    <div class="max-w-6xl mx-auto space-y-10">
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
+        <div>
+          <span id="vet-plans-kicker" class="font-mono text-xs uppercase tracking-[0.25em] text-teal-700 font-bold">MEDICINA PREVENTIVA INTEGRAL</span>
+          <h2 id="vet-plans-title" class="font-serif text-3xl sm:text-5xl font-extrabold text-stone-950 mt-1">Planes de Salud por Etapa de Vida</h2>
+        </div>
+        <p id="vet-plans-desc" class="text-stone-600 text-sm max-w-md">
+          Diseñados según las pautas clínicas de la Asociación Mundial de Veterinarios de Pequeños Animales (WSAVA).
+        </p>
+      </div>
+
+      <div id="vet-plans-container" class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Plan Cachorro -->
+        <div class="rounded-3xl border-2 border-teal-200 bg-teal-50/40 p-6 space-y-4 hover:border-teal-500 transition shadow-lg flex flex-col justify-between">
+          <div class="space-y-3">
+            <div class="flex justify-between items-start">
+              <span class="bg-teal-700 text-white font-mono text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-full">0 A 12 MESES</span>
+              <span class="font-mono text-xl font-extrabold text-teal-950">S/ 65</span>
+            </div>
+            <h3 class="font-serif text-2xl font-bold text-stone-900">Plan Inmunidad Cachorro / Kitten</h3>
+            <p class="text-xs text-stone-600">Esquema inicial de vacunas esenciales (Séxtuple o Triple felina) + desparasitación interna con control de peso y carnet de salud.</p>
+            <ul class="text-xs font-mono text-stone-700 space-y-1.5 pt-2">
+              <li class="flex items-center gap-1.5"><span class="text-teal-600 font-bold">✓</span> Vacuna Séxtuple / Triple felina</li>
+              <li class="flex items-center gap-1.5"><span class="text-teal-600 font-bold">✓</span> Dosis antiparasitaria interna</li>
+              <li class="flex items-center gap-1.5"><span class="text-teal-600 font-bold">✓</span> Carnet oficial y guía nutricional</li>
+            </ul>
+          </div>
+          <button type="button" data-vet-plan-id="plan-cachorro" data-vet-plan-name="Plan Inmunidad Cachorro (Vacuna + Desparasitación)" data-vet-plan-price="65" class="btn-add-vet-plan w-full py-3 bg-teal-700 hover:bg-teal-800 text-white font-mono text-xs uppercase font-bold rounded-xl transition cursor-pointer shadow-md">
+            + Agendar Plan Cachorro
+          </button>
+        </div>
+
+        <!-- Plan Adulto -->
+        <div class="rounded-3xl border-2 border-emerald-300 bg-emerald-50/50 p-6 space-y-4 hover:border-emerald-500 transition shadow-xl flex flex-col justify-between relative">
+          <div class="absolute -top-3.5 right-6 bg-emerald-600 text-white font-mono text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider shadow">
+            ⭐ RECOMENDADO ANUAL
+          </div>
+          <div class="space-y-3">
+            <div class="flex justify-between items-start">
+              <span class="bg-emerald-700 text-white font-mono text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-full">1 A 7 AÑOS</span>
+              <span class="font-mono text-xl font-extrabold text-emerald-950">S/ 85</span>
+            </div>
+            <h3 class="font-serif text-2xl font-bold text-stone-900">Plan Bienestar &amp; Protección Adulto</h3>
+            <p class="text-xs text-stone-600">Refuerzo anual antirrábico y séxtuple, chequeo odontológico con lámpara uv y aplicación de pipeta antipulgas de larga duración.</p>
+            <ul class="text-xs font-mono text-stone-700 space-y-1.5 pt-2">
+              <li class="flex items-center gap-1.5"><span class="text-teal-600 font-bold">✓</span> Refuerzo de vacunación anual</li>
+              <li class="flex items-center gap-1.5"><span class="text-teal-600 font-bold">✓</span> Evaluación dental y de oídos</li>
+              <li class="flex items-center gap-1.5"><span class="text-teal-600 font-bold">✓</span> Pipeta antipulgas / garrapatas</li>
+            </ul>
+          </div>
+          <button type="button" data-vet-plan-id="plan-adulto" data-vet-plan-name="Plan Bienestar Adulto (Refuerzo + Pipeta + Chequeo)" data-vet-plan-price="85" class="btn-add-vet-plan w-full py-3 bg-emerald-600 hover:bg-emerald-700 text-white font-mono text-xs uppercase font-bold rounded-xl transition cursor-pointer shadow-md">
+            + Agendar Plan Adulto
+          </button>
+        </div>
+
+        <!-- Plan Senior -->
+        <div class="rounded-3xl border-2 border-teal-200 bg-teal-50/40 p-6 space-y-4 hover:border-teal-500 transition shadow-lg flex flex-col justify-between">
+          <div class="space-y-3">
+            <div class="flex justify-between items-start">
+              <span class="bg-teal-800 text-white font-mono text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-full">8+ AÑOS</span>
+              <span class="font-mono text-xl font-extrabold text-teal-950">S/ 120</span>
+            </div>
+            <h3 class="font-serif text-2xl font-bold text-stone-900">Plan Senior &amp; Longevidad Geriátrica</h3>
+            <p class="text-xs text-stone-600">Chequeo geriátrico integral para detectar a tiempo artrosis, problemas renales o cardíacos, con perfil de sangre y ecografía rápida.</p>
+            <ul class="text-xs font-mono text-stone-700 space-y-1.5 pt-2">
+              <li class="flex items-center gap-1.5"><span class="text-teal-600 font-bold">✓</span> Chequeo articular y de movilidad</li>
+              <li class="flex items-center gap-1.5"><span class="text-teal-600 font-bold">✓</span> Descarte renal y hepático</li>
+              <li class="flex items-center gap-1.5"><span class="text-teal-600 font-bold">✓</span> Suplemento vitamínico geriátrico</li>
+            </ul>
+          </div>
+          <button type="button" data-vet-plan-id="plan-senior" data-vet-plan-name="Plan Senior Geriátrico (Chequeo Renal + Articular)" data-vet-plan-price="120" class="btn-add-vet-plan w-full py-3 bg-teal-800 hover:bg-teal-900 text-white font-mono text-xs uppercase font-bold rounded-xl transition cursor-pointer shadow-md">
+            + Agendar Plan Senior
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CALCULADORA DE VACUNAS & DESPARASITACIÓN (Herramienta Preventiva para Tutores) -->
+  <section id="vet-calculadora-vacunas" class="py-16 sm:py-20 px-4 bg-[#f0fdfa]/40 text-stone-900 border-b border-teal-100">
+    <div class="max-w-5xl mx-auto space-y-8">
+      <div class="text-center max-w-2xl mx-auto space-y-2">
+        <span class="font-mono text-xs uppercase tracking-[0.25em] text-teal-700 font-bold">HERRAMIENTA PARA TUTORES</span>
+        <h2 class="font-serif text-3xl sm:text-5xl font-extrabold text-stone-950">¿Qué Vacuna o Chequeo le Toca a tu Mascota?</h2>
+        <p class="text-stone-600 text-sm leading-relaxed">
+          Selecciona la etapa de vida de tu engreído y obtén de inmediato el cronograma clínico recomendado según la WSAVA.
+        </p>
+      </div>
+
+      <div class="bg-white border-2 border-teal-200 rounded-3xl p-6 sm:p-10 shadow-xl space-y-8">
+        <div>
+          <label class="block font-mono text-xs uppercase tracking-wider text-teal-900 font-bold mb-3">
+            SELECCIONA LA ETAPA DE VIDA DE TU ENGREÍDO:
+          </label>
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 font-mono text-xs">
+            <button type="button" data-vcalc-age="cachorro" class="vet-vcalc-btn py-3.5 px-3 rounded-2xl border-2 border-teal-600 bg-teal-50 text-teal-950 font-bold transition cursor-pointer text-center shadow flex flex-col items-center justify-center">
+              <svg class="w-5 h-5 mb-1 text-teal-700" fill="currentColor" viewBox="0 0 24 24"><path d="M12 10c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm-4.5-1c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm9 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm-4.5 6.5c-2.33 0-4.32 1.45-5.12 3.5h10.24c-.8-2.05-2.79-3.5-5.12-3.5zM4.5 13c-.83 0-1.5.67-1.5 1.5S3.67 16 4.5 16s1.5-.67 1.5-1.5S5.33 13 4.5 13zm15 0c-.83 0-1.5.67-1.5 1.5s.67 1.5 1.5 1.5 1.5-.67 1.5-1.5-.67-1.5-1.5-1.5z"/></svg>
+              <span class="block font-bold">Cachorro / Kitten</span>
+              <span class="text-[10px] text-teal-700 font-normal">Menor de 1 año</span>
+            </button>
+            <button type="button" data-vcalc-age="joven" class="vet-vcalc-btn py-3.5 px-3 rounded-2xl border border-stone-200 bg-stone-50 text-stone-700 font-bold hover:border-teal-400 transition cursor-pointer text-center flex flex-col items-center justify-center">
+              <svg class="w-5 h-5 mb-1 text-stone-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+              <span class="block font-bold">Joven / Adulto</span>
+              <span class="text-[10px] text-stone-500 font-normal">1 a 7 años</span>
+            </button>
+            <button type="button" data-vcalc-age="senior" class="vet-vcalc-btn py-3.5 px-3 rounded-2xl border border-stone-200 bg-stone-50 text-stone-700 font-bold hover:border-teal-400 transition cursor-pointer text-center flex flex-col items-center justify-center">
+              <svg class="w-5 h-5 mb-1 text-stone-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
+              <span class="block font-bold">Senior / Abuelito</span>
+              <span class="text-[10px] text-stone-500 font-normal">Mayor de 8 años</span>
+            </button>
+            <button type="button" data-vcalc-age="viajero" class="vet-vcalc-btn py-3.5 px-3 rounded-2xl border border-stone-200 bg-stone-50 text-stone-700 font-bold hover:border-teal-400 transition cursor-pointer text-center flex flex-col items-center justify-center">
+              <svg class="w-5 h-5 mb-1 text-stone-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              <span class="block font-bold">Viaje / Certificado</span>
+              <span class="text-[10px] text-stone-500 font-normal">Nacional / SENASA</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Tarjeta de Resultado Dinámico -->
+        <div class="p-6 sm:p-8 rounded-2xl bg-gradient-to-r from-teal-800 via-teal-900 to-emerald-900 text-white shadow-xl space-y-4 font-mono">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between border-b border-teal-700/60 pb-3 gap-2">
+            <div>
+              <span class="text-xs uppercase tracking-widest text-teal-300 font-bold flex items-center gap-2">
+                <span class="w-2.5 h-2.5 rounded-full bg-teal-400 animate-pulse"></span>
+                ESQUEMA PREVENTIVO RECOMENDADO
+              </span>
+              <h3 id="vet-vcalc-title" class="font-serif text-2xl font-bold text-white mt-1">Esquema Primovacunación Cachorro</h3>
+            </div>
+            <span id="vet-vcalc-freq" class="text-xs bg-teal-500/20 text-teal-300 border border-teal-500/40 px-3 py-1 rounded-full self-start sm:self-auto font-bold">
+              Cada 21 días hasta completar ciclo
+            </span>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs font-sans">
+            <div class="bg-teal-950/60 p-4 rounded-xl border border-teal-700/60 space-y-1.5">
+              <span class="font-mono text-teal-300 font-bold uppercase text-[11px] flex items-center gap-1.5">
+                <svg class="w-3.5 h-3.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/></svg>
+                VACUNAS OBLIGATORIAS:
+              </span>
+              <p id="vet-vcalc-vacunas" class="text-stone-200 leading-relaxed">
+                • Parvovirus + Distemper canino (Séxtuple)<br />
+                • Refuerzo de Leptospira y Hepatitis<br />
+                • Antirrábica a partir de los 3 meses con carnet oficial.
+              </p>
+            </div>
+            <div class="bg-teal-950/60 p-4 rounded-xl border border-teal-700/60 space-y-1.5">
+              <span class="font-mono text-teal-300 font-bold uppercase text-[11px] flex items-center gap-1.5">
+                <svg class="w-3.5 h-3.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+                DESPARASITACIÓN &amp; CUIDADO:
+              </span>
+              <p id="vet-vcalc-despar" class="text-stone-200 leading-relaxed">
+                • Desparasitación interna en suspensión según peso cada 15-30 días.<br />
+                • Inicio de protección antipulgas y garrapatas segura para cachorros.
+              </p>
+            </div>
+          </div>
+
+          <div class="pt-2 flex flex-col sm:flex-row items-center justify-between gap-3 border-t border-teal-700/60">
+            <span class="text-stone-200 text-xs font-sans">¿Tu engreído necesita este control? Llena la ficha y asegura su atención médica:</span>
+            <a href="#vet-triaje" class="w-full sm:w-auto px-6 py-3 bg-teal-400 hover:bg-teal-300 text-stone-950 font-bold text-xs uppercase tracking-wider rounded-xl transition text-center shadow-lg font-mono">
+              Completar Ficha del Paciente →
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEMÁFORO RÁPIDO DE URGENCIAS MÉDICAS (Triaje de Tranquilidad) -->
+  <section id="vet-semaforo-urgencias" class="py-16 sm:py-20 px-4 bg-[#f8fafc] text-stone-900 border-b border-teal-100">
+    <div class="max-w-5xl mx-auto space-y-10">
+      <div class="text-center max-w-2xl mx-auto space-y-2">
+        <span class="font-mono text-xs uppercase tracking-[0.25em] text-teal-700 font-bold">TRIAJE CLÍNICO DE RESPALDO</span>
+        <h2 class="font-serif text-3xl sm:text-5xl font-extrabold text-stone-950">¿Cuándo Acudir de Emergencia?</h2>
+        <p class="text-stone-600 text-sm leading-relaxed">
+          Identifica los síntomas de alerta de tu mascota para saber si requiere atención inmediata en nuestro tópico.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 font-mono text-xs">
+        <!-- Nivel Rojo -->
+        <div class="rounded-2xl border-2 border-red-300 bg-red-50/80 p-6 space-y-4 flex flex-col justify-between shadow-md">
+          <div class="space-y-3">
+            <div class="flex items-center justify-between">
+              <span class="bg-red-600 text-white text-[10px] font-bold px-2.5 py-1 rounded-full uppercase inline-flex items-center gap-1.5">
+                <span class="w-2 h-2 rounded-full bg-white animate-ping"></span>
+                NIVEL 1 · URGENCIA CRÍTICA
+              </span>
+              <span class="w-2.5 h-2.5 rounded-full bg-red-500 animate-ping"></span>
+            </div>
+            <h3 class="font-serif text-xl font-bold text-stone-950 font-sans">Atención Inmediata</h3>
+            <ul class="text-stone-700 text-xs font-sans space-y-1.5 pt-1">
+              <li>• Dificultad severa para respirar o lengua azul</li>
+              <li>• Convulsiones o pérdida de consciencia</li>
+              <li>• Traumatismo por atropello o caída de altura</li>
+              <li>• Ingestión confirmada de veneno, chocolate o fármacos</li>
+            </ul>
+          </div>
+          <a id="vet-urgent-call-btn" href="#" class="w-full py-3 bg-red-600 hover:bg-red-700 text-white font-bold text-center uppercase tracking-wider rounded-xl transition shadow block">
+            <span class="inline-flex items-center justify-center gap-2">
+              <svg class="w-4 h-4 fill-none stroke-current" stroke-width="2.2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+              Llamar Urgencias Directo
+            </span>
+          </a>
+        </div>
+
+        <!-- Nivel Amarillo -->
+        <div class="rounded-2xl border-2 border-amber-300 bg-amber-50/80 p-6 space-y-4 flex flex-col justify-between shadow-md">
+          <div class="space-y-3">
+            <div class="flex items-center justify-between">
+              <span class="bg-amber-500 text-stone-950 text-[10px] font-bold px-2.5 py-1 rounded-full uppercase inline-flex items-center gap-1.5">
+                <span class="w-2 h-2 rounded-full bg-stone-950"></span>
+                NIVEL 2 · PRIORITARIO
+              </span>
+              <span class="w-2.5 h-2.5 rounded-full bg-amber-500"></span>
+            </div>
+            <h3 class="font-serif text-xl font-bold text-stone-950 font-sans">Atención en las Próximas Horas</h3>
+            <ul class="text-stone-700 text-xs font-sans space-y-1.5 pt-1">
+              <li>• Vómitos o diarrea continua más de 24 horas</li>
+              <li>• Inapetencia total y decaimiento marcado</li>
+              <li>• Cojera súbita con quejido o dolor al tacto</li>
+              <li>• Secreción ocular purulenta o rascado excesivo de oídos</li>
+            </ul>
+          </div>
+          <a href="#vet-triaje" class="w-full py-3 bg-amber-500 hover:bg-amber-600 text-stone-950 font-bold text-center uppercase tracking-wider rounded-xl transition shadow block">
+            <span class="inline-flex items-center justify-center gap-2">
+              <svg class="w-4 h-4 fill-none stroke-current" stroke-width="2.2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+              Agendar Consulta Prioritaria
+            </span>
+          </a>
+        </div>
+
+        <!-- Nivel Verde -->
+        <div class="rounded-2xl border-2 border-teal-300 bg-teal-50/80 p-6 space-y-4 flex flex-col justify-between shadow-md">
+          <div class="space-y-3">
+            <div class="flex items-center justify-between">
+              <span class="bg-teal-600 text-white text-[10px] font-bold px-2.5 py-1 rounded-full uppercase inline-flex items-center gap-1.5">
+                <span class="w-2 h-2 rounded-full bg-white"></span>
+                NIVEL 3 · PROGRAMADO
+              </span>
+              <span class="w-2.5 h-2.5 rounded-full bg-teal-500"></span>
+            </div>
+            <h3 class="font-serif text-xl font-bold text-stone-950 font-sans">Consulta Médica Preventiva</h3>
+            <ul class="text-stone-700 text-xs font-sans space-y-1.5 pt-1">
+              <li>• Vacunación anual y refuerzos de carnet</li>
+              <li>• Baño medicado y corte higiénico Fear-Free</li>
+              <li>• Limpieza dental preventiva con ultrasonido</li>
+              <li>• Control de peso y orientación nutricional</li>
+            </ul>
+          </div>
+          <a href="#vet-protocolos" class="w-full py-3 bg-teal-600 hover:bg-teal-700 text-white font-bold text-center uppercase tracking-wider rounded-xl transition shadow block">
+            <span class="inline-flex items-center justify-center gap-2">
+              <svg class="w-4 h-4 fill-none stroke-current" stroke-width="2.2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              Ver Planes Preventivos →
+            </span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- SECCIÓN 2: PILARES CLÍNICOS & ESPECIALIDADES (Estilo Aristocat) -->
-  <section id="vet-servicios" class="py-16 sm:py-24 px-4 bg-white text-stone-900 border-b border-purple-100">
+  <section id="vet-servicios" class="py-16 sm:py-24 px-4 bg-white text-stone-900 border-b border-teal-100">
     <div class="max-w-6xl mx-auto space-y-12">
       <div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
         <div>
-          <span class="font-mono text-xs uppercase tracking-[0.25em] text-teal-600 font-bold">HOSPITAL &amp; CONSULTORIOS</span>
-          <h2 class="font-serif text-3xl sm:text-5xl font-extrabold text-stone-900 mt-1">Especialidades Médicas</h2>
+          <span class="font-mono text-xs uppercase tracking-[0.25em] text-teal-700 font-bold">HOSPITAL &amp; CONSULTORIOS</span>
+          <h2 class="font-serif text-3xl sm:text-5xl font-extrabold text-stone-950 mt-1">Especialidades Médicas</h2>
         </div>
         <p class="text-stone-600 text-sm max-w-md">
           Infraestructura médica completa diseñada para diagnósticos certeros y tratamientos compasivos.
@@ -287,9 +705,9 @@
 
       <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
         <!-- Pilar 1 -->
-        <div class="p-6 rounded-2xl border-2 border-stone-100 hover:border-purple-300 bg-purple-50/40 transition space-y-4">
-          <div class="w-12 h-12 rounded-xl bg-purple-600 text-white flex items-center justify-center text-2xl shadow-md">
-            🩺
+        <div class="p-6 rounded-2xl border-2 border-teal-100 hover:border-teal-300 bg-teal-50/40 transition space-y-4 shadow-xs">
+          <div class="w-12 h-12 rounded-xl bg-teal-700 text-white flex items-center justify-center text-2xl shadow-md">
+            <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
           </div>
           <h3 class="font-serif text-xl font-bold text-stone-900">Medicina General &amp; Vacunatorio</h3>
           <p class="text-xs text-stone-600 leading-relaxed">
@@ -298,9 +716,9 @@
         </div>
 
         <!-- Pilar 2 -->
-        <div class="p-6 rounded-2xl border-2 border-stone-100 hover:border-teal-300 bg-teal-50/40 transition space-y-4">
-          <div class="w-12 h-12 rounded-xl bg-teal-600 text-white flex items-center justify-center text-2xl shadow-md">
-            🏥
+        <div class="p-6 rounded-2xl border-2 border-emerald-100 hover:border-emerald-300 bg-emerald-50/40 transition space-y-4 shadow-xs">
+          <div class="w-12 h-12 rounded-xl bg-emerald-700 text-white flex items-center justify-center text-2xl shadow-md">
+            <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
           </div>
           <h3 class="font-serif text-xl font-bold text-stone-900">Cirugía &amp; Quirófano</h3>
           <p class="text-xs text-stone-600 leading-relaxed">
@@ -309,9 +727,9 @@
         </div>
 
         <!-- Pilar 3 -->
-        <div class="p-6 rounded-2xl border-2 border-stone-100 hover:border-purple-300 bg-purple-50/40 transition space-y-4">
-          <div class="w-12 h-12 rounded-xl bg-purple-600 text-white flex items-center justify-center text-2xl shadow-md">
-            🛁
+        <div class="p-6 rounded-2xl border-2 border-teal-100 hover:border-teal-300 bg-teal-50/40 transition space-y-4 shadow-xs">
+          <div class="w-12 h-12 rounded-xl bg-teal-700 text-white flex items-center justify-center text-2xl shadow-md">
+            <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/></svg>
           </div>
           <h3 class="font-serif text-xl font-bold text-stone-900">Grooming Spa &amp; Baño Medicado</h3>
           <p class="text-xs text-stone-600 leading-relaxed">
@@ -320,9 +738,9 @@
         </div>
 
         <!-- Pilar 4 -->
-        <div class="p-6 rounded-2xl border-2 border-stone-100 hover:border-teal-300 bg-teal-50/40 transition space-y-4">
-          <div class="w-12 h-12 rounded-xl bg-teal-600 text-white flex items-center justify-center text-2xl shadow-md">
-            🔬
+        <div class="p-6 rounded-2xl border-2 border-emerald-100 hover:border-emerald-300 bg-emerald-50/40 transition space-y-4 shadow-xs">
+          <div class="w-12 h-12 rounded-xl bg-emerald-700 text-white flex items-center justify-center text-2xl shadow-md">
+            <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"/></svg>
           </div>
           <h3 class="font-serif text-xl font-bold text-stone-900">Laboratorio &amp; Ecografía</h3>
           <p class="text-xs text-stone-600 leading-relaxed">
@@ -334,12 +752,12 @@
   </section>
 
   <!-- SECCIÓN 3: TARIFARIO TRANSPARENTE DE SALUD -->
-  <section id="vet-tarifario" class="py-16 sm:py-24 px-4 bg-[#fbf9fd] text-stone-900 border-b border-purple-100">
+  <section id="vet-tarifario" class="py-16 sm:py-24 px-4 bg-[#f8fafc] text-stone-900 border-b border-teal-100">
     <div class="max-w-6xl mx-auto">
-      <div class="flex flex-col md:flex-row md:items-end justify-between pb-8 border-b border-purple-200 gap-4">
+      <div class="flex flex-col md:flex-row md:items-end justify-between pb-8 border-b border-teal-200 gap-4">
         <div>
-          <span class="font-mono text-xs uppercase tracking-[0.2em] text-[#581c87] font-bold">PRECIOS CLAROS Y TRANSPARENTES</span>
-          <h2 class="font-serif text-3xl sm:text-5xl font-extrabold text-stone-900 mt-1">Tarifario de Servicios Médicos</h2>
+          <span class="font-mono text-xs uppercase tracking-[0.2em] text-teal-700 font-bold">PRECIOS CLAROS Y TRANSPARENTES</span>
+          <h2 class="font-serif text-3xl sm:text-5xl font-extrabold text-stone-950 mt-1">Tarifario de Servicios Médicos</h2>
         </div>
         <div id="vet-category-tabs" class="flex flex-wrap gap-2">
           <!-- Pestañas de categorías inyectadas por JS -->
@@ -348,31 +766,31 @@
 
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 pt-10 items-start">
         <div class="lg:col-span-8">
-          <div id="vet-services-list" class="divide-y divide-purple-100 border-t border-purple-200">
+          <div id="vet-services-list" class="divide-y divide-teal-100 border-t border-teal-200">
             <!-- Inyectado por JS -->
           </div>
         </div>
 
         <!-- Tarjeta de Confianza Médica y Contacto -->
-        <div class="lg:col-span-4 bg-white border-2 border-purple-300 p-6 sm:p-8 rounded-2xl shadow-lg space-y-4">
-          <div class="border-b border-purple-100 pb-4">
-            <span class="font-mono text-[10px] uppercase tracking-wider text-teal-600 font-bold">GARANTÍA CLÍNICA</span>
-            <h3 class="font-serif text-xl font-bold text-purple-950 mt-1">Atención Médica Colegiada</h3>
+        <div class="lg:col-span-4 bg-white border-2 border-teal-300 p-6 sm:p-8 rounded-2xl shadow-xl space-y-4">
+          <div class="border-b border-teal-100 pb-4">
+            <span class="font-mono text-[10px] uppercase tracking-wider text-teal-700 font-bold">GARANTÍA CLÍNICA</span>
+            <h3 class="font-serif text-xl font-bold text-stone-950 mt-1">Atención Médica Colegiada</h3>
             <p class="text-xs text-stone-600 mt-1">Egresados de la Universidad Nacional Mayor de San Marcos con colegiatura activa CMVP.</p>
           </div>
 
           <div class="space-y-3 text-xs font-mono">
-            <div class="p-3 bg-purple-50 rounded-xl">
-              <span class="text-purple-900 font-bold block">CONSULTORIO VETERINARIO:</span>
+            <div class="p-3 bg-teal-50/80 rounded-xl border border-teal-100">
+              <span class="text-teal-900 font-bold block">CONSULTORIO VETERINARIO:</span>
               <span id="vet-ticket-name" class="text-stone-700">Veterinaria Mikelas</span>
             </div>
-            <div class="p-3 bg-teal-50 rounded-xl">
-              <span class="text-teal-900 font-bold block">WHATSAPP / URGENCIAS:</span>
+            <div class="p-3 bg-emerald-50/80 rounded-xl border border-emerald-100">
+              <span class="text-emerald-900 font-bold block">WHATSAPP / URGENCIAS:</span>
               <span id="vet-ticket-phone" class="text-stone-700 font-bold">Teléfono</span>
             </div>
           </div>
 
-          <a href="#vet-triaje" class="block text-center py-3.5 bg-gradient-to-r from-[#581c87] to-[#7e22ce] text-white font-bold font-mono text-xs uppercase tracking-wider rounded-xl transition hover:brightness-110 shadow-md">
+          <a href="#vet-triaje" class="block text-center py-3.5 bg-teal-600 hover:bg-teal-700 text-white font-bold font-mono text-xs uppercase tracking-wider rounded-xl transition shadow-md">
             Llenar Ficha del Paciente
           </a>
         </div>
@@ -381,13 +799,13 @@
   </section>
 
   <!-- SECCIÓN 4: CLÍNICA, SEDE & MAPA -->
-  <section id="vet-ubicacion" class="py-16 sm:py-24 px-4 bg-white text-stone-900 border-b border-purple-100">
+  <section id="vet-ubicacion" class="py-16 sm:py-24 px-4 bg-white text-stone-900 border-b border-teal-100">
     <div class="max-w-6xl mx-auto space-y-12">
-      <div class="grid grid-cols-1 lg:grid-cols-12 border-2 border-purple-200 rounded-3xl overflow-hidden bg-purple-50/30">
-        <div class="lg:col-span-5 p-6 sm:p-10 flex flex-col justify-between space-y-6 border-b lg:border-b-0 lg:border-r border-purple-200">
+      <div class="grid grid-cols-1 lg:grid-cols-12 border-2 border-teal-200 rounded-3xl overflow-hidden bg-teal-50/30">
+        <div class="lg:col-span-5 p-6 sm:p-10 flex flex-col justify-between space-y-6 border-b lg:border-b-0 lg:border-r border-teal-200">
           <div class="space-y-4">
-            <span class="font-mono text-xs uppercase tracking-[0.2em] text-[#581c87] font-bold">SEDE DE ATENCIÓN</span>
-            <h3 id="vet-loc-name" class="font-serif text-3xl sm:text-4xl font-extrabold text-stone-900">Veterinaria Mikelas</h3>
+            <span class="font-mono text-xs uppercase tracking-[0.2em] text-teal-700 font-bold">SEDE DE ATENCIÓN</span>
+            <h3 id="vet-loc-name" class="font-serif text-3xl sm:text-4xl font-extrabold text-stone-950">Veterinaria Mikelas</h3>
 
             <div class="space-y-3 pt-2 text-sm">
               <div>
@@ -396,7 +814,7 @@
               </div>
               <div>
                 <span class="font-mono text-[10px] uppercase tracking-wider text-stone-500 block">TELÉFONO DE CONSULTORIO</span>
-                <span id="vet-loc-phone" class="font-mono text-[#581c87] font-bold text-base">Teléfono</span>
+                <span id="vet-loc-phone" class="font-mono text-teal-800 font-bold text-base">Teléfono</span>
               </div>
               <div>
                 <span class="font-mono text-[10px] uppercase tracking-wider text-stone-500 block">HORARIOS</span>
@@ -405,11 +823,11 @@
             </div>
           </div>
 
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-4 border-t border-purple-200 font-mono">
-            <a id="vet-maps-link" href="#" target="_blank" rel="noopener noreferrer" class="bg-[#581c87] hover:bg-[#4c1973] text-white font-bold py-3 px-4 text-center text-xs uppercase tracking-wider rounded-xl transition">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-4 border-t border-teal-200 font-mono">
+            <a id="vet-maps-link" href="#" target="_blank" rel="noopener noreferrer" class="bg-teal-700 hover:bg-teal-800 text-white font-bold py-3 px-4 text-center text-xs uppercase tracking-wider rounded-xl transition">
               Google Maps ↗
             </a>
-            <a id="vet-call-link" href="#" class="py-3 px-4 border border-purple-300 hover:border-purple-600 text-center text-xs uppercase tracking-wider text-purple-950 font-bold transition rounded-xl bg-white">
+            <a id="vet-call-link" href="#" class="py-3 px-4 border border-teal-300 hover:border-teal-600 text-center text-xs uppercase tracking-wider text-teal-950 font-bold transition rounded-xl bg-white shadow-xs">
               Llamar a Consultorio
             </a>
           </div>
@@ -422,28 +840,28 @@
 
       <!-- Reseñas Familiares -->
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6 font-sans">
-        <div class="bg-purple-50/50 border border-purple-100 p-6 rounded-2xl space-y-3">
-          <div class="font-mono text-xs text-[#581c87] flex items-center justify-between">
+        <div class="bg-white border border-teal-100 shadow-sm p-6 rounded-2xl space-y-3">
+          <div class="font-mono text-xs text-teal-800 flex items-center justify-between">
             <span>★★★★★ · ATENCIÓN MÉDICA</span>
-            <span class="text-teal-700 font-semibold text-[10px] bg-teal-100 px-2 py-0.5 rounded">FAMILIA VERIFICADA</span>
+            <span class="text-teal-800 font-semibold text-[10px] bg-teal-50 border border-teal-200 px-2 py-0.5 rounded">FAMILIA VERIFICADA</span>
           </div>
           <p class="font-serif text-lg italic text-stone-800">"Traje a mi perrita de urgencia un domingo y la salvaron. La calidad humana y el profesionalismo de los veterinarios de San Marcos no tiene comparación."</p>
           <p class="font-mono text-[11px] text-stone-500 uppercase">— Paciente habitual en Google</p>
         </div>
 
-        <div class="bg-purple-50/50 border border-purple-100 p-6 rounded-2xl space-y-3">
-          <div class="font-mono text-xs text-[#581c87] flex items-center justify-between">
+        <div class="bg-white border border-teal-100 shadow-sm p-6 rounded-2xl space-y-3">
+          <div class="font-mono text-xs text-teal-800 flex items-center justify-between">
             <span>★★★★★ · BAÑO SIN ESTRÉS</span>
-            <span class="text-teal-700 font-semibold text-[10px] bg-teal-100 px-2 py-0.5 rounded">FAMILIA VERIFICADA</span>
+            <span class="text-teal-800 font-semibold text-[10px] bg-teal-50 border border-teal-200 px-2 py-0.5 rounded">FAMILIA VERIFICADA</span>
           </div>
           <p class="font-serif text-lg italic text-stone-800">"El servicio de baño medicado es impecable. Tratan a los perritos con mucho cariño y paciencia, jamás los sedan. 100% recomendado."</p>
           <p class="font-mono text-[11px] text-stone-500 uppercase">— Ficha pública Google</p>
         </div>
 
-        <div class="bg-purple-50/50 border border-purple-100 p-6 rounded-2xl space-y-3">
-          <div class="font-mono text-xs text-[#581c87] flex items-center justify-between">
+        <div class="bg-white border border-teal-100 shadow-sm p-6 rounded-2xl space-y-3">
+          <div class="font-mono text-xs text-teal-800 flex items-center justify-between">
             <span>★ <span id="vet-rev-rating">4.8</span> PROMEDIO</span>
-            <span class="text-teal-700 font-semibold text-[10px] bg-teal-100 px-2 py-0.5 rounded">FAMILIA VERIFICADA</span>
+            <span class="text-teal-800 font-semibold text-[10px] bg-teal-50 border border-teal-200 px-2 py-0.5 rounded">FAMILIA VERIFICADA</span>
           </div>
           <p class="font-serif text-lg italic text-stone-800">"Instalaciones limpias, sin olores fuertes, y precios justos sin sorpresas. Es la veterinaria de confianza para toda mi familia."</p>
           <p class="font-mono text-[11px] text-stone-500 uppercase">— Reseña 5 estrellas</p>
@@ -453,7 +871,7 @@
   </section>
 
   <!-- Footer Veterinario -->
-  <footer class="border-t border-purple-900/40 py-8 px-4 text-xs text-purple-300 font-mono bg-[#1f0730]">
+  <footer class="border-t border-teal-900/40 py-8 px-4 text-xs text-teal-200 font-mono bg-teal-950">
     <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
       <div class="flex items-center gap-3">
         <img id="vet-footer-logo" src="/logos/p003-mikelas.svg" alt="Logo de pie" class="h-8 w-auto object-contain bg-white rounded p-1" />
@@ -462,4 +880,16 @@
       <p class="text-teal-300">Medicina Veterinaria Preventiva &amp; Citas por WhatsApp</p>
     </div>
   </footer>
+
+  <!-- Barra Flotante Veterinaria: Ficha Clínica Lista / Emergencia -->
+  <div id="vet-floating-bar" class="fixed bottom-6 right-6 z-40 transition-all duration-300 transform translate-y-24 opacity-0 pointer-events-none">
+    <a href="#vet-protocolos" class="flex items-center gap-3 px-5 py-3.5 bg-gradient-to-r from-teal-700 via-emerald-800 to-teal-800 text-white font-bold rounded-full shadow-2xl hover:scale-105 transition border-2 border-teal-300 font-mono text-xs uppercase tracking-wider">
+      <span class="w-2.5 h-2.5 rounded-full bg-teal-300 animate-ping"></span>
+      <span class="inline-flex items-center gap-1.5">
+        <svg class="w-3.5 h-3.5 text-teal-300 inline-block" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+        <span id="vet-floating-bar-text">Ficha Médica · 1 protocolo</span>
+      </span>
+      <span class="bg-white text-teal-950 px-2.5 py-0.5 rounded-full text-[10px] font-bold">Enviar Ficha →</span>
+    </a>
+  </div>
 </div>
